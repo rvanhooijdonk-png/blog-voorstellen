@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en-US" prefix="og: https://ogp.me/ns#">
-<head><meta name="robots" content="noindex, nofollow"><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
-</script>
+<head><style id="voorbeeld-hero">.elementor-section-height-full,.elementor-section-height-min-height,.e-con{min-height:0!important}.elementor-section-height-full>.elementor-container{min-height:460px!important;height:auto!important}</style><style>.elementor-invisible{visibility:visible!important}[data-settings*="animation"]{opacity:1!important;animation:none!important}</style><meta name="robots" content="noindex, nofollow"><meta charset="UTF-8">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -43,7 +42,7 @@
 <meta name="twitter:data1" content="Richard van Hooijdonk" />
 <meta name="twitter:label2" content="Time to read" />
 <meta name="twitter:data2" content="5 minutes" />
-<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://blog.richardvanhooijdonk.com/en/#person/","name":"Richard van Hooijdonk"},{"@type":"WebSite","@id":"https://blog.richardvanhooijdonk.com/en/#website/","url":"https://blog.richardvanhooijdonk.com/en/","name":"Richard van Hooijdonk Blog","publisher":{"@id":"https://blog.richardvanhooijdonk.com/en/#person/"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://blog.richardvanhooijdonk.com/wp-content/uploads/2025/07/shutterstock_2508779297-min-1-scaled.jpg","url":"https://blog.richardvanhooijdonk.com/wp-content/uploads/2025/07/shutterstock_2508779297-min-1-scaled.jpg","width":"2560","height":"1229","caption":"The impact of a guest speaker: elevate your event with expert Insights","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/#webpage","url":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/","name":"The impact of a guest speaker: elevate your event with expert Insights","datePublished":"2025-05-22T18:59:00+02:00","dateModified":"2025-07-22T19:04:39+02:00","isPartOf":{"@id":"https://blog.richardvanhooijdonk.com/en/#website/"},"primaryImageOfPage":{"@id":"https://blog.richardvanhooijdonk.com/wp-content/uploads/2025/07/shutterstock_2508779297-min-1-scaled.jpg"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://blog.richardvanhooijdonk.com/#author","name":"Richard van Hooijdonk","url":"https://blog.richardvanhooijdonk.com/en/about-richard-van-hooijdonk/","jobTitle":"Futurist and keynote speaker","sameAs":["https://richardvanhooijdonk.com/","https://www.linkedin.com/in/vanhooijdonk/","https://twitter.com/rvhooijdonk","https://www.tiktok.com/@richardvanhooijdonk","https://www.instagram.com/richard.vanhooijdonk/"],"image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/344986b9580b2bc8add683e3ba977744b5a7ade44e99a29d428462671bf3b78a?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/344986b9580b2bc8add683e3ba977744b5a7ade44e99a29d428462671bf3b78a?s=96&amp;d=mm&amp;r=g","caption":"Richard van Hooijdonk","inLanguage":"en-US"}},{"@type":"NewsArticle","headline":"The impact of a guest speaker: elevate your event with expert Insights","keywords":"Richard van hooijdonk","datePublished":"2025-05-22T18:59:00+02:00","dateModified":"2025-07-22T19:04:39+02:00","author":{"@id":"https://blog.richardvanhooijdonk.com/#author","name":"Richard van Hooijdonk"},"publisher":{"@id":"https://blog.richardvanhooijdonk.com/en/#person/"},"description":"Elevate events with guest speakers like Richard van Hooijdonk\u2014boost engagement, media reach &amp; impact.","copyrightYear":"2025","copyrightHolder":{"@id":"https://blog.richardvanhooijdonk.com/en/#person/"},"name":"The impact of a guest speaker: elevate your event with expert Insights","@id":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/#richSnippet","isPartOf":{"@id":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/#webpage"},"image":{"@id":"https://blog.richardvanhooijdonk.com/wp-content/uploads/2025/07/shutterstock_2508779297-min-1-scaled.jpg"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/#webpage"}}]}</script>
+
 <!-- /Rank Math WordPress SEO plugin -->
 
 <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
@@ -136,20 +135,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=rocket-lazyload-inline-css */
 </style>
 
-<script id="wpml-cookie-js-extra">
-var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":"Sat, 17 Oct 2026 15:11:28 GMT","path":"/"}};
-//# sourceURL=wpml-cookie-js-extra
-</script>
-<script type="text/rocketlazyloadscript" data-minify="1" data-wp-strategy="defer" defer id="wpml-cookie-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=1789046691"></script>
-<script type="text/rocketlazyloadscript" id="jquery-core-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
-<script type="text/rocketlazyloadscript" id="jquery-migrate-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
-<script type="text/rocketlazyloadscript" id="font-awesome-4-shim-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=4.3.4"></script>
-<script type="text/rocketlazyloadscript" data-minify="1" id="she-header-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/cache/min/1/wp-content/plugins/sticky-header-effects-for-elementor/assets/js/she-header.js?ver=1789046691"></script>
-<script id="wpml-browser-redirect-js-extra">
-var wpml_browser_redirect_params = {"pageLanguage":"en","languageUrls":{"nl_nl":"https://blog.richardvanhooijdonk.com/de-impact-van-een-gastspreker-verhoog-je-evenement-met-deskundige-inzichten/","nl":"https://blog.richardvanhooijdonk.com/de-impact-van-een-gastspreker-verhoog-je-evenement-met-deskundige-inzichten/","en_us":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/","en":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/","us":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/"},"languages":[{"code":"nl","language":"nl","country":"NL","locale":"nl_nl","url":"https://blog.richardvanhooijdonk.com/de-impact-van-een-gastspreker-verhoog-je-evenement-met-deskundige-inzichten/"},{"code":"en","language":"en","country":null,"locale":"en_us","url":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/"}],"cookie":{"name":"_icl_visitor_lang_js","domain":"blog.richardvanhooijdonk.com","path":"/","expiration":24}};
-//# sourceURL=wpml-browser-redirect-js-extra
-</script>
-<script data-minify="1" id="wpml-browser-redirect-js" src="https://blog.richardvanhooijdonk.com/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/dist/js/browser-redirect/app.js?ver=1789046691"></script>
+
+
+
+
+
+
+
+
 <link rel="https://api.w.org/" href="https://blog.richardvanhooijdonk.com/en/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://blog.richardvanhooijdonk.com/en/wp-json/wp/v2/posts/81075" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.richardvanhooijdonk.com/xmlrpc.php?rsd" />
 <meta name="generator" content="WPML ver:5.1.0 stt:37,1;" />
 <meta name="description" content="Elevate events with guest speakers like Richard van Hooijdonk—boost engagement, media reach &amp; impact.">
@@ -645,8 +638,7 @@ width:28px!important;
 				<div class="elementor-element elementor-element-2543683 elementor-hidden-desktop elementor-widget elementor-widget-jet-mobile-menu" data-id="2543683" data-element_type="widget" data-e-type="widget" data-widget_type="jet-mobile-menu.default">
 				<div class="elementor-widget-container">
 					<div  id="jet-mobile-menu-6ad23ea0c0d14" class="jet-mobile-menu jet-mobile-menu--location-elementor" data-menu-id="5631" data-menu-options="{&quot;menuUniqId&quot;:&quot;6ad23ea0c0d14&quot;,&quot;menuId&quot;:&quot;5631&quot;,&quot;mobileMenuId&quot;:&quot;5631&quot;,&quot;location&quot;:&quot;elementor&quot;,&quot;menuLocation&quot;:false,&quot;menuLayout&quot;:&quot;slide-out&quot;,&quot;togglePosition&quot;:&quot;default&quot;,&quot;menuPosition&quot;:&quot;right&quot;,&quot;headerTemplate&quot;:&quot;&quot;,&quot;beforeTemplate&quot;:&quot;&quot;,&quot;afterTemplate&quot;:&quot;&quot;,&quot;useBreadcrumb&quot;:false,&quot;breadcrumbPath&quot;:&quot;full&quot;,&quot;toggleText&quot;:&quot;&quot;,&quot;toggleLoader&quot;:true,&quot;backText&quot;:&quot;&quot;,&quot;itemIconVisible&quot;:true,&quot;itemBadgeVisible&quot;:true,&quot;itemDescVisible&quot;:false,&quot;loaderColor&quot;:&quot;#3a3a3a&quot;,&quot;subEvent&quot;:&quot;click&quot;,&quot;subTrigger&quot;:&quot;submarker&quot;,&quot;subOpenLayout&quot;:&quot;slide-in&quot;,&quot;closePreviousSubmenu&quot;:false,&quot;closeAfterNavigate&quot;:false,&quot;lockPageScroll&quot;:false,&quot;fillSvgIcon&quot;:true,&quot;megaAjaxLoad&quot;:false}">
-			<mobile-menu></mobile-menu><div class="jet-mobile-menu__refs"><div ref="toggleClosedIcon"><svg class="e-font-icon-svg e-fas-bars" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></div><div ref="toggleOpenedIcon"><svg class="e-font-icon-svg e-fas-times" viewBox="0 0 352 512" xmlns="http://www.w3.org/2000/svg"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></div><div ref="closeIcon"><svg class="e-font-icon-svg e-fas-times" viewBox="0 0 352 512" xmlns="http://www.w3.org/2000/svg"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></div><div ref="backIcon"><svg class="e-font-icon-svg e-fas-angle-left" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></div><div ref="dropdownIcon"><svg class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div><div ref="dropdownOpenedIcon"><svg class="e-font-icon-svg e-fas-angle-down" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg></div><div ref="breadcrumbIcon"><svg class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div></div></div><script id="jetMenuMobileWidgetRenderData6ad23ea0c0d14" type="application/json">
-            {"items":{"item-78810":{"id":"item-78810","name":"Home","attrTitle":false,"description":"","url":"https:\/\/richardvanhooijdonk.com\/","target":false,"xfn":false,"itemParent":false,"itemId":78810,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""},"item-78811":{"id":"item-78811","name":"Over","attrTitle":false,"description":"","url":"#","target":false,"xfn":false,"itemParent":false,"itemId":78811,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":"","children":{"item-78812":{"id":"item-78812","name":"Over Richard","attrTitle":false,"description":"","url":"https:\/\/richardvanhooijdonk.com\/over-ons\/","target":false,"xfn":false,"itemParent":"item-78811","itemId":78812,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""},"item-78813":{"id":"item-78813","name":"Stories","attrTitle":false,"description":"","url":"https:\/\/richardvanhooijdonk.com\/stories\/","target":false,"xfn":false,"itemParent":"item-78811","itemId":78813,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""},"item-78814":{"id":"item-78814","name":"Reviews","attrTitle":false,"description":"","url":"https:\/\/richardvanhooijdonk.com\/reviews\/","target":false,"xfn":false,"itemParent":"item-78811","itemId":78814,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""},"item-78815":{"id":"item-78815","name":"Webinars","attrTitle":false,"description":"","url":"https:\/\/richardvanhooijdonk.com\/webinars\/","target":false,"xfn":false,"itemParent":"item-78811","itemId":78815,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""}}},"item-78816":{"id":"item-78816","name":"Lezingen","attrTitle":false,"description":"","url":"#","target":false,"xfn":false,"itemParent":false,"itemId":78816,"megaTemplateId":false,"megaContent":false,"megaContentType":"elementor","megaContentHasContent":true,"open":false,"badgeContent":"","itemIcon":"","hideItemText":false,"classes":["lezingenmenu","menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""},"item-78818":{"id":"item-78818","name":"Blog","attrTitle":false,"description":"","url":"https:\/\/blog.richardvanhooijdonk.com\/","target":false,"xfn":false,"itemParent":false,"itemId":78818,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""},"item-78817":{"id":"item-78817","name":"Kennis","attrTitle":false,"description":"","url":"#","target":false,"xfn":false,"itemParent":false,"itemId":78817,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":"","children":{"item-78819":{"id":"item-78819","name":"E-books","attrTitle":false,"description":"","url":"https:\/\/richardvanhooijdonk.com\/e-books\/","target":false,"xfn":false,"itemParent":"item-78817","itemId":78819,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""},"item-78820":{"id":"item-78820","name":"Videos","attrTitle":false,"description":"","url":"https:\/\/blog.richardvanhooijdonk.com\/videos\/","target":false,"xfn":false,"itemParent":"item-78817","itemId":78820,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""}}},"item-78822":{"id":"item-78822","name":"Contact","attrTitle":false,"description":"","url":"https:\/\/richardvanhooijdonk.com\/contact\/","target":false,"xfn":false,"itemParent":false,"itemId":78822,"megaTemplateId":false,"megaContent":false,"megaContentType":"default","megaContentHasContent":true,"open":false,"badgeContent":false,"itemIcon":"","hideItemText":false,"classes":["menu-item","menu-item-type-custom","menu-item-object-custom"],"signature":""}},"activeStateURL":"https:\/\/blog.richardvanhooijdonk.com\/en\/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights\/"}        </script>				</div>
+			<mobile-menu></mobile-menu><div class="jet-mobile-menu__refs"><div ref="toggleClosedIcon"><svg class="e-font-icon-svg e-fas-bars" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></div><div ref="toggleOpenedIcon"><svg class="e-font-icon-svg e-fas-times" viewBox="0 0 352 512" xmlns="http://www.w3.org/2000/svg"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></div><div ref="closeIcon"><svg class="e-font-icon-svg e-fas-times" viewBox="0 0 352 512" xmlns="http://www.w3.org/2000/svg"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></div><div ref="backIcon"><svg class="e-font-icon-svg e-fas-angle-left" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></div><div ref="dropdownIcon"><svg class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div><div ref="dropdownOpenedIcon"><svg class="e-font-icon-svg e-fas-angle-down" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg></div><div ref="breadcrumbIcon"><svg class="e-font-icon-svg e-fas-angle-right" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></div></div></div>				</div>
 				</div>
 				<div class="elementor-element elementor-element-bcf668d flag-container elementor-widget elementor-widget-shortcode" data-id="bcf668d" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
 				<div class="elementor-widget-container">
@@ -703,7 +695,7 @@ width:28px!important;
 				<div class="elementor-widget-container">
 							<div class="elementor-author-box">
 							<div  class="elementor-author-box__avatar">
-					<img width="300" height="197" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20197'%3E%3C/svg%3E" alt="Picture of Richard van Hooijdonk" data-lazy-src="https://blog.richardvanhooijdonk.com/wp-content/uploads/2024/10/RichardVanHooijdonk_3787-1-300x197.jpg"><noscript><img width="300" height="197" src="https://blog.richardvanhooijdonk.com/wp-content/uploads/2024/10/RichardVanHooijdonk_3787-1-300x197.jpg" alt="Picture of Richard van Hooijdonk" loading="lazy"></noscript>
+					<img width="300" height="197" alt="Picture of Richard van Hooijdonk" src="https://blog.richardvanhooijdonk.com/wp-content/uploads/2024/10/RichardVanHooijdonk_3787-1-300x197.jpg"><noscript><img width="300" height="197" src="https://blog.richardvanhooijdonk.com/wp-content/uploads/2024/10/RichardVanHooijdonk_3787-1-300x197.jpg" alt="Picture of Richard van Hooijdonk" loading="lazy"></noscript>
 				</div>
 			
 			<div class="elementor-author-box__text">
@@ -1218,7 +1210,7 @@ width:28px!important;
 		<div class="elementor-element elementor-element-ba85411 e-con-full e-flex e-con e-child" data-id="ba85411" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
 				<div class="elementor-element elementor-element-3ba9287 elementor-position-top elementor-widget elementor-widget-image-box" data-id="3ba9287" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="93" height="69" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2093%2069'%3E%3C/svg%3E" class="attachment-full size-full wp-image-78897" alt="" data-lazy-src="https://blog.richardvanhooijdonk.com/wp-content/uploads/2024/01/logo-donker-1.svg" /><noscript><img width="93" height="69" src="https://blog.richardvanhooijdonk.com/wp-content/uploads/2024/01/logo-donker-1.svg" class="attachment-full size-full wp-image-78897" alt="" /></noscript></figure><div class="elementor-image-box-content"><div class="elementor-image-box-title">Richard van Hooijdonk</div><p class="elementor-image-box-description">Trendwatcher, futurist en internationaal topspreker Richard Van Hooijdonk neemt je mee naar een inspirerende toekomst die leven, werken en ondernemen drastisch gaat veranderen.</p></div></div>				</div>
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="93" height="69" class="attachment-full size-full wp-image-78897" alt="" src="https://blog.richardvanhooijdonk.com/wp-content/uploads/2024/01/logo-donker-1.svg" /><noscript><img width="93" height="69" src="https://blog.richardvanhooijdonk.com/wp-content/uploads/2024/01/logo-donker-1.svg" class="attachment-full size-full wp-image-78897" alt="" /></noscript></figure><div class="elementor-image-box-content"><div class="elementor-image-box-title">Richard van Hooijdonk</div><p class="elementor-image-box-description">Trendwatcher, futurist en internationaal topspreker Richard Van Hooijdonk neemt je mee naar een inspirerende toekomst die leven, werken en ondernemen drastisch gaat veranderen.</p></div></div>				</div>
 				</div>
 				<div class="elementor-element elementor-element-ff78bcf e-grid-align-left elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="ff78bcf" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
 				<div class="elementor-widget-container">
@@ -1277,328 +1269,9 @@ width:28px!important;
 				</div>
 				</footer>
 		
-<script type="text/rocketlazyloadscript" data-rocket-type='text/javascript'>
-/* <![CDATA[ */
-var hasJetBlogPlaylist = 0;
-/* ]]> */
-</script>
-<script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/en/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/en/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script>
-<script type="text/x-template" id="mobile-menu-item-template"><li
-	:id="'jet-mobile-menu-item-'+itemDataObject.itemId"
-	:class="itemClasses"
->
-	<div
-		class="jet-mobile-menu__item-inner"
-		:style="itemInnerStyle"
-		v-on:click="itemSubHandler"
-		v-on:focusin="handleFocusIn"
-		v-on:focusout="handleFocusOut"
-	>
-		<div
-			class="jet-mobile-menu__item-output"
-			v-if="itemDataObject.itemOutput"
-			ref="item-output"
-		></div>
-		<a
-			v-else
-			:class="itemLinkClasses"
-			:href="itemDataObject.url"
-			:rel="itemDataObject.xfn || null"
-			:title="itemDataObject.attrTitle || null"
-			:target="itemDataObject.target || null"
-			:aria-current="itemAriaCurrent"
-			:style="itemLinkStyle"
-			:aria-haspopup="isSub && 'item' === effectiveSubTrigger ? 'true' : null"
-			:aria-expanded="isSub && 'item' === effectiveSubTrigger ? submenuExpandedState : null"
-			v-on:keydown.space.prevent="itemSpaceHandler"
-		>
-			<div class="jet-menu-item-wrapper">
-				<div
-					class="jet-menu-icon"
-					v-if="isIconVisible"
-					v-html="itemIconHtml"
-				></div>
-				<div class="jet-menu-name">
-					<span
-						class="jet-menu-label"
-						v-if="isLabelVisible"
-						v-html="itemDataObject.name"
-					></span>
-					<small
-						class="jet-menu-desc"
-						v-if="isDescVisible"
-						v-html="itemDataObject.description"
-					></small>
-				</div>
-				<div
-					class="jet-menu-badge"
-					v-if="isBadgeVisible"
-				>
-					<div class="jet-menu-badge__inner" v-html="itemDataObject.badgeContent"></div>
-				</div>
-			</div>
-		</a>
-		<button
-			class="jet-dropdown-arrow"
-			v-if="isSub && !templateLoadStatus && showSubmenuButton"
-			v-html="dropdownIconHtml"
-			type="button"
-			:style="submenuButtonStyle"
-			:aria-label="'Toggle submenu for ' + itemDataObject.name"
-			:aria-expanded="submenuExpandedState"
-			:aria-haspopup="isSub ? 'true' : null"
-			v-on:click="markerSubHandler"
-		>
-		</button>
-		<span
-			class="jet-dropdown-arrow"
-			v-else-if="isSub && !templateLoadStatus"
-			v-html="dropdownIconHtml"
-			aria-hidden="true"
-		>
-		</span>
-		<div
-			class="jet-mobile-menu__template-loader"
-			v-if="templateLoadStatus"
-		>
-			<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="24px" height="25px" viewBox="0 0 128 128" xml:space="preserve">
-				<g>
-					<linearGradient :id="'linear-gradient-'+itemDataObject.itemId">
-						<stop offset="0%" :stop-color="loaderColor" stop-opacity="0"/>
-						<stop offset="100%" :stop-color="loaderColor" stop-opacity="1"/>
-					</linearGradient>
-				<path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" :fill="'url(#linear-gradient-'+itemDataObject.itemId+')'" fill-rule="evenodd"/>
-				<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
-				</g>
-			</svg>
-		</div>
-	</div>
 
-	<transition name="menu-container-accordion-animation">
-		<mobile-menu-list
-			v-if="isDropdownLayout && subDropdownVisible"
-			:depth="depth+1"
-			:children-object="itemDataObject.children"
-		></mobile-menu-list>
-	</transition>
 
-</li>
-				</script><script type="text/x-template" id="mobile-menu-list-template"><div
-	class="jet-mobile-menu__list"
-	role="navigation"
->
-	<ul class="jet-mobile-menu__items">
-		<mobile-menu-item
-			v-for="(item, index) in childrenObject"
-			:key="item.id"
-			:item-data-object="item"
-			:depth="depth"
-			:sub-dropdown-visible="expandedItemIds.includes( item.id )"
-			v-on:toggle-submenu="toggleSubmenu"
-		></mobile-menu-item>
-	</ul>
-</div>
-				</script><script type="text/x-template" id="mobile-menu-template"><div
-	:class="instanceClass"
-	v-on:keyup.esc="escapeKeyHandler"
-	v-on:keydown="handleMenuKeydown"
->
-	<div
-		class="jet-mobile-menu__toggle"
-		role="button"
-		ref="toggle"
-		tabindex="0"
-		aria-label="Open/Close Menu"
-        aria-expanded="false"
-		v-on:click="menuToggle"
-		v-on:keyup.enter="menuToggle"
-		v-on:keydown.space.prevent="menuToggle"
-	>
-		<div
-			class="jet-mobile-menu__template-loader"
-			v-if="toggleLoaderVisible"
-		>
-			<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="24px" height="25px" viewBox="0 0 128 128" xml:space="preserve">
-				<g>
-					<linearGradient :id="'linear-gradient-'+itemDataObject.itemId">
-						<stop offset="0%" :stop-color="loaderColor" stop-opacity="0"/>
-						<stop offset="100%" :stop-color="loaderColor" stop-opacity="1"/>
-					</linearGradient>
-				<path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" :fill="'url(#linear-gradient-'+itemDataObject.itemId+')'" fill-rule="evenodd"/>
-				<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
-				</g>
-			</svg>
-		</div>
-
-		<div
-			class="jet-mobile-menu__toggle-icon"
-			v-if="!menuOpen && !toggleLoaderVisible"
-			v-html="toggleClosedIcon"
-		></div>
-		<div
-			class="jet-mobile-menu__toggle-icon"
-			v-if="menuOpen && !toggleLoaderVisible"
-			v-html="toggleOpenedIcon"
-		></div>
-		<span
-			class="jet-mobile-menu__toggle-text"
-			v-if="toggleText"
-			v-html="toggleText"
-		></span>
-
-	</div>
-
-	<transition name="cover-animation">
-		<div
-			class="jet-mobile-menu-cover"
-			v-if="menuContainerVisible && coverVisible"
-			v-on:click="closeMenu"
-		></div>
-	</transition>
-
-	<transition
-		:name="showAnimation"
-		@before-enter="onContainerBeforeEnter"
-		@after-enter="onContainerAfterEnter"
-		@enter-cancelled="onContainerAfterEnter"
-		@after-leave="onContainerAfterLeave"
-		@leave-cancelled="onContainerAfterLeave"
-	>
-		<div
-			class="jet-mobile-menu__container"
-			ref="container"
-			:style="containerStyle"
-			v-if="menuContainerVisible"
-		>
-			<div
-				class="jet-mobile-menu__container-inner"
-				ref="menu-container-inner"
-				tabindex="-1"
-				:style="containerInnerStyle"
-			>
-				<div
-					class="jet-mobile-menu__header-template"
-					v-if="headerTemplateVisible"
-				>
-					<div
-						class="jet-mobile-menu__header-template-content"
-						ref="header-template-content"
-						v-html="headerContent"
-					></div>
-				</div>
-
-				<div
-					class="jet-mobile-menu__controls"
-                    v-if="isBreadcrumbs || isBack || isClose"
-				>
-					<div
-						class="jet-mobile-menu__breadcrumbs"
-						v-if="isBreadcrumbs"
-					>
-						<div
-							class="jet-mobile-menu__breadcrumb"
-							v-for="(item, index) in breadcrumbsPathData"
-							:key="index"
-						>
-							<button
-								v-if="isBreadcrumbInteractive(index)"
-								class="breadcrumb-label"
-								type="button"
-								style="background: transparent; border: 0; padding: 0; margin: 0; appearance: none; -webkit-appearance: none;"
-								v-on:click="breadcrumbHandle(index+1)"
-								v-html="item"
-							></button>
-							<span
-								v-else
-								class="breadcrumb-label"
-								v-html="item"
-							></span>
-							<div
-								class="breadcrumb-divider"
-								v-html="breadcrumbIcon"
-								v-if="(breadcrumbIcon && index !== breadcrumbsPathData.length-1)"
-							></div>
-						</div>
-					</div>
-					<div
-						class="jet-mobile-menu__back"
-						role="button"
-						ref="back"
-						tabindex="0"
-						aria-label="Close Menu"
-                        aria-expanded="false"
-						v-if="!isBack && isClose"
-						v-html="closeIcon"
-						v-on:click="menuToggle"
-						v-on:keyup.enter="menuToggle"
-						v-on:keydown.space.prevent="menuToggle"
-					></div>
-					<div
-						class="jet-mobile-menu__back"
-						role="button"
-						ref="back"
-						tabindex="0"
-						aria-label="Back to Prev Items"
-                        aria-expanded="false"
-						v-if="isBack"
-						v-html="backIcon"
-						v-on:click="goBack"
-						v-on:keyup.enter="goBack"
-						v-on:keydown.space.prevent="goBack"
-					></div>
-				</div>
-
-				<div
-					class="jet-mobile-menu__before-template"
-					v-if="beforeTemplateVisible"
-				>
-					<div
-						class="jet-mobile-menu__before-template-content"
-						ref="before-template-content"
-						v-html="beforeContent"
-					></div>
-				</div>
-
-				<div class="jet-mobile-menu__body" ref="menu-body">
-					<transition :name="animation">
-						<mobile-menu-list
-							v-if="!templateVisible"
-                            :key="'list-' + depth"
-							:depth="depth"
-							:children-object="itemsList"
-						></mobile-menu-list>
-
-						<div v-else
-                             :key="'tpl-' + depth"
-							class="jet-mobile-menu__template"
-							ref="template-content"
-						>
-							<div
-								class="jet-mobile-menu__template-content"
-								v-html="itemTemplateContent"
-							></div>
-						</div>
-					</transition>
-				</div>
-
-				<div
-					class="jet-mobile-menu__after-template"
-					v-if="afterTemplateVisible"
-				>
-					<div
-						class="jet-mobile-menu__after-template-content"
-						ref="after-template-content"
-						v-html="afterContent"
-					></div>
-				</div>
-
-			</div>
-		</div>
-	</transition>
-</div>
-				</script>		<div data-elementor-type="popup" data-elementor-id="80466" class="elementor elementor-80466 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeInDown&quot;,&quot;exit_animation&quot;:&quot;fadeInDown&quot;,&quot;open_selector&quot;:&quot;.lezingenmenu&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:{&quot;devices_devices&quot;:[&quot;desktop&quot;],&quot;devices&quot;:&quot;yes&quot;}}" data-elementor-post-type="elementor_library">
+		<div data-elementor-type="popup" data-elementor-id="80466" class="elementor elementor-80466 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeInDown&quot;,&quot;exit_animation&quot;:&quot;fadeInDown&quot;,&quot;open_selector&quot;:&quot;.lezingenmenu&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:{&quot;devices_devices&quot;:[&quot;desktop&quot;],&quot;devices&quot;:&quot;yes&quot;}}" data-elementor-post-type="elementor_library">
 			<div class="elementor-element elementor-element-3496c06 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-parent" data-id="3496c06" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
 		<div class="elementor-element elementor-element-90f6f99 e-con-full e-flex e-con e-child" data-id="90f6f99" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
 		<div class="elementor-element elementor-element-3522272 e-con-full e-grid e-con e-child" data-id="3522272" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
@@ -2142,34 +1815,7 @@ var hasJetBlogPlaylist = 0;
 				</div>
 				</div>
 				</div>
-					<script type="text/rocketlazyloadscript">
-				( () => {
-					const lazyloadRunObserver = () => {
-						const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
-						const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
-							entries.forEach( ( entry ) => {
-								if ( entry.isIntersecting ) {
-									let lazyloadBackground = entry.target;
-									if( lazyloadBackground ) {
-										lazyloadBackground.classList.add( 'e-lazyloaded' );
-									}
-									lazyloadBackgroundObserver.unobserve( entry.target );
-								}
-							});
-						}, { rootMargin: '200px 0px 200px 0px' } );
-						lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
-							lazyloadBackgroundObserver.observe( lazyloadBackground );
-						} );
-					};
-					const events = [
-						'DOMContentLoaded',
-						'elementor/lazyload/observe',
-					];
-					events.forEach( ( event ) => {
-						document.addEventListener( event, lazyloadRunObserver );
-					} );
-				} )();
-			</script>
+					
 			<style>:root{--ss-fsidebar-spacing: 0px} #ss-floating-bar{left: 0;}</style>		<div  id="ss-floating-bar" class="ss-left-sidebar ss-small-icons ss-hide-on-mobile ss-rounded-icons">
 
 			<div  class="ss-floating-bar__inner">
@@ -2268,95 +1914,44 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 /*# sourceURL=global-styles-inline-css */
 </style>
 <link data-minify="1" rel='stylesheet' id='jet-elements-css' href='https://blog.richardvanhooijdonk.com/wp-content/cache/min/1/wp-content/plugins/jet-elements/assets/css/jet-elements.css?ver=1792153251' media='all' />
-<script type="text/rocketlazyloadscript" data-minify="1" id="coblocks-animation-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/cache/min/1/wp-content/plugins/coblocks/dist/js/coblocks-animation.js?ver=1789046691"></script>
-<script type="text/rocketlazyloadscript" id="rocket-browser-checker-js-after">
-"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
-//# sourceURL=rocket-browser-checker-js-after
-</script>
-<script id="rocket-preload-links-js-extra">
-var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://blog.richardvanhooijdonk.com/en/","onHoverDelay":"100","rateThrottle":"3"};
-//# sourceURL=rocket-preload-links-js-extra
-</script>
-<script type="text/rocketlazyloadscript" id="rocket-preload-links-js-after">
-(function() {
-"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
-}());
 
-//# sourceURL=rocket-preload-links-js-after
-</script>
-<script type="text/rocketlazyloadscript" id="wp-hooks-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
-<script id="jet-menu-public-scripts-js-extra">
-var jetMenuPublicSettings = {"version":"3.0.5.1","ajaxUrl":"https://blog.richardvanhooijdonk.com/wp-admin/admin-ajax.php","isMobile":"false","getElementorTemplateApiUrl":"https://blog.richardvanhooijdonk.com/en/wp-json/jet-menu-api/v2/get-elementor-template-content","getBlocksTemplateApiUrl":"https://blog.richardvanhooijdonk.com/en/wp-json/jet-menu-api/v2/get-blocks-template-content","menuItemsApiUrl":"https://blog.richardvanhooijdonk.com/en/wp-json/jet-menu-api/v2/get-menu-items","mobileMenuScriptUrl":"https://blog.richardvanhooijdonk.com/wp-content/plugins/jet-menu/assets/public/js/jet-menu-mobile-menu-public-scripts.js?ver=3.0.5.1","restNonce":"7e242b1b28","devMode":"false","wpmlLanguageCode":"en","menuSettings":{"jetMenuRollUp":"true","jetMenuMouseleaveDelay":"500","jetMenuMegaWidthType":"selector","jetMenuMegaWidthSelector":".content-area","jetMenuMegaOpenSubType":"hover","jetMenuMegaAjax":""}};
-var jetMenuPublicSettings = {"version":"3.0.5.1","ajaxUrl":"https://blog.richardvanhooijdonk.com/wp-admin/admin-ajax.php","isMobile":"false","getElementorTemplateApiUrl":"https://blog.richardvanhooijdonk.com/en/wp-json/jet-menu-api/v2/get-elementor-template-content","getBlocksTemplateApiUrl":"https://blog.richardvanhooijdonk.com/en/wp-json/jet-menu-api/v2/get-blocks-template-content","menuItemsApiUrl":"https://blog.richardvanhooijdonk.com/en/wp-json/jet-menu-api/v2/get-menu-items","mobileMenuScriptUrl":"https://blog.richardvanhooijdonk.com/wp-content/plugins/jet-menu/assets/public/js/jet-menu-mobile-menu-public-scripts.js?ver=3.0.5.1","restNonce":"7e242b1b28","devMode":"false","wpmlLanguageCode":"en","menuSettings":{"jetMenuRollUp":"true","jetMenuMouseleaveDelay":"500","jetMenuMegaWidthType":"selector","jetMenuMegaWidthSelector":".content-area","jetMenuMegaOpenSubType":"hover","jetMenuMegaAjax":""}};
-//# sourceURL=jet-menu-public-scripts-js-extra
-</script>
-<script type="text/rocketlazyloadscript" id="jet-menu-public-scripts-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/jet-menu/assets/public/js/jet-menu-public-scripts.js?ver=3.0.5.1"></script>
-<script type="text/rocketlazyloadscript" id="jet-menu-public-scripts-js-after">
-function CxCSSCollector(){"use strict";var t,e=window.CxCollectedCSS;void 0!==e&&((t=document.createElement("style")).setAttribute("title",e.title),t.setAttribute("type",e.type),t.textContent=e.css,document.head.appendChild(t))}CxCSSCollector();
-//# sourceURL=jet-menu-public-scripts-js-after
-</script>
-<script type="text/rocketlazyloadscript" id="elementor-webpack-runtime-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.3.4"></script>
-<script type="text/rocketlazyloadscript" id="elementor-frontend-modules-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.3.4"></script>
-<script type="text/rocketlazyloadscript" id="jquery-ui-core-js-before">
-jQuery.uiBackCompat = true;
-//# sourceURL=jquery-ui-core-js-before
-</script>
-<script type="text/rocketlazyloadscript" id="jquery-ui-core-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
-<script type="text/rocketlazyloadscript" id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnX":"Share on X","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.3.4","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"nested-elements":true,"import-export-customization":true,"e_pro_atomic_form":true,"e_pro_collection_loop":true},"urls":{"assets":"https:\/\/blog.richardvanhooijdonk.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/blog.richardvanhooijdonk.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/blog.richardvanhooijdonk.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"81cf1d86c9","atomicFormsSendForm":"f74ca68ead"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":81075,"title":"The%20impact%20of%20a%20guest%20speaker%3A%20elevate%20your%20event%20with%20expert%20Insights","excerpt":"Elevate events with guest speakers like Richard van Hooijdonk\u2014boost engagement, media reach & impact.","featuredImage":"https:\/\/blog.richardvanhooijdonk.com\/wp-content\/uploads\/2025\/07\/shutterstock_2508779297-min-1-1024x491.jpg"}};
-//# sourceURL=elementor-frontend-js-before
-</script>
-<script type="text/rocketlazyloadscript" id="elementor-frontend-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.4"></script>
-<script type="text/rocketlazyloadscript" id="smartmenus-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1"></script>
-<script type="text/rocketlazyloadscript" id="e-sticky-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=4.3.1"></script>
-<script type="text/rocketlazyloadscript" id="imagesloaded-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0"></script>
-<script type="text/rocketlazyloadscript" data-minify="1" id="jet-plugins-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/cache/min/1/wp-content/plugins/jet-engine/assets/lib/jet-plugins/jet-plugins.js?ver=1789046698"></script>
-<script id="jet-engine-frontend-js-extra">
-var JetEngineSettings = {"ajaxurl":"https://blog.richardvanhooijdonk.com/wp-admin/admin-ajax.php","ajaxlisting":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/?nocache=1","restNonce":"7e242b1b28","hoverActionTimeout":"400","post_id":"81075","sliderLibrary":"swiper","query_builder":{"custom_ids":[]},"queried_object_id":"81075","queried_object_class":"WP_Post"};
-//# sourceURL=jet-engine-frontend-js-extra
-</script>
-<script type="text/rocketlazyloadscript" data-minify="1" id="jet-engine-frontend-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/cache/min/1/wp-content/plugins/jet-engine/assets/js/frontend/frontend.js?ver=1789046698"></script>
-<script id="socialsnap-js-js-extra">
-var socialsnap_script = {"ajaxurl":"https://blog.richardvanhooijdonk.com/wp-admin/admin-ajax.php","on_media_width":"250","on_media_height":"250","nonce":"5c86a7f401","post_id":"81075"};
-var socialsnap_script = {"ajaxurl":"https://blog.richardvanhooijdonk.com/wp-admin/admin-ajax.php","on_media_width":"250","on_media_height":"250","nonce":"5c86a7f401","post_id":"81075"};
-//# sourceURL=socialsnap-js-js-extra
-</script>
-<script type="text/rocketlazyloadscript" data-minify="1" id="socialsnap-js-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/cache/min/1/wp-content/plugins/socialsnap/assets/js/socialsnap.js?ver=1789046883"></script>
-<script type="text/rocketlazyloadscript" id="jet-tween-js-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/jet-elements/assets/js/lib/tweenjs/tweenjs.min.js?ver=2.0.2"></script>
-<script id="jet-elements-js-extra">
-var jetElements = {"ajaxUrl":"https://blog.richardvanhooijdonk.com/wp-admin/admin-ajax.php","isMobile":"false","templateApiUrl":"https://blog.richardvanhooijdonk.com/en/wp-json/jet-elements-api/v1/elementor-template","devMode":"false","mapboxToken":"","messages":{"invalidMail":"Please specify a valid e-mail"}};
-//# sourceURL=jet-elements-js-extra
-</script>
-<script type="text/rocketlazyloadscript" id="jet-elements-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/jet-elements/assets/js/jet-elements.min.js?ver=2.9.2.4"></script>
-<script type="text/rocketlazyloadscript" id="wp-i18n-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
-<script type="text/rocketlazyloadscript" id="wp-i18n-js-after">
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-//# sourceURL=wp-i18n-js-after
-</script>
-<script type="text/rocketlazyloadscript" id="elementor-pro-frontend-js-before">
-var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/blog.richardvanhooijdonk.com\/wp-admin\/admin-ajax.php","nonce":"dc4ce71425","urls":{"assets":"https:\/\/blog.richardvanhooijdonk.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/blog.richardvanhooijdonk.com\/en\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/blog.richardvanhooijdonk.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
-//# sourceURL=elementor-pro-frontend-js-before
-</script>
-<script type="text/rocketlazyloadscript" id="elementor-pro-frontend-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.3.1"></script>
-<script type="text/rocketlazyloadscript" id="pro-elements-handlers-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.3.1"></script>
-<script type="text/rocketlazyloadscript" id="jet-blocks-jsticky-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/jet-blocks/assets/js/lib/jsticky/jquery.jsticky.min.js?ver=1.1.0"></script>
-<script id="jet-blocks-js-extra">
-var jetBlocksData = {"recaptchaConfig":""};
-var JetHamburgerPanelSettings = {"ajaxurl":"https://blog.richardvanhooijdonk.com/wp-admin/admin-ajax.php","isMobile":"false","templateApiUrl":"https://blog.richardvanhooijdonk.com/en/wp-json/jet-blocks-api/v1/elementor-template","devMode":"false","restNonce":"7e242b1b28"};
-//# sourceURL=jet-blocks-js-extra
-</script>
-<script type="text/rocketlazyloadscript" id="jet-blocks-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/jet-blocks/assets/js/jet-blocks.min.js?ver=1.5.2.2"></script>
-<script type="text/rocketlazyloadscript" data-minify="1" id="jet-menu-elementor-widgets-scripts-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/cache/min/1/wp-content/plugins/jet-menu/includes/elementor/assets/public/js/widgets-scripts.js?ver=1789046691"></script>
-<script id="jet-tabs-frontend-js-extra">
-var JetTabsSettings = {"ajaxurl":"https://blog.richardvanhooijdonk.com/wp-admin/admin-ajax.php","isMobile":"false","templateApiUrl":"https://blog.richardvanhooijdonk.com/en/wp-json/jet-tabs-api/v1/elementor-template","devMode":"false","isSelfRequest":""};
-//# sourceURL=jet-tabs-frontend-js-extra
-</script>
-<script type="text/rocketlazyloadscript" id="jet-tabs-frontend-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/jet-tabs/assets/js/jet-tabs-frontend.min.js?ver=2.3.4"></script>
-<script id="jet-blog-js-extra">
-var JetBlogSettings = {"ajaxurl":"https://blog.richardvanhooijdonk.com/en/the-impact-of-a-guest-speaker-elevate-your-event-with-expert-insights/?nocache=1792163488&jet_blog_ajax=1"};
-//# sourceURL=jet-blog-js-extra
-</script>
-<script type="text/rocketlazyloadscript" id="jet-blog-js" data-rocket-src="https://blog.richardvanhooijdonk.com/wp-content/plugins/jet-blog/assets/js/jet-blog.min.js?ver=2.4.11"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<div  id="ss-all-networks-popup" class="ss-popup-overlay" data-nonce="a8bb7c4848">
 			<div  class="ss-popup">
@@ -2455,11 +2050,8 @@ var JetBlogSettings = {"ajaxurl":"https://blog.richardvanhooijdonk.com/en/the-im
 		</div><!-- END #ss-copy-popup -->
 
 		<div  hidden data-wpu-integrity="5bfb2c2c283abcb93ff4c572e9ed4c62"></div>
-<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
-if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
-images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
-if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://blog.richardvanhooijdonk.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadImg(id,l){var s='https://i.ytimg.com/vi/ID/hqdefault.jpg'.replace("ID",id),img=document.createElement("img");if(true&&!l&&false){img.setAttribute("loading","lazy");img.setAttribute("src",s);}else if(true&&!l&&!false){img.setAttribute("data-lazy-src",s);}else{img.setAttribute("src",s);}img.setAttribute("width","480");img.setAttribute("height","360");return img;}function lazyLoadThumb(id,alt,l){if(!/^[A-Za-z0-9_-]{11}$/.test(id)){return null;}var frag=document.createDocumentFragment(),img=lazyLoadImg(id,l);img.setAttribute("alt",alt);frag.appendChild(img);var btn=document.createElement("button");btn.setAttribute("class","play");btn.setAttribute("aria-label","Play Youtube video");frag.appendChild(btn);return frag;}function lazyLoadYoutubeIframe(){var src=this.parentNode.dataset.src,url;try{url=new URL(src,"https://www.youtube.com");}catch(err){return;}if("https:"!==url.protocol&&"http:"!==url.protocol){return;}if(["youtube.com","www.youtube.com","youtube-nocookie.com","www.youtube-nocookie.com"].indexOf(url.hostname)===-1){return;}if(url.username||url.password||url.port){return;}if(!/^\/embed\/[A-Za-z0-9_-]{11}\/?$/.test(url.pathname)){return;}url=new URL("https://"+url.hostname+url.pathname.replace(/\/$/,""));var query=this.parentNode.dataset.query||"";new URLSearchParams(query).forEach(function(v,k){url.searchParams.set(k,v);});url.searchParams.set("autoplay","1");var e=document.createElement("iframe");e.setAttribute("src",url.href);e.setAttribute("frameborder","0");e.setAttribute("allowfullscreen","1");e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");this.parentNode.parentNode.replaceChild(e,this.parentNode);}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,frag,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++){u='https://i.ytimg.com/vi/ID/hqdefault.jpg'.replace("ID",a[t].dataset.id);l=exclusions.some(function(exclusion){return u.indexOf(exclusion)!==-1;});e=document.createElement("div");e.setAttribute("data-id",a[t].dataset.id);e.setAttribute("data-query",a[t].dataset.query);e.setAttribute("data-src",a[t].dataset.src);frag=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l);if(!frag){continue;}e.appendChild(frag);a[t].appendChild(e);e.querySelector(".play").onclick=lazyLoadYoutubeIframe;}});</script>
-<script>(()=>{class RocketElementorPreload{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}t(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this.i(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this.o(t)}catch(t){}})}o(t){const e=JSON.parse(t.dataset.settings),i=e.m||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let o=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this.l(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(o)})}i(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}l(t,e){this.i().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorPreload;requestAnimationFrame(t.t.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorPreload.run)})();</script></body>
+
+</body>
 </html>
 <!--
 Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
