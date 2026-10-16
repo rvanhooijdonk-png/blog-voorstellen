@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "16-10-2026 14:56",
+ "gebouwd": "16-10-2026 16:22",
  "overzicht": {
   "keten": [
    {
@@ -90,7 +90,7 @@
   "delen": {
    "Blog EN": {
     "klikken_7d": 147,
-    "vertoningen_7d": 23662,
+    "vertoningen_7d": 23889,
     "trend_pct": -3,
     "reeks_90d": [
      12.0,
@@ -188,7 +188,7 @@
    },
    "Blog NL": {
     "klikken_7d": 6,
-    "vertoningen_7d": 704,
+    "vertoningen_7d": 707,
     "trend_pct": -29,
     "reeks_90d": [
      0.0,
@@ -285,8 +285,8 @@
     "context": false
    },
    "Hoofdsite": {
-    "klikken_7d": 123,
-    "vertoningen_7d": 2459,
+    "klikken_7d": 124,
+    "vertoningen_7d": 2470,
     "trend_pct": 11,
     "reeks_90d": [
      2.0,
@@ -378,7 +378,7 @@
      21.71,
      19.57,
      18.57,
-     17.57
+     17.71
     ],
     "context": true
    }
@@ -387,22 +387,22 @@
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
     "klikken": 25,
-    "vertoningen": 626
+    "vertoningen": 627
    },
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 8,
-    "vertoningen": 833
+    "vertoningen": 839
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 8,
-    "vertoningen": 523
+    "vertoningen": 525
    },
    {
     "pad": "/en/sexbots-love-them-or-hate-them-they-are-coming/",
     "klikken": 7,
-    "vertoningen": 210
+    "vertoningen": 213
    },
    {
     "pad": "/chip-in-mijn-hand/",
@@ -412,7 +412,7 @@
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 5,
-    "vertoningen": 602
+    "vertoningen": 604
    },
    {
     "pad": "/en/six-unsexy-industries-where-ai-is-solving-real-problems/",
@@ -427,7 +427,7 @@
    {
     "pad": "/en/ai-gone-wrong-seven-unsettling-examples-that-show-how-ai-is-far-from-perfect/",
     "klikken": 4,
-    "vertoningen": 196
+    "vertoningen": 198
    },
    {
     "pad": "/en/six-ai-accidents-you-never-heard-of-but-need-to-know-about/",
