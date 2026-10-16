@@ -1,0 +1,553 @@
+{
+ "schema": "groeibord-publiek/1",
+ "gebouwd": "16-10-2026 14:56",
+ "overzicht": {
+  "keten": [
+   {
+    "stap": "1 Klik blog naar lezing of contact",
+    "status": "ontbreekt",
+    "toelichting": "gebeurtenis klik_naar_lezing (SEO-007, tagplan SEA via ONDERHOUD)"
+   },
+   {
+    "stap": "2 Aanvraag lezing",
+    "status": "ontbreekt",
+    "toelichting": "conversie lezing_aangevraagd met unieke aanvraag-ID"
+   },
+   {
+    "stap": "3 Gekwalificeerde aanvraag",
+    "status": "ontbreekt",
+    "toelichting": "definitie in conversieplan, bron CRM"
+   },
+   {
+    "stap": "4 Bevestigde boeking",
+    "status": "ontbreekt",
+    "toelichting": "CRM leidend; kanaalcijfers worden niet opgeteld"
+   }
+  ],
+  "kanalen": [
+   {
+    "naam": "SEO",
+    "eigenaar": "SEO/GEO-kanaal",
+    "plan_klaar": 1,
+    "plan_totaal": 5,
+    "kern_label": "klikken uit Google, blog, 7 dagen",
+    "kern_waarde": "153",
+    "kosten_status": "geen extra externe kosten"
+   },
+   {
+    "naam": "GEO",
+    "eigenaar": "SEO/GEO-kanaal",
+    "plan_klaar": 1,
+    "plan_totaal": 5,
+    "kern_label": "ChatGPT noemt Richard",
+    "kern_waarde": "4 van 10 antwoorden",
+    "kosten_status": "geen extra externe kosten"
+   },
+   {
+    "naam": "SEA",
+    "eigenaar": "SEA-kanaal",
+    "plan_klaar": 2,
+    "plan_totaal": 12,
+    "kern_label": "campagnes (details op het SEA-bord)",
+    "kern_waarde": "geen actief",
+    "kosten_status": "budget nog niet vastgesteld"
+   }
+  ]
+ },
+ "SEO": {
+  "plan": {
+   "klaar": 1,
+   "lopend": 3,
+   "wacht": 1,
+   "items": [
+    {
+     "titel": "Triage 520 niet-geindexeerde artikelen",
+     "status": "lopend",
+     "mijlpaal": "hermeting november"
+    },
+    {
+     "titel": "Titelmeting 143 nieuwe titels",
+     "status": "lopend",
+     "mijlpaal": "26-10 tussenstand, 11-11 eindmeting"
+    },
+    {
+     "titel": "Auteurspagina en auteursgegevens",
+     "status": "klaar",
+     "mijlpaal": "live 16-10"
+    },
+    {
+     "titel": "Interne links (483)",
+     "status": "wacht",
+     "mijlpaal": "na toestemming ONDERHOUD"
+    },
+    {
+     "titel": "Nieuwe artikelen als concept",
+     "status": "lopend",
+     "mijlpaal": "vanaf week 43"
+    }
+   ]
+  },
+  "delen": {
+   "Blog EN": {
+    "klikken_7d": 147,
+    "vertoningen_7d": 23662,
+    "trend_pct": -3,
+    "reeks_90d": [
+     12.0,
+     12.5,
+     14.0,
+     14.25,
+     14.8,
+     15.83,
+     17.0,
+     18.71,
+     21.86,
+     23.57,
+     25.29,
+     27.57,
+     29.0,
+     28.57,
+     27.86,
+     27.0,
+     27.29,
+     27.43,
+     24.71,
+     22.71,
+     22.86,
+     22.0,
+     20.71,
+     18.14,
+     17.14,
+     18.86,
+     19.0,
+     19.14,
+     19.0,
+     18.71,
+     20.57,
+     19.43,
+     17.57,
+     18.86,
+     17.43,
+     18.0,
+     18.29,
+     18.0,
+     19.71,
+     20.0,
+     19.43,
+     19.71,
+     19.14,
+     18.0,
+     17.57,
+     17.29,
+     17.57,
+     17.0,
+     17.43,
+     18.71,
+     19.14,
+     18.43,
+     19.29,
+     20.43,
+     20.0,
+     20.43,
+     20.57,
+     20.71,
+     23.57,
+     23.71,
+     23.86,
+     25.43,
+     25.86,
+     24.86,
+     27.0,
+     24.71,
+     24.29,
+     24.29,
+     23.43,
+     22.29,
+     22.86,
+     21.29,
+     22.86,
+     22.43,
+     22.86,
+     23.86,
+     24.86,
+     22.86,
+     21.86,
+     19.57,
+     20.43,
+     19.71,
+     18.43,
+     18.29,
+     20.57,
+     20.43,
+     20.86,
+     20.71,
+     21.29,
+     21.0
+    ],
+    "context": false
+   },
+   "Blog NL": {
+    "klikken_7d": 6,
+    "vertoningen_7d": 704,
+    "trend_pct": -29,
+    "reeks_90d": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.2,
+     0.17,
+     0.14,
+     0.29,
+     0.43,
+     0.43,
+     0.43,
+     0.29,
+     0.43,
+     0.43,
+     0.29,
+     0.14,
+     0.14,
+     0.14,
+     0.14,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.29,
+     0.29,
+     0.43,
+     0.43,
+     0.43,
+     0.57,
+     0.71,
+     0.43,
+     0.43,
+     0.43,
+     0.57,
+     0.57,
+     0.43,
+     0.43,
+     0.71,
+     0.86,
+     0.86,
+     0.71,
+     0.71,
+     0.71,
+     0.71,
+     0.43,
+     0.29,
+     0.29,
+     0.43,
+     0.43,
+     0.43,
+     0.57,
+     0.86,
+     1.0,
+     0.86,
+     0.71,
+     0.71,
+     0.86,
+     0.57,
+     0.57,
+     0.43,
+     0.57,
+     0.86,
+     0.86,
+     0.71,
+     0.86,
+     0.71,
+     0.86,
+     1.0,
+     0.86,
+     1.0,
+     1.0,
+     1.0,
+     1.14,
+     1.14,
+     1.86,
+     1.71,
+     1.57,
+     2.0,
+     2.0,
+     1.86,
+     2.14,
+     1.14,
+     1.57,
+     1.71,
+     1.43,
+     1.29,
+     1.14,
+     0.71,
+     0.86
+    ],
+    "context": false
+   },
+   "Hoofdsite": {
+    "klikken_7d": 123,
+    "vertoningen_7d": 2459,
+    "trend_pct": 11,
+    "reeks_90d": [
+     2.0,
+     2.0,
+     6.33,
+     7.75,
+     6.8,
+     6.17,
+     6.0,
+     5.86,
+     5.71,
+     5.14,
+     3.71,
+     4.86,
+     5.57,
+     5.29,
+     5.14,
+     5.29,
+     5.43,
+     6.43,
+     5.86,
+     5.57,
+     5.57,
+     6.0,
+     6.0,
+     5.86,
+     5.71,
+     5.71,
+     5.43,
+     5.43,
+     5.43,
+     5.71,
+     5.0,
+     4.86,
+     5.29,
+     5.57,
+     6.86,
+     6.71,
+     6.71,
+     7.14,
+     7.14,
+     6.57,
+     6.86,
+     5.71,
+     5.57,
+     5.57,
+     8.71,
+     9.86,
+     13.29,
+     17.29,
+     18.0,
+     17.86,
+     17.71,
+     16.71,
+     17.57,
+     15.0,
+     10.57,
+     9.71,
+     10.0,
+     10.14,
+     8.57,
+     8.86,
+     10.29,
+     12.43,
+     13.0,
+     13.29,
+     13.43,
+     14.0,
+     12.71,
+     13.0,
+     14.0,
+     14.29,
+     14.14,
+     13.57,
+     13.43,
+     14.43,
+     13.14,
+     13.29,
+     14.29,
+     15.0,
+     15.43,
+     16.86,
+     17.71,
+     19.0,
+     18.71,
+     22.71,
+     22.86,
+     23.71,
+     21.71,
+     19.57,
+     18.57,
+     17.57
+    ],
+    "context": true
+   }
+  },
+  "top": [
+   {
+    "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
+    "klikken": 25,
+    "vertoningen": 626
+   },
+   {
+    "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
+    "klikken": 8,
+    "vertoningen": 833
+   },
+   {
+    "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
+    "klikken": 8,
+    "vertoningen": 523
+   },
+   {
+    "pad": "/en/sexbots-love-them-or-hate-them-they-are-coming/",
+    "klikken": 7,
+    "vertoningen": 210
+   },
+   {
+    "pad": "/chip-in-mijn-hand/",
+    "klikken": 5,
+    "vertoningen": 25
+   },
+   {
+    "pad": "/en/human-microchipping-the-benefits-and-downsides/",
+    "klikken": 5,
+    "vertoningen": 602
+   },
+   {
+    "pad": "/en/six-unsexy-industries-where-ai-is-solving-real-problems/",
+    "klikken": 5,
+    "vertoningen": 32
+   },
+   {
+    "pad": "/en/ai-bloopers-artificial-intelligences-most-memorable-mistakes/",
+    "klikken": 4,
+    "vertoningen": 114
+   },
+   {
+    "pad": "/en/ai-gone-wrong-seven-unsettling-examples-that-show-how-ai-is-far-from-perfect/",
+    "klikken": 4,
+    "vertoningen": 196
+   },
+   {
+    "pad": "/en/six-ai-accidents-you-never-heard-of-but-need-to-know-about/",
+    "klikken": 4,
+    "vertoningen": 155
+   }
+  ],
+  "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
+ },
+ "GEO": {
+  "plan": {
+   "klaar": 1,
+   "lopend": 2,
+   "wacht": 2,
+   "items": [
+    {
+     "titel": "Wekelijkse meting koopvragen ChatGPT",
+     "status": "lopend",
+     "mijlpaal": "elke maandag"
+    },
+    {
+     "titel": "EN-artikelen bijwerken voor AI (batch 1 en 2)",
+     "status": "klaar",
+     "mijlpaal": "live 16-10"
+    },
+    {
+     "titel": "EN-artikelen bijwerken batch 3",
+     "status": "wacht",
+     "mijlpaal": "na 11-11"
+    },
+    {
+     "titel": "Pr-doelen en sprekerslijsten",
+     "status": "wacht",
+     "mijlpaal": "besluit Richard"
+    },
+    {
+     "titel": "Bing AI Performance voor de blog",
+     "status": "lopend",
+     "mijlpaal": "blog toevoegen in Bing"
+    }
+   ]
+  },
+  "chatgpt": {
+   "datum": "2026-10-16",
+   "genoemd": 4,
+   "geciteerd": 4,
+   "antwoorden": 10,
+   "vragen": 10
+  },
+  "google_ai": {
+   "waarde": 38026,
+   "periode": "14-07 t/m 13-10-2026, 3 maanden"
+  },
+  "copilot": {
+   "waarde": 168,
+   "periode": "7 dagen, hoofdsite, gelezen 16-10-2026"
+  },
+  "domeinen": [
+   "jarnoduursma.nl",
+   "richardvanhooijdonk.com",
+   "remygieling.nl",
+   "deborahnas.com",
+   "managementboek.nl",
+   "sprekershuys.nl",
+   "aihr.com",
+   "erikvanvulpen.com"
+  ],
+  "kosten_status": "geen extra externe kosten (meting via bestaand ChatGPT-abonnement)"
+ },
+ "SEA": {
+  "plan": {
+   "klaar": 2,
+   "lopend": 6,
+   "wacht": 4
+  },
+  "resultaat_status": "geen actieve campagnes; SEA levert de export aan",
+  "kosten_status": "budget nog niet vastgesteld"
+ },
+ "bronnen": [
+  {
+   "naam": "Search Console prestaties",
+   "eigenaar": "SEO/GEO",
+   "ritme": "dagelijks, laatste 2 dagen voorlopig",
+   "datum": "2026-10-15",
+   "status": "ok"
+  },
+  {
+   "naam": "ChatGPT koopvragen",
+   "eigenaar": "SEO/GEO",
+   "ritme": "wekelijks, maandag",
+   "datum": "2026-10-16",
+   "status": "ok"
+  },
+  {
+   "naam": "Google AI-functies",
+   "eigenaar": "SEO/GEO",
+   "ritme": "wekelijks, handmatig",
+   "datum": "13-10-2026",
+   "status": "handmatig"
+  },
+  {
+   "naam": "Copilot / Bing AI Performance",
+   "eigenaar": "SEO/GEO",
+   "ritme": "wekelijks, handmatig",
+   "datum": "16-10-2026",
+   "status": "handmatig"
+  },
+  {
+   "naam": "GA4 blog (klik naar lezing nog niet gemeten)",
+   "eigenaar": "SEO/GEO",
+   "ritme": "dagelijks",
+   "datum": "2026-10-15",
+   "status": "ok"
+  },
+  {
+   "naam": "SEA-export (sea-publiek.json)",
+   "eigenaar": "SEA",
+   "ritme": "wekelijks, maandag",
+   "datum": "-",
+   "status": "ontbreekt"
+  }
+ ]
+}
