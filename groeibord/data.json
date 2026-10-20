@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "19-10-2026 07:15",
+ "gebouwd": "20-10-2026 07:15",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "149",
+    "kern_waarde": "158",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,17 +89,16 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 147,
-    "vertoningen_7d": 25603,
-    "trend_pct": -1,
+    "klikken_7d": 155,
+    "vertoningen_7d": 27026,
+    "trend_pct": 4,
     "reeks_90d": [
-     15.0,
-     16.0,
-     17.67,
-     19.25,
-     20.2,
-     22.67,
-     23.57,
+     17.0,
+     19.0,
+     20.67,
+     21.5,
+     24.2,
+     25.0,
      25.29,
      27.57,
      29.0,
@@ -182,22 +181,22 @@
      21.57,
      21.71,
      21.43,
-     21.0
+     22.29,
+     22.14
     ],
     "context": false
    },
    "Blog NL": {
-    "klikken_7d": 2,
-    "vertoningen_7d": 682,
-    "trend_pct": -76,
+    "klikken_7d": 3,
+    "vertoningen_7d": 650,
+    "trend_pct": -64,
     "reeks_90d": [
-     0.0,
+     1.0,
      0.5,
      0.33,
-     0.25,
-     0.4,
      0.5,
-     0.43,
+     0.6,
+     0.5,
      0.43,
      0.29,
      0.43,
@@ -280,22 +279,22 @@
      0.86,
      0.43,
      0.29,
-     0.29
+     0.29,
+     0.43
     ],
     "context": false
    },
    "Hoofdsite": {
-    "klikken_7d": 104,
-    "vertoningen_7d": 2334,
-    "trend_pct": -12,
+    "klikken_7d": 105,
+    "vertoningen_7d": 2239,
+    "trend_pct": -10,
     "reeks_90d": [
-     12.0,
-     7.5,
-     6.0,
-     5.75,
-     4.8,
-     4.17,
-     5.14,
+     3.0,
+     3.0,
+     3.67,
+     3.0,
+     2.6,
+     4.0,
      3.71,
      4.86,
      5.57,
@@ -378,7 +377,8 @@
      18.29,
      15.29,
      15.14,
-     14.86
+     15.29,
+     15.0
     ],
     "context": true
    }
@@ -386,53 +386,53 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 31,
-    "vertoningen": 664
+    "klikken": 34,
+    "vertoningen": 687
    },
    {
     "pad": "/en/sexbots-love-them-or-hate-them-they-are-coming/",
-    "klikken": 9,
-    "vertoningen": 348
+    "klikken": 10,
+    "vertoningen": 365
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 7,
-    "vertoningen": 505
+    "vertoningen": 519
    },
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 5,
-    "vertoningen": 741
-   },
-   {
-    "pad": "/en/human-microchipping-the-benefits-and-downsides/",
-    "klikken": 5,
-    "vertoningen": 616
+    "vertoningen": 713
    },
    {
     "pad": "/en/ai-bloopers-artificial-intelligences-most-memorable-mistakes/",
     "klikken": 4,
-    "vertoningen": 123
+    "vertoningen": 139
    },
    {
-    "pad": "/en/six-unsexy-industries-where-ai-is-solving-real-problems/",
+    "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 4,
-    "vertoningen": 33
+    "vertoningen": 638
    },
    {
     "pad": "/en/top-10-intelligent-robots-that-improve-peoples-emotional-and-social-wellbeing/",
     "klikken": 4,
-    "vertoningen": 203
+    "vertoningen": 204
    },
    {
     "pad": "/en/25-business-leaders-who-inspire/",
     "klikken": 3,
-    "vertoningen": 348
+    "vertoningen": 357
    },
    {
     "pad": "/en/ai-gone-wrong-seven-unsettling-examples-that-show-how-ai-is-far-from-perfect/",
     "klikken": 3,
-    "vertoningen": 203
+    "vertoningen": 202
+   },
+   {
+    "pad": "/en/how-ai-is-transforming-the-entertainment-industry/",
+    "klikken": 3,
+    "vertoningen": 229
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
@@ -511,7 +511,7 @@
    "naam": "Search Console prestaties",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks, laatste 2 dagen voorlopig",
-   "datum": "2026-10-18",
+   "datum": "2026-10-19",
    "status": "ok"
   },
   {
@@ -539,7 +539,7 @@
    "naam": "GA4 blog (klik naar lezing nog niet gemeten)",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks",
-   "datum": "2026-10-18",
+   "datum": "2026-10-19",
    "status": "ok"
   },
   {
