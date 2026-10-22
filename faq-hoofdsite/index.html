@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Voorbeeld FAQ hoofdsite</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500;600;700&family=Wix+Madefor+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#3B86F0;--accent-deep:#2566C4;--accent-knop:#2E73D6;--accent-tint:#E4F0FD;--bg:#F2F8FE;--card:#FFFFFF;--card-soft:#EEF5FD;--dark:#16263F;--ink:#20344F;--ink-soft:#5C6E84;--line:#DCEAF6;--sand:#E8F1FC;--open-bg:#FFF6DB;--open-rand:#E7C35A;--open-ink:#5A4300;
+--sans:'Wix Madefor Text',system-ui,-apple-system,sans-serif;--serif:'Spline Sans',system-ui,sans-serif;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1B2E;--card:#16263F;--card-soft:#1B2E4B;--ink:#E6EEF8;--ink-soft:#A9B8CB;--line:#26395A;--accent:#6AA6F5;--accent-deep:#8DBBF8;--accent-tint:#1C3558;--open-bg:#3A3112;--open-rand:#8A7224;--open-ink:#F5E3A6;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1B2E;--card:#16263F;--card-soft:#1B2E4B;--ink:#E6EEF8;--ink-soft:#A9B8CB;--line:#26395A;--accent:#6AA6F5;--accent-deep:#8DBBF8;--accent-tint:#1C3558;--open-bg:#3A3112;--open-rand:#8A7224;--open-ink:#F5E3A6;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans)}
+.balk{background:var(--dark);color:#fff;font-size:14px;padding:10px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.balk button{font:600 13px var(--sans);border:1px solid #ffffff55;background:transparent;color:#fff;border-radius:999px;padding:6px 14px;cursor:pointer}
+.balk button[aria-pressed="true"]{background:#fff;color:var(--dark)}
+main{max-width:820px;margin:0 auto;padding:40px 16px 72px}
+.label{font:600 13px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 8px}
+h1{font:700 clamp(30px,5vw,46px)/1.12 var(--serif);margin:0 0 12px;color:var(--ink)}
+.sub{color:var(--ink-soft);font-size:19px;margin:0 0 32px}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;margin:0 0 12px;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:18px 52px 18px 22px;font:600 18px/1.35 var(--serif);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font:500 24px var(--sans);color:var(--accent)}
+details[open] summary::after{content:"\2212"}
+.antw{padding:0 22px 18px}
+.antw p{margin:0 0 12px}
+a{color:var(--accent-deep)}
+.open{background:var(--open-bg);border:1px dashed var(--open-rand);color:var(--open-ink);border-radius:12px;padding:12px 14px;font-size:15px;margin-top:8px}
+.open p{margin:6px 0 0}
+.cta{margin-top:40px;background:var(--card-soft);border:1px solid var(--line);border-radius:24px;padding:28px 24px}
+.cta h2{font:700 26px/1.2 var(--serif);margin:0 0 8px}
+.knoppen{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.knop,.knop-rand{font:600 15px var(--sans);text-decoration:none;border-radius:999px;padding:12px 22px}
+.knop{background:var(--accent-knop);color:#fff}
+.knop:hover{background:var(--accent-deep)}
+.knop-rand{border:1.5px solid var(--accent);color:var(--accent-deep)}
+.uitleg{max-width:820px;margin:0 auto;padding:0 16px 48px;color:var(--ink-soft);font-size:14px}
+.uitleg pre{white-space:pre-wrap;word-break:break-word;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:12px;max-height:320px;overflow:auto}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "@id": "https://richardvanhooijdonk.com/veelgestelde-vragen#faq",
+ "url": "https://richardvanhooijdonk.com/veelgestelde-vragen",
+ "inLanguage": "nl",
+ "about": {
+  "@id": "https://richardvanhooijdonk.com/#richard"
+ },
+ "publisher": {
+  "@id": "https://richardvanhooijdonk.com/#organisatie"
+ },
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Waarover spreekt Richard van Hooijdonk?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Over AI en nieuwe technologie, de organisatie van de toekomst en leiderschap in tijden van AI. Er zijn zes lezingen: De AI-revolutie, Agentic AI, De organisatie van de toekomst, Leiderschap en management in het AI-tijdperk, Cybercrime in het AI-tijdperk en Trends 2040. Het criminele gebruik van dezelfde technologie, van gekloonde stemmen tot nagemaakte video's, is een vast onderdeel van elke keynote."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Voor wie is een keynote bedoeld?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Voor organisaties die een bijeenkomst houden voor klanten, relaties of medewerkers: een congres, een klantenevenement, een personeelsdag, een beurs of een sessie in de directiekamer. De opdrachtgevers lopen uiteen van wereldwijde multinationals en internationale overheden tot kleine organisaties. Meer dan 400 merken werkten met hem samen. Een selectie staat op Klanten."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kan de lezing worden afgestemd op onze sector?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. Elke lezing is af te stemmen op jouw sector, en er zijn varianten voor 20 sectoren, waaronder de zorg, de overheid, de logistiek en het onderwijs. Alle sectoren staan op Alle lezingen. Voorbeelden en accenten worden afgestemd op jouw sector en jouw publiek. Daarvoor vragen we eerst hoe je evenement eruitziet, wie er in de zaal zitten en welke thema's jou interesseren."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hoe lang duurt een lezing?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "30, 45 of 60 minuten, of langer, met ruimte voor vragen. In 45 minuten kan een managementteam bijvoorbeeld de keynote Agentic AI krijgen: wat AI-agents zijn, wat ze zelf mogen en wanneer een mens ingrijpt."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Spreekt hij ook in het Engels?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. Richard spreekt in het Nederlands en het Engels en stond in meer dan 30 landen op het podium, onder meer op de World Police Summit in Dubai."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kan het op locatie en online?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja, allebei. Een keynote kan in de zaal, op jouw locatie, of online als webinar. In het voorstel staat welke vorm er voor jouw evenement is afgesproken."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wat is het verschil tussen een keynote, een masterclass en een boardroomsessie?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Een keynote is de lezing voor de hele zaal. Een masterclass is er ook inclusief workshop. Een boardroomsessie is een sessie in de directiekamer, met het bestuur of de directie. Welke vorm past, bespreek je in het kennismakingsgesprek."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hoe boek je een keynote?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Via het aanvraagformulier, per mail via talks@vanhooijdonk.com, telefonisch op 085 303 0792 (internationaal +31 85 303 0792) of via WhatsApp. Een paar zinnen over je evenement zijn genoeg om te beginnen. Daarna volgen een gesprek over je evenement, een voorstel op papier en een kennismaking met Richard, waarin jullie samen brainstormen over de lezing. Die kennismaking kost je niets. Boekingen lopen via RVH Speaking B.V."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hoe snel krijg je antwoord?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Op werkdagen binnen een uur, en nog dezelfde dag een voorstel. Dat voorstel noemt het onderwerp, de vorm, de duur en de prijs, zodat je het intern kunt bespreken."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wat kost een keynote?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Keynotes zijn er vanaf € 3.500 (webinars). De prijs van een keynote is afhankelijk van locatie, duur en eventueel gewenst maatwerk. Stuur je datum en een korte beschrijving van de zaal mee, dan staat in het voorstel wat de lezing voor jouw evenement kost."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Moet de datum al vastliggen?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nee. Geef aan welke periode je overweegt, dan bespreken we de beschikbare data met je."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Welke ervaring heeft Richard van Hooijdonk?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Hij gaf meer dan 3.000 keynotes voor meer dan 650.000 deelnemers in meer dan 30 landen. Hij is futurist, trendwatcher en internationaal keynotespreker, en is regelmatig te gast op radio en televisie. Wat opdrachtgevers over zijn keynotes zeggen, onder meer de Europese Commissie, de Politie, Deloitte, Heineken en Atos, staat op Reviews."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Welk boek schreef hij?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "De bestseller De wereld van morgen (Bertram + de Leeuw, 2017), over hoe technologie ons werk en ons dagelijks leven verandert. Daarnaast schreef hij meer dan 2.000 artikelen op zijn blog over AI, technologie en de toekomst."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Mogen we de bio en foto's gebruiken in onze aankondiging?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. De bio, de aankondiging voor de dagvoorzitter, de foto's en het logo staan op Voor organisatoren en pers en zijn vrij te gebruiken voor de aankondiging van je evenement. Daar staan ook de technische wensen voor het podium."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div class="balk"><span>Voorbeeld voor richardvanhooijdonk.com, niet live (noindex). Gele vakken zijn open vragen en komen niet op de pagina.</span>
+<span><button type="button" data-taal="nl" aria-pressed="true">NL</button> <button type="button" data-taal="en" aria-pressed="false">EN</button> <button type="button" id="thema">Licht/donker</button></span></div>
+<main>
+<section class="taal" lang="nl" id="taal-nl">
+  <header class="kop"><p class="label">Veelgestelde vragen</p><h1>Een keynote boeken: de antwoorden</h1><p class="sub">Alles wat je wilt weten voordat je een lezing aanvraagt.</p></header>
+  <div class="lijst"><details open><summary>Waarover spreekt Richard van Hooijdonk?</summary><div class="antw"><p>Over AI en nieuwe technologie, de organisatie van de toekomst en leiderschap in tijden van AI. Er zijn zes lezingen: <a href="https://richardvanhooijdonk.com/lezing-de-ai-revolutie">De AI-revolutie</a>, <a href="https://richardvanhooijdonk.com/lezing-agentic-ai">Agentic AI</a>, <a href="https://richardvanhooijdonk.com/lezing-de-organisatie-van-de-toekomst">De organisatie van de toekomst</a>, <a href="https://richardvanhooijdonk.com/lezing-leiderschap-en-management">Leiderschap en management in het AI-tijdperk</a>, <a href="https://richardvanhooijdonk.com/lezing-cybercrime">Cybercrime in het AI-tijdperk</a> en <a href="https://richardvanhooijdonk.com/lezing-trends-2040">Trends 2040</a>.</p><p>Het criminele gebruik van dezelfde technologie, van gekloonde stemmen tot nagemaakte video's, is een vast onderdeel van elke keynote.</p></div></details><details><summary>Voor wie is een keynote bedoeld?</summary><div class="antw"><p>Voor organisaties die een bijeenkomst houden voor klanten, relaties of medewerkers: een congres, een klantenevenement, een personeelsdag, een beurs of een sessie in de directiekamer.</p><p>De opdrachtgevers lopen uiteen van wereldwijde multinationals en internationale overheden tot kleine organisaties. Meer dan 400 merken werkten met hem samen. Een selectie staat op <a href="https://richardvanhooijdonk.com/klanten">Klanten</a>.</p></div></details><details><summary>Kan de lezing worden afgestemd op onze sector?</summary><div class="antw"><p>Ja. Elke lezing is af te stemmen op jouw sector, en er zijn varianten voor 20 sectoren, waaronder <a href="https://richardvanhooijdonk.com/sector-zorg">de zorg</a>, <a href="https://richardvanhooijdonk.com/sector-overheid">de overheid</a>, <a href="https://richardvanhooijdonk.com/sector-logistiek">de logistiek</a> en <a href="https://richardvanhooijdonk.com/sector-onderwijs">het onderwijs</a>. Alle sectoren staan op <a href="https://richardvanhooijdonk.com/alle-lezingen">Alle lezingen</a>.</p><p>Voorbeelden en accenten worden afgestemd op jouw sector en jouw publiek. Daarvoor vragen we eerst hoe je evenement eruitziet, wie er in de zaal zitten en welke thema's jou interesseren.</p></div></details><details><summary>Hoe lang duurt een lezing?</summary><div class="antw"><p>30, 45 of 60 minuten, of langer, met ruimte voor vragen. In 45 minuten kan een managementteam bijvoorbeeld de keynote <a href="https://richardvanhooijdonk.com/lezing-agentic-ai">Agentic AI</a> krijgen: wat AI-agents zijn, wat ze zelf mogen en wanneer een mens ingrijpt.</p></div></details><details><summary>Spreekt hij ook in het Engels?</summary><div class="antw"><p>Ja. Richard spreekt in het Nederlands en het Engels en stond in meer dan 30 landen op het podium, onder meer op de World Police Summit in Dubai.</p></div></details><details><summary>Kan het op locatie en online?</summary><div class="antw"><p>Ja, allebei. Een keynote kan in de zaal, op jouw locatie, of online als webinar. In het voorstel staat welke vorm er voor jouw evenement is afgesproken.</p></div></details><details><summary>Wat is het verschil tussen een keynote, een masterclass en een boardroomsessie?</summary><div class="antw"><p>Een keynote is de lezing voor de hele zaal. Een masterclass is er ook inclusief workshop. Een boardroomsessie is een sessie in de directiekamer, met het bestuur of de directie.</p><p>Welke vorm past, bespreek je in het kennismakingsgesprek.</p><div class="open"><strong>Open vraag voor Richard (niet op de pagina)</strong><p>[RICHARD: duur, groepsgrootte en opzet van een masterclass en een boardroomsessie. Op de site staat alleen &quot;inclusief workshop beschikbaar&quot; en &quot;sessies in de boardroom&quot;; zonder jouw antwoord blijft het bij deze drie zinnen.]</p></div></div></details><details><summary>Hoe boek je een keynote?</summary><div class="antw"><p>Via het <a href="https://richardvanhooijdonk.com/contact">aanvraagformulier</a>, per mail via <a href="mailto:talks@vanhooijdonk.com">talks@vanhooijdonk.com</a>, telefonisch op 085 303 0792 (internationaal +31 85 303 0792) of via WhatsApp. Een paar zinnen over je evenement zijn genoeg om te beginnen.</p><p>Daarna volgen een gesprek over je evenement, een voorstel op papier en een kennismaking met Richard, waarin jullie samen brainstormen over de lezing. Die kennismaking kost je niets. Boekingen lopen via RVH Speaking B.V.</p></div></details><details><summary>Hoe snel krijg je antwoord?</summary><div class="antw"><p>Op werkdagen binnen een uur, en nog dezelfde dag een voorstel. Dat voorstel noemt het onderwerp, de vorm, de duur en de prijs, zodat je het intern kunt bespreken.</p></div></details><details><summary>Wat kost een keynote?</summary><div class="antw"><p>Keynotes zijn er vanaf € 3.500 (webinars). De prijs van een keynote is afhankelijk van locatie, duur en eventueel gewenst maatwerk. Stuur je datum en een korte beschrijving van de zaal mee, dan staat in het voorstel wat de lezing voor jouw evenement kost.</p><div class="open"><strong>Open vraag voor Richard (niet op de pagina)</strong><p>[RICHARD: mag er een prijsindicatie voor een keynote op locatie bij (bijvoorbeeld &quot;vanaf € ...&quot; of een bandbreedte)? AI-assistenten beantwoorden de koopvraag &quot;wat kost een keynote&quot; nu met bedragen van bureaus.]</p><p>[RICHARD: hoe gaan reis- en verblijfkosten, in Nederland en in het buitenland? Staan die in het voorstel of zitten ze in de prijs?]</p></div></div></details><details><summary>Moet de datum al vastliggen?</summary><div class="antw"><p>Nee. Geef aan welke periode je overweegt, dan bespreken we de beschikbare data met je.</p><div class="open"><strong>Open vraag voor Richard (niet op de pagina)</strong><p>[RICHARD: hoe ver vooruit wordt er meestal geboekt, en kan een keynote op korte termijn (binnen enkele weken)?]</p></div></div></details><details><summary>Welke ervaring heeft Richard van Hooijdonk?</summary><div class="antw"><p>Hij gaf meer dan 3.000 keynotes voor meer dan 650.000 deelnemers in meer dan 30 landen. Hij is futurist, trendwatcher en internationaal keynotespreker, en is regelmatig te gast op radio en televisie.</p><p>Wat opdrachtgevers over zijn keynotes zeggen, onder meer de Europese Commissie, de Politie, Deloitte, Heineken en Atos, staat op <a href="https://richardvanhooijdonk.com/reviews">Reviews</a>.</p><div class="open"><strong>Open vraag voor Richard (niet op de pagina)</strong><p>[RICHARD: mogen er één of twee reviews met naam en functie in deze FAQ (bijvoorbeeld van de Douane of Atos, die al op de site staan)? De stijlgids houdt reviews nu buiten de basisteksten.]</p></div></div></details><details><summary>Welk boek schreef hij?</summary><div class="antw"><p>De bestseller <em>De wereld van morgen</em> (Bertram + de Leeuw, 2017), over hoe technologie ons werk en ons dagelijks leven verandert. Daarnaast schreef hij meer dan 2.000 artikelen op zijn <a href="https://blog.richardvanhooijdonk.com/">blog</a> over AI, technologie en de toekomst.</p></div></details><details><summary>Mogen we de bio en foto&#x27;s gebruiken in onze aankondiging?</summary><div class="antw"><p>Ja. De bio, de aankondiging voor de dagvoorzitter, de foto's en het logo staan op <a href="https://richardvanhooijdonk.com/organisatoren-en-pers">Voor organisatoren en pers</a> en zijn vrij te gebruiken voor de aankondiging van je evenement. Daar staan ook de technische wensen voor het podium.</p></div></details></div>
+  <aside class="cta"><h2>Staat je vraag er niet bij?</h2><p>Bel 085 303 0792, mail talks@vanhooijdonk.com of stuur een paar regels over je evenement via het formulier.</p>
+  <p class="knoppen"><a class="knop" href="https://richardvanhooijdonk.com/contact">Vraag een lezing aan</a><a class="knop-rand" href="tel:+31853030792">085 303 0792</a></p></aside>
+</section><section class="taal" lang="en" id="taal-en" hidden>
+  <header class="kop"><p class="label">FAQ</p><h1>Booking a keynote: the answers</h1><p class="sub">What organisers usually want to know before they get in touch.</p></header>
+  <div class="lijst"><details open><summary>What does Richard van Hooijdonk speak about?</summary><div class="antw"><p>AI and new technology, the organisation of the future and leadership in the age of AI. There are six keynotes: <a href="https://richardvanhooijdonk.com/en/keynote-the-ai-revolution">The AI Revolution</a>, <a href="https://richardvanhooijdonk.com/en/keynote-agentic-ai">Agentic AI</a>, <a href="https://richardvanhooijdonk.com/en/keynote-the-organisation-of-the-future">The Organisation of the Future</a>, <a href="https://richardvanhooijdonk.com/en/keynote-leadership-and-management">Leadership and Management in the AI Era</a>, <a href="https://richardvanhooijdonk.com/en/keynote-cybercrime">Cybercrime in the AI Era</a> and <a href="https://richardvanhooijdonk.com/en/keynote-trends-2040">Trends 2040</a>.</p><p>Every keynote also covers the criminal use of the same technology, from cloned voices to fake videos.</p></div></details><details><summary>Who is a keynote for?</summary><div class="antw"><p>Organisations holding an event for customers, partners or employees: a conference, a customer event, a staff day, a trade fair or a session in the boardroom.</p><p>Clients range from global multinationals and international governments to small organisations. More than 400 brands have worked with him.</p></div></details><details><summary>Can the keynote be tailored to our sector?</summary><div class="antw"><p>Yes. Every keynote can be tailored to your sector, and there are versions for 20 sectors, including healthcare, government, logistics and education.</p><p>Examples and emphasis are matched to your sector and your audience. To get there, we first ask what your event looks like, who will be in the audience and which themes interest you.</p></div></details><details><summary>How long is a keynote?</summary><div class="antw"><p>30, 45 or 60 minutes, or longer, with time for questions. A 45-minute slot is enough, for example, to take a management team through <a href="https://richardvanhooijdonk.com/en/keynote-agentic-ai">Agentic AI</a>: what AI agents are, what they may do on their own and when a person steps in.</p></div></details><details><summary>Does he speak in English?</summary><div class="antw"><p>Yes. Richard speaks in English and Dutch, and has been on stage in more than 30 countries, including at the World Police Summit in Dubai.</p></div></details><details><summary>Can he speak in person and online?</summary><div class="antw"><p>Both. A keynote can be given in the hall, at your venue, or online as a webinar. The proposal states which format has been agreed for your event.</p></div></details><details><summary>What is the difference between a keynote, a masterclass and a boardroom session?</summary><div class="antw"><p>A keynote is the talk for the whole audience. A masterclass is also available with a workshop. A boardroom session takes place in the boardroom, with the board or the management team.</p><p>Which format fits is something you decide together in the introductory call.</p><div class="open"><strong>Open question for Richard (not on the page)</strong><p>[RICHARD: length, group size and set-up of a masterclass and a boardroom session. The site only says &quot;workshop available&quot; and &quot;boardroom sessions&quot;; without your answer the text stays at these three sentences.]</p></div></div></details><details><summary>How do I book a keynote?</summary><div class="antw"><p>Use the <a href="https://richardvanhooijdonk.com/en/contact">enquiry form</a>, email <a href="mailto:talks@vanhooijdonk.com">talks@vanhooijdonk.com</a>, call +31 85 303 0792 or send a WhatsApp message. A few lines about your event are enough to get started.</p><p>Next come a conversation about your event, a written proposal and an introductory call with Richard to brainstorm the keynote together. There's no charge for that call. Bookings are handled by RVH Speaking B.V.</p></div></details><details><summary>How quickly will I hear back?</summary><div class="antw"><p>On working days within the hour, with a proposal the same day. The proposal covers the topic, format, length and fee, so you can talk it over with your colleagues.</p></div></details><details><summary>How much does a keynote cost?</summary><div class="antw"><p>Keynotes start from €3,500 (webinars). The fee for a keynote depends on location, duration and any tailoring you would like. Send your date and a short description of the audience, and the proposal will give the fee for your event.</p><div class="open"><strong>Open question for Richard (not on the page)</strong><p>[RICHARD: may we add a fee indication for an in-person keynote (for example &quot;from € ...&quot; or a range)? AI assistants currently answer the question &quot;what does a keynote cost&quot; with figures from agencies.]</p><p>[RICHARD: how are travel and accommodation handled, in the Netherlands and abroad? Listed in the proposal or included in the fee?]</p></div></div></details><details><summary>Does the date need to be fixed?</summary><div class="antw"><p>No. Tell us which period you have in mind and we'll go through the available dates with you.</p><div class="open"><strong>Open question for Richard (not on the page)</strong><p>[RICHARD: how far ahead do clients usually book, and is a keynote at short notice (within a few weeks) possible?]</p></div></div></details><details><summary>What experience does Richard van Hooijdonk have?</summary><div class="antw"><p>He has delivered more than 3,000 keynotes for more than 650,000 participants in more than 30 countries. He is a futurist, trend watcher and international keynote speaker, and a regular guest on radio and television.</p><p>What clients such as the European Commission, the Dutch police, Deloitte, Heineken and Atos say about his keynotes is on the <a href="https://richardvanhooijdonk.com/reviews">reviews page</a>.</p><div class="open"><strong>Open question for Richard (not on the page)</strong><p>[RICHARD: may we quote one or two named reviews here (for example Customs or Atos, already on the site)? The style guide currently keeps reviews out of the core copy.]</p></div></div></details><details><summary>Has he written a book?</summary><div class="antw"><p>Yes: the bestseller <em>De wereld van morgen</em> (The World of Tomorrow; Bertram + de Leeuw, 2017), on how technology changes our work and daily lives. He has also written more than 2,000 articles on his <a href="https://blog.richardvanhooijdonk.com/en/">blog</a> about AI, technology and the future.</p></div></details><details><summary>Can we use the biography and photos in our announcement?</summary><div class="antw"><p>Yes. The biography, the introduction for the host, the photos and the logo are on <a href="https://richardvanhooijdonk.com/en/organisers-and-press">For organisers and press</a> and are free to use to promote your event. The technical requirements for the stage are there too.</p></div></details></div>
+  <aside class="cta"><h2>Question not listed?</h2><p>Call +31 85 303 0792, email talks@vanhooijdonk.com or send a few lines about your event through the form.</p>
+  <p class="knoppen"><a class="knop" href="https://richardvanhooijdonk.com/en/contact">Request a keynote</a><a class="knop-rand" href="tel:+31853030792">085 303 0792</a></p></aside>
+</section>
+</main>
+<div class="uitleg"><details><summary>FAQPage-JSON-LD (NL en EN)</summary><pre>[
+ {
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;FAQPage&quot;,
+  &quot;@id&quot;: &quot;https://richardvanhooijdonk.com/veelgestelde-vragen#faq&quot;,
+  &quot;url&quot;: &quot;https://richardvanhooijdonk.com/veelgestelde-vragen&quot;,
+  &quot;inLanguage&quot;: &quot;nl&quot;,
+  &quot;about&quot;: {
+   &quot;@id&quot;: &quot;https://richardvanhooijdonk.com/#richard&quot;
+  },
+  &quot;publisher&quot;: {
+   &quot;@id&quot;: &quot;https://richardvanhooijdonk.com/#organisatie&quot;
+  },
+  &quot;mainEntity&quot;: [
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Waarover spreekt Richard van Hooijdonk?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Over AI en nieuwe technologie, de organisatie van de toekomst en leiderschap in tijden van AI. Er zijn zes lezingen: De AI-revolutie, Agentic AI, De organisatie van de toekomst, Leiderschap en management in het AI-tijdperk, Cybercrime in het AI-tijdperk en Trends 2040. Het criminele gebruik van dezelfde technologie, van gekloonde stemmen tot nagemaakte video&#x27;s, is een vast onderdeel van elke keynote.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Voor wie is een keynote bedoeld?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Voor organisaties die een bijeenkomst houden voor klanten, relaties of medewerkers: een congres, een klantenevenement, een personeelsdag, een beurs of een sessie in de directiekamer. De opdrachtgevers lopen uiteen van wereldwijde multinationals en internationale overheden tot kleine organisaties. Meer dan 400 merken werkten met hem samen. Een selectie staat op Klanten.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Kan de lezing worden afgestemd op onze sector?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Ja. Elke lezing is af te stemmen op jouw sector, en er zijn varianten voor 20 sectoren, waaronder de zorg, de overheid, de logistiek en het onderwijs. Alle sectoren staan op Alle lezingen. Voorbeelden en accenten worden afgestemd op jouw sector en jouw publiek. Daarvoor vragen we eerst hoe je evenement eruitziet, wie er in de zaal zitten en welke thema&#x27;s jou interesseren.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Hoe lang duurt een lezing?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;30, 45 of 60 minuten, of langer, met ruimte voor vragen. In 45 minuten kan een managementteam bijvoorbeeld de keynote Agentic AI krijgen: wat AI-agents zijn, wat ze zelf mogen en wanneer een mens ingrijpt.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Spreekt hij ook in het Engels?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Ja. Richard spreekt in het Nederlands en het Engels en stond in meer dan 30 landen op het podium, onder meer op de World Police Summit in Dubai.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Kan het op locatie en online?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Ja, allebei. Een keynote kan in de zaal, op jouw locatie, of online als webinar. In het voorstel staat welke vorm er voor jouw evenement is afgesproken.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Wat is het verschil tussen een keynote, een masterclass en een boardroomsessie?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Een keynote is de lezing voor de hele zaal. Een masterclass is er ook inclusief workshop. Een boardroomsessie is een sessie in de directiekamer, met het bestuur of de directie. Welke vorm past, bespreek je in het kennismakingsgesprek.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Hoe boek je een keynote?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Via het aanvraagformulier, per mail via talks@vanhooijdonk.com, telefonisch op 085 303 0792 (internationaal +31 85 303 0792) of via WhatsApp. Een paar zinnen over je evenement zijn genoeg om te beginnen. Daarna volgen een gesprek over je evenement, een voorstel op papier en een kennismaking met Richard, waarin jullie samen brainstormen over de lezing. Die kennismaking kost je niets. Boekingen lopen via RVH Speaking B.V.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Hoe snel krijg je antwoord?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Op werkdagen binnen een uur, en nog dezelfde dag een voorstel. Dat voorstel noemt het onderwerp, de vorm, de duur en de prijs, zodat je het intern kunt bespreken.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Wat kost een keynote?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Keynotes zijn er vanaf € 3.500 (webinars). De prijs van een keynote is afhankelijk van locatie, duur en eventueel gewenst maatwerk. Stuur je datum en een korte beschrijving van de zaal mee, dan staat in het voorstel wat de lezing voor jouw evenement kost.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Moet de datum al vastliggen?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Nee. Geef aan welke periode je overweegt, dan bespreken we de beschikbare data met je.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Welke ervaring heeft Richard van Hooijdonk?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Hij gaf meer dan 3.000 keynotes voor meer dan 650.000 deelnemers in meer dan 30 landen. Hij is futurist, trendwatcher en internationaal keynotespreker, en is regelmatig te gast op radio en televisie. Wat opdrachtgevers over zijn keynotes zeggen, onder meer de Europese Commissie, de Politie, Deloitte, Heineken en Atos, staat op Reviews.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Welk boek schreef hij?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;De bestseller De wereld van morgen (Bertram + de Leeuw, 2017), over hoe technologie ons werk en ons dagelijks leven verandert. Daarnaast schreef hij meer dan 2.000 artikelen op zijn blog over AI, technologie en de toekomst.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Mogen we de bio en foto&#x27;s gebruiken in onze aankondiging?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Ja. De bio, de aankondiging voor de dagvoorzitter, de foto&#x27;s en het logo staan op Voor organisatoren en pers en zijn vrij te gebruiken voor de aankondiging van je evenement. Daar staan ook de technische wensen voor het podium.&quot;
+    }
+   }
+  ]
+ },
+ {
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;FAQPage&quot;,
+  &quot;@id&quot;: &quot;https://richardvanhooijdonk.com/en/faq#faq&quot;,
+  &quot;url&quot;: &quot;https://richardvanhooijdonk.com/en/faq&quot;,
+  &quot;inLanguage&quot;: &quot;en&quot;,
+  &quot;about&quot;: {
+   &quot;@id&quot;: &quot;https://richardvanhooijdonk.com/#richard&quot;
+  },
+  &quot;publisher&quot;: {
+   &quot;@id&quot;: &quot;https://richardvanhooijdonk.com/#organisatie&quot;
+  },
+  &quot;mainEntity&quot;: [
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;What does Richard van Hooijdonk speak about?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;AI and new technology, the organisation of the future and leadership in the age of AI. There are six keynotes: The AI Revolution, Agentic AI, The Organisation of the Future, Leadership and Management in the AI Era, Cybercrime in the AI Era and Trends 2040. Every keynote also covers the criminal use of the same technology, from cloned voices to fake videos.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Who is a keynote for?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Organisations holding an event for customers, partners or employees: a conference, a customer event, a staff day, a trade fair or a session in the boardroom. Clients range from global multinationals and international governments to small organisations. More than 400 brands have worked with him.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Can the keynote be tailored to our sector?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Yes. Every keynote can be tailored to your sector, and there are versions for 20 sectors, including healthcare, government, logistics and education. Examples and emphasis are matched to your sector and your audience. To get there, we first ask what your event looks like, who will be in the audience and which themes interest you.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;How long is a keynote?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;30, 45 or 60 minutes, or longer, with time for questions. A 45-minute slot is enough, for example, to take a management team through Agentic AI: what AI agents are, what they may do on their own and when a person steps in.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Does he speak in English?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Yes. Richard speaks in English and Dutch, and has been on stage in more than 30 countries, including at the World Police Summit in Dubai.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Can he speak in person and online?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Both. A keynote can be given in the hall, at your venue, or online as a webinar. The proposal states which format has been agreed for your event.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;What is the difference between a keynote, a masterclass and a boardroom session?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;A keynote is the talk for the whole audience. A masterclass is also available with a workshop. A boardroom session takes place in the boardroom, with the board or the management team. Which format fits is something you decide together in the introductory call.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;How do I book a keynote?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Use the enquiry form, email talks@vanhooijdonk.com, call +31 85 303 0792 or send a WhatsApp message. A few lines about your event are enough to get started. Next come a conversation about your event, a written proposal and an introductory call with Richard to brainstorm the keynote together. There&#x27;s no charge for that call. Bookings are handled by RVH Speaking B.V.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;How quickly will I hear back?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;On working days within the hour, with a proposal the same day. The proposal covers the topic, format, length and fee, so you can talk it over with your colleagues.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;How much does a keynote cost?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Keynotes start from €3,500 (webinars). The fee for a keynote depends on location, duration and any tailoring you would like. Send your date and a short description of the audience, and the proposal will give the fee for your event.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Does the date need to be fixed?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;No. Tell us which period you have in mind and we&#x27;ll go through the available dates with you.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;What experience does Richard van Hooijdonk have?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;He has delivered more than 3,000 keynotes for more than 650,000 participants in more than 30 countries. He is a futurist, trend watcher and international keynote speaker, and a regular guest on radio and television. What clients such as the European Commission, the Dutch police, Deloitte, Heineken and Atos say about his keynotes is on the reviews page.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Has he written a book?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Yes: the bestseller De wereld van morgen (The World of Tomorrow; Bertram + de Leeuw, 2017), on how technology changes our work and daily lives. He has also written more than 2,000 articles on his blog about AI, technology and the future.&quot;
+    }
+   },
+   {
+    &quot;@type&quot;: &quot;Question&quot;,
+    &quot;name&quot;: &quot;Can we use the biography and photos in our announcement?&quot;,
+    &quot;acceptedAnswer&quot;: {
+     &quot;@type&quot;: &quot;Answer&quot;,
+     &quot;text&quot;: &quot;Yes. The biography, the introduction for the host, the photos and the logo are on For organisers and press and are free to use to promote your event. The technical requirements for the stage are there too.&quot;
+    }
+   }
+  ]
+ }
+]</pre></details></div>
+<script>
+document.querySelectorAll('[data-taal]').forEach(function(b){b.addEventListener('click',function(){
+ var t=b.getAttribute('data-taal');document.documentElement.lang=t;
+ document.querySelectorAll('.taal').forEach(function(s){s.hidden=s.lang!==t});
+ document.querySelectorAll('[data-taal]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});})});
+document.getElementById('thema').addEventListener('click',function(){
+ var r=document.documentElement,d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+ r.setAttribute('data-theme',d==='dark'?'light':'dark');});
+</script>
+</body>
+</html>
