@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "21-10-2026 07:15",
+ "gebouwd": "22-10-2026 07:15",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "166",
+    "kern_waarde": "179",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,17 +89,16 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 162,
-    "vertoningen_7d": 28192,
-    "trend_pct": 7,
+    "klikken_7d": 175,
+    "vertoningen_7d": 30085,
+    "trend_pct": 13,
     "reeks_90d": [
-     21.0,
-     22.5,
-     23.0,
-     26.0,
-     26.6,
-     26.67,
-     27.57,
+     24.0,
+     24.0,
+     27.67,
+     28.0,
+     27.8,
+     28.67,
      29.0,
      28.57,
      27.86,
@@ -182,22 +181,22 @@
      21.43,
      22.29,
      24.0,
-     23.14
+     25.43,
+     25.0
     ],
     "context": false
    },
    "Blog NL": {
     "klikken_7d": 4,
-    "vertoningen_7d": 554,
-    "trend_pct": -52,
+    "vertoningen_7d": 501,
+    "trend_pct": -50,
     "reeks_90d": [
      0.0,
-     0.0,
-     0.33,
+     0.5,
+     0.67,
      0.5,
      0.4,
      0.33,
-     0.29,
      0.43,
      0.43,
      0.29,
@@ -280,22 +279,22 @@
      0.29,
      0.29,
      0.57,
+     0.57,
      0.57
     ],
     "context": false
    },
    "Hoofdsite": {
-    "klikken_7d": 110,
-    "vertoningen_7d": 2168,
-    "trend_pct": -7,
+    "klikken_7d": 104,
+    "vertoningen_7d": 2166,
+    "trend_pct": -9,
     "reeks_90d": [
+     5.0,
      3.0,
+     2.33,
+     4.5,
      4.0,
-     3.0,
-     2.5,
-     4.2,
-     3.83,
-     4.86,
+     5.17,
      5.57,
      5.29,
      5.14,
@@ -378,7 +377,8 @@
      15.14,
      15.29,
      15.14,
-     15.71
+     16.0,
+     14.86
     ],
     "context": true
    }
@@ -386,53 +386,53 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 42,
-    "vertoningen": 767
+    "klikken": 50,
+    "vertoningen": 834
    },
    {
     "pad": "/en/sexbots-love-them-or-hate-them-they-are-coming/",
-    "klikken": 8,
-    "vertoningen": 379
+    "klikken": 6,
+    "vertoningen": 400
+   },
+   {
+    "pad": "/en/how-we-will-communicate-in-2050/",
+    "klikken": 5,
+    "vertoningen": 161
    },
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 5,
-    "vertoningen": 659
+    "vertoningen": 700
    },
    {
-    "pad": "/en/top-10-intelligent-robots-that-improve-peoples-emotional-and-social-wellbeing/",
+    "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 5,
-    "vertoningen": 193
+    "vertoningen": 549
    },
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 4,
-    "vertoningen": 716
+    "vertoningen": 744
    },
    {
-    "pad": "/en/ai-bloopers-artificial-intelligences-most-memorable-mistakes/",
+    "pad": "/en/top-10-intelligent-robots-that-improve-peoples-emotional-and-social-wellbeing/",
     "klikken": 4,
-    "vertoningen": 148
+    "vertoningen": 193
    },
    {
     "pad": "/en/how-ai-is-transforming-the-entertainment-industry/",
-    "klikken": 4,
-    "vertoningen": 234
-   },
-   {
-    "pad": "/en/how-we-will-communicate-in-2050/",
-    "klikken": 4,
-    "vertoningen": 144
-   },
-   {
-    "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
-    "klikken": 4,
-    "vertoningen": 537
-   },
-   {
-    "pad": "/en/25-business-leaders-who-inspire/",
     "klikken": 3,
-    "vertoningen": 392
+    "vertoningen": 242
+   },
+   {
+    "pad": "/en/the-good-the-bad-and-the-future-of-deepfakes/",
+    "klikken": 3,
+    "vertoningen": 99
+   },
+   {
+    "pad": "/en/the-good-the-bad-and-the-ugly-of-crispr-gene-editing/",
+    "klikken": 3,
+    "vertoningen": 52
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
@@ -511,7 +511,7 @@
    "naam": "Search Console prestaties",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks, laatste 2 dagen voorlopig",
-   "datum": "2026-10-20",
+   "datum": "2026-10-21",
    "status": "ok"
   },
   {
@@ -539,7 +539,7 @@
    "naam": "GA4 blog (klik naar lezing nog niet gemeten)",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks",
-   "datum": "2026-10-20",
+   "datum": "2026-10-21",
    "status": "ok"
   },
   {
