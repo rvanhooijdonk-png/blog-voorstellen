@@ -1,0 +1,78 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Wezen ronde 4</title><style>:root{--bg:#F2F8FE;--card:#fff;--ink:#20344F;--soft:#5C6E84;--line:#DCEAF6}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A2B;--card:#15243A;--ink:#E6EEF8;--soft:#9DB0C7;--line:#24395A;color-scheme:dark}}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,sans-serif;padding:24px 16px}main{max-width:1000px;margin:auto}table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;display:block;overflow-x:auto}th,td{text-align:left;vertical-align:top;padding:6px 9px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}li{margin:3px 0 3px 18px}code{font-size:13px}</style></head><body><main><h1>Pakket: inkomende links voor wezen, ronde 4 (23-10-2026, werkvoorraad 271)</h1>
+<p>Klaargezet door SEO/GEO. <b>Niets live.</b> Uitvoeren door ONDERHOUD, pas na Richards eigen &quot;ja&quot; in het ONDERHOUD-venster.</p>
+<h2>Wat</h2>
+<li>Doelen: de 30 artikelen uit <code>data/pakketten/WEZEN-2026-10-23.csv</code> met <code>inkomend_na_pakketten=0</code> en de meeste vertoningen (90 dagen), zonder de doelen van wezen-3 en zonder de artikelen in de titelmeting (<code>data/pakketten/techniek/titels-meta.csv</code>). Alle 30 krijgen 1 of 2 inkomende links (19 EN, 11 NL; 3 met 1 link: 56374, 56819, 56385).</li>
+<li>Overgeslagen: <b>82571</b> (Inventors Who Regretted Their Creations), zoals in wezen-3: eerst beoordelen of hij samengaat met 57858.</li>
+<li>55 bestanden <code>&lt;bron-id&gt;.json</code> met 57 vervangingen. Vorm zoals wezen-3: <code>id</code>, <code>vervangingen[{oud, nieuw}]</code>, <code>vooraan</code> (leeg).</li>
+<li>44x een ankertekst in een bestaande zin: een gewone <code>&lt;a href=&quot;...&quot;&gt;</code> zonder stijl.</li>
+<li>13x een grijze regel direct na een passende alinea, in de bestaande rvh-zie-opmaak (&quot;→ titel&quot;). Gutenberg: eigen <code>wp:paragraph</code>-blok; klassiek: na een lege regel.</li>
+<li>Bronnen: zelfde taal (NL naar NL, EN naar EN), gepubliceerd, niet noindex, niet in de titelmeting, linken nog niet naar het doel (ook niet na alle pakketten). Geen bron komt in alle pakketten samen boven 3 nieuwe links of 3 nieuwe grijze regels. Geen grijze regel direct voor een bestaande grijze regel. Elke <code>oud</code> staat precies 1x in de tekst na de NU-pakketten en ook na de NA_1211-pakketten, en raakt geen tekst die een NA_1211-pakket wijzigt.</li>
+<h2>Uitvoeren</h2>
+<p>1. Back-up van <code>post_content</code> van de bronnen.</p>
+<p>2. Per bestand elke <code>oud</code> precies 1x vervangen door <code>nieuw</code>, in de volgorde van het bestand. Komt een <code>oud</code> niet precies 1x voor, sla dat artikel over en meld het.</p>
+<p>3. Geen wijziging aan <code>rvh_bijgewerkt</code> of de datumregel. Dit zijn alleen links.</p>
+<p>4. Cache legen. Controle: de links staan live, elk 1x, en de grijze regels zien eruit als de bestaande.</p>
+<p>Volgorde: als laatste van de groep &quot;nu&quot; in <code>bin/pakketten-toets.py</code> (na en-links-hoofdsite, voor de groep &quot;na 12-11&quot;). De vervangingen zijn gebouwd op de tekst na die pakketten.</p>
+<h2>Getest</h2>
+<p>23-10-2026: <code>bin/pakketten-toets.py</code> tegen de live <code>post_content</code> (TO_BASE64, alleen lezen), alle pakketten samen: 0 fouten, geen dubbele links, geen artikel met meer dan 3 nieuwe grijze regels. <code>bin/check-streepjes.sh</code>: geen lange streepjes.</p>
+<h2>Links (doel &lt;- bron)</h2>
+<table><tr><th>Doel</th><th>Taal</th><th>Bron</th><th>Soort</th><th>Ankertekst of grijze regel</th></tr>
+<tr><td>61801 Human DNA holds the key to ultimate product and service pers...</td><td>en</td><td>60554 From interactive voice ads to DNA-based marketin...</td><td>anker</td><td>DNA test results</td></tr>
+<tr><td>61801 Human DNA holds the key to ultimate product and service pers...</td><td>en</td><td>82150 The rise of personalised nutrition: how science ...</td><td>anker</td><td>DNA-based meal plans</td></tr>
+<tr><td>78024 Fit for the future: these 4 technologies transform the way w...</td><td>en</td><td>67535 AI finding treatments and robots disinfecting ho...</td><td>anker</td><td>virtual fitness classes</td></tr>
+<tr><td>78024 Fit for the future: these 4 technologies transform the way w...</td><td>en</td><td>60568 The future of fitness: AI-based personal trainin...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>79413 Buckle up: marketing campaigns get generative AI superpowers</td><td>en</td><td>78470 The future of shopping: unveiling the gen-AI-dri...</td><td>anker</td><td>create full marketing campaigns</td></tr>
+<tr><td>79413 Buckle up: marketing campaigns get generative AI superpowers</td><td>en</td><td>78144 Exploring generative AI&#x27;s impact on human creati...</td><td>anker</td><td>marketing campaigns</td></tr>
+<tr><td>56374 &#x27;Random Acts of Kindness&#x27;. Wat zijn het?</td><td>nl</td><td>56801 Wat zijn social acts of kindness?</td><td>anker</td><td>Random Acts of Kindness</td></tr>
+<tr><td>56819 Facebook how to: een eigen tabblad maken</td><td>nl</td><td>56529 Offline media worden steeds waardevoller</td><td>anker</td><td>een speciaal tabblad</td></tr>
+<tr><td>57985 These 3 tech duds defined the future even as they failed</td><td>en</td><td>58074 Running a business without trend analysis is lik...</td><td>anker</td><td>Blackberry</td></tr>
+<tr><td>57985 These 3 tech duds defined the future even as they failed</td><td>en</td><td>57792 Pokémon GO - innocent game or (cybersecurity) ni...</td><td>anker</td><td>Google Glass, it seems, has somewhat disappeared</td></tr>
+<tr><td>79314 How generative AI is changing the way we lead</td><td>en</td><td>80565 Leadership in the age of AI: how AI can make us ...</td><td>anker</td><td>how we lead</td></tr>
+<tr><td>79314 How generative AI is changing the way we lead</td><td>en</td><td>79098 Navigating the future: how AI, continuous learni...</td><td>anker</td><td>traditional leadership styles</td></tr>
+<tr><td>56444 Video Volvo Trucks goes viral</td><td>nl</td><td>56788 Rally en sneakers, een flitsende combinatie</td><td>anker</td><td>hoe je een video viral kan maken</td></tr>
+<tr><td>56444 Video Volvo Trucks goes viral</td><td>nl</td><td>56804 T-Mobile verwelkomt reizigers op Heathrow</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>58068 Is the position of CEO also under threat from the rise of th...</td><td>en</td><td>61939 25 business leaders who inspire</td><td>anker</td><td>the position of chief executive officer (CEO)</td></tr>
+<tr><td>58068 Is the position of CEO also under threat from the rise of th...</td><td>en</td><td>78533 Beyond human: navigating the new era of AI leade...</td><td>anker</td><td>your new boss - a virtual, AI-powered robot</td></tr>
+<tr><td>58018 All the surprising and scary ways you (and your systems) can...</td><td>en</td><td>57740 How cybercrime is overtaking physical crime</td><td>anker</td><td>devices that can be hacked</td></tr>
+<tr><td>58018 All the surprising and scary ways you (and your systems) can...</td><td>en</td><td>58109 Smart homes and buildings are a new battlefield ...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>58041 Top AI trends that shouldn’t be overlooked in 2019</td><td>en</td><td>75135 How AI can improve business productivity</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>58041 Top AI trends that shouldn’t be overlooked in 2019</td><td>en</td><td>81525 The six AI trends that will define 2026</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>80641 How do we keep our kids ahead in times of change?</td><td>en</td><td>79011 Generative AI emerges as a promising new tool in...</td><td>anker</td><td>prepare the next generation</td></tr>
+<tr><td>80641 How do we keep our kids ahead in times of change?</td><td>en</td><td>57713 6 important education trends that are caused by ...</td><td>anker</td><td>motivate our kids</td></tr>
+<tr><td>65623 AI in management: your boss could soon be a machine</td><td>en</td><td>78533 Beyond human: navigating the new era of AI leade...</td><td>anker</td><td>robot bosses</td></tr>
+<tr><td>65623 AI in management: your boss could soon be a machine</td><td>en</td><td>67957 The future of work is all about quantified workp...</td><td>anker</td><td>the manager of the future</td></tr>
+<tr><td>67957 The future of work is all about quantified workplaces and AI...</td><td>en</td><td>58053 The tech-driven future of work has arrived</td><td>anker</td><td>quantified workplace</td></tr>
+<tr><td>67957 The future of work is all about quantified workplaces and AI...</td><td>en</td><td>78227 The art of talent management: how generative AI ...</td><td>anker</td><td>the hiring and recruitment process</td></tr>
+<tr><td>81223 AI-schaamte: hoe doorbreken we het?</td><td>nl</td><td>81020 AI-overload: worden mensen overbodig?</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>81223 AI-schaamte: hoe doorbreken we het?</td><td>nl</td><td>81647 Iedereen een expert: hoe AI de hiërarchie in org...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>74649 Autonome robottrekkers zijn onderweg naar boerderijen over d...</td><td>nl</td><td>56935 Op de volledig geautomatiseerde boerderij van de...</td><td>anker</td><td>zelfrijdende trekker</td></tr>
+<tr><td>74649 Autonome robottrekkers zijn onderweg naar boerderijen over d...</td><td>nl</td><td>56646 Slimme landbouw: de nieuwe agrarische maatstaf</td><td>anker</td><td>trekkers met ingebouwde navigatie en sensoren</td></tr>
+<tr><td>81048 The insane future of healthcare</td><td>en</td><td>67706 Bold predictions for the future of healthcare - ...</td><td>anker</td><td>the future of healthcare</td></tr>
+<tr><td>81048 The insane future of healthcare</td><td>en</td><td>79608 How generative AI is changing the role of doctor...</td><td>anker</td><td>the future of healthcare</td></tr>
+<tr><td>57014 Nu Chinese wetenschappers apen hebben gekloond, kunnen we bi...</td><td>nl</td><td>56839 De ontwikkeling van de designer human: is de gee...</td><td>anker</td><td>zoogdieren te klonen</td></tr>
+<tr><td>57014 Nu Chinese wetenschappers apen hebben gekloond, kunnen we bi...</td><td>nl</td><td>67624 Biowapens en klimaathacken - is dit de toekomst ...</td><td>anker</td><td>klonen</td></tr>
+<tr><td>78015 Van scifi naar realiteit: dit is de hightech gevangenis van ...</td><td>nl</td><td>57164 De transformatie van de gevangenis: van wearable...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>78015 Van scifi naar realiteit: dit is de hightech gevangenis van ...</td><td>nl</td><td>57172 Kan kunstmatige intelligentie de traag malende m...</td><td>anker</td><td>overvolle gevangenissen</td></tr>
+<tr><td>80087 Het lichaam van de toekomst: bepaalt technologie straks wat ...</td><td>nl</td><td>81053 De waanzinnige toekomst van de gezondheidszorg</td><td>anker</td><td>wat het betekent om mens te zijn</td></tr>
+<tr><td>80087 Het lichaam van de toekomst: bepaalt technologie straks wat ...</td><td>nl</td><td>64897 Human 2.0: Hoe ver gaan we in de toekomst met he...</td><td>anker</td><td>de natuurlijke grenzen van het menselijk lichaam</td></tr>
+<tr><td>57799 The future of dating and relationships - what&#x27;s love got to ...</td><td>en</td><td>60532 How can cutting-edge tech improve our love life?</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>57799 The future of dating and relationships - what&#x27;s love got to ...</td><td>en</td><td>57757 BNR MINDSHIFT / Can we have a relationship with ...</td><td>anker</td><td>a relationship had developed between a robot and two humans</td></tr>
+<tr><td>61776 5G paves the way for the era of total connectivity</td><td>en</td><td>80435 How we will communicate in 2050</td><td>anker</td><td>5G networks</td></tr>
+<tr><td>61776 5G paves the way for the era of total connectivity</td><td>en</td><td>57798 5G Internet - the connectivity of the future</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>72702 Virtual and augmented reality herald a new era in marketing</td><td>en</td><td>58049 Authentic content, voice search, AI, and AR/VR -...</td><td>anker</td><td>augmented and virtual reality (AR/VR) technologies</td></tr>
+<tr><td>72702 Virtual and augmented reality herald a new era in marketing</td><td>en</td><td>75585 Marketing in this brave new world called the met...</td><td>anker</td><td>virtual reality (VR) and augmented reality (AR) experiences</td></tr>
+<tr><td>57940 ProjectDR uses new augmented reality tech to let doctors see...</td><td>en</td><td>57732 The future of robotic surgery is here: robot arm...</td><td>anker</td><td>‘see right through you’</td></tr>
+<tr><td>57940 ProjectDR uses new augmented reality tech to let doctors see...</td><td>en</td><td>57911 Beyond VR and AR: mixed reality is the tech of t...</td><td>anker</td><td>help surgeons visualise organ placements</td></tr>
+<tr><td>82569 Mind uploading: are humans slowly turning into robots?</td><td>en</td><td>68626 Richard van Hooijdonk: “We already live in a mix...</td><td>anker</td><td>upload our consciousness to the cloud</td></tr>
+<tr><td>82569 Mind uploading: are humans slowly turning into robots?</td><td>en</td><td>60726 The quest for immortality</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>81633 Gondola magazine (Belgie) interview with Richard van Hooijdo...</td><td>en</td><td>79084 “Only managing uncertainty can bring a more stab...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>81633 Gondola magazine (Belgie) interview with Richard van Hooijdo...</td><td>en</td><td>72677 Trendwatcher Richard van Hooijdonk warns agripre...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>56385 Social media en de automotive branche</td><td>nl</td><td>56482 Social Media en de salesafdeling</td><td>anker</td><td>de autobranche</td></tr>
+<tr><td>81640 The democratisation of expertise: how AI is flattening organ...</td><td>en</td><td>57873 The company of the future: staff are microchippe...</td><td>anker</td><td>a flatter structure</td></tr>
+<tr><td>81640 The democratisation of expertise: how AI is flattening organ...</td><td>en</td><td>79098 Navigating the future: how AI, continuous learni...</td><td>anker</td><td>rigid hierarchies and top-down decision making</td></tr>
+<tr><td>56454 Opstellen van social persona&#x27;s: zin of onzin?</td><td>nl</td><td>56413 Social persona: van discussies naar doelgericht ...</td><td>anker</td><td>social persona&#x27;s</td></tr>
+<tr><td>56454 Opstellen van social persona&#x27;s: zin of onzin?</td><td>nl</td><td>56420 Customer Decision Journey: aandacht voor de juis...</td><td>anker</td><td>social persona’s</td></tr>
+<tr><td>56895 4 manieren waarop technologische innovatie sportprestaties v...</td><td>nl</td><td>56984 Van vibrerende yogabroek tot hardloopcoach in je...</td><td>anker</td><td>hun sportprestaties te verbeteren</td></tr>
+<tr><td>56895 4 manieren waarop technologische innovatie sportprestaties v...</td><td>nl</td><td>63181 De sportsector omarmt KI en robots om sport eerl...</td><td>anker</td><td>betere sportprestaties</td></tr>
+</table>
+<p>Zichtbaar voor lezers: ja, klein: links in bestaande tekst of grijze regels.</p><p style="color:var(--soft)">Bron: data/pakketten/wezen-4/README.md in blog-seo-geo. Niets live.</p></main></body></html>
