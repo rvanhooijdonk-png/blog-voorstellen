@@ -1,0 +1,74 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Wezen ronde 3</title><style>:root{--bg:#F2F8FE;--card:#fff;--ink:#20344F;--soft:#5C6E84;--line:#DCEAF6}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A2B;--card:#15243A;--ink:#E6EEF8;--soft:#9DB0C7;--line:#24395A;color-scheme:dark}}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,sans-serif;padding:24px 16px}main{max-width:1000px;margin:auto}table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14px;display:block;overflow-x:auto}th,td{text-align:left;vertical-align:top;padding:6px 9px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}li{margin:3px 0 3px 18px}code{font-size:13px}</style></head><body><main><h1>Pakket: inkomende links voor wezen, ronde 3 (23-10-2026, werkvoorraad 117)</h1>
+<p>Klaargezet door SEO/GEO. <b>Niets live.</b> Uitvoeren door ONDERHOUD, pas na Richards eigen &quot;ja&quot; in het ONDERHOUD-venster.</p>
+<h2>Wat</h2>
+<li>Doelen: de 30 artikelen uit <code>data/pakketten/WEZEN-2026-10-23.csv</code> met <code>inkomend_na_pakketten=0</code> en de meeste vertoningen (90 dagen). 29 daarvan krijgen 1 of 2 inkomende links (17 EN, 12 NL).</li>
+<li>Overgeslagen: <b>82571</b> (Inventors Who Regretted Their Creations). Bijna dubbel met 57858 (zelfde onderwerp, zie wezen ronde 2); eerst beoordelen of die twee samengaan.</li>
+<li>52 bestanden <code>&lt;bron-id&gt;.json</code> met 54 vervangingen. Vorm zoals wezen en wezen-2: <code>id</code>, <code>vervangingen[{oud, nieuw}]</code>, <code>vooraan</code> (leeg).</li>
+<li>30x een ankertekst in een bestaande zin: een gewone <code>&lt;a href=&quot;...&quot;&gt;</code> zonder stijl.</li>
+<li>24x een grijze regel direct na een passende alinea, in de bestaande rvh-zie-opmaak (&quot;→ titel&quot;). Gutenberg: eigen <code>wp:paragraph</code>-blok; klassiek: na een lege regel.</li>
+<li>Bronnen: zelfde taal (NL naar NL, EN naar EN), gepubliceerd, niet noindex, niet in de titelmeting van 12-10, linken nog niet naar het doel (ook niet na alle pakketten). Geen bron komt in alle pakketten samen boven 3 nieuwe links of 3 nieuwe grijze regels. Geen grijze regel direct voor een bestaande grijze regel.</li>
+<h2>Uitvoeren</h2>
+<p>1. Back-up van <code>post_content</code> van de bronnen.</p>
+<p>2. Per bestand elke <code>oud</code> precies 1x vervangen door <code>nieuw</code>, in de volgorde van het bestand. Komt een <code>oud</code> niet precies 1x voor, sla dat artikel over en meld het.</p>
+<p>3. Geen wijziging aan <code>rvh_bijgewerkt</code> of de datumregel. Dit zijn alleen links.</p>
+<p>4. Cache legen. Controle: de links staan live, elk 1x, en de grijze regels zien eruit als de bestaande.</p>
+<p>Volgorde: als laatste van de groep &quot;nu&quot; in <code>bin/pakketten-toets.py</code> (na alle andere &quot;nu&quot;-pakketten, voor de groep &quot;na 12-11&quot;). De vervangingen zijn gebouwd op de tekst na die pakketten.</p>
+<h2>Getest</h2>
+<p>23-10-2026: <code>bin/pakketten-toets.py</code> tegen de live <code>post_content</code> (TO_BASE64, alleen lezen), alle pakketten samen: 0 fouten, geen dubbele links, geen artikel met meer dan 3 nieuwe grijze regels. <code>bin/check-streepjes.sh</code>: geen lange streepjes.</p>
+<h2>Links (doel &lt;- bron)</h2>
+<table><tr><th>Doel</th><th>Taal</th><th>Bron</th><th>Soort</th><th>Ankertekst of grijze regel</th></tr>
+<tr><td>57964 Revolutionary graphene-concrete could be an absolute game...</td><td>en</td><td>57970 Claytronics, smart dust, and utility fog: mind-...</td><td>anker</td><td>graphene</td></tr>
+<tr><td>57964 Revolutionary graphene-concrete could be an absolute game...</td><td>en</td><td>57915 Innovations in construction: from eco-friendly...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>74058 The future of construction - 2022 and beyond</td><td>en</td><td>67756 Innovative tech like AI, robots, and 4D printin...</td><td>anker</td><td>the future of construction</td></tr>
+<tr><td>74058 The future of construction - 2022 and beyond</td><td>en</td><td>68387 Building the future: cutting-edge technology ch...</td><td>anker</td><td>The future of construction</td></tr>
+<tr><td>57834 Tech that protects president Trump: threat-identifying al...</td><td>en</td><td>75173 How can artificial intelligence help us create...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>79513 How AI can land you your next job; even if you’re not qua...</td><td>en</td><td>78328 Pandora&#x27;s gen-AI box is wide open: what has the...</td><td>anker</td><td>job seekers</td></tr>
+<tr><td>57963 Will robo-bees be buzzing on Mars soon? NASA is testing t...</td><td>en</td><td>57920 These 4 ubercool scuttling, jumping, and flying...</td><td>anker</td><td>robotic ‘bees’</td></tr>
+<tr><td>57963 Will robo-bees be buzzing on Mars soon? NASA is testing t...</td><td>en</td><td>58078 High-tech bumblebees and cyborg dragonflies cou...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>58103 Regtech lends a helping hand to the finance industry awas...</td><td>en</td><td>78464 Redefining finance: how AI is revolutionising t...</td><td>anker</td><td>regulatory compliance</td></tr>
+<tr><td>58103 Regtech lends a helping hand to the finance industry awas...</td><td>en</td><td>57994 Advancing into extended financial services - wh...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>60491 Technology is becoming an increasingly important tool in...</td><td>en</td><td>75173 How can artificial intelligence help us create...</td><td>anker</td><td>monitor wildlife</td></tr>
+<tr><td>60491 Technology is becoming an increasingly important tool in...</td><td>en</td><td>57953 Drones prove to be a powerful ally in wildlife...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>57908 The future of crime is a pretty face and a webcam: the ri...</td><td>en</td><td>74427 How do we keep safe from the growing threat of...</td><td>anker</td><td>no one has access to your webcam</td></tr>
+<tr><td>57908 The future of crime is a pretty face and a webcam: the ri...</td><td>en</td><td>65928 From gun trafficking social media accounts to A...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>67241 The first living robots have been created with frog stem...</td><td>en</td><td>57876 Incredible science and tech breakthroughs chang...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>57775 From organ implant designer to medical roboticist - 8 hea...</td><td>en</td><td>57764 The future of work and jobs that do not yet exist</td><td>anker</td><td>a large number of jobs have yet to be invented</td></tr>
+<tr><td>57775 From organ implant designer to medical roboticist - 8 hea...</td><td>en</td><td>67706 Bold predictions for the future of healthcare -...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>58083 From a &#x27;Trojan horse&#x27; cancer treatment to turning maligna...</td><td>en</td><td>57876 Incredible science and tech breakthroughs chang...</td><td>anker</td><td>fight cancer</td></tr>
+<tr><td>58083 From a &#x27;Trojan horse&#x27; cancer treatment to turning maligna...</td><td>en</td><td>79132 How robots can offer a helping hand in the figh...</td><td>anker</td><td>a better understanding of cancer</td></tr>
+<tr><td>57782 The IoT is changing the way buildings are designed</td><td>en</td><td>81104 Eight revolutionary buildings redefining what’s...</td><td>anker</td><td>IoT sensors</td></tr>
+<tr><td>57782 The IoT is changing the way buildings are designed</td><td>en</td><td>78115 Five ground-breaking innovations that are redef...</td><td>anker</td><td>make buildings ‘smarter’</td></tr>
+<tr><td>58037 Are stablecoins the next big thing in the crypto world?</td><td>en</td><td>76246 What will cybercrime look like in the metaverse?</td><td>anker</td><td>stablecoin</td></tr>
+<tr><td>58037 Are stablecoins the next big thing in the crypto world?</td><td>en</td><td>58052 Key things to know before launching a blockchai...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>75585 Marketing in this brave new world called the metaverse</td><td>en</td><td>74028 The metaverse: blurring the lines between our p...</td><td>anker</td><td>marketing and advertising of businesses in the metaverse</td></tr>
+<tr><td>75585 Marketing in this brave new world called the metaverse</td><td>en</td><td>72702 Virtual and augmented reality herald a new era...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>81022 Government’s AI makeover: how AI is transforming public s...</td><td>en</td><td>81459 How governments can get AI right… and how it mi...</td><td>anker</td><td>public services</td></tr>
+<tr><td>81022 Government’s AI makeover: how AI is transforming public s...</td><td>en</td><td>67948 In the future of smart governance, elections ar...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>74001 How do growth, caring, and abundance mindsets affect your...</td><td>en</td><td>68260 A new mindset, a new culture: future-centric co...</td><td>anker</td><td>a growth mindset</td></tr>
+<tr><td>74001 How do growth, caring, and abundance mindsets affect your...</td><td>en</td><td>73689 What makes a good leader? 16 crucial traits, sk...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>57896 Genetically modified fish have reached our dinner tables....</td><td>en</td><td>57803 GMO food: the good, the bad and the ugly</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>81533 De zes AI-trends die 2026 gaan bepalen</td><td>nl</td><td>81574 Leiderschap in 2026: de 6 belangrijkste AI-trends</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>81533 De zes AI-trends die 2026 gaan bepalen</td><td>nl</td><td>81212 Hoe AI-first bedrijven de regels herschrijven</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>56642 Chip in mijn hand</td><td>nl</td><td>56649 BNR MINDSHIFT</td><td>RFID Chips in je lichaam? Waaro...</td><td>anker</td><td>enkele chips in mijn lichaam te laten plaatsen</td></tr>
+<tr><td>56642 Chip in mijn hand</td><td>nl</td><td>56855 De onafwendbare komst van de onderhuidse chip:...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>57047 De waarheid over China&#x27;s futuristische spooksteden</td><td>nl</td><td>57089 4 plausibele voorspellingen over hoe China zich...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>57047 De waarheid over China&#x27;s futuristische spooksteden</td><td>nl</td><td>56623 8 Voorspellingen over de steden van de toekomst</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>56727 GMO-voedsel: the good, the bad &amp; the ugly</td><td>nl</td><td>56932 Genetisch gemanipuleerde vis heeft onze eettafe...</td><td>anker</td><td>genetisch gemodificeerd voedsel</td></tr>
+<tr><td>56727 GMO-voedsel: the good, the bad &amp; the ugly</td><td>nl</td><td>57154 Genetisch gemanipuleerd voedsel zou de wereldwi...</td><td>anker</td><td>GGO-voedsel</td></tr>
+<tr><td>56386 Adverteren veel minder effectief dan gedacht</td><td>nl</td><td>56817 De impact van social media op Paid, Owned en Ea...</td><td>anker</td><td>effectiever zijn dan reclame</td></tr>
+<tr><td>56386 Adverteren veel minder effectief dan gedacht</td><td>nl</td><td>67653 Is holografische technologie in dit tijdperk va...</td><td>anker</td><td>traditionele televisiereclame en print-media</td></tr>
+<tr><td>79277 Zelfrijdende auto&#x27;s helpen senioren en mindervaliden veil...</td><td>nl</td><td>79281 Hoe technologie mensen met een beperking helpt...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>79277 Zelfrijdende auto&#x27;s helpen senioren en mindervaliden veil...</td><td>nl</td><td>64335 Intelligente technologie verbetert de levenskwa...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>65197 De opkomst van meditatie- en mindfulness-apps - wordt de...</td><td>nl</td><td>57011 Geestelijke gezondheid in het digitale tijdperk...</td><td>anker</td><td>apps voor zelfzorg</td></tr>
+<tr><td>65197 De opkomst van meditatie- en mindfulness-apps - wordt de...</td><td>nl</td><td>79367 Therapie 2.0 - kan AI je beter helpen dan je ve...</td><td>anker</td><td>geestelijke gezondheidsapps</td></tr>
+<tr><td>81124 AI-vrienden - De toekomst van verbinding of eenzame afgrond?</td><td>nl</td><td>81020 AI-overload: worden mensen overbodig?</td><td>anker</td><td>AI-maatjes</td></tr>
+<tr><td>81124 AI-vrienden - De toekomst van verbinding of eenzame afgrond?</td><td>nl</td><td>79062 Digitale liefde: de impact van AI, virtuele kar...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>78595 De opkomst van digital twin-fabrieken en de evolutie van...</td><td>nl</td><td>77884 Digital twin-technologie is misschien wel de to...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>78595 De opkomst van digital twin-fabrieken en de evolutie van...</td><td>nl</td><td>56653 De fabriek van de toekomst komt als een cycloon...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>56597 Mens verandert langzaam in robot</td><td>nl</td><td>80087 Het lichaam van de toekomst: bepaalt technologi...</td><td>anker</td><td>technologie die het menselijk lichaam herstelt of verbetert</td></tr>
+<tr><td>56597 Mens verandert langzaam in robot</td><td>nl</td><td>80505 8 manieren waarop brein-computer interfaces je...</td><td>grijze regel</td><td>→ titel doel</td></tr>
+<tr><td>65210 Top 10 exoskeletten die bovenmenselijke krachten en vaard...</td><td>nl</td><td>67774 Innovatieve technologie als KI, robots en 4D-pr...</td><td>anker</td><td>exoskeletten</td></tr>
+<tr><td>65210 Top 10 exoskeletten die bovenmenselijke krachten en vaard...</td><td>nl</td><td>57136 Exoskeletten kunnen ons bovenmenselijke krachte...</td><td>anker</td><td>exoskeletten</td></tr>
+<tr><td>72663 De toekomst van voetbal draait om hightech innovatie</td><td>nl</td><td>80622 De toekomst van sport: waar technologie en tale...</td><td>anker</td><td>Voetbal loopt in de technologische revolutie voorop</td></tr>
+<tr><td>72663 De toekomst van voetbal draait om hightech innovatie</td><td>nl</td><td>76372 Innovatieve technologieën zorgen voor een ongeë...</td><td>anker</td><td>tech-ontwikkelingen in het voetbal</td></tr>
+</table><p style="color:var(--soft)">Bron: data/pakketten/wezen-3/README.md in blog-seo-geo. Niets live.</p></main></body></html>
