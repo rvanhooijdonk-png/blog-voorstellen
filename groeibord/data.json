@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "24-10-2026 07:15",
+ "gebouwd": "24-10-2026 08:10",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "216",
+    "kern_waarde": "218",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,9 +89,9 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 207,
-    "vertoningen_7d": 33006,
-    "trend_pct": 25,
+    "klikken_7d": 209,
+    "vertoningen_7d": 33332,
+    "trend_pct": 26,
     "reeks_90d": [
      35.0,
      32.0,
@@ -182,13 +182,13 @@
      25.43,
      28.0,
      29.71,
-     29.57
+     29.86
     ],
     "context": false
    },
    "Blog NL": {
     "klikken_7d": 9,
-    "vertoningen_7d": 513,
+    "vertoningen_7d": 519,
     "trend_pct": 3,
     "reeks_90d": [
      1.0,
@@ -286,7 +286,7 @@
    },
    "Hoofdsite": {
     "klikken_7d": 73,
-    "vertoningen_7d": 2253,
+    "vertoningen_7d": 2270,
     "trend_pct": -33,
     "reeks_90d": [
      1.0,
@@ -387,22 +387,22 @@
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
     "klikken": 61,
-    "vertoningen": 1045
+    "vertoningen": 1049
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 8,
-    "vertoningen": 585
+    "vertoningen": 587
    },
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 7,
-    "vertoningen": 757
+    "vertoningen": 762
    },
    {
     "pad": "/en/sexbots-love-them-or-hate-them-they-are-coming/",
     "klikken": 6,
-    "vertoningen": 399
+    "vertoningen": 400
    },
    {
     "pad": "/en/if-ai-becomes-self-aware-will-we-need-to-give-it-the-rights-we-normally-reserve-for-humans/",
@@ -412,7 +412,7 @@
    {
     "pad": "/en/ai-in-aerospace-whos-liable-when-the-algorithm-crashes-the-plane/",
     "klikken": 4,
-    "vertoningen": 109
+    "vertoningen": 110
    },
    {
     "pad": "/en/six-futuristic-wind-energy-innovations-that-will-blow-you-away/",
@@ -427,12 +427,12 @@
    {
     "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
     "klikken": 4,
-    "vertoningen": 1076
+    "vertoningen": 1079
    },
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 3,
-    "vertoningen": 782
+    "vertoningen": 785
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
