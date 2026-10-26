@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "25-10-2026 07:15",
+ "gebouwd": "26-10-2026 07:22",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "218",
+    "kern_waarde": "227",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -40,7 +40,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "ChatGPT noemt Richard",
-    "kern_waarde": "15 van 30 antwoorden",
+    "kern_waarde": "15 van 33 antwoorden",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,17 +89,16 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 209,
-    "vertoningen_7d": 34026,
-    "trend_pct": 26,
+    "klikken_7d": 215,
+    "vertoningen_7d": 33446,
+    "trend_pct": 29,
     "reeks_90d": [
-     29.0,
-     28.0,
-     29.67,
-     30.0,
-     28.2,
-     26.67,
      27.0,
+     30.0,
+     30.33,
+     28.0,
+     26.2,
+     26.67,
      27.29,
      27.43,
      24.71,
@@ -182,22 +181,22 @@
      28.0,
      29.71,
      30.71,
-     29.86
+     30.0,
+     30.71
     ],
     "context": false
    },
    "Blog NL": {
-    "klikken_7d": 9,
-    "vertoningen_7d": 545,
-    "trend_pct": 6,
+    "klikken_7d": 12,
+    "vertoningen_7d": 621,
+    "trend_pct": 26,
     "reeks_90d": [
      0.0,
      0.0,
-     0.0,
+     0.33,
      0.25,
      0.2,
      0.17,
-     0.14,
      0.14,
      0.14,
      0.14,
@@ -280,22 +279,22 @@
      0.57,
      1.14,
      1.29,
-     1.29
+     1.43,
+     1.71
     ],
     "context": false
    },
    "Hoofdsite": {
-    "klikken_7d": 72,
+    "klikken_7d": 63,
     "vertoningen_7d": 2417,
-    "trend_pct": -35,
+    "trend_pct": -43,
     "reeks_90d": [
-     11.0,
+     2.0,
      6.5,
-     8.0,
-     8.0,
      7.0,
-     5.83,
-     5.29,
+     6.0,
+     4.8,
+     4.33,
      5.43,
      6.43,
      5.86,
@@ -378,7 +377,8 @@
      15.0,
      13.0,
      10.57,
-     10.29
+     10.29,
+     9.0
     ],
     "context": true
    }
@@ -386,53 +386,53 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 59,
-    "vertoningen": 1145
+    "klikken": 55,
+    "vertoningen": 1147
    },
    {
-    "pad": "/en/human-microchipping-the-benefits-and-downsides/",
-    "klikken": 7,
-    "vertoningen": 775
+    "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
+    "klikken": 9,
+    "vertoningen": 1145
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 7,
-    "vertoningen": 614
+    "vertoningen": 627
+   },
+   {
+    "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
+    "klikken": 6,
+    "vertoningen": 782
    },
    {
     "pad": "/en/sexbots-love-them-or-hate-them-they-are-coming/",
     "klikken": 6,
-    "vertoningen": 408
-   },
-   {
-    "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
-    "klikken": 6,
-    "vertoningen": 1108
+    "vertoningen": 427
    },
    {
     "pad": "/en/ai-in-aerospace-whos-liable-when-the-algorithm-crashes-the-plane/",
     "klikken": 5,
-    "vertoningen": 110
+    "vertoningen": 96
+   },
+   {
+    "pad": "/en/human-microchipping-the-benefits-and-downsides/",
+    "klikken": 5,
+    "vertoningen": 751
    },
    {
     "pad": "/en/if-ai-becomes-self-aware-will-we-need-to-give-it-the-rights-we-normally-reserve-for-humans/",
     "klikken": 5,
-    "vertoningen": 83
+    "vertoningen": 87
+   },
+   {
+    "pad": "/en/ai-gone-wrong-seven-unsettling-examples-that-show-how-ai-is-far-from-perfect/",
+    "klikken": 4,
+    "vertoningen": 253
    },
    {
     "pad": "/en/six-futuristic-wind-energy-innovations-that-will-blow-you-away/",
     "klikken": 4,
-    "vertoningen": 257
-   },
-   {
-    "pad": "/en/9-new-wearable-health-gadgets-that-promise-high-tech-health/",
-    "klikken": 3,
-    "vertoningen": 204
-   },
-   {
-    "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
-    "klikken": 3,
-    "vertoningen": 799
+    "vertoningen": 247
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
@@ -471,11 +471,11 @@
    ]
   },
   "chatgpt": {
-   "datum": "2026-10-19",
+   "datum": "2026-10-26",
    "genoemd": 15,
-   "geciteerd": 13,
-   "antwoorden": 30,
-   "vragen": 10
+   "geciteerd": 14,
+   "antwoorden": 33,
+   "vragen": 11
   },
   "google_ai": {
    "waarde": 38026,
@@ -487,13 +487,13 @@
   },
   "domeinen": [
    "richardvanhooijdonk.com",
+   "jarnoduursma.nl",
+   "sprekershuys.nl",
+   "remygieling.nl",
+   "azeemazhar.com",
    "mennolanting.nl",
    "deborahnas.com",
-   "jarnoduursma.nl",
-   "remygieling.nl",
-   "lucienengelen.com",
-   "speakersacademy.com",
-   "azeemazhar.com"
+   "koenkas.com"
   ],
   "kosten_status": "geen extra externe kosten (meting via bestaand ChatGPT-abonnement)"
  },
@@ -511,14 +511,14 @@
    "naam": "Search Console prestaties",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks, laatste 2 dagen voorlopig",
-   "datum": "2026-10-24",
+   "datum": "2026-10-25",
    "status": "ok"
   },
   {
    "naam": "ChatGPT koopvragen",
    "eigenaar": "SEO/GEO",
    "ritme": "wekelijks, maandag",
-   "datum": "2026-10-19",
+   "datum": "2026-10-26",
    "status": "ok"
   },
   {
@@ -539,7 +539,7 @@
    "naam": "GA4 blog (klik naar lezing nog niet gemeten)",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks",
-   "datum": "2026-10-24",
+   "datum": "2026-10-25",
    "status": "ok"
   },
   {
