@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "26-10-2026 07:22",
+ "gebouwd": "27-10-2026 07:15",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "227",
+    "kern_waarde": "229",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,17 +89,16 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 215,
-    "vertoningen_7d": 33446,
-    "trend_pct": 29,
+    "klikken_7d": 216,
+    "vertoningen_7d": 32716,
+    "trend_pct": 30,
     "reeks_90d": [
-     27.0,
-     30.0,
-     30.33,
-     28.0,
-     26.2,
-     26.67,
-     27.29,
+     33.0,
+     32.0,
+     28.33,
+     26.0,
+     26.6,
+     27.33,
      27.43,
      24.71,
      22.71,
@@ -182,22 +181,22 @@
      29.71,
      30.71,
      30.0,
-     30.71
+     31.57,
+     30.86
     ],
     "context": false
    },
    "Blog NL": {
-    "klikken_7d": 12,
-    "vertoningen_7d": 621,
-    "trend_pct": 26,
+    "klikken_7d": 13,
+    "vertoningen_7d": 716,
+    "trend_pct": 30,
     "reeks_90d": [
      0.0,
-     0.0,
+     0.5,
      0.33,
      0.25,
      0.2,
      0.17,
-     0.14,
      0.14,
      0.14,
      0.0,
@@ -280,22 +279,22 @@
      1.14,
      1.29,
      1.43,
-     1.71
+     1.86,
+     1.86
     ],
     "context": false
    },
    "Hoofdsite": {
-    "klikken_7d": 63,
-    "vertoningen_7d": 2417,
-    "trend_pct": -43,
+    "klikken_7d": 85,
+    "vertoningen_7d": 3008,
+    "trend_pct": -26,
     "reeks_90d": [
-     2.0,
-     6.5,
-     7.0,
-     6.0,
+     11.0,
+     9.5,
+     7.33,
+     5.5,
      4.8,
-     4.33,
-     5.43,
+     6.0,
      6.43,
      5.86,
      5.57,
@@ -378,7 +377,8 @@
      13.0,
      10.57,
      10.29,
-     9.0
+     9.0,
+     12.14
     ],
     "context": true
    }
@@ -386,53 +386,53 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 55,
-    "vertoningen": 1147
-   },
-   {
-    "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
-    "klikken": 9,
-    "vertoningen": 1145
-   },
-   {
-    "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
-    "klikken": 7,
-    "vertoningen": 627
-   },
-   {
-    "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
-    "klikken": 6,
-    "vertoningen": 782
+    "klikken": 49,
+    "vertoningen": 1053
    },
    {
     "pad": "/en/sexbots-love-them-or-hate-them-they-are-coming/",
-    "klikken": 6,
-    "vertoningen": 427
+    "klikken": 10,
+    "vertoningen": 432
+   },
+   {
+    "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
+    "klikken": 9,
+    "vertoningen": 673
+   },
+   {
+    "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
+    "klikken": 8,
+    "vertoningen": 1191
+   },
+   {
+    "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
+    "klikken": 7,
+    "vertoningen": 789
    },
    {
     "pad": "/en/ai-in-aerospace-whos-liable-when-the-algorithm-crashes-the-plane/",
     "klikken": 5,
-    "vertoningen": 96
+    "vertoningen": 90
    },
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 5,
-    "vertoningen": 751
+    "vertoningen": 665
    },
    {
     "pad": "/en/if-ai-becomes-self-aware-will-we-need-to-give-it-the-rights-we-normally-reserve-for-humans/",
     "klikken": 5,
-    "vertoningen": 87
+    "vertoningen": 90
+   },
+   {
+    "pad": "/en/six-futuristic-wind-energy-innovations-that-will-blow-you-away/",
+    "klikken": 5,
+    "vertoningen": 250
    },
    {
     "pad": "/en/ai-gone-wrong-seven-unsettling-examples-that-show-how-ai-is-far-from-perfect/",
     "klikken": 4,
-    "vertoningen": 253
-   },
-   {
-    "pad": "/en/six-futuristic-wind-energy-innovations-that-will-blow-you-away/",
-    "klikken": 4,
-    "vertoningen": 247
+    "vertoningen": 255
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
@@ -511,7 +511,7 @@
    "naam": "Search Console prestaties",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks, laatste 2 dagen voorlopig",
-   "datum": "2026-10-25",
+   "datum": "2026-10-26",
    "status": "ok"
   },
   {
@@ -539,7 +539,7 @@
    "naam": "GA4 blog (klik naar lezing nog niet gemeten)",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks",
-   "datum": "2026-10-25",
+   "datum": "2026-10-26",
    "status": "ok"
   },
   {
