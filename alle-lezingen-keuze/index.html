@@ -1,0 +1,55 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Voorbeeld: alle lezingen als keuzepagina</title><style>
+:root{--bg:#fff;--tx:#1d1d1f;--mu:#5f6368;--gr:#dcf5e0;--ln:#ddd;--kaart:#f6f7f9;--acc:#0b5cad}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16181c;--tx:#eee;--mu:#aaa;--gr:#244a2e;--ln:#333;--kaart:#1f2228;--acc:#7fb3ff}}
+:root[data-theme="dark"]{--bg:#16181c;--tx:#eee;--mu:#aaa;--gr:#244a2e;--ln:#333;--kaart:#1f2228;--acc:#7fb3ff}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,sans-serif;max-width:960px;margin:0 auto;padding:16px}
+a{color:var(--acc)}h1{font-size:1.6rem;line-height:1.25}h2{font-size:1.25rem;margin:0 0 8px}h3{font-size:1.05rem;margin:14px 0 4px}
+.uitleg{color:var(--mu);font-size:14px;border-left:3px solid var(--ln);padding-left:10px}.nieuw{background:var(--gr);border-radius:10px;padding:16px;margin:22px 0}
+.lbl{display:inline-block;font-size:12px;color:var(--mu);margin-bottom:6px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.kaart{background:var(--kaart);border-radius:8px;padding:12px}ul{margin:6px 0 0;padding-left:20px}.bestaand{background:var(--kaart);border-radius:10px;padding:16px;margin:22px 0;color:var(--mu)}
+details{border-top:1px solid var(--ln);padding:10px 0}summary{cursor:pointer;font-weight:600}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<h1>Voorbeeld: /alle-lezingen als keuzepagina</h1>
+<p class="uitleg">Voorbeeld voor Richard (vraag 129, WEBSITE SEO-116), 30-10-2026. Groen is nieuw; grijs blijft zoals het nu is. Alle tekst staat al op
+richardvanhooijdonk.com (/contact, /alle-lezingen, /over-richard); niets nieuws beloofd. Onzichtbaar komt er schema bij: FAQPage voor de vragen
+en een lijst (ItemList) van de 26 lezingen.</p>
+
+<div class="bestaand"><span class="lbl">Blijft: kop en inleiding van de pagina</span>
+<h2>26 lezingen over AI en de toekomst</h2>
+<p>Elke keynote belicht een eigen kant van wat er de komende jaren op organisaties afkomt. De keynotes zijn af te stemmen op het publiek.</p></div>
+
+<div class="nieuw"><span class="lbl">Nieuw: keuzeblok</span>
+<h2>Welke lezing past bij je evenement?</h2>
+<div class="grid">
+<div class="kaart"><h3>Kies op onderwerp</h3>
+<p><strong>Een algemene lezing</strong> voor een breed publiek: De AI-revolutie, Trends 2040, Agentic AI, Leiderschap en management in het
+AI-tijdperk, Cybercrime in het AI-tijdperk of De organisatie van de toekomst.</p>
+<p><strong>Een sectorlezing</strong> als de zaal uit één sector komt: twintig sectoren, van zorg en overheid tot bouw, energie, logistiek en
+retail.</p></div>
+<div class="kaart"><h3>Kies de vorm</h3>
+<ul><li>Op locatie of online</li><li>30, 45, 60 minuten of langer</li><li>In het Nederlands of het Engels</li></ul>
+<p>Twijfel je? Vertel wie er in de zaal zitten en wat ze na afloop anders moeten zien. Op werkdagen binnen een uur reactie, nog dezelfde dag
+een voorstel.</p></div>
+</div></div>
+
+<div class="bestaand"><span class="lbl">Blijft: de lijst met lezingen per categorie</span>
+<p>Uitgelichte keynote De AI-revolutie; Algemeen; Zorg; Financiële en zakelijke dienstverlening; Overheid en veiligheid; Bouw en mobiliteit;
+Industrie en energie; Handel en keten; ...</p></div>
+
+<div class="nieuw"><span class="lbl">Nieuw: veelgestelde vragen onderaan (met FAQPage-schema)</span>
+<h2>Veelgestelde vragen</h2>
+<details open><summary>Kun je een lezing aanpassen aan ons publiek?</summary><p>Ja. De keynotes zijn af te stemmen op het publiek. In een
+kennismakingsgesprek brainstormen jullie samen over de lezing, de onderwerpen en de vorm. Dat kost je niets.</p></details>
+<details><summary>Moet de datum al vastliggen?</summary><p>Nee. Geef aan welke periode je overweegt, dan bespreekt het team de beschikbare data
+met je.</p></details>
+<details><summary>Kan het in het Engels, en ook in het buitenland?</summary><p>Ja. Richard spreekt in het Nederlands en het Engels, op locatie of
+online, en stond al in meer dan 30 landen op het podium, onder meer op een politietop in Dubai.</p></details>
+<details><summary>Wat kost een lezing?</summary><p>Lezingen zijn er vanaf € 3.500. De prijs hangt af van locatie, duur en eventueel gewenst
+maatwerk. <em>(Zin zoals Richard op 30-10 bevestigde; de site zegt nu "Keynotes zijn er vanaf € 3.500 (webinars)".)</em></p></details>
+</div>
+<p class="uitleg">Waarom: bij de vraag "Welke spreker kan ons managementteam in 45 minuten uitleggen wat AI-agents betekenen voor onze
+organisatie?" citeren AI-assistenten 9 keer de keynotepagina van een concurrent met precies zo'n keuzeblok en vragen. /alle-lezingen heeft nu
+ongeveer 560 woorden en geen vragen.</p>
+</body></html>
