@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "31-10-2026 07:15",
+ "gebouwd": "01-11-2026 07:15",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "206",
+    "kern_waarde": "200",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,17 +89,16 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 191,
-    "vertoningen_7d": 34914,
-    "trend_pct": 11,
+    "klikken_7d": 185,
+    "vertoningen_7d": 35262,
+    "trend_pct": 7,
     "reeks_90d": [
-     29.0,
-     30.0,
-     29.33,
-     25.5,
-     23.8,
-     23.5,
-     22.0,
+     31.0,
+     29.5,
+     24.33,
+     22.5,
+     22.4,
+     20.83,
      20.71,
      18.14,
      17.14,
@@ -182,16 +181,16 @@
      30.86,
      28.71,
      29.29,
-     27.29
+     27.57,
+     26.43
     ],
     "context": false
    },
    "Blog NL": {
     "klikken_7d": 15,
-    "vertoningen_7d": 1269,
-    "trend_pct": 58,
+    "vertoningen_7d": 1387,
+    "trend_pct": 54,
     "reeks_90d": [
-     0.0,
      0.0,
      0.0,
      0.0,
@@ -280,22 +279,22 @@
      2.29,
      2.86,
      2.29,
+     2.14,
      2.14
     ],
     "context": false
    },
    "Hoofdsite": {
-    "klikken_7d": 144,
-    "vertoningen_7d": 4265,
-    "trend_pct": 19,
+    "klikken_7d": 141,
+    "vertoningen_7d": 4267,
+    "trend_pct": 18,
     "reeks_90d": [
-     2.0,
-     7.0,
-     7.67,
-     7.5,
-     7.2,
-     6.5,
-     6.0,
+     12.0,
+     10.5,
+     9.33,
+     8.5,
+     7.4,
+     6.67,
      6.0,
      5.86,
      5.71,
@@ -378,7 +377,8 @@
      16.57,
      19.43,
      19.71,
-     20.57
+     20.57,
+     20.14
     ],
     "context": true
    }
@@ -386,53 +386,53 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 20,
-    "vertoningen": 565
+    "klikken": 15,
+    "vertoningen": 423
    },
    {
     "pad": "/en/sexbots-love-them-or-hate-them-they-are-coming/",
-    "klikken": 12,
-    "vertoningen": 439
+    "klikken": 13,
+    "vertoningen": 420
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
-    "klikken": 11,
-    "vertoningen": 703
+    "klikken": 10,
+    "vertoningen": 671
+   },
+   {
+    "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
+    "klikken": 10,
+    "vertoningen": 1024
    },
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 9,
-    "vertoningen": 734
-   },
-   {
-    "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
-    "klikken": 9,
-    "vertoningen": 1099
+    "vertoningen": 683
    },
    {
     "pad": "/en/top-10-intelligent-robots-that-improve-peoples-emotional-and-social-wellbeing/",
     "klikken": 6,
-    "vertoningen": 294
+    "vertoningen": 257
    },
    {
     "pad": "/en/the-good-the-bad-and-the-future-of-deepfakes/",
     "klikken": 5,
-    "vertoningen": 243
+    "vertoningen": 250
    },
    {
     "pad": "/en/6-innovations-that-will-help-predict-earthquakes-and-improve-rescue-operations/",
     "klikken": 4,
-    "vertoningen": 417
+    "vertoningen": 428
+   },
+   {
+    "pad": "/en/ai-gone-wrong-seven-unsettling-examples-that-show-how-ai-is-far-from-perfect/",
+    "klikken": 4,
+    "vertoningen": 211
    },
    {
     "pad": "/en/how-cybercrime-is-overtaking-physical-crime/",
     "klikken": 4,
-    "vertoningen": 21
-   },
-   {
-    "pad": "/en/how-we-will-communicate-in-2050/",
-    "klikken": 4,
-    "vertoningen": 92
+    "vertoningen": 26
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
@@ -511,7 +511,7 @@
    "naam": "Search Console prestaties",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks, laatste 2 dagen voorlopig",
-   "datum": "2026-10-30",
+   "datum": "2026-10-31",
    "status": "ok"
   },
   {
@@ -539,7 +539,7 @@
    "naam": "GA4 blog (klik naar lezing nog niet gemeten)",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks",
-   "datum": "2026-10-30",
+   "datum": "2026-10-31",
    "status": "ok"
   },
   {
