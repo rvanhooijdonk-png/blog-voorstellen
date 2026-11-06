@@ -1,0 +1,65 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>SEO-repo's november</title><style>
+:root{--bg:#fff;--tx:#1d1d1f;--mu:#5f6368;--ln:#ddd;--kaart:#f6f7f9;--ja:#dcf5e0;--test:#fff3cd;--nee:#f3f3f3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16181c;--tx:#eee;--mu:#aaa;--ln:#333;--kaart:#1f2228;--ja:#244a2e;--test:#4a3f1a;--nee:#24262b}}
+:root[data-theme="dark"]{--bg:#16181c;--tx:#eee;--mu:#aaa;--ln:#333;--kaart:#1f2228;--ja:#244a2e;--test:#4a3f1a;--nee:#24262b}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,sans-serif;max-width:860px;margin:0 auto;padding:16px;overflow-wrap:anywhere}
+a{color:inherit;text-underline-offset:3px}h1{font-size:1.6rem;line-height:1.25}h2{font-size:1.25rem;margin-top:32px;border-bottom:1px solid var(--ln);padding-bottom:6px}
+.meta{color:var(--mu);font-size:14px}section{margin:16px 0;padding:14px 16px;background:var(--kaart);border-radius:10px}
+section h3{margin:0 0 6px;font-size:1.08rem}.lab{display:inline-block;font-size:13px;font-weight:600;padding:1px 8px;border-radius:6px;margin-right:6px}
+.doen{background:var(--ja)}.testen{background:var(--test)}.later{background:var(--nee)}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid var(--ln);padding:6px 4px;text-align:left;vertical-align:top}
+.vraag{font-weight:600}
+@media (max-width:640px){section{padding:12px}h1{font-size:1.35rem}table{font-size:13px}}
+</style></head><body>
+<h1>SEO-repo's: vinden, analyse, advies (06-11-2026)</h1>
+<p>Opdracht Richard: zoveel mogelijk repo's vinden die de SEO kunnen aanvullen of verbeteren. Twee zoekers vonden <b>90 kandidaten</b> (techniek en data 42, inhoud en GEO 48), naast de ~40 die het SEO-kanaal op 16-10 al beoordeelde. Elke repo is bij GitHub gecontroleerd op bestaan, onderhoud en licentie. Daarna is elke kandidaat gelegd naast wat het SEO-kanaal al heeft (~300 eigen scripts). Er is niets geïnstalleerd of live gewijzigd.</p>
+<p class="meta">Uitvoeren na jouw ja: het SEO-kanaal (blog-seo-geo) bouwt, installeren gaat langs de repo-check van TOEZICHT, live wijzigingen via ONDERHOUD. Lijsten: <a href="https://github.com/rvanhooijdonk-png/blog-sea/tree/main/data/seo-repos">data/seo-repos</a>.</p>
+
+<h2>Advies: 8 voorstellen - antwoord per nummer ja of nee</h2>
+
+<section><h3><span class="lab doen">doen</span>1. Bijgehouden lijst van AI-bots gebruiken</h3>
+<p><b>ai-robots-txt/ai.robots.txt</b> (MIT) en <b>monperrus/crawler-user-agents</b> (MIT). De AI-botmeting en de robots-bewaking hebben de botnamen nu vast in de code; nieuwe AI-bots worden gemist. Deze lijsten worden wekelijks bijgehouden. Geen installatie, alleen een JSON-bestand inlezen. Klein werk.</p>
+<p class="vraag">Ja of nee?</p></section>
+
+<section><h3><span class="lab testen">testen</span>2. Artikelen vergelijken op betekenis (lokaal)</h3>
+<p><b>huggingface/sentence-transformers</b> met het meertalige model <b>BGE-M3</b> (FlagOpen/FlagEmbedding), plus <b>hdbscan</b> (clusters) en <b>datasketch</b> (bijna-dubbele teksten). Het SEO-kanaal vergelijkt artikelen nu op losse woorden. Op betekenis vind je beter: artikelen die elkaar beconcurreren (kannibalisatie), bijna-dubbele artikelen onder de 919 niet-geïndexeerde, en passende interne links naar de lezingpagina's, in NL en EN. Alles lokaal, geen kosten, model ~2 GB. Proef: één keer over de 1.965 artikelen, vergelijken met de huidige uitkomst.</p>
+<p class="vraag">Ja of nee?</p></section>
+
+<section><h3><span class="lab testen">testen</span>3. Linkkracht per artikel (interne links)</h3>
+<p><b>networkx</b> (BSD-3) berekent uit de bestaande interne links welke artikelen de meeste 'kracht' hebben en of die doorstroomt naar de lezingpagina's. <b>martech-engineer/WebKnoGraph</b> (Apache-2.0, op een paper gebaseerd) als voorbeeld voor 'welke link toevoegen'. Nu kijkt het kanaal alleen naar artikelen zonder enige link (wezen).</p>
+<p class="vraag">Ja of nee?</p></section>
+
+<section><h3><span class="lab testen">testen</span>4. Snelheid van alle pagina's in één keer</h3>
+<p><b>harlan-zw/unlighthouse</b> (MIT) draait Lighthouse lokaal over alle pagina's van blog en hoofdsite en groepeert per sjabloon. Nu meet het kanaal alleen de drukste pagina's via de Google-API. Eén volledige meting, daarna maandelijks.</p>
+<p class="vraag">Ja of nee?</p></section>
+
+<section><h3><span class="lab testen">testen</span>5. Taal- en stijlcontrole NL en EN, lokaal</h3>
+<p><b>languagetool-org/languagetool</b> (LGPL, als eigen server op de Mac, niets naar buiten) voor taalfouten, en <b>vale-cli/vale</b> (MIT) met jouw eigen regels (alleen korte streepjes, verboden woorden, je-vorm). Voor nieuwe concepten, bijgewerkte artikelen en de teksten van de hoofdsite, vóór ze naar jou gaan.</p>
+<p class="vraag">Ja of nee?</p></section>
+
+<section><h3><span class="lab later">later</span>6. Leesbaarheid Nederlands</h3>
+<p><b>explosion/spaCy</b> (NL-model) met <b>HLasse/TextDescriptives</b> (Apache-2.0): leesbaarheid en zinslengte per artikel, als extra regel in de concepttoets. Pas na 2 en 5.</p>
+<p class="vraag">Ja of nee?</p></section>
+
+<section><h3><span class="lab later">later</span>7. Gratis linkkansen via Common Crawl</h3>
+<p><b>commoncrawl/cc-webgraph</b> en <b>cc-index-table</b> (Apache-2.0, open data): welke sites linken naar andere sprekers en bureaus, en waar je naam genoemd wordt zonder link. Geen gekochte links, alleen een doelenlijst voor pr. Zwaar (grote bestanden); pas na de GEO-meting van 4 weken.</p>
+<p class="vraag">Ja of nee?</p></section>
+
+<section><h3><span class="lab later">later</span>8. Voor de hoofdsite (naar WEBSITE)</h3>
+<p><b>google/schema-dts</b> (getypt schema op de lezingpagina's) en <b>GoogleChrome/web-vitals</b> (snelheid bij echte bezoekers, alleen achter de cookiemelding), als de site in JavaScript of TypeScript is gebouwd. WEBSITE beslist of het past.</p>
+<p class="vraag">Ja of nee?</p></section>
+
+<h2>Bewust niet (met reden)</h2>
+<table><tr><th>Repo's</th><th>Waarom niet</th></tr>
+<tr><td>simonw/llm, promptfoo, foundamental</td><td>AI-zichtbaarheid meten kost dan geld per vraag; de GEO-meting loopt al via Codex en Gemini zonder API-kosten</td></tr>
+<tr><td>faster-whisper, whisper.cpp, youtube-transcript-api</td><td>transcripten doet trend-pipeline al (whisper, YouTube-ondertitels)</td></tr>
+<tr><td>claude-blog (decay), content-decay, claude-seo-skills</td><td>dalers worden al elke nacht gemeten (N4); hooguit naslag</td></tr>
+<tr><td>lychee, linkchecker, scrapy, katana, crawl4ai, trafilatura, open-seo-crawler, squirrelscan, sitemap-parsers, wp-cli, goaccess</td><td>het kanaal heeft dit al (dode links, eigen crawler, WP-database) of heeft geen ruwe serverlogs</td></tr>
+<tr><td>serpbear, llm-keywords-pipeline, searxng</td><td>vragen een betaalde SERP-dienst of sturen zoekvragen naar zoekmachines</td></tr>
+<tr><td>google-indexing-script, indexpusher, index-now-for-python</td><td>Google Indexing API is alleen voor vacatures en livestreams; IndexNow doen Rank Math en de Bing-API al</td></tr>
+<tr><td>storm, gpt-researcher, long-form-factuality, OpenFactVerification</td><td>zwaar, sturen data naar LLM- en zoekdiensten, of zijn stilgevallen; claimcontrole blijft met primaire bronnen</td></tr>
+<tr><td>Top2Vec, bertje, REL, spaCy-entity-linker, ecommercetools, repo's zonder licentie</td><td>stilgevallen, alleen Engels, al gedekt door BERTopic/advertools, of geen licentie</td></tr>
+</table>
+<p class="meta">SEA-kanaal, 06-11-2026. Vinden en analyse: twee zoekers met GitHub-controle; advies: SEA. Niets geïnstalleerd.</p>
+</body></html>
