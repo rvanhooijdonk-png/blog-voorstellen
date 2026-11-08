@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "08-11-2026 07:15",
+ "gebouwd": "08-11-2026 11:04",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "240",
+    "kern_waarde": "245",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,9 +89,9 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 214,
-    "vertoningen_7d": 36526,
-    "trend_pct": 12,
+    "klikken_7d": 219,
+    "vertoningen_7d": 37155,
+    "trend_pct": 13,
     "reeks_90d": [
      13.0,
      17.0,
@@ -182,13 +182,13 @@
      25.86,
      27.0,
      30.0,
-     30.57
+     31.29
     ],
     "context": false
    },
    "Blog NL": {
     "klikken_7d": 26,
-    "vertoningen_7d": 2540,
+    "vertoningen_7d": 2570,
     "trend_pct": 89,
     "reeks_90d": [
      0.0,
@@ -286,7 +286,7 @@
    },
    "Hoofdsite": {
     "klikken_7d": 167,
-    "vertoningen_7d": 5913,
+    "vertoningen_7d": 5934,
     "trend_pct": 37,
     "reeks_90d": [
      11.0,
@@ -386,33 +386,33 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 31,
-    "vertoningen": 531
+    "klikken": 32,
+    "vertoningen": 540
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
-    "klikken": 11,
-    "vertoningen": 697
+    "klikken": 12,
+    "vertoningen": 730
    },
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
-    "klikken": 7,
-    "vertoningen": 705
+    "klikken": 8,
+    "vertoningen": 718
    },
    {
     "pad": "/en/sexbots-love-them-or-hate-them-they-are-coming/",
     "klikken": 6,
-    "vertoningen": 296
+    "vertoningen": 301
    },
    {
     "pad": "/en/the-future-of-holographic-technology-will-flip-almost-every-industry-on-its-head/",
     "klikken": 6,
-    "vertoningen": 118
+    "vertoningen": 123
    },
    {
     "pad": "/en/what-universities-will-look-like-in-2050-if-they-still-exist/",
     "klikken": 6,
-    "vertoningen": 200
+    "vertoningen": 202
    },
    {
     "pad": "/chip-in-mijn-hand/",
@@ -422,17 +422,17 @@
    {
     "pad": "/en/25-business-leaders-who-inspire/",
     "klikken": 4,
-    "vertoningen": 468
+    "vertoningen": 473
    },
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 4,
-    "vertoningen": 606
+    "vertoningen": 621
    },
    {
     "pad": "/en/ai-bloopers-artificial-intelligences-most-memorable-mistakes/",
     "klikken": 4,
-    "vertoningen": 123
+    "vertoningen": 126
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
