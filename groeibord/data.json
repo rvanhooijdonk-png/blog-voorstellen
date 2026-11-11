@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "10-11-2026 07:15",
+ "gebouwd": "10-11-2026 13:53",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "247",
+    "kern_waarde": "256",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,9 +89,9 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 219,
-    "vertoningen_7d": 35546,
-    "trend_pct": 11,
+    "klikken_7d": 228,
+    "vertoningen_7d": 36896,
+    "trend_pct": 14,
     "reeks_90d": [
      26.0,
      22.0,
@@ -182,13 +182,13 @@
      30.0,
      31.86,
      31.86,
-     31.29
+     32.57
     ],
     "context": false
    },
    "Blog NL": {
     "klikken_7d": 28,
-    "vertoningen_7d": 2726,
+    "vertoningen_7d": 2758,
     "trend_pct": 87,
     "reeks_90d": [
      0.0,
@@ -286,7 +286,7 @@
    },
    "Hoofdsite": {
     "klikken_7d": 184,
-    "vertoningen_7d": 5303,
+    "vertoningen_7d": 5375,
     "trend_pct": 47,
     "reeks_90d": [
      7.0,
@@ -387,27 +387,27 @@
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
     "klikken": 35,
-    "vertoningen": 531
+    "vertoningen": 555
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 13,
-    "vertoningen": 658
+    "vertoningen": 672
    },
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 9,
-    "vertoningen": 729
+    "vertoningen": 746
    },
    {
     "pad": "/en/the-future-of-holographic-technology-will-flip-almost-every-industry-on-its-head/",
     "klikken": 8,
-    "vertoningen": 111
+    "vertoningen": 115
    },
    {
     "pad": "/en/what-universities-will-look-like-in-2050-if-they-still-exist/",
     "klikken": 6,
-    "vertoningen": 183
+    "vertoningen": 191
    },
    {
     "pad": "/chip-in-mijn-hand/",
@@ -417,22 +417,22 @@
    {
     "pad": "/en/6-innovations-that-will-help-predict-earthquakes-and-improve-rescue-operations/",
     "klikken": 5,
-    "vertoningen": 318
+    "vertoningen": 337
    },
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 5,
-    "vertoningen": 599
+    "vertoningen": 633
    },
    {
     "pad": "/en/brain-chip-applications-that-will-blow-your-mind/",
     "klikken": 5,
-    "vertoningen": 205
+    "vertoningen": 214
    },
    {
     "pad": "/en/25-business-leaders-who-inspire/",
     "klikken": 4,
-    "vertoningen": 479
+    "vertoningen": 486
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
