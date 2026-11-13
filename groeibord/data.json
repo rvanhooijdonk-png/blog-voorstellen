@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "11-11-2026 07:15",
+ "gebouwd": "12-11-2026 07:15",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "254",
+    "kern_waarde": "241",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,17 +89,16 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 225,
-    "vertoningen_7d": 34941,
-    "trend_pct": 13,
+    "klikken_7d": 215,
+    "vertoningen_7d": 33019,
+    "trend_pct": 8,
     "reeks_90d": [
-     18.0,
-     20.5,
+     23.0,
+     17.5,
      17.67,
-     17.75,
-     19.4,
-     18.33,
-     17.57,
+     19.75,
+     18.4,
+     17.5,
      18.86,
      17.43,
      18.0,
@@ -182,22 +181,22 @@
      31.86,
      31.86,
      32.86,
-     32.14
+     33.29,
+     30.71
     ],
     "context": false
    },
    "Blog NL": {
-    "klikken_7d": 29,
-    "vertoningen_7d": 2736,
-    "trend_pct": 78,
+    "klikken_7d": 26,
+    "vertoningen_7d": 2648,
+    "trend_pct": 53,
     "reeks_90d": [
-     1.0,
-     0.5,
+     0.0,
+     0.0,
      0.33,
      0.5,
-     0.6,
-     0.5,
-     0.43,
+     0.4,
+     0.33,
      0.43,
      0.57,
      0.57,
@@ -279,23 +278,23 @@
      3.86,
      3.71,
      3.71,
-     4.0,
-     4.14
+     4.14,
+     4.29,
+     3.71
     ],
     "context": false
    },
    "Hoofdsite": {
-    "klikken_7d": 188,
-    "vertoningen_7d": 5291,
-    "trend_pct": 46,
+    "klikken_7d": 174,
+    "vertoningen_7d": 5009,
+    "trend_pct": 36,
     "reeks_90d": [
-     4.0,
-     3.5,
+     3.0,
+     3.0,
      3.33,
-     3.5,
      4.0,
-     4.5,
-     5.29,
+     4.6,
+     5.5,
      5.57,
      6.86,
      6.71,
@@ -378,7 +377,8 @@
      23.86,
      24.29,
      26.29,
-     26.86
+     26.86,
+     24.86
     ],
     "context": true
    }
@@ -386,53 +386,53 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 36,
-    "vertoningen": 508
+    "klikken": 35,
+    "vertoningen": 489
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
-    "klikken": 12,
-    "vertoningen": 653
+    "klikken": 10,
+    "vertoningen": 625
    },
    {
-    "pad": "/en/human-microchipping-the-benefits-and-downsides/",
-    "klikken": 8,
-    "vertoningen": 706
+    "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
+    "klikken": 9,
+    "vertoningen": 618
    },
    {
-    "pad": "/en/the-future-of-holographic-technology-will-flip-almost-every-industry-on-its-head/",
-    "klikken": 8,
-    "vertoningen": 113
-   },
-   {
-    "pad": "/en/what-universities-will-look-like-in-2050-if-they-still-exist/",
-    "klikken": 6,
-    "vertoningen": 195
-   },
-   {
-    "pad": "/chip-in-mijn-hand/",
+    "pad": "/de-toekomst-van-windenergie-zes-futuristische-innovaties-2/",
     "klikken": 5,
-    "vertoningen": 35
+    "vertoningen": 108
    },
    {
     "pad": "/en/6-innovations-that-will-help-predict-earthquakes-and-improve-rescue-operations/",
     "klikken": 5,
-    "vertoningen": 313
+    "vertoningen": 305
    },
    {
-    "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
+    "pad": "/en/ai-bloopers-artificial-intelligences-most-memorable-mistakes/",
     "klikken": 5,
-    "vertoningen": 632
-   },
-   {
-    "pad": "/en/brain-chip-applications-that-will-blow-your-mind/",
-    "klikken": 5,
-    "vertoningen": 227
+    "vertoningen": 142
    },
    {
     "pad": "/en/how-we-will-communicate-in-2050/",
     "klikken": 5,
-    "vertoningen": 121
+    "vertoningen": 109
+   },
+   {
+    "pad": "/en/human-microchipping-the-benefits-and-downsides/",
+    "klikken": 5,
+    "vertoningen": 635
+   },
+   {
+    "pad": "/en/the-future-of-holographic-technology-will-flip-almost-every-industry-on-its-head/",
+    "klikken": 5,
+    "vertoningen": 106
+   },
+   {
+    "pad": "/en/what-universities-will-look-like-in-2050-if-they-still-exist/",
+    "klikken": 5,
+    "vertoningen": 182
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
@@ -511,7 +511,7 @@
    "naam": "Search Console prestaties",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks, laatste 2 dagen voorlopig",
-   "datum": "2026-11-10",
+   "datum": "2026-11-11",
    "status": "ok"
   },
   {
@@ -539,7 +539,7 @@
    "naam": "GA4 blog (klik naar lezing nog niet gemeten)",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks",
-   "datum": "2026-11-10",
+   "datum": "2026-11-11",
    "status": "ok"
   },
   {
