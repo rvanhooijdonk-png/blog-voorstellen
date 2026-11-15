@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "15-11-2026 09:29",
+ "gebouwd": "15-11-2026 11:05",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "256",
+    "kern_waarde": "264",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,9 +89,9 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 229,
-    "vertoningen_7d": 38327,
-    "trend_pct": 7,
+    "klikken_7d": 237,
+    "vertoningen_7d": 38667,
+    "trend_pct": 10,
     "reeks_90d": [
      26.0,
      19.5,
@@ -182,13 +182,13 @@
      33.86,
      32.86,
      32.29,
-     32.71
+     33.86
     ],
     "context": false
    },
    "Blog NL": {
     "klikken_7d": 27,
-    "vertoningen_7d": 2765,
+    "vertoningen_7d": 2767,
     "trend_pct": 35,
     "reeks_90d": [
      1.0,
@@ -286,7 +286,7 @@
    },
    "Hoofdsite": {
     "klikken_7d": 120,
-    "vertoningen_7d": 4248,
+    "vertoningen_7d": 4257,
     "trend_pct": -4,
     "reeks_90d": [
      6.0,
@@ -386,13 +386,13 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 46,
-    "vertoningen": 698
+    "klikken": 48,
+    "vertoningen": 708
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 14,
-    "vertoningen": 672
+    "vertoningen": 684
    },
    {
     "pad": "/en/ai-bloopers-artificial-intelligences-most-memorable-mistakes/",
@@ -402,12 +402,17 @@
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 8,
-    "vertoningen": 707
+    "vertoningen": 721
    },
    {
     "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
     "klikken": 6,
-    "vertoningen": 833
+    "vertoningen": 843
+   },
+   {
+    "pad": "/en/how-we-will-communicate-in-2050/",
+    "klikken": 5,
+    "vertoningen": 117
    },
    {
     "pad": "/de-toekomst-van-windenergie-zes-futuristische-innovaties-2/",
@@ -417,22 +422,17 @@
    {
     "pad": "/en/6-innovations-that-will-help-predict-earthquakes-and-improve-rescue-operations/",
     "klikken": 4,
-    "vertoningen": 391
+    "vertoningen": 395
    },
    {
     "pad": "/en/ai-in-aerospace-whos-liable-when-the-algorithm-crashes-the-plane/",
     "klikken": 4,
-    "vertoningen": 390
+    "vertoningen": 394
    },
    {
     "pad": "/en/biohacking-when-your-body-becomes-a-target/",
     "klikken": 4,
     "vertoningen": 208
-   },
-   {
-    "pad": "/en/how-we-will-communicate-in-2050/",
-    "klikken": 4,
-    "vertoningen": 112
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
