@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "20-11-2026 07:53",
+ "gebouwd": "20-11-2026 10:52",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "349",
+    "kern_waarde": "354",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,9 +89,9 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 313,
-    "vertoningen_7d": 45373,
-    "trend_pct": 34,
+    "klikken_7d": 318,
+    "vertoningen_7d": 47256,
+    "trend_pct": 35,
     "reeks_90d": [
      16.0,
      18.0,
@@ -181,14 +181,14 @@
      40.14,
      41.43,
      43.29,
-     43.86,
-     44.71
+     44.0,
+     45.43
     ],
     "context": false
    },
    "Blog NL": {
     "klikken_7d": 36,
-    "vertoningen_7d": 2927,
+    "vertoningen_7d": 3106,
     "trend_pct": 43,
     "reeks_90d": [
      0.0,
@@ -286,7 +286,7 @@
    },
    "Hoofdsite": {
     "klikken_7d": 123,
-    "vertoningen_7d": 3951,
+    "vertoningen_7d": 4050,
     "trend_pct": -11,
     "reeks_90d": [
      2.0,
@@ -386,53 +386,53 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 47,
-    "vertoningen": 895
+    "klikken": 49,
+    "vertoningen": 910
    },
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 14,
-    "vertoningen": 1068
+    "vertoningen": 1095
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 14,
-    "vertoningen": 728
+    "vertoningen": 742
    },
    {
     "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
     "klikken": 11,
-    "vertoningen": 1186
+    "vertoningen": 1220
    },
    {
     "pad": "/en/how-to-choose-the-right-guest-speakers-for-your-event/",
     "klikken": 9,
-    "vertoningen": 95
+    "vertoningen": 100
    },
    {
     "pad": "/en/the-future-of-public-speaking-trends-and-technologies-for-presenters/",
     "klikken": 8,
-    "vertoningen": 246
+    "vertoningen": 252
    },
    {
     "pad": "/en/ai-bloopers-artificial-intelligences-most-memorable-mistakes/",
     "klikken": 7,
-    "vertoningen": 210
+    "vertoningen": 216
    },
    {
     "pad": "/en/how-to-choose-the-right-guest-speakers-for-your-event/",
     "klikken": 7,
-    "vertoningen": 58
+    "vertoningen": 59
    },
    {
     "pad": "/en/how-ai-is-transforming-the-entertainment-industry/",
     "klikken": 5,
-    "vertoningen": 259
+    "vertoningen": 274
    },
    {
     "pad": "/en/how-to-choose-the-right-guest-speakers-for-your-event/",
     "klikken": 5,
-    "vertoningen": 97
+    "vertoningen": 106
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
