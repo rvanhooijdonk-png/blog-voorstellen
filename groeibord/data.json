@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "21-11-2026 07:15",
+ "gebouwd": "21-11-2026 07:52",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "349",
+    "kern_waarde": "350",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -90,7 +90,7 @@
   "delen": {
    "Blog EN": {
     "klikken_7d": 310,
-    "vertoningen_7d": 45854,
+    "vertoningen_7d": 46502,
     "trend_pct": 32,
     "reeks_90d": [
      20.0,
@@ -187,9 +187,9 @@
     "context": false
    },
    "Blog NL": {
-    "klikken_7d": 39,
-    "vertoningen_7d": 3058,
-    "trend_pct": 49,
+    "klikken_7d": 40,
+    "vertoningen_7d": 3144,
+    "trend_pct": 51,
     "reeks_90d": [
      0.0,
      0.5,
@@ -279,14 +279,14 @@
      4.29,
      4.14,
      4.71,
-     5.14,
-     5.57
+     5.29,
+     5.71
     ],
     "context": false
    },
    "Hoofdsite": {
     "klikken_7d": 138,
-    "vertoningen_7d": 4108,
+    "vertoningen_7d": 4157,
     "trend_pct": -3,
     "reeks_90d": [
      4.0,
@@ -387,17 +387,17 @@
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
     "klikken": 50,
-    "vertoningen": 847
+    "vertoningen": 854
    },
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 14,
-    "vertoningen": 1146
+    "vertoningen": 1152
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 12,
-    "vertoningen": 702
+    "vertoningen": 708
    },
    {
     "pad": "/en/how-to-choose-the-right-guest-speakers-for-your-event/",
@@ -407,12 +407,12 @@
    {
     "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
     "klikken": 9,
-    "vertoningen": 1165
+    "vertoningen": 1173
    },
    {
     "pad": "/en/the-future-of-public-speaking-trends-and-technologies-for-presenters/",
     "klikken": 8,
-    "vertoningen": 254
+    "vertoningen": 255
    },
    {
     "pad": "/en/how-to-choose-the-right-guest-speakers-for-your-event/",
@@ -427,12 +427,12 @@
    {
     "pad": "/en/6-innovations-that-will-help-predict-earthquakes-and-improve-rescue-operations/",
     "klikken": 6,
-    "vertoningen": 517
+    "vertoningen": 519
    },
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 5,
-    "vertoningen": 851
+    "vertoningen": 853
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
