@@ -110,12 +110,12 @@ const I=[
 ["Retailketen laat AI de schappen indelen, omzet per meter stijgt","Business Insider","07:30","Artikel",["AI-revolutie","Retail"],0,0]];
 const el=document.getElementById("items"),mel=document.getElementById("mel");
 function zeg(t){mel.textContent=t;mel.style.display="block";clearTimeout(zeg.t);zeg.t=setTimeout(()=>mel.style.display="none",2200)}
-function rij(it,i){const[t,b,u,ty,tags,gr,pod]=it;const d=document.createElement("div");d.className="rij"+(gr?" groen":"");d.tabIndex=0;d.dataset.i=i;
+function rij(it,i){const[t,b,u,ty,tags,gr,pod]=it;const d=document.createElement("div");d.className="rij"+(gr?" groen":"");d.tabIndex=0;d.dataset.i=i;d.dataset.type=ty;d.dataset.tags=tags.join("|");d.dataset.pod=pod;d.dataset.bron=b;
 d.innerHTML=`<div><div class="t">${t}</div><div class="m"><a href="#" class="bn">${b}</a> · ${u} · ${ty}${tags.map(x=>`<span class="lab">${x}</span>`).join("")}${pod?` <span class="pod">★ podiumgeschikt: concreet cijfer, raakt bestuurders</span>`:""}${gr?` · <span class="st">uitgewerkt</span>`:""}</div></div>
 <div class="acts">${gr?`<button>Uitwerking tonen</button>`:""}<button title="Ster (1)">★ Ster</button><button title="Later (2)">Later</button><button title="Dossier (3)">Dossier</button><button title="Rij (4)" class="rj">Rij</button>${gr?"":`<button title="Uitwerken (5)">Uitwerken</button>`}<button title="Weg (6)" class="weg">Weg</button></div>
 <div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>`;return d}
 I.forEach((it,i)=>el.appendChild(rij(it,i)));
-const B=document.createElement("div");B.className="rij bundel";B.tabIndex=0;
+const B=document.createElement("div");B.className="rij bundel";B.tabIndex=0;B.dataset.type="Artikel|Social media";B.dataset.tags="AI-first organisatie|Finance";B.dataset.pod="0";B.dataset.bron="Financial Times|Reuters|@account-4|De Tijd AI";
 B.innerHTML='<div style="cursor:pointer" class="bk"><div class="t">Banken zetten AI-agents in voor kredietbeslissingen <span class="n">verhaal · 4 berichten · 2 nieuw</span></div><div class="m">loopt sinds wo 19 nov · Financial Times, Reuters, @account-4, De Tijd AI<span class="lab">AI-first organisatie</span><span class="lab">Finance</span></div></div><div class="acts"><button title="Ster (1)">★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';
 const K=document.createElement("div");K.className="kind";
 [["● Banken zetten AI-agents in voor kredietbeoordeling","Reuters","vr 09:40 · nieuw"],["● ECB waarschuwt voor modelrisico bij AI-kredietbeslissingen","De Tijd AI","vr 08:15 · nieuw"],["Draad: wat agents in banken nu al doen","@account-4","do 20 nov 17:52"],["Kredietbank automatiseert 60% van mkb-aanvragen","Financial Times","wo 19 nov 11:10"]].forEach(([tt,b,u])=>{const d=document.createElement("div");d.className="rij";d.innerHTML='<div><div class="t">'+tt+'</div><div class="m"><a href="#" class="bn">'+b+'</a> · '+u+'</div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';K.appendChild(d)});
@@ -126,7 +126,15 @@ document.getElementById("kitems").innerHTML='<div class="rij"><div><div class="t
 const L=[["@account-1",158],["@account-2",135],["@account-3",108],["@account-4",95],["@account-5",91],["@account-6",89],["@account-7",84],["@account-8",83],["34 andere accounts",355]];
 document.getElementById("bronnen").innerHTML=L.map(([n,c])=>`<div class="bron"><b style="font-weight:500">${n}</b><span>${c}</span></div>`).join("");
 const tokens=document.getElementById("tokens");let act=[];
-function toon(){tokens.innerHTML=act.map((a,i)=>`<span class="tok">${a}<b data-i="${i}">×</b></span>`).join(" ");document.querySelectorAll(".dd").forEach(d=>{const n=d.querySelectorAll("input:checked").length,b=d.querySelector(".f");b.classList.toggle("aan",n>0);b.textContent=d.dataset.f+(n?" · "+n:"")+" ▾"})}
+function filter(){const sel=f=>[...document.querySelectorAll('.dd[data-f="'+f+'"] input:checked')].map(c=>c.value);
+ const on=sel("Onderwerp"),se=sel("Sector"),ty=sel("Type"),opv=document.getElementById("opv").classList.contains("aan"),br=(act.find(a=>a.startsWith("Bron: "))||"").slice(6),q=document.getElementById("q").value.toLowerCase();
+ let n=0;document.querySelectorAll("#items > .rij").forEach(r=>{const tg=(r.dataset.tags||"").split("|"),tp=(r.dataset.type||"").split("|");
+  const ok=(!on.length||on.some(x=>tg.includes(x)))&&(!se.length||se.some(x=>tg.includes(x)))&&(!ty.length||ty.some(x=>tp.includes(x)))&&(!opv||r.dataset.pod==="1")&&(!br||(r.dataset.bron||"").split("|").includes(br))&&(!q||r.innerText.toLowerCase().includes(q));
+  r.style.display=ok?"":"none";if(r.classList.contains("bundel")){const k=r.nextElementSibling;if(k&&k.classList.contains("kind"))k.style.display=ok?"":"none"}if(ok)n++});
+ const tel=document.querySelector(".dag .tel"),filt=on.length||se.length||ty.length||opv||br||q;tel.textContent="452 open · 812 behandeld van 1.264"+(filt?" · met filter: "+n+" getoond":"");
+ let leeg=document.getElementById("leeg");if(!leeg){leeg=document.createElement("div");leeg.id="leeg";leeg.className="ghost";document.getElementById("items").after(leeg)}leeg.textContent=filt&&!n?"Geen items vandaag met deze filters. Wis een filter om meer te zien.":""}
+
+function toon(){setTimeout(filter,0);tokens.innerHTML=act.map((a,i)=>`<span class="tok">${a}<b data-i="${i}">×</b></span>`).join(" ");document.querySelectorAll(".dd").forEach(d=>{const n=d.querySelectorAll("input:checked").length,b=d.querySelector(".f");b.classList.toggle("aan",n>0);b.textContent=d.dataset.f+(n?" · "+n:"")+" ▾"})}
 document.addEventListener("click",e=>{const dd=e.target.closest(".dd");document.querySelectorAll(".dd.open").forEach(x=>{if(x!==dd)x.classList.remove("open")});
  if(e.target.matches(".dd>.f")){dd.classList.toggle("open");return}
  if(e.target.matches(".tok b")){const v=act[+e.target.dataset.i];act.splice(+e.target.dataset.i,1);document.querySelectorAll(".menu input").forEach(c=>{if(v.endsWith(": "+c.value))c.checked=false});if(v==="Opvallend")document.getElementById("opv").classList.remove("aan");toon();return}
@@ -144,6 +152,7 @@ document.addEventListener("click",e=>{const dd=e.target.closest(".dd");document.
  if(/Uitwerken/.test(e.target.textContent)){zeg("Proef: wordt uitgewerkt; daarna groen");return}
  zeg("Proef: "+e.target.textContent.replace("★ ","")+" — item verdwijnt uit de lijst");r.remove()});
 document.addEventListener("change",e=>{if(!e.target.matches(".menu input"))return;const f=e.target.closest(".dd").dataset.f,v=f+": "+e.target.value;act=act.filter(a=>a!==v);if(e.target.checked)act.push(v);toon()});
+document.getElementById("q").addEventListener("input",()=>filter());
 document.addEventListener("keydown",e=>{if(e.target.tagName==="INPUT")return;if(e.key==="/"){e.preventDefault();document.getElementById("q").focus();return}
  const rs=[...document.querySelectorAll("#items .rij")];let i=rs.findIndex(r=>r.classList.contains("sel"));
  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();rs.forEach(r=>r.classList.remove("sel"));i=Math.max(0,Math.min(rs.length-1,i+(e.key==="ArrowDown"?1:-1)));rs[i]&&rs[i].classList.add("sel");rs[i]&&rs[i].scrollIntoView({block:"nearest"});return}
