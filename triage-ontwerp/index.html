@@ -52,6 +52,11 @@ main{min-width:0}
 .bron{display:flex;justify-content:space-between;padding:7px 4px;border-bottom:1px solid var(--lijn);cursor:pointer}.bron:hover{color:var(--focus)}.bron span{color:var(--zacht);font-variant-numeric:tabular-nums}
 .bundel .t::before{content:"▸ ";color:var(--zacht)}.bundel.open .t::before{content:"▾ "}.bundel .n{font-size:11.5px;background:var(--knop);border-radius:10px;padding:1px 7px;margin-left:6px;font-weight:500;color:var(--zacht)}.kind{display:none;padding-left:28px;background:var(--vlak)}.kind.open{display:block}.kind .rij{background:transparent}
 .ghost{color:var(--zacht);font-size:12.5px;padding:6px 12px;font-style:italic}
+.rij{grid-template-columns:auto 1fr auto}.rij>.kb{width:16px;height:16px;margin:0}.rij .opm{grid-column:2/-1}
+#batch{position:sticky;bottom:0;display:none;align-items:center;gap:6px;flex-wrap:wrap;background:var(--inkt);color:var(--vlak);border-radius:10px;padding:8px 12px;margin-top:10px;z-index:6}
+#batch.aan{display:flex}#batch b{margin-right:6px}#batch button{font:inherit;font-size:12.5px;border:0;border-radius:6px;padding:4px 9px;cursor:pointer;background:rgba(255,255,255,.14);color:inherit}#batch .wis{margin-left:auto;background:transparent;text-decoration:underline}
+.selalles{font:inherit;font-size:12.5px;background:none;border:0;color:var(--focus);cursor:pointer;padding:0}
+@media (max-width:820px){.rij{grid-template-columns:auto 1fr}.rij .acts{grid-column:2}}
 .melding{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--inkt);color:var(--vlak);padding:7px 14px;border-radius:7px;font-size:13px;display:none;z-index:30}
 .hint{color:var(--zacht);font-size:12px;margin-left:8px}
 .kaarten{display:none}.kaarten.aan{display:block}.kaarten .info{color:var(--zacht);font-size:13px;margin:18px 0 8px}
@@ -84,7 +89,7 @@ main{min-width:0}
  </div>
 </div>
 <div class="lijst" id="lijst">
- <div class="dag"><h2>Vrijdag 21 november</h2><div class="balk"><i></i></div><div class="tel">452 open · 812 behandeld van 1.264</div><span class="hint">verhalen: klik om te openen · ↑↓ kiezen · 1–6 acties · ? sneltoetsen</span></div>
+ <div class="dag"><h2>Vrijdag 21 november</h2><div class="balk"><i></i></div><div class="tel">452 open · 812 behandeld van 1.264</div><span class="hint">vink aan voor batch · verhalen: klik om te openen · ↑↓ kiezen · 1–6 acties · ? sneltoetsen</span></div>
  <div id="items"></div>
  <button class="inklap" data-x="laag">▸ Lage scores · 19 items</button><div class="extra" id="laag"></div>
  <div class="dag"><h2>Donderdag 20 november</h2><div class="tel">38 open</div></div><div class="ghost">↳ 1 bericht over "Banken zetten AI-agents in…" staat in het verhaal bij vrijdag</div>
@@ -121,6 +126,17 @@ const K=document.createElement("div");K.className="kind";
 [["● Banken zetten AI-agents in voor kredietbeoordeling","Reuters","vr 09:40 · nieuw"],["● ECB waarschuwt voor modelrisico bij AI-kredietbeslissingen","De Tijd AI","vr 08:15 · nieuw"],["Draad: wat agents in banken nu al doen","@account-4","do 20 nov 17:52"],["Kredietbank automatiseert 60% van mkb-aanvragen","Financial Times","wo 19 nov 11:10"]].forEach(([tt,b,u])=>{const d=document.createElement("div");d.className="rij";d.innerHTML='<div><div class="t">'+tt+'</div><div class="m"><a href="#" class="bn">'+b+'</a> · '+u+'</div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';K.appendChild(d)});
 el.insertBefore(K,el.children[2]);el.insertBefore(B,K);
 B.querySelector(".bk").addEventListener("click",()=>{B.classList.toggle("open");K.classList.toggle("open")});
+function kb(r){if(r.querySelector(":scope>.kb"))return;const c=document.createElement("input");c.type="checkbox";c.className="kb";c.setAttribute("aria-label","Selecteer");r.prepend(c)}
+document.querySelectorAll("#items .rij").forEach(kb);
+const bar=document.createElement("div");bar.id="batch";bar.innerHTML='<b id="bn">0 geselecteerd</b><button>★ Ster</button><button>Later</button><button>Dossier</button><button>Rij</button><button>Uitwerken</button><button>Weg</button><button class="wis">selectie wissen</button>';
+document.getElementById("lijst").appendChild(bar);
+function telsel(){const n=[...document.querySelectorAll("#items .kb:checked")].filter(c=>c.closest(".rij").offsetParent!==null).length;document.getElementById("bn").textContent=n+" geselecteerd";bar.classList.toggle("aan",n>0)}
+document.addEventListener("change",e=>{if(e.target.classList.contains("kb")){if(e.target.closest(".bundel")){const k=e.target.closest(".bundel").nextElementSibling;k&&k.querySelectorAll(".kb").forEach(c=>c.checked=e.target.checked)}telsel()}});
+bar.addEventListener("click",e=>{if(e.target.tagName!=="BUTTON")return;if(e.target.classList.contains("wis")){document.querySelectorAll("#items .kb").forEach(c=>c.checked=false);telsel();return}
+ const rs=[...document.querySelectorAll("#items .kb:checked")].map(c=>c.closest(".rij")).filter(r=>r.offsetParent!==null);zeg("Proef: "+e.target.textContent.replace("★ ","")+" voor "+rs.length+" items — ze verdwijnen uit de lijst");rs.forEach(r=>{if(r.classList.contains("bundel")){const k=r.nextElementSibling;k&&k.classList.contains("kind")&&k.remove()}r.remove()});telsel()});
+const dk=document.querySelector(".dag");const sa=document.createElement("button");sa.className="selalles";sa.textContent="alles op deze dag selecteren";dk.appendChild(sa);
+sa.addEventListener("click",()=>{document.querySelectorAll("#items > .rij").forEach(r=>{if(r.style.display!=="none")r.querySelector(".kb").checked=true});document.querySelectorAll("#items .kind .kb").forEach(c=>c.checked=true);telsel()});
+
 
 document.getElementById("kitems").innerHTML='<div class="rij"><div><div class="t">Banken zetten AI-agents in voor kredietbeslissingen</div><div class="m">3 bronnen · Financial Times, Reuters, @account-4<span class="lab">AI-first organisatie</span><span class="lab">Finance</span></div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button>Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div></div>';
 const L=[["@account-1",158],["@account-2",135],["@account-3",108],["@account-4",95],["@account-5",91],["@account-6",89],["@account-7",84],["@account-8",83],["34 andere accounts",355]];
