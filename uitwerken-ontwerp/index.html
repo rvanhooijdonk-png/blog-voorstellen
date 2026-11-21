@@ -1,0 +1,139 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Ontwerp: Uitwerken-scherm</title><style>
+:root{--grond:#F3F5F1;--vlak:#FFFFFF;--vlak2:#F8FAF7;--inkt:#15201B;--zacht:#5D6B64;--lijn:#DCE3DC;--accent:#1F5F4A;--accent-zacht:#E3EFE9;
+--wacht:#7A5A12;--wacht-z:#FBF1D6;--bezig:#1F4F8A;--bezig-z:#E3ECF8;--klaar:#1F5F4A;--klaar-z:#E3EFE9;--mis:#A3332A;--mis-z:#FBE9E7;--chip:#EEF2EE}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--grond:#0F1513;--vlak:#17201C;--vlak2:#1C2722;--inkt:#E6ECE8;--zacht:#9AABA2;--lijn:#2A3832;
+--accent:#6CC4A1;--accent-zacht:#1F3A30;--wacht:#E3C46A;--wacht-z:#352B10;--bezig:#8DB8F0;--bezig-z:#1C2B40;--klaar:#6CC4A1;--klaar-z:#1F3A30;--mis:#FF8A7F;--mis-z:#3A1E1C;--chip:#22302A}}
+:root[data-theme="dark"]{--grond:#0F1513;--vlak:#17201C;--vlak2:#1C2722;--inkt:#E6ECE8;--zacht:#9AABA2;--lijn:#2A3832;
+--accent:#6CC4A1;--accent-zacht:#1F3A30;--wacht:#E3C46A;--wacht-z:#352B10;--bezig:#8DB8F0;--bezig-z:#1C2B40;--klaar:#6CC4A1;--klaar-z:#1F3A30;--mis:#FF8A7F;--mis-z:#3A1E1C;--chip:#22302A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--grond);color:var(--inkt);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+.pagina{max-width:880px;margin:0 auto;padding:24px 16px 64px}
+.toelichting{font-size:14px;color:var(--zacht);border-left:3px solid var(--lijn);padding:2px 0 2px 12px;margin:0 0 20px}
+.thema{display:flex;gap:8px;margin:0 0 24px}.thema button{font:inherit;font-size:14px;padding:6px 12px;border:1px solid var(--lijn);border-radius:8px;background:var(--vlak);color:var(--inkt);cursor:pointer}
+h1{font-size:1.6rem;line-height:1.25;margin:0 0 6px}
+.groepkop{display:flex;align-items:baseline;gap:10px;margin:32px 0 12px}
+.groepkop h2{font-size:1.25rem;margin:0}.groepkop .aantal{color:var(--zacht);font-size:15px}
+.kaart{background:var(--vlak);border:1px solid var(--lijn);border-radius:12px;overflow:hidden}
+.item{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:20px 24px}
+.item + .item, .item + .uitwerking, .uitwerking + .item{border-top:1px solid var(--lijn)}
+.item h3{font-size:1.125rem;line-height:1.35;margin:0 0 8px;font-weight:700;max-width:70ch}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.chip{font-size:13px;line-height:1;padding:5px 9px;border-radius:999px;background:var(--chip);color:var(--inkt);white-space:nowrap}
+.stand{font-size:13px;line-height:1;padding:5px 9px;border-radius:999px;font-weight:600;white-space:nowrap}
+.stand.wacht{background:var(--wacht-z);color:var(--wacht)}.stand.bezig{background:var(--bezig-z);color:var(--bezig)}
+.stand.klaar{background:var(--klaar-z);color:var(--klaar)}.stand.mis{background:var(--mis-z);color:var(--mis)}
+.stand::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;margin-right:6px;vertical-align:1px}
+.meta{font-size:14px;color:var(--zacht);margin:0;max-width:70ch}
+.acties{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.knop{font:inherit;font-size:14px;padding:8px 14px;border-radius:8px;border:1px solid var(--lijn);background:var(--vlak2);color:var(--inkt);cursor:pointer;white-space:nowrap}
+.knop.primair{background:var(--accent);border-color:var(--accent);color:var(--vlak)}
+.uitwerking{background:var(--vlak2);padding:8px 24px 28px}
+.uitwerking details>summary{cursor:pointer;font-weight:600;padding:14px 0;list-style:none}
+.uitwerking details>summary::before{content:"▸ ";color:var(--zacht)}.uitwerking details[open]>summary::before{content:"▾ "}
+.doc{max-width:70ch;line-height:1.7}
+.doc h4{font-size:1.05rem;margin:28px 0 8px;padding-top:4px;border-top:1px solid var(--lijn);padding-top:16px}
+.doc h4:first-of-type{border-top:0;padding-top:0;margin-top:8px}
+.doc p,.doc li{margin:0 0 10px}.doc ul,.doc ol{padding-left:22px;margin:0 0 10px}
+.doc blockquote{margin:0 0 14px;padding:10px 16px;border-left:3px solid var(--accent);background:var(--vlak)}
+.doc blockquote footer{font-size:14px;color:var(--zacht);margin-top:6px}
+.doc .bron{font-size:14px;color:var(--zacht)}
+.voorbeeld{font-size:13px;color:var(--zacht);font-style:italic}
+@media (max-width:640px){.item{grid-template-columns:1fr;padding:18px 20px}.acties{flex-direction:row;align-items:center}.uitwerking{padding:4px 20px 24px}
+.groepkop{flex-direction:column;gap:2px}}
+</style></head><body><div class="pagina">
+
+<p class="toelichting">Ontwerp voor Richard (21-11-2026), na je afkeuring van het Uitwerken-scherm (OW-93406). Dit is een statische voorbeeldpagina: nog geen code in de keten.
+Titels, citaten en cijfers zijn <strong>verzonnen voorbeeldinhoud</strong> om de opmaak te tonen; in het echte scherm komen ze uit je dossiers. Schakel hieronder tussen licht en donker; op een telefoon schuiven de knoppen onder het item.</p>
+<div class="thema"><button onclick="document.documentElement.dataset.theme='light'">Licht</button><button onclick="document.documentElement.dataset.theme='dark'">Donker</button><button onclick="delete document.documentElement.dataset.theme">Volg systeem</button></div>
+
+<h1>Uitwerken</h1>
+<p class="meta">Items die je naar uitwerken stuurde. Elke uitwerking is een onderzoek met opbouw, citaten, stellingen, cijfers, voorbeelden, tegengeluid en ideeën voor je lezingen.</p>
+
+<div class="groepkop"><h2>Tekst</h2><span class="aantal">— 3 items</span></div>
+<div class="kaart">
+
+  <div class="item">
+    <div>
+      <h3>Ziekenhuizen zetten AI in voor triage op de spoedeisende hulp</h3>
+      <div class="chips"><span class="chip">Tekst</span><span class="chip">Dossiers</span><span class="stand wacht">Wacht</span></div>
+      <p class="meta">Uit je dossier Zorg en AI · 20 nov · wacht op een vrije schrijver (2 voor je in de rij)</p>
+    </div>
+    <div class="acties"><button class="knop">Ongedaan</button></div>
+  </div>
+
+  <div class="item">
+    <div>
+      <h3>Waarom middenmanagers de eerste banen zijn die AI-agents veranderen</h3>
+      <div class="chips"><span class="chip">Tekst</span><span class="chip">Later</span><span class="stand bezig">Bezig</span></div>
+      <p class="meta">Uit Later · 19 nov · onderzoek loopt sinds 13:12, nog ongeveer 10 minuten</p>
+    </div>
+    <div class="acties"><button class="knop">Ongedaan</button></div>
+  </div>
+
+  <div class="item">
+    <div>
+      <h3>Gemeenten die vergunningen met AI afhandelen: sneller, maar wie is verantwoordelijk?</h3>
+      <div class="chips"><span class="chip">Tekst</span><span class="chip">★ Ster</span><span class="stand klaar">Klaar</span></div>
+      <p class="meta">Uit je sterren · 18 nov · klaar om 11:40 · 7 onderdelen, 12 bronnen</p>
+    </div>
+    <div class="acties"><button class="knop primair">Lees uitwerking</button><button class="knop">Ongedaan</button></div>
+  </div>
+
+  <div class="uitwerking"><details open><summary>Uitwerking: Gemeenten die vergunningen met AI afhandelen</summary>
+  <div class="doc">
+    <h4>Opbouw</h4>
+    <ol>
+      <li>Wat gemeenten nu al automatiseren, en waarom vergunningen de eerste grote toepassing zijn.</li>
+      <li>De belofte: van weken naar dagen, en wat dat voor burgers en ondernemers betekent.</li>
+      <li>De keerzijde: wie is verantwoordelijk als het systeem fout beslist?</li>
+      <li>Wat leiders in andere sectoren hieruit kunnen leren over AI en verantwoordelijkheid.</li>
+    </ol>
+
+    <h4>Quotes</h4>
+    <blockquote>"We gebruiken het systeem niet om te beslissen, maar om te ordenen. De ambtenaar tekent nog steeds."
+      <footer>Voorbeeld: een gemeentesecretaris in een interview met een vakblad voor het openbaar bestuur, nov 2026</footer></blockquote>
+    <blockquote>"Snelheid is geen doel als niemand meer kan uitleggen waarom een aanvraag is afgewezen."
+      <footer>Voorbeeld: een hoogleraar bestuursrecht in een opiniestuk, okt 2026</footer></blockquote>
+
+    <h4>Stellingen</h4>
+    <ul>
+      <li>De eerste AI-revolutie in de overheid is geen chatbot maar een stille achterkant van formulieren.</li>
+      <li>Wie de beslissing automatiseert zonder de uitleg te automatiseren, verliest het vertrouwen van de burger.</li>
+    </ul>
+
+    <h4>Cijfers</h4>
+    <ul>
+      <li>De doorlooptijd van een standaardvergunning daalde in een proef van 6 weken naar 9 dagen. <span class="bron">Voorbeeldbron: evaluatierapport van een gemeente, 2026</span></li>
+      <li>4 op de 10 gemeenten testen AI in de dienstverlening. <span class="bron">Voorbeeldbron: enquête van een koepelorganisatie, 2026</span></li>
+    </ul>
+
+    <h4>Voorbeelden</h4>
+    <p>Een middelgrote gemeente laat een systeem aanvragen voor dakkapellen sorteren op volledigheid; alleen twijfelgevallen gaan naar een ambtenaar. In een Scandinavische stad krijgt elke afwijzing automatisch een uitleg in gewone taal mee.</p>
+
+    <h4>Tegengeluid</h4>
+    <p>Critici wijzen erop dat de toeslagenaffaire liet zien hoe automatisering zonder menselijke toets ontspoort. Ook vakbonden waarschuwen dat "ordenen" in de praktijk vaak beslissen wordt.</p>
+
+    <h4>Ideeën voor je lezingen</h4>
+    <ul>
+      <li>Openingsvraag aan de zaal: "Wie van u zou een AI laten beslissen over uw eigen verbouwing?"</li>
+      <li>Brug naar bedrijven: elke organisatie heeft haar eigen "vergunningen", processen waar snelheid en verantwoordelijkheid botsen.</li>
+    </ul>
+  </div></details></div>
+
+</div>
+
+<div class="groepkop"><h2>Video</h2><span class="aantal">— 1 item</span></div>
+<div class="kaart">
+  <div class="item">
+    <div>
+      <h3>Robots in de logistiek: wat het magazijn van 2030 ons leert over werk</h3>
+      <div class="chips"><span class="chip">Video</span><span class="chip">Dossiers</span><span class="stand mis">Mislukt</span></div>
+      <p class="meta">Uit je dossier Robots · 17 nov · onderzoek gestopt: te weinig bronnen gevonden (3 van minimaal 6) · <a href="#" style="color:var(--accent)">Opnieuw proberen</a></p>
+    </div>
+    <div class="acties"><button class="knop">Ongedaan</button></div>
+  </div>
+</div>
+
+<p class="voorbeeld" style="margin-top:28px">Wat er anders is dan het afgekeurde scherm: binnenmarge van 20–24 px; per item een vette kop met daaronder chips voor soort, herkomst en stand (met kleur en tekst); één gedempte regel met bron, datum en reden van wachten; Ongedaan rechts, verticaal gecentreerd; een groepskop "Tekst — 3 items"; de uitwerking als leesbaar document met tussenkoppen, maximaal ~70 tekens per regel en ruime regelafstand.</p>
+</div></body></html>
