@@ -2,177 +2,68 @@
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Werkplek Artikelen</title>
 <style>
-:root{--bg:#f7f7f5;--card:#fff;--ink:#1a1a1a;--mute:#666;--line:#e3e3df;--acc:#1f5fbf;--accbg:#eef4ff;--top:#0d7a43;--topbg:#e3f4ea;--warn:#a15c00;--warnbg:#fff4df;--side:#efefec}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141414;--card:#1e1e1e;--ink:#eee;--mute:#aaa;--line:#333;--acc:#7aa7ff;--accbg:#1b2638;--top:#5fd08f;--topbg:#16301f;--warn:#f0b65a;--warnbg:#33290f;--side:#191919}}
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1a1a1a;--mute:#666;--line:#e3e3df;--acc:#1f5fbf;--accbg:#eef4ff;--top:#0d7a43;--topbg:#e3f4ea;--warn:#a15c00;--warnbg:#fff4df}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141414;--card:#1e1e1e;--ink:#eee;--mute:#aaa;--line:#333;--acc:#7aa7ff;--accbg:#1b2638;--top:#5fd08f;--topbg:#16301f;--warn:#f0b65a;--warnbg:#33290f}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-.app{display:flex;min-height:100vh}
-nav{width:190px;background:var(--side);border-right:1px solid var(--line);padding:14px 10px;flex-shrink:0}
-nav .m{display:block;padding:6px 10px;border-radius:6px;color:var(--ink);text-decoration:none;font-size:14px;cursor:pointer}
-nav .m.act{background:var(--accbg);color:var(--acc);font-weight:600}nav .m .badge{float:right;background:var(--warn);color:#fff;border-radius:9px;font-size:11px;padding:0 6px}
-nav .grp{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin:12px 10px 4px}
-main{flex:1;min-width:0;padding:18px 20px 120px;max-width:1100px}
-h1{font-size:22px;margin:0 0 4px}.sub{color:var(--mute);margin:0 0 14px;font-size:14px}
-.terug{font-size:13.5px;margin:0 0 10px}a{color:var(--acc)}
-.uitleg{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-size:14px;margin:0 0 14px}
+main{max-width:1200px;margin:0 auto;padding:16px 16px 40px}
+h1{font-size:22px;margin:0 0 4px}.sub{color:var(--mute);margin:0 0 12px;font-size:14px}a{color:var(--acc)}
 .kolommen{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .kol h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin:0 0 6px}
 .kaart{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;cursor:pointer}
 .kaart:hover{border-color:var(--acc)}.kaart .t{font-weight:600;font-size:14.5px}.kaart .s{font-size:12.5px;margin-top:4px}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}.wacht{background:var(--warn)}.bezig{background:var(--mute)}.klaar{background:var(--top)}
-.lab{font-size:11.5px;border:1px solid var(--line);border-radius:10px;padding:1px 8px;color:var(--mute);margin-right:4px;white-space:nowrap}
-.stappen{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 14px}.stap{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:5px 14px;font-size:13.5px;cursor:pointer;color:var(--ink)}
-.stap.act{background:var(--acc);border-color:var(--acc);color:#fff}.stap.ok::before{content:"✓ ";color:var(--top)}.stap.act.ok::before{color:#fff}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle;background:var(--warn)}
+.leeg{font-size:13px;color:var(--mute)}
+.kop{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 8px}
+.stappen{display:flex;gap:6px;flex-wrap:wrap}.stap{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:4px 13px;font-size:13.5px;cursor:pointer;color:var(--ink)}
+.stap.act{background:var(--acc);border-color:var(--acc);color:#fff}.stap.ok::before{content:"✓ "}.stap:disabled{opacity:.4;cursor:default}
 .blok{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:0 0 10px}
 .blok h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin:0 0 6px}
-label.f{display:block;font-size:13px;color:var(--mute);margin:8px 0 2px}input.f,textarea.f,select.f{width:100%;font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
-textarea.f{min-height:52px}.rij2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.item{border-top:1px solid var(--line);padding:8px 0}.item:first-of-type{border-top:0}.item .n{font-weight:600}.item .z{font-size:14px;margin:2px 0 4px}
-.item.gek{background:var(--topbg);margin:0 -8px;padding:8px}.kies{font:inherit;font-size:13px;padding:3px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);cursor:pointer}
-.item.gek .kies{background:var(--top);color:#fff;border-color:var(--top)}.opm{display:none;gap:8px;margin-top:6px}.item.gek .opm{display:flex;flex-wrap:wrap}.opm textarea{flex:1;min-width:200px}
-.engb{border-left:3px solid var(--acc);background:var(--accbg);padding:6px 10px;margin:8px 0;font-size:14px;border-radius:0 6px 6px 0}
-.status{font-size:13px;color:var(--top)}.balk{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px 16px;display:none}
-.balk.toon{display:block}.balk div{max-width:1100px;margin:0 auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.knop{font:inherit;font-size:14px;font-weight:600;padding:7px 14px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}.knop.groen{background:var(--top);border-color:var(--top);color:#fff}
-.melding{font-size:13.5px;color:var(--mute)}.verb{font-size:13px;color:var(--mute)}
-.bron{border:1px dashed var(--line);border-radius:6px;padding:6px 10px;font-size:13.5px;margin:4px 0}
+iframe{width:100%;height:calc(100vh - 150px);min-height:520px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
 .vis{display:none}.vis.toon{display:block}
-@media (max-width:760px){.app{flex-direction:column}nav{width:auto;display:flex;overflow-x:auto;gap:4px;padding:8px}nav .grp{display:none}nav .m{white-space:nowrap}.kolommen{grid-template-columns:1fr}.rij2{grid-template-columns:1fr}main{padding:14px 16px 140px}}
-</style></head><body>
-<div class="app">
-<nav>
- <div class="grp">Input</div>
- <a class="m" data-g="rij">De Rij</a>
- <a class="m" data-g="item">Item en richting</a>
- <div class="grp">Output</div>
- <a class="m act" data-g="overzicht">Artikelen <span class="badge">7</span></a>
- <div class="grp">Bewaren</div>
- <a class="m" data-g="dossier">Dossiers</a>
-</nav>
-<main>
-<p class="terug"><a href="../artikelen/">← Alle artikelen (huidige losse pagina's)</a></p>
+.uitleg{font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 12px}
+@media (max-width:760px){.kolommen{grid-template-columns:1fr}iframe{height:75vh}}
+</style></head><body><main>
 
-<!-- OVERZICHT -->
 <section class="vis toon" id="v-overzicht">
-<h1>Artikelen</h1>
-<p class="sub">Paginaconcept · werkplek in de contentpijplijn (OUTPUT) · <b>Briefing → Onderzoek → Opzet → Schrijven</b> · alles slaat direct op, geen plakregels</p>
-<div class="uitleg"><b>Zo hangt het samen:</b> aan de inputkant <b>begrijp</b> je één bron (Uitwerken). Aan de outputkant <b>maak</b> je een eigen stuk. De brug is <b>“Maak hier een artikel van”</b> (vanuit De Rij of een uitwerking) of een eigen onderwerp. Dat opent eerst de <b>briefing</b>: wat wil je, in welke vorm, met welke bronnen. Daarna start het onderzoek. <span class="verb">Concept om te klikken: knoppen werken, maar er draait nog geen echte AI achter.</span></div>
-<p><button class="knop" id="nieuw">+ Nieuw artikel (eigen onderwerp)</button> <span class="melding">· 7 wachten op jou</span></p>
+<h1>Werkplek Artikelen</h1>
+<p class="sub">Za 21-11-2026 · al je artikelen in de maak · klik een artikel om er direct in te werken</p>
+<div class="uitleg"><b>Wat doe je hier?</b> Klik op een artikel. Je komt meteen in de stap waar het op jou wacht, met de <b>echte inhoud</b> (alle 30 items of de outline). Daar kies je en geef je commentaar zoals je gewend bent, en plak je de regel onderaan bij TOEZICHT. Stappen: <b>1 Briefing</b> (jouw vraag) → <b>2 Onderzoek</b> (kiezen) → <b>3 Opzet</b> (outline) → <b>4 Schrijven</b> (pas na jouw akkoord op de opzet).</div>
 <div class="kolommen">
- <div class="kol"><h3>Briefing</h3>
-  <div class="kaart" data-a="podcast" style="border-style:dashed"><div class="s" style="margin:0 0 4px"><span class="lab" style="background:var(--warnbg);color:var(--warn);border-color:transparent">VOORBEELD (verzonnen)</span></div><div class="t">Wat de podcast van Ethan Mollick ons leert over AI-collega's</div><div class="s"><span class="dot wacht"></span>Wacht op jou: briefing aanvullen</div><div class="s"><span class="lab">vanuit Uitwerken</span></div></div>
- </div>
- <div class="kol"><h3>Onderzoek</h3>
-  <div class="kaart" data-a="kunnen"><div class="t">Wat kunnen we in 2027 met AI?</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies items (30)</div><div class="s"><span class="lab">3 onderzoekers</span><span class="lab">lijst</span></div></div>
-  <div class="kaart" data-a="fysiek"><div class="t">AI verlaat het scherm</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies items (30)</div><div class="s"><span class="lab">bizar-score</span></div></div>
-  <div class="kaart" data-a="wakker"><div class="t">Je wordt wakker in 2030</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies scènes (30)</div><div class="s"><span class="lab">scenario</span></div></div>
-  <div class="kaart" data-a="leiders"><div class="t">AI en leiders in 2027</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies items (30)</div></div>
-  <div class="kaart" data-a="kinderen"><div class="t">Wat leren we onze kinderen?</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies 3-7 bouwstenen</div><div class="s"><span class="lab">betoog</span></div></div>
- </div>
- <div class="kol"><h3>Opzet</h3>
-  <div class="kaart" data-a="trends"><div class="t">AI-trends 2027 <span class="verb">(titel nog te kiezen)</span></div><div class="s"><span class="dot wacht"></span>Wacht op jou: beoordeel opzet v1</div><div class="s"><span class="lab">10 onderdelen</span><span class="lab">titeltoets ✓</span></div></div>
- </div>
- <div class="kol"><h3>Schrijven</h3>
-  <p class="verb" style="font-size:13px">Nog niets. Schrijven start pas na jouw <b>akkoord op de opzet</b>.</p>
- </div>
+ <div class="kol"><h3>1 Briefing</h3><p class="leeg">Geen artikelen in deze stap.</p></div>
+ <div class="kol"><h3>2 Onderzoek — kies items</h3><div id="k-onderzoek"></div></div>
+ <div class="kol"><h3>3 Opzet — beoordeel outline</h3><div id="k-opzet"></div></div>
+ <div class="kol"><h3>4 Schrijven</h3><p class="leeg">Nog niets. Schrijven start pas na jouw akkoord op de opzet.</p></div>
 </div>
 </section>
 
-<!-- DE RIJ (bron met knop) -->
-<section class="vis" id="v-rij">
-<h1>De Rij</h1><p class="sub"><span class="lab" style="background:var(--warnbg);color:var(--warn);border-color:transparent">VOORBEELD (verzonnen)</span> om de brug vanaf de inputkant te tonen; in het echt staan hier jouw items uit De Rij</p>
-<div class="blok"><div class="item"><div class="n">Anthropic: Claude kan nu 1.000 agents tegelijk aansturen</div><div class="z">Bloomberg Law, 09-11-2026 · <span class="lab">uitgewerkt ✓</span> · jouw opmerking: “hier wil ik iets mee voor bestuurders”</div>
-<button class="knop groen" data-maak="Anthropic 1.000 agents">Maak hier een artikel van</button></div></div>
-</section>
-<section class="vis" id="v-item"><h1>Item en richting</h1><p class="sub">(bestaand scherm, ongewijzigd in dit concept)</p></section>
-<section class="vis" id="v-dossier"><h1>Dossiers</h1><p class="sub">(bestaand scherm) · uitgewerkte bronnen staan hier en zijn de eerste bron voor Onderzoek</p></section>
-
-<!-- ARTIKEL -->
 <section class="vis" id="v-artikel">
-<p class="terug"><a href="#" id="naaroverzicht">← Artikelen</a></p>
-<h1 id="a-titel">Artikel</h1>
-<div class="stappen" id="stappen">
- <button class="stap" data-s="briefing">1 Briefing</button><button class="stap" data-s="onderzoek">2 Onderzoek</button><button class="stap" data-s="opzet">3 Opzet</button><button class="stap" data-s="schrijven">4 Schrijven</button>
- <span class="status" id="opgeslagen"></span>
-</div>
-
-<div class="vis" id="s-briefing">
- <div class="blok"><h4>Briefing — wat wil je maken?</h4>
-  <label class="f">Werktitel / onderwerp</label><input class="f save" id="b-titel">
-  <label class="f">Richting: wat is jouw invalshoek of vraag? (dit stuurt het onderzoek)</label><textarea class="f save" id="b-richting" placeholder="bv. tegendraads: agents worden geen collega's maar stagiairs die je moet nakijken"></textarea>
-  <div class="rij2"><div><label class="f">Vorm</label><select class="f save"><option>Lijst (bv. top 10)</option><option>Betoog met 3-7 bouwstenen</option><option>Essay / gedachte-experiment</option><option>Scenario / dag uit het leven</option><option>Eén case diep</option></select></div>
-  <div><label class="f">Publiek</label><select class="f save"><option>Bestuurders en managers</option><option>Breed publiek</option><option>Ouders en onderwijs</option></select></div></div>
-  <div class="rij2"><div><label class="f">Versies</label><select class="f save"><option>NL + ENG</option><option>alleen NL</option><option>alleen ENG</option></select></div>
-  <div><label class="f">Wat moet het onderzoek extra uitzoeken, verder dan de bron?</label><input class="f save" placeholder="bv. Nederlandse cijfers, tegengeluid, wat concurrenten al schreven"></div></div>
-  <h4 style="margin-top:12px">Meegenomen bronnen</h4><div id="b-bronnen"></div>
-  <p class="verb">Uitgewerkte bronnen en je dossiers zijn de eerste bron; daarna zoeken drie onderzoekers (Claude, Codex, Gemini) breed op het web. Titeltoets op concurrentie loopt mee.</p>
- </div>
-</div>
-
-<div class="vis" id="s-onderzoek"><div class="blok echt" style="display:none;border-color:var(--top)"><h4>Jouw echte inhoud van deze stap</h4><p><a class="echtlink" href="#" target="_blank">Open de echte pagina →</a></p><p class="verb">In de werkplek staat deze inhoud straks hier zelf; nu nog als losse pagina. Wat hieronder staat is <b>voorbeeldinhoud</b> om de vorm te tonen.</p></div>
- <div class="blok"><h4>Onderzoek — kies wat erin moet (voorbeeld: 4 van 30)</h4>
-  <div class="item" data-n="1"><div class="n">De agent die een werkweek doorwerkt</div><div class="z">In 2027 geef je een agent een opdracht van meerdere werkdagen en komt die zonder tussenkomst terug.</div><span class="lab">impact hoog</span><span class="lab">3 van 3</span><span class="lab">populair 4 · uniek 3 · verrassend 3</span> <button class="kies">+ Kiezen</button><div class="opm"><textarea class="f save" placeholder="Commentaar NL"></textarea><textarea class="f save" placeholder="Commentaar ENG"></textarea></div></div>
-  <div class="item" data-n="8"><div class="n">De agent die namens jou inkoopt</div><div class="z">Agents vergelijken, onderhandelen en kopen; de klant wordt een machine.</div><span class="lab">impact hoog</span><span class="lab">2 van 3</span><span class="lab">populair 4 · uniek 3 · verrassend 4</span> <button class="kies">+ Kiezen</button><div class="opm"><textarea class="f save" placeholder="Commentaar NL"></textarea><textarea class="f save" placeholder="Commentaar ENG"></textarea></div></div>
-  <div class="item" data-n="18"><div class="n">AI die zelf recepten verlengt</div><div class="z">Eerste wettelijke precedent: AI verlengt herhaalrecepten zonder arts.</div><span class="lab">impact midden</span><span class="lab">1 van 3</span><span class="lab">populair 3 · uniek 5 · verrassend 5</span> <button class="kies">+ Kiezen</button><div class="opm"><textarea class="f save" placeholder="Commentaar NL"></textarea><textarea class="f save" placeholder="Commentaar ENG"></textarea></div></div>
-  <div class="item" data-n="27"><div class="n">De overheidsagent die je aanvraag indient</div><div class="z">Overheden laten agents namens burgers aanvragen indienen.</div><span class="lab">impact midden</span><span class="lab">2 van 3</span><span class="lab">populair 3 · uniek 4 · verrassend 4</span> <button class="kies">+ Kiezen</button><div class="opm"><textarea class="f save" placeholder="Commentaar NL"></textarea><textarea class="f save" placeholder="Commentaar ENG"></textarea></div></div>
- </div>
-</div>
-
-<div class="vis" id="s-opzet"><div class="blok echt" style="display:none;border-color:var(--top)"><h4>Jouw echte inhoud van deze stap</h4><p><a class="echtlink" href="#" target="_blank">Open de echte pagina →</a></p><p class="verb">In de werkplek staat deze inhoud straks hier zelf; nu nog als losse pagina. Wat hieronder staat is <b>voorbeeldinhoud</b> om de vorm te tonen.</p></div>
- <div class="blok"><h4>Opzet <select class="f" style="width:auto;display:inline-block;font-size:13px"><option>v1 (huidig)</option></select></h4>
-  <label class="f">Titel</label>
-  <label style="display:block"><input type="radio" name="t" checked> 2027: het jaar dat AI ophoudt met praten en gaat werken. Wie houdt de regie? <span class="lab">populair 4 · uniek 4 · verrassend 4</span></label>
-  <label style="display:block"><input type="radio" name="t"> 10 AI-trends voor 2027, en waarom regie belangrijker wordt dan capaciteit <span class="lab">populair 5 · uniek 3 · verrassend 3</span></label>
-  <p class="verb">Titeltoets: concurrentie EXTREEM voor “top 10 AI-trends 2027” · 5 gevonden vergelijkbare artikelen ▾</p>
- </div>
- <div class="blok"><h4>Verhaallijn</h4><ul><li><b>Opening:</b> Huang: 75.000 mensen naast 7,5 miljoen agents.</li><li><b>Rode draad:</b> capaciteit is niet meer schaars, regie wel.</li><li><b>Slot:</b> drie vragen voor bestuurders.</li></ul><div class="opm" style="display:flex"><textarea class="f save" placeholder="Commentaar NL"></textarea><textarea class="f save" placeholder="Commentaar ENG"></textarea></div></div>
- <div class="blok"><h4>Onderdeel 4 — Stroom is het nieuwe plafond</h4><ul><li>📊 15.498 aanvragen in de wachtrij voor het stroomnet (Netbeheer Nederland)</li><li>💬 “chips sitting in inventory that I can't plug in” — Satya Nadella</li></ul><div class="engb"><b>ENG gebruikt in plaats daarvan:</b> IEA-verdubbeling naar ~950 TWh in 2030; voorbeeld netwachtrijen VS.</div><div class="opm" style="display:flex"><textarea class="f save" placeholder="Commentaar NL"></textarea><textarea class="f save" placeholder="Commentaar ENG"></textarea></div></div>
-</div>
-
-<div class="vis" id="s-schrijven">
- <div class="blok"><h4>Schrijven</h4>
-  <p><span class="dot klaar"></span><b>NL-versie</b> — concept klaar · 2.340 woorden · <a href="#" onclick="return false">bekijk concept</a> · WordPress-concept (niet live)</p>
-  <p><span class="dot bezig"></span><b>ENG-versie</b> — wordt geschreven</p>
-  <label class="f">Terugkoppeling op het concept (NL/ENG)</label><textarea class="f save" placeholder="Wat moet er nog anders?"></textarea>
-  <p class="verb">Live zetten gebeurt nooit automatisch: alleen met jouw akkoord per versie.</p>
- </div>
-</div>
+<p style="margin:0 0 8px;font-size:13.5px"><a href="#" id="terug">← Alle artikelen</a></p>
+<div class="kop"><h1 id="a-titel" style="margin:0"></h1>
+<div class="stappen"><button class="stap" data-s="briefing">1 Briefing</button><button class="stap" data-s="onderzoek">2 Onderzoek</button><button class="stap" data-s="opzet">3 Opzet</button><button class="stap" data-s="schrijven">4 Schrijven</button></div></div>
+<div class="vis" id="s-briefing"><div class="blok"><h4>Jouw vraag (briefing)</h4><p id="b-vraag"></p><p class="leeg" id="b-extra"></p></div></div>
+<div class="vis" id="s-frame"><iframe id="frame" title="inhoud van deze stap"></iframe></div>
+<div class="vis" id="s-schrijven"><div class="blok"><h4>Schrijven</h4><p class="leeg">Nog niet gestart. Dit gebeurt pas na jouw <b>Akkoord: schrijven</b> op de opzet.</p></div></div>
 </section>
-</main></div>
-
-<div class="balk" id="balk"><div><span class="melding" id="b-tekst"></span><button class="knop" id="b-nieuw" style="display:none">↻ Nieuwe versie met mijn commentaar</button><button class="knop groen" id="b-akk">Akkoord</button></div></div>
 
 <script>
-const ECHT={kunnen:{onderzoek:'../ai-kunnen-2027/'},fysiek:{onderzoek:'../ai-fysiek/'},wakker:{onderzoek:'../ai-wakker-2030/'},leiders:{onderzoek:'../ai-leiders-2027/'},kinderen:{onderzoek:'../ai-kinderen/'},trends:{onderzoek:'../ai-trends-2027/',opzet:'../ai-trends-2027/outline/'}};
-const A={podcast:{t:'Wat de podcast van Ethan Mollick ons leert over AI-collega\'s',s:'briefing',bron:['Podcast-uitwerking: One Useful Thing, afl. 14-11 (uitgewerkt ✓)','Dossier: AI agents & automation (12 items)']},
- kunnen:{t:'Wat kunnen we in 2027 met AI?',s:'onderzoek',bron:['Eigen onderwerp (21-11)']},
- kinderen:{t:'Wat leren we onze kinderen?',s:'onderzoek',bron:['Eigen onderwerp (21-11)']},
- trends:{t:'AI-trends 2027 (titel nog te kiezen in de opzet)',s:'opzet',bron:['Eigen onderwerp (21-11)']},
- fysiek:{t:'AI verlaat het scherm',s:'onderzoek',bron:['Eigen onderwerp (21-11)']},wakker:{t:'Je wordt wakker in 2030',s:'onderzoek',bron:['Eigen onderwerp (21-11)']},leiders:{t:'AI en leiders in 2027',s:'onderzoek',bron:['Eigen onderwerp (21-11)']}};
-const ORDE=['briefing','onderzoek','opzet','schrijven'];let huidig=null,stap=null;
-function zie(id){document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('toon',s.id==='v-'+id));document.querySelectorAll('nav .m').forEach(m=>m.classList.toggle('act',m.dataset.g===id||(id==='artikel'&&m.dataset.g==='overzicht')));document.getElementById('balk').classList.toggle('toon',id==='artikel');window.scrollTo(0,0);}
-function open(k){huidig=k;const a=A[k];document.querySelectorAll('#s-briefing input.f,#s-briefing textarea.f').forEach(x=>x.value='');document.querySelectorAll('#s-briefing select.f').forEach(x=>x.selectedIndex=0);document.getElementById('a-titel').textContent=a.t;document.getElementById('b-titel').value=a.t;
-document.getElementById('b-bronnen').innerHTML=a.bron.map(b=>'<div class="bron">'+b+'</div>').join('');zie('artikel');toonStap(a.s);}
-function toonStap(s){stap=s;const a=A[huidig];const i=ORDE.indexOf(a.s);
-document.querySelectorAll('.stap').forEach(b=>{const j=ORDE.indexOf(b.dataset.s);b.classList.toggle('act',b.dataset.s===s);b.classList.toggle('ok',j<i);b.disabled=j>i;b.style.opacity=j>i?.45:1;});
-ORDE.forEach(o=>document.getElementById('s-'+o).classList.toggle('toon',o===s));
-document.querySelectorAll('.echt').forEach(b=>{const sid=b.parentElement.id.slice(2);const u=(ECHT[huidig]||{})[sid];b.style.display=u?'':'none';if(u)b.querySelector('.echtlink').href=u;});
-const bt=document.getElementById('b-akk'),bn=document.getElementById('b-nieuw'),tx=document.getElementById('b-tekst');bn.style.display=s==='opzet'?'':'none';
-if(s!==a.s){bt.style.display='none';tx.textContent='Afgeronde stap (alleen lezen). Huidige stap: '+a.s+'.';return;}bt.style.display='';
-if(s==='briefing'){bt.textContent='Akkoord: start onderzoek';tx.textContent='Vul de richting in; de rest mag standaard blijven.';}
-if(s==='onderzoek'){bt.textContent='Akkoord: maak de opzet';tx.textContent='Kies items en zet commentaar voor NL/ENG.';}
-if(s==='opzet'){bt.textContent='Akkoord: schrijven';tx.textContent='Commentaar wordt direct opgeslagen.';}
-if(s==='schrijven'){bt.textContent='Akkoord: concepten klaar';tx.textContent='Live zetten blijft jouw besluit per versie.';}}
-document.querySelectorAll('.kaart').forEach(k=>k.addEventListener('click',()=>open(k.dataset.a)));
-document.querySelectorAll('nav .m').forEach(m=>m.addEventListener('click',()=>zie(m.dataset.g)));
-document.getElementById('naaroverzicht').addEventListener('click',e=>{e.preventDefault();zie('overzicht');});
-document.querySelectorAll('.stap').forEach(b=>b.addEventListener('click',()=>{if(!b.disabled)toonStap(b.dataset.s);}));
-document.querySelectorAll('.kies').forEach(b=>b.addEventListener('click',()=>{const it=b.closest('.item');it.classList.toggle('gek');b.textContent=it.classList.contains('gek')?'✓ Gekozen':'+ Kiezen';opgeslagen();}));
-let tm;function opgeslagen(){const o=document.getElementById('opgeslagen');o.textContent='· opgeslagen ✓';clearTimeout(tm);tm=setTimeout(()=>o.textContent='',1800);}
-document.querySelectorAll('.save').forEach(x=>x.addEventListener('input',opgeslagen));
-document.getElementById('b-akk').addEventListener('click',()=>{const a=A[huidig];const i=ORDE.indexOf(a.s);
-if(i<3){a.s=ORDE[i+1];document.getElementById('b-tekst').textContent='✓ Akkoord vastgelegd. De volgende stap wordt nu gemaakt (in het echt: door de pijplijn).';setTimeout(()=>toonStap(a.s),900);}
-else{document.getElementById('b-tekst').textContent='✓ Concepten klaar gemeld. Live zetten vraag je apart per versie.';}});
-document.getElementById('b-nieuw').addEventListener('click',()=>{document.getElementById('b-tekst').textContent='✓ Nieuwe versie aangevraagd met je commentaar (v2 verschijnt hier in de versiekeuze).';});
-document.getElementById('nieuw').addEventListener('click',()=>{A.eigen={t:'Nieuw artikel',s:'briefing',bron:['Eigen onderwerp']};open('eigen');document.getElementById('b-titel').value='';document.getElementById('b-titel').focus();});
-document.querySelectorAll('[data-maak]').forEach(b=>b.addEventListener('click',()=>{A.rij={t:b.dataset.maak,s:'briefing',bron:['De Rij-item: '+b.dataset.maak+' (uitgewerkt ✓)','Jouw opmerking: “hier wil ik iets mee voor bestuurders”']};open('rij');}));
-</script></body></html>
+const A=[
+ {k:'trends',t:'AI-trends 2027',stap:'opzet',w:'Wacht op jou: beoordeel outline v1 (titel kiezen, commentaar NL/ENG)',vraag:'"De 10 meest belangrijke AI trends voor 2027" — eerst grondig onderzoek, top 30, dan kies ik er 10 uit. (21-11)',extra:'Jouw keuze: 1+2 samen, 5, 9, 10, 13, 14, 17, 22, 27, 28. Akkoord op invalshoek: één betoog met de regie-stelling.',onderzoek:'../ai-trends-2027/',opzet:'../ai-trends-2027/outline/'},
+ {k:'kunnen',t:'Wat kunnen we in 2027 met AI?',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"Wat kunnen we in 2027 verwachten van AI? Wat kunnen we, wat we nu niet kunnen" — praktisch: wat kunnen agents en AI volgend jaar wat ze nu nog niet kunnen. (21-11)',extra:'Apart van de AI-trends (jouw besluit).',onderzoek:'../ai-kunnen-2027/'},
+ {k:'fysiek',t:'AI verlaat het scherm',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"AI verlaat het scherm. 10 mooie voorbeelden physical AI in de toekomst — als futurist een bizar vooruitkijkje." (21-11)',extra:'',onderzoek:'../ai-fysiek/'},
+ {k:'wakker',t:'Je wordt wakker in 2030',stap:'onderzoek',w:'Wacht op jou: kies scènes uit 30',vraag:'"Je wordt wakker in 2030: hoe ziet een wereld er dan uit met AI?" (21-11)',extra:'',onderzoek:'../ai-wakker-2030/'},
+ {k:'leiders',t:'AI en leiders in 2027',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"Wat is de impact van AI voor leiders in 2027?" (21-11)',extra:'',onderzoek:'../ai-leiders-2027/'},
+ {k:'kinderen',t:'Wat leren we onze kinderen?',stap:'onderzoek',w:'Wacht op jou: kies 3-7 bouwstenen uit 30',vraag:'"Wat leren we onze kinderen nu, zodat ze klaar zijn voor de (AI-)wereld van morgen?" — geen top 10, maar een opgebouwd betoog over skills in relatie tot de nieuwe maatschappij; mag 5 onderwerpen zijn. (21-11)',extra:'',onderzoek:'../ai-kinderen/'},
+ {k:'ideeen',t:'Verbazingwekkende artikelideeën',stap:'onderzoek',w:'Wacht op jou: kies ideeën uit 30',vraag:'"Kom met aanvullende suggesties voor verbazingwekkende artikelen (en dat hoeven geen opsommingen te zijn)." (21-11)',extra:'Elk gekozen idee wordt een eigen artikel met eigen briefing.',onderzoek:'../ai-ideeen/'}];
+const ORDE=['briefing','onderzoek','opzet','schrijven'];let cur=null;
+function kaart(a){return '<div class="kaart" data-k="'+a.k+'"><div class="t">'+a.t+'</div><div class="s"><span class="dot"></span>'+a.w+'</div></div>';}
+document.getElementById('k-onderzoek').innerHTML=A.filter(a=>a.stap==='onderzoek').map(kaart).join('');
+document.getElementById('k-opzet').innerHTML=A.filter(a=>a.stap==='opzet').map(kaart).join('');
+function zie(id){document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('toon',s.id==='v-'+id));window.scrollTo(0,0);}
+function open(k){cur=A.find(a=>a.k===k);document.getElementById('a-titel').textContent=cur.t;document.getElementById('b-vraag').textContent=cur.vraag;document.getElementById('b-extra').textContent=cur.extra;zie('artikel');stap(cur.stap);}
+function stap(s){const i=ORDE.indexOf(cur.stap);document.querySelectorAll('.stap').forEach(b=>{const j=ORDE.indexOf(b.dataset.s);b.classList.toggle('act',b.dataset.s===s);b.classList.toggle('ok',j<i);b.disabled=j>i;});
+document.getElementById('s-briefing').classList.toggle('toon',s==='briefing');document.getElementById('s-schrijven').classList.toggle('toon',s==='schrijven');
+const u=cur[s];const f=document.getElementById('frame');const toon=!!u&&(s==='onderzoek'||s==='opzet');document.getElementById('s-frame').classList.toggle('toon',toon);if(toon&&f.getAttribute('src')!==u)f.setAttribute('src',u);}
+document.querySelectorAll('.kaart').forEach(k=>k.addEventListener('click',()=>open(k.dataset.k)));
+document.querySelectorAll('.stap').forEach(b=>b.addEventListener('click',()=>{if(!b.disabled)stap(b.dataset.s);}));
+document.getElementById('terug').addEventListener('click',e=>{e.preventDefault();zie('overzicht');});
+</script></main></body></html>
