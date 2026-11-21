@@ -68,60 +68,28 @@ h1{font-size:1.6rem;line-height:1.25;margin:0 0 6px}
 .item-wrap:has(.groen){border-color:var(--accent);border-left:6px solid var(--accent)}
 .item.groen,.uitwerking.groen{border-left:0}
 .item-wrap .uitwerking{border-top:1px dashed var(--lijn)}
+.trilijst{display:flex;flex-direction:column;gap:14px}.trilijst .kaart.groen{background:var(--accent-zacht);border:2px solid var(--accent)}
+.trilijst .kaart.groen .item{background:transparent;border-left:0}.trilijst .uitwerking{border-top:1px solid var(--lijn);background:var(--vlak)}
+.knop.klap{font-weight:600}
 </style></head><body><div class="pagina">
 
 <p class="toelichting">Ontwerp voor Richard (21-11-2026), na je keuze "uitwerking adaptief ja" (OW-93524). Statische voorbeeldpagina, nog geen code in de keten.
-Titels, citaten, cijfers en bronnen zijn <strong>verzonnen voorbeeldinhoud</strong> om de opbouw te tonen. De lijst bovenaan is ongewijzigd; open de drie klare items om het verschil te zien:
-een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek met podiummateriaal. Elk onderdeel verschijnt alleen als er materiaal voor is.</p>
+Titels, citaten, cijfers en bronnen zijn <strong>verzonnen voorbeeldinhoud</strong> om de opbouw te tonen. Klap de uitgewerkte items open om het verschil te zien: een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, een podcasthoofdstuk met transcript en een rijk onderzoek (versie 2) met podiummateriaal. Elk onderdeel verschijnt alleen als er materiaal voor is.</p>
 <div class="thema"><button onclick="document.documentElement.dataset.theme='light'">Licht</button><button onclick="document.documentElement.dataset.theme='dark'">Donker</button><button onclick="delete document.documentElement.dataset.theme">Volg systeem</button></div>
 
 <h1>Zo werkt Uitwerken in Triage</h1>
-<p class="meta">Nieuw (OW-93665/66/67): een uitgewerkt item blijft staan waar het vandaan komt, hier in Triage 1, en de uitwerking klapt daar open. Het is helemaal groen en heeft alle knoppen behalve Uitwerken. Stuur je het naar Ster, Later, Dossier of Rij, dan verdwijnt het uit Uitwerken; het losse Uitwerken-scherm blijft alleen als overzicht met een teller.</p>
-<div class="groepkop"><h2>Triage 1 · vandaag</h2><span class="aantal">— 4 items</span></div>
-<div class="sorteer" role="group" aria-label="Volgorde"><span>Volgorde:</span><button aria-pressed="false" onclick="sorteer(this,'uit')">Uitgewerkt eerst</button><button aria-pressed="false" onclick="sorteer(this,'niet')">Niet uitgewerkt eerst</button><button aria-pressed="true" onclick="sorteer(this,'standaard')">Standaard</button></div>
-<div class="kaart" id="triage-lijst">
-  <div class="tri" data-uit="0" data-volg="1"><div class="item"><div><h3>Robotarmen in de bouw: eerste aannemer zet ze in voor metselwerk</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span></div><p class="meta">Nieuwsbericht · 21 nov · nog niet uitgewerkt</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Uitwerken</button><button class="knop">Weg</button></div></div></div>
-  <div class="tri" data-uit="0" data-volg="2"><div class="item"><div><h3>Ziekenhuizen zetten AI in voor triage op de spoedeisende hulp</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="stand bezig">Wordt uitgewerkt</span></div><p class="meta">Onderzoek · 20 nov · uitwerking loopt sinds 14:05</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div></div>
-  <div class="tri" data-uit="1" data-volg="3"><div class="item groen"><div><h3>Hoe een verzekeraar klachten 40% sneller afhandelt met een AI-assistent</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="stand klaar">Uitgewerkt</span></div><p class="meta">Praktijkvoorbeeld · 19 nov · leestijd 4 min · 6 bronnen</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div>
-    <div class="uitwerking groen"><details><summary>Uitwerking</summary><p class="leeg">Hier klapt de uitwerking open, met de tabs Samenvatting en Volledige tekst en het veld "Wat moet er anders?", zoals hieronder.</p></details></div></div>
-  <div class="tri" data-uit="1" data-volg="4"><div class="item groen"><div><h3>Gemeenten die vergunningen met AI afhandelen: sneller, maar wie is verantwoordelijk?</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="tag-opnieuw">Wordt opnieuw uitgewerkt</span></div><p class="meta">Versie 2 loopt met jouw opmerking: "Minder over Scandinavië, meer over wie aansprakelijk is." · versie 1 blijft leesbaar</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div></div>
-</div>
-<p class="voorbeeld" style="margin:10px 0 32px">Groen = uitgewerkt. Een item dat opnieuw wordt uitgewerkt, krijgt de tag "Wordt opnieuw uitgewerkt" en is daarna weer groen met "versie 2".</p>
-<h1 style="margin-top:8px">Overzicht Uitwerken (alleen teller en overzicht)</h1>
-<h2 style="font-size:1.1rem;margin:0 0 6px;color:var(--zacht)">Eerdere opzet van het losse scherm, ter vergelijking</h2>
-<p class="meta">Items die je naar uitwerken stuurde. De opbouw en lengte van elke uitwerking volgen het materiaal: geen vaste koppen, geen lege onderdelen.</p>
-
-<div class="groepkop"><h2>Tekst</h2><span class="aantal">— 6 items</span></div>
-<div class="kaart">
-
-  <div class="item">
-    <div>
-      <h3>Ziekenhuizen zetten AI in voor triage op de spoedeisende hulp</h3>
-      <div class="chips"><span class="chip">Tekst</span><span class="chip">Dossiers</span><span class="stand wacht">Wacht</span></div>
-      <p class="meta">Uit je dossier Zorg en AI · 20 nov · wacht op een vrije schrijver (2 voor je in de rij)</p>
-    </div>
-    <div class="acties"><button class="knop">Ongedaan</button></div>
-  </div>
-  <div class="uitwerking"><details><summary>Uitwerking</summary><p class="leeg">Nog niet gestart. De uitwerking verschijnt hier zodra hij klaar is.</p></details></div>
-
-  <div class="item">
-    <div>
-      <h3>Chipmaker kondigt fabriek in Europa aan, bouwstart nog onzeker</h3>
-      <div class="chips"><span class="chip">Tekst</span><span class="chip">Later</span><span class="stand klaar">Klaar</span></div>
-      <p class="meta">Gebeurtenis · uit Later · 20 nov · klaar om 13:05 · 3 bronnen</p>
-    </div>
-    <div class="acties"><button class="knop">Ongedaan</button></div>
-  </div>
-  <div class="uitwerking"><details><summary>Uitwerking</summary>
-  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" onclick="tab(this,'a-sam')">Samenvatting</button><button role="tab" aria-selected="false" onclick="tab(this,'a-vol')">Volledige tekst</button></div>
-  <div class="doc paneel" id="a-vol" hidden>
-    <p class="bronlink">Leesweergave van het persbericht, niet herschreven · <a href="#">origineel openen</a></p>
-    <h4>Chipmaker maakt plannen bekend voor nieuwe fabriek in Europa</h4>
-    <p>Het bedrijf onderzoekt de bouw van een productielocatie voor geavanceerde chips in Europa. Een definitief besluit over locatie en investering volgt naar verwachting volgend jaar.</p>
-    <p>"Europa is een belangrijke markt voor ons, en dichter bij onze klanten produceren past in onze strategie," aldus het bedrijf in de verklaring.</p>
-    <p>Over de omvang van de investering en het aantal banen worden nog geen mededelingen gedaan.</p>
-  </div>
-  <div class="doc paneel" id="a-sam">
+<p class="meta">Een uitgewerkt item blijft staan waar het vandaan komt, hier in Triage 1. Het is groen en heeft alle knoppen behalve Uitwerken; met "Uitwerking tonen" klapt de uitwerking open onder het item zelf. Stuur je het naar Ster, Later, Dossier of Rij, dan verdwijnt het uit Uitwerken.</p>
+<div class="groepkop"><h2>Triage 1 · vandaag</h2><span class="aantal">— 8 items</span></div>
+<div class="sorteer" role="group" aria-label="Volgorde"><span>Volgorde:</span><button aria-pressed="false" onclick="sorteer(this,'uit')">Uitgewerkt eerst</button><button aria-pressed="false" onclick="sorteer(this,'niet')">Niet uitgewerkt eerst</button><button aria-pressed="true" onclick="sorteer(this,'standaard')">Standaard</button>
+<span style="flex:1"></span><button onclick="klapAlles(true)">Alles uitklappen</button><button onclick="klapAlles(false)">Alles inklappen</button></div>
+<div id="triage-lijst" class="trilijst">
+<div class="kaart tri" data-uit="0" data-volg="1"><div class="item"><div><h3>Robotarmen in de bouw: eerste aannemer zet ze in voor metselwerk</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span></div><p class="meta">Nieuwsbericht · 21 nov · nog niet uitgewerkt</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Uitwerken</button><button class="knop">Weg</button></div></div></div>
+<div class="kaart tri" data-uit="0" data-volg="2"><div class="item"><div><h3>Ziekenhuizen zetten AI in voor triage op de spoedeisende hulp</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="stand bezig">Wordt uitgewerkt</span></div><p class="meta">Onderzoek · 20 nov · uitwerking loopt sinds 14:05</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div></div>
+<div class="kaart tri" data-uit="0" data-volg="3"><div class="item"><div><h3>Waarom middenmanagers de eerste banen zijn die AI-agents veranderen</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="tag-opnieuw">Wordt opnieuw uitgewerkt</span></div><p class="meta">Versie 2 loopt met jouw opmerking: "Meer voorbeelden uit Nederland." · versie 1 blijft leesbaar</p></div><div class="acties knoppen5"><button class="knop klap" aria-expanded="false" onclick="klap(this)">Uitwerking tonen ▾</button><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div><div class="uitwerking" hidden><div class="doc"><div class="versie">Versie 1 · versie 2 wordt uitgewerkt met jouw opmerking</div>
+<h4>Kern</h4><p>AI-agents nemen eerst het coördinerende werk over: planningen bijhouden, voortgang rapporteren, informatie doorgeven. Juist dat is veel middenmanagementwerk. Voor leiders: de rol verschuift van doorgeven naar beslissen en coachen.</p>
+<h4>Bewijsgrens</h4><div class="grens"><div><strong>Staat vast</strong>Twee bedrijven melden minder coördinatielagen.</div><div><strong>Interpretatie</strong>Dat dit een bredere trend is.</div><div><strong>Open vragen</strong>Wat gebeurt er met de mensen?</div></div></div></div></div>
+<div class="kaart tri groen" data-uit="1" data-volg="4"><div class="item"><div><h3>Chipmaker kondigt fabriek in Europa aan, bouwstart nog onzeker</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="stand klaar">Uitgewerkt</span><span class="label dun">Dun bewijs</span></div><p class="meta">Gebeurtenis · 20 nov · leestijd 2 min · 3 bronnen</p></div><div class="acties knoppen5"><button class="knop klap" aria-expanded="false" onclick="klap(this)">Uitwerking tonen ▾</button><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div><div class="uitwerking" hidden><div class="tabs" role="tablist"><button role="tab" aria-selected="true" onclick="tab(this,'a-s')">Samenvatting</button><button role="tab" aria-selected="false" onclick="tab(this,'a-v')">Volledige tekst</button></div>
+<div class="doc paneel" id="a-s">
     <div class="kopregel"><span>Leestijd 2 min</span><span class="label dun">Dun bewijs</span></div>
     <h4>Kern</h4>
     <p>Een chipmaker meldt plannen voor een fabriek in Europa. Het past in de trend dat landen chipproductie terughalen na de tekorten van de afgelopen jaren. Voor leiders betekent het vooral: leveringszekerheid wordt een politieke keuze, geen inkoopkwestie.</p>
@@ -132,25 +100,15 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
     <h4>Bronnen</h4>
     <ul class="bronnen"><li><span class="weging">Primair</span>Persbericht van het bedrijf, 20 nov</li><li><span class="weging">Secundair</span>Twee nieuwsberichten die het persbericht herhalen</li></ul>
     <div class="feedback"><label for="fb-a">Wat moet er anders?</label><textarea id="fb-a" placeholder="Bijvoorbeeld: minder achtergrond, meer over de gevolgen voor werkgevers."></textarea><div class="rij"><button class="knop primair">Opnieuw uitwerken</button></div></div>
-  </div></details></div>
-
-  <div class="item">
-    <div>
-      <h3>Hoe een verzekeraar klachten 40% sneller afhandelt met een AI-assistent</h3>
-      <div class="chips"><span class="chip">Tekst</span><span class="chip">Dossiers</span><span class="stand bezig">Bezig (versie 2)</span></div>
-      <p class="meta">Praktijkvoorbeeld · uit je dossier Werk en AI · versie 2 loopt sinds 14:12 met jouw opmerking: "Wat kost het per brief?" · versie 1 staat hieronder</p>
-    </div>
-    <div class="acties"><button class="knop">Ongedaan</button></div>
-  </div>
-  <div class="uitwerking"><details><summary>Uitwerking</summary>
-  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" onclick="tab(this,'b-sam')">Samenvatting</button><button role="tab" aria-selected="false" onclick="tab(this,'b-vol')">Volledige tekst</button></div>
-  <div class="doc paneel" id="b-vol" hidden>
-    <p class="bronlink">Leesweergave van het interview in het vakblad, niet herschreven · <a href="#">origineel openen</a></p>
-    <h4>"Eerst het werk opnieuw ontworpen"</h4>
-    <p>Het hoofd klantenservice vertelt hoe de afdeling de achterstand van zes weken aanpakte. "We hebben eerst het werk opnieuw ontworpen en daarna pas de AI erbij gezet," zegt ze.</p>
-    <p>Twintig standaardsituaties werden beschreven voordat de assistent werd ingezet. Medewerkers mochten elk concept weigeren; in het begin gebeurde dat bij een op de drie brieven.</p>
-  </div>
-  <div class="doc paneel" id="b-sam">
+  </div><div class="doc paneel" id="a-v" hidden>
+    <p class="bronlink">Leesweergave van het persbericht, niet herschreven · <a href="#">origineel openen</a></p>
+    <h4>Chipmaker maakt plannen bekend voor nieuwe fabriek in Europa</h4>
+    <p>Het bedrijf onderzoekt de bouw van een productielocatie voor geavanceerde chips in Europa. Een definitief besluit over locatie en investering volgt naar verwachting volgend jaar.</p>
+    <p>"Europa is een belangrijke markt voor ons, en dichter bij onze klanten produceren past in onze strategie," aldus het bedrijf in de verklaring.</p>
+    <p>Over de omvang van de investering en het aantal banen worden nog geen mededelingen gedaan.</p>
+  </div></div></div>
+<div class="kaart tri groen" data-uit="1" data-volg="5"><div class="item"><div><h3>Hoe een verzekeraar klachten 40% sneller afhandelt met een AI-assistent</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="stand klaar">Uitgewerkt</span></div><p class="meta">Praktijkvoorbeeld · 19 nov · leestijd 4 min · 6 bronnen</p></div><div class="acties knoppen5"><button class="knop klap" aria-expanded="false" onclick="klap(this)">Uitwerking tonen ▾</button><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div><div class="uitwerking" hidden><div class="tabs" role="tablist"><button role="tab" aria-selected="true" onclick="tab(this,'b-s')">Samenvatting</button><button role="tab" aria-selected="false" onclick="tab(this,'b-v')">Volledige tekst</button></div>
+<div class="doc paneel" id="b-s">
     <div class="kopregel"><span>Versie 1 · leestijd 4 min</span></div>
     <h4>Kern</h4>
     <p>Een middelgrote verzekeraar laat een AI-assistent klachtbrieven samenvatten en een conceptantwoord klaarzetten; een medewerker controleert en verstuurt. Het is een van de eerste voorbeelden waarbij het resultaat extern is gemeten. Voor leiders laat het zien dat de winst zit in het herontwerp van het werk, niet in de tool.</p>
@@ -168,27 +126,21 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
     <h4>Bronnen</h4>
     <ul class="bronnen"><li><span class="weging">Primair</span>Jaarverslag van de toezichthouder</li><li><span class="weging">Primair</span>Interview met het hoofd klantenservice</li><li><span class="weging">Secundair</span>Vier artikelen in vakmedia</li></ul>
     <p class="leeg">Versie 2 wordt uitgewerkt met je opmerking. Versie 1 blijft bewaard.</p>
-  </div></details></div>
-
-  <div class="item">
-    <div>
-      <h3>Podcast: waarom AI-agents eerst de saaiste processen overnemen</h3>
-      <div class="chips"><span class="chip">Tekst</span><span class="chip">Podcasts &amp; YouTube</span><span class="stand klaar">Klaar</span></div>
-      <p class="meta">Hoofdstuk 3 van een aflevering (14:20–31:05) · 18 nov · klaar om 12:55 · transcript plus 3 bronnen</p>
-    </div>
-    <div class="acties"><button class="knop">Ongedaan</button></div>
-  </div>
-  <div class="uitwerking"><details open><summary>Uitwerking</summary>
-  <div class="tabs" role="tablist"><button role="tab" aria-selected="false" onclick="tab(this,'p-sam')">Samenvatting</button><button role="tab" aria-selected="true" onclick="tab(this,'p-vol')">Volledige tekst</button></div>
-  <div class="doc paneel" id="p-sam" hidden>
+  </div><div class="doc paneel" id="b-v" hidden>
+    <p class="bronlink">Leesweergave van het interview in het vakblad, niet herschreven · <a href="#">origineel openen</a></p>
+    <h4>"Eerst het werk opnieuw ontworpen"</h4>
+    <p>Het hoofd klantenservice vertelt hoe de afdeling de achterstand van zes weken aanpakte. "We hebben eerst het werk opnieuw ontworpen en daarna pas de AI erbij gezet," zegt ze.</p>
+    <p>Twintig standaardsituaties werden beschreven voordat de assistent werd ingezet. Medewerkers mochten elk concept weigeren; in het begin gebeurde dat bij een op de drie brieven.</p>
+  </div></div></div>
+<div class="kaart tri groen" data-uit="1" data-volg="6"><div class="item"><div><h3>Podcast: waarom AI-agents eerst de saaiste processen overnemen</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Podcasts &amp; YouTube</span><span class="stand klaar">Uitgewerkt</span></div><p class="meta">Hoofdstuk 3 (14:20–31:05) · 18 nov · transcript plus 3 bronnen</p></div><div class="acties knoppen5"><button class="knop klap" aria-expanded="false" onclick="klap(this)">Uitwerking tonen ▾</button><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div><div class="uitwerking" hidden><div class="tabs" role="tablist"><button role="tab" aria-selected="true" onclick="tab(this,'p-s')">Samenvatting</button><button role="tab" aria-selected="false" onclick="tab(this,'p-v')">Volledige tekst</button></div>
+<div class="doc paneel" id="p-s">
     <div class="kopregel"><span>Leestijd 3 min</span></div>
     <h4>Kern</h4>
     <p>De gast stelt dat AI-agents niet beginnen bij het creatieve werk maar bij administratieve processen met duidelijke regels. Voor leiders: de eerste winst zit in het werk waar niemand trots op is.</p>
     <h4>Bewijsgrens</h4>
     <div class="grens"><div><strong>Staat vast</strong>Wat de gast zegt (transcript).</div><div><strong>Interpretatie</strong>Dat dit voor alle sectoren geldt.</div><div><strong>Open vragen</strong>Welke cijfers ondersteunen dit?</div></div>
     <div class="feedback"><label for="fb-p">Wat moet er anders?</label><textarea id="fb-p" placeholder="Bijvoorbeeld: meer over de risico's."></textarea><div class="rij"><button class="knop primair">Opnieuw uitwerken</button></div></div>
-  </div>
-  <div class="doc paneel transcript" id="p-vol">
+  </div><div class="doc paneel" id="p-v" hidden>
     <p class="bronlink">Transcript van hoofdstuk 3, opgemaakt maar niet herschreven (vulwoorden en herhalingen weggelaten) · <a href="#">aflevering openen</a></p>
     <h4>Hoofdstuk 3 · Waar agents beginnen</h4>
     <p><a class="tc" href="#">14:20</a><span class="spreker">Presentator:</span> Je zegt dat de eerste agents niet in de creatieve hoek landen. Waar dan wel?</p>
@@ -196,26 +148,9 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
     <p><a class="tc" href="#">15:10</a><span class="spreker">Gast:</span> En dat is ook precies het werk dat mensen het minst leuk vinden. Dus de weerstand is kleiner dan je zou denken.</p>
     <p><a class="tc" href="#">15:42</a><span class="spreker">Presentator:</span> Maar wat gebeurt er met de mensen die dat werk nu doen?</p>
     <p><a class="tc" href="#">15:51</a><span class="spreker">Gast:</span> Die worden de controleurs. Ze kijken naar de uitzonderingen, en dat is moeilijker werk dan je zou denken.</p>
-  </div>
-  </details></div>
-
-  <div class="item">
-    <div>
-      <h3>Gemeenten die vergunningen met AI afhandelen: sneller, maar wie is verantwoordelijk?</h3>
-      <div class="chips"><span class="chip">Tekst</span><span class="chip">★ Ster</span><span class="stand klaar">Klaar</span></div>
-      <p class="meta">Onderzoek en standpunt · uit je sterren · versie 2 klaar om 13:50 · 12 bronnen</p>
-    </div>
-    <div class="acties"><button class="knop">Ongedaan</button></div>
-  </div>
-  <div class="uitwerking"><details open><summary>Uitwerking</summary>
-  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" onclick="tab(this,'c-sam')">Samenvatting</button><button role="tab" aria-selected="false" onclick="tab(this,'c-vol')">Volledige tekst</button></div>
-  <div class="doc paneel" id="c-vol" hidden>
-    <p class="bronlink">Betaalde titel: alleen de bewaarde passages en de link naar het origineel (toeschrijvingsregel, OW-00799) · <a href="#">origineel openen</a></p>
-    <h4>Bewaarde passages</h4>
-    <p>"We gebruiken het systeem niet om te beslissen, maar om te ordenen. De ambtenaar tekent nog steeds."</p>
-    <p>Het evaluatierapport noemt een daling van de doorlooptijd van zes weken naar negen dagen, gemeten over 1.200 aanvragen.</p>
-  </div>
-  <div class="doc paneel" id="c-sam">
+  </div></div></div>
+<div class="kaart tri groen" data-uit="1" data-volg="7"><div class="item"><div><h3>Gemeenten die vergunningen met AI afhandelen: sneller, maar wie is verantwoordelijk?</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="stand klaar">Uitgewerkt · versie 2</span><span class="label podium">Podiumgeschikt</span></div><p class="meta">Onderzoek en standpunt · 18 nov · versie 2 klaar om 13:50 · 12 bronnen</p></div><div class="acties knoppen5"><button class="knop klap" aria-expanded="false" onclick="klap(this)">Uitwerking tonen ▾</button><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div><div class="uitwerking" hidden><div class="tabs" role="tablist"><button role="tab" aria-selected="true" onclick="tab(this,'c-s')">Samenvatting</button><button role="tab" aria-selected="false" onclick="tab(this,'c-v')">Volledige tekst</button></div>
+<div class="doc paneel" id="c-s">
     <div class="versie">Versie 2 · jouw opmerking: "Minder over Scandinavië, meer over wie aansprakelijk is." · <a href="#">versie 1 bekijken</a></div>
     <div class="kopregel"><span>Leestijd 9 min</span><span class="label podium">Podiumgeschikt</span></div>
     <div class="waarschuwing">Let op: het cijfer over 4 op de 10 gemeenten komt uit een enquête met een lage respons; het is een indicatie, geen meting.</div>
@@ -237,21 +172,18 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
     <h4>Bronnen</h4>
     <ul class="bronnen"><li><span class="weging">Primair</span>Evaluatierapport van de gemeente</li><li><span class="weging">Primair</span>Interview met een gemeentesecretaris</li><li><span class="weging">Opinie</span>Opiniestuk van een hoogleraar bestuursrecht</li><li><span class="weging">Indicatie</span>Enquête koepelorganisatie (lage respons)</li><li><span class="weging">Secundair</span>Acht nieuwsartikelen</li></ul>
     <div class="feedback"><label for="fb-c">Wat moet er anders?</label><textarea id="fb-c" placeholder="Bijvoorbeeld: minder achtergrond, meer over de gevolgen voor werkgevers."></textarea><div class="rij"><button class="knop primair">Opnieuw uitwerken</button></div></div>
-  </div></details></div>
-
-  <div class="item">
-    <div>
-      <h3>Robots in de logistiek: wat het magazijn van 2030 ons leert over werk</h3>
-      <div class="chips"><span class="chip">Tekst</span><span class="chip">Dossiers</span><span class="stand mis">Mislukt</span></div>
-      <p class="meta">Uit je dossier Robots · 17 nov · onderzoek gestopt: te weinig bronnen gevonden (3 van minimaal 6) · <a href="#" style="color:var(--accent)">Opnieuw proberen</a></p>
-    </div>
-    <div class="acties"><button class="knop">Ongedaan</button></div>
-  </div>
-  <div class="uitwerking"><details><summary>Uitwerking</summary><p class="leeg">Geen uitwerking: het onderzoek vond te weinig bronnen. Kies Opnieuw proberen of Ongedaan.</p></details></div>
-
+  </div><div class="doc paneel" id="c-v" hidden>
+    <p class="bronlink">Betaalde titel: alleen de bewaarde passages en de link naar het origineel (toeschrijvingsregel, OW-00799) · <a href="#">origineel openen</a></p>
+    <h4>Bewaarde passages</h4>
+    <p>"We gebruiken het systeem niet om te beslissen, maar om te ordenen. De ambtenaar tekent nog steeds."</p>
+    <p>Het evaluatierapport noemt een daling van de doorlooptijd van zes weken naar negen dagen, gemeten over 1.200 aanvragen.</p>
+  </div></div></div>
+<div class="kaart tri" data-uit="0" data-volg="8"><div class="item"><div><h3>Robots in de logistiek: wat het magazijn van 2030 ons leert over werk</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="stand mis">Mislukt: te weinig bronnen (3 van minimaal 6)</span></div><p class="meta">Onderzoek · 17 nov · <a href="#" style="color:var(--accent)">Opnieuw proberen</a></p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Uitwerken opnieuw</button><button class="knop">Weg</button></div></div></div>
 </div>
-
-<p class="voorbeeld" style="margin-top:28px">Opbouw van elke uitwerking: altijd een kern (wat speelt er, waarom nu, wat betekent het voor leiders), onderzoek waarvan de koppen de bevindingen volgen, een bewijsgrens en de bronnen met weging. Quotes en cijfers alleen als ze letterlijk in de bronnen staan; podiummateriaal alleen als het stuk podiumgeschikt is. Bij dun materiaal: eerst aanvullend zoeken, anders kort met het label "dun bewijs". Botst de bouwsteen met de bronvorm, dan staat er bovenaan een waarschuwing. Elke uitwerking heeft twee tabs: Samenvatting (de uitwerking) en Volledige tekst (de bron zelf, opgemaakt maar niet herschreven: een transcript met sprekers en tijdcodes, of de leesweergave van een artikel). Onder de samenvatting: "Wat moet er anders?" met Opnieuw uitwerken; je opmerking gaat letterlijk mee, de vorige versie blijft bewaard.</p>
+<p class="voorbeeld" style="margin:10px 0 32px">Groen = uitgewerkt. Niet uitgewerkt: zes knoppen. Bezig of opnieuw: een label en vijf knoppen (bij opnieuw kun je versie 1 tonen). Mislukt: een rood label met de reden, "Opnieuw proberen" en de gewone knoppen. Alleen een item mét uitwerking heeft de knop "Uitwerking tonen". Elke uitwerking volgt het materiaal: geen vaste koppen en geen lege onderdelen; onder de samenvatting staat "Wat moet er anders?".</p>
+</div>
+<script>function klap(b){var k=b.closest('.kaart'),u=k.querySelector('.uitwerking');var open=u.hidden;u.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');b.textContent=open?'Uitwerking verbergen ▴':'Uitwerking tonen ▾'}
+function klapAlles(o){document.querySelectorAll('.trilijst .kaart').forEach(function(k){var u=k.querySelector('.uitwerking'),b=k.querySelector('.klap');if(u&&b){u.hidden=!o;b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'Uitwerking verbergen ▴':'Uitwerking tonen ▾'}})}</script>
 <script>function tab(b,id){var w=b.closest('.uitwerking');w.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});w.querySelectorAll('.paneel').forEach(function(p){p.hidden=p.id!==id})}</script>
 <script>function sorteer(b,w){var l=document.getElementById('triage-lijst');b.parentNode.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
 var it=[].slice.call(l.querySelectorAll('.tri'));it.sort(function(a,c){if(w==='uit')return (c.dataset.uit-a.dataset.uit)||(a.dataset.volg-c.dataset.volg);if(w==='niet')return (a.dataset.uit-c.dataset.uit)||(a.dataset.volg-c.dataset.volg);return a.dataset.volg-c.dataset.volg});it.forEach(function(x){l.appendChild(x)})}</script>
