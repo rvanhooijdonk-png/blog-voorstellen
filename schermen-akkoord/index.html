@@ -26,10 +26,10 @@ img{display:block;width:100%;height:auto;border-radius:4px}
 </head><body>
 <div class="wrap">
 <h1>Schermen voor akkoord</h1>
-<p class="sub">Twee schermwijzigingen in de contentpijplijn die jouw sjabloon-akkoord nodig hebben. Alle schermen tonen proefgegevens, geen echte items. Beide staan achter een schakelaar die uit staat; met de schakelaar uit verandert er niets.</p>
+<p class="sub">De kaartweergave van Triage 1 en Inhalen, opnieuw gebouwd op de Rij-functie die al live staat (21-11, 13:5x). Alle schermen tonen proefgegevens, geen echte items. De schakelaar staat uit; met de schakelaar uit verandert er niets.</p>
 
 <h2>1. Kaartweergave Triage en Inhalen</h2>
-<p>Samenhangende berichten op één kaart, met filters en tellingen. Rij (met opmerking) en Weg werken op elke kaart. Goedgekeurd door de controleur en door TRECHTER.</p>
+<p>Samenhangende berichten op één kaart, met filters en tellingen. Rij (met opmerking) en Weg werken op elke kaart. Herbouwd op de bestaande Rij-functie; de testrun is groen, op 13 bekende fouten na die ook in de huidige versie zitten. De controleur kijkt nu naar de herbouw.</p>
 <div class="paste"><code id="a1">Sjabloon ja op de kaartweergave Triage/Inhalen (5b)</code><button data-c="a1">Kopieer</button></div>
 <figure><figcaption>Triage 1, licht</figcaption><img src="5b-triage1-licht.png" alt="Triage 1 als kaarten, licht thema"></figure>
 <figure><figcaption>Triage 1 met twee filters actief ("5 van 17 kaarten")</figcaption><img src="5b-triage1-licht-filter.png" alt="Triage 1 met filters"></figure>
@@ -38,19 +38,8 @@ img{display:block;width:100%;height:auto;border-radius:4px}
 <figure><figcaption>Triage 1, donker, met filters</figcaption><img src="5b-triage1-donker-filter.png" alt="Triage 1 donker met filters"></figure>
 <figure><figcaption>Inhalen</figcaption><img src="5b-inhalen-licht.png" alt="Inhalen als kaarten"></figure>
 
-<h2>2. Splitsen van onderdelen: wat er met je klik gebeurt</h2>
-<p>Na een klik op Uitwerken zie je per item eerlijk de stand: wacht, bezig, klaar, of mislukt met de reden. Het ontwerp kreeg van twee controleurs een ja; de bouw is in vijf rondes nagekeken. Het scherm is sinds deze beelden niet meer veranderd.</p>
-<div class="paste"><code id="a2">Sjabloon ja op het Uitwerken-scherm (splitsen)</code><button data-c="a2">Kopieer</button></div>
-<figure><figcaption>Uitwerken met drie items die wachten</figcaption><img src="eo-01-desktop.png" alt="Uitwerken, drie items wachten"></figure>
-<figure><figcaption>Stand 2</figcaption><img src="eo-02-desktop.png" alt="Uitwerken stand 2"></figure>
-<figure><figcaption>Stand 3</figcaption><img src="eo-03-desktop.png" alt="Uitwerken stand 3"></figure>
-<figure><figcaption>Stand 4</figcaption><img src="eo-04-desktop.png" alt="Uitwerken stand 4"></figure>
-<figure><figcaption>Stand 5</figcaption><img src="eo-05-desktop.png" alt="Uitwerken stand 5"></figure>
-<figure><figcaption>Stand 6</figcaption><img src="eo-06-desktop.png" alt="Uitwerken stand 6"></figure>
-<figure><figcaption>Stand 7</figcaption><img src="eo-07-desktop.png" alt="Uitwerken stand 7"></figure>
-<figure><figcaption>Stand 8</figcaption><img src="eo-08-desktop.png" alt="Uitwerken stand 8"></figure>
-<figure><figcaption>Stand 9</figcaption><img src="eo-09-desktop.png" alt="Uitwerken stand 9"></figure>
-<figure><figcaption>Met de schakelaar uit: zoals nu</figcaption><img src="vlag-uit-desktop.png" alt="Uitwerken met schakelaar uit"></figure>
+<h2>2. Uitwerken-scherm</h2>
+<p>Afgekeurd door Richard op 21-11 (tekst tegen de rand, geen kop, uitwerking onduidelijk). Er komt een nieuw ontwerp als aparte pagina.</p>
 </div>
 <script>
 document.querySelectorAll('.paste button').forEach(function(b){b.addEventListener('click',function(){var el=document.getElementById(b.getAttribute('data-c'));function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent='Gekopieerd';setTimeout(function(){b.textContent='Kopieer'},1500)},sel);}catch(e){sel();}});});
