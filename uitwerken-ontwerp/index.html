@@ -42,16 +42,26 @@ h1{font-size:1.6rem;line-height:1.25;margin:0 0 6px}
 .voorbeeld{font-size:13px;color:var(--zacht);font-style:italic}
 @media (max-width:640px){.item{grid-template-columns:minmax(0,1fr);padding:20px}.acties{flex-direction:row;flex-wrap:wrap;justify-content:flex-end;align-items:center}.uitwerking{padding:20px 20px 24px}
 .groepkop{flex-direction:column;gap:2px}}
+.kopregel{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px;font-size:14px;color:var(--zacht)}
+.label{font-size:12px;font-weight:700;letter-spacing:.02em;padding:3px 8px;border-radius:6px;border:1px solid currentColor}
+.label.dun{color:var(--wacht);background:var(--wacht-z)}.label.podium{color:var(--bezig);background:var(--bezig-z)}
+.waarschuwing{border:1px solid var(--mis);background:var(--mis-z);color:var(--inkt);border-radius:8px;padding:10px 14px;margin:0 0 16px;font-size:15px}
+.grens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 10px}
+.grens div{background:var(--vlak);border:1px solid var(--lijn);border-radius:8px;padding:10px 12px;font-size:15px}
+.grens strong{display:block;font-size:13px;color:var(--zacht);margin-bottom:4px}
+.bronnen li{font-size:15px}.weging{font-size:12px;font-weight:600;padding:2px 6px;border-radius:5px;background:var(--chip);margin-right:6px}
+@media (max-width:640px){.grens{grid-template-columns:minmax(0,1fr)}}
 </style></head><body><div class="pagina">
 
-<p class="toelichting">Ontwerp voor Richard (21-11-2026), na je afkeuring van het Uitwerken-scherm (OW-93406). Dit is een statische voorbeeldpagina: nog geen code in de keten.
-Titels, citaten en cijfers zijn <strong>verzonnen voorbeeldinhoud</strong> om de opmaak te tonen; in het echte scherm komen ze uit je dossiers. Schakel hieronder tussen licht en donker; op een telefoon schuiven de knoppen onder het item.</p>
+<p class="toelichting">Ontwerp voor Richard (21-11-2026), na je keuze "uitwerking adaptief ja" (OW-93524). Statische voorbeeldpagina, nog geen code in de keten.
+Titels, citaten, cijfers en bronnen zijn <strong>verzonnen voorbeeldinhoud</strong> om de opbouw te tonen. De lijst bovenaan is ongewijzigd; open de drie klare items om het verschil te zien:
+een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek met podiummateriaal. Elk onderdeel verschijnt alleen als er materiaal voor is.</p>
 <div class="thema"><button onclick="document.documentElement.dataset.theme='light'">Licht</button><button onclick="document.documentElement.dataset.theme='dark'">Donker</button><button onclick="delete document.documentElement.dataset.theme">Volg systeem</button></div>
 
 <h1>Uitwerken</h1>
-<p class="meta">Items die je naar uitwerken stuurde. Elke uitwerking is een onderzoek met opbouw, citaten, stellingen, cijfers, voorbeelden, tegengeluid en ideeën voor je lezingen.</p>
+<p class="meta">Items die je naar uitwerken stuurde. De opbouw en lengte van elke uitwerking volgen het materiaal: geen vaste koppen, geen lege onderdelen.</p>
 
-<div class="groepkop"><h2>Tekst</h2><span class="aantal">— 3 items</span></div>
+<div class="groepkop"><h2>Tekst</h2><span class="aantal">— 5 items</span></div>
 <div class="kaart">
 
   <div class="item">
@@ -66,78 +76,95 @@ Titels, citaten en cijfers zijn <strong>verzonnen voorbeeldinhoud</strong> om de
 
   <div class="item">
     <div>
-      <h3>Waarom middenmanagers de eerste banen zijn die AI-agents veranderen</h3>
-      <div class="chips"><span class="chip">Tekst</span><span class="chip">Later</span><span class="stand bezig">Bezig</span></div>
-      <p class="meta">Uit Later · 19 nov · onderzoek loopt sinds 13:12, nog ongeveer 10 minuten</p>
+      <h3>Chipmaker kondigt fabriek in Europa aan, bouwstart nog onzeker</h3>
+      <div class="chips"><span class="chip">Tekst</span><span class="chip">Later</span><span class="stand klaar">Klaar</span></div>
+      <p class="meta">Gebeurtenis · uit Later · 20 nov · klaar om 13:05 · 3 bronnen</p>
     </div>
     <div class="acties"><button class="knop">Ongedaan</button></div>
   </div>
-  <div class="uitwerking"><details><summary>Uitwerking</summary><p class="leeg">Het onderzoek loopt. De uitwerking verschijnt hier zodra hij klaar is.</p></details></div>
+  <div class="uitwerking"><details><summary>Uitwerking</summary>
+  <div class="doc">
+    <div class="kopregel"><span>Leestijd 2 min</span><span class="label dun">Dun bewijs</span></div>
+    <h4>Kern</h4>
+    <p>Een chipmaker meldt plannen voor een fabriek in Europa. Het past in de trend dat landen chipproductie terughalen na de tekorten van de afgelopen jaren. Voor leiders betekent het vooral: leveringszekerheid wordt een politieke keuze, geen inkoopkwestie.</p>
+    <h4>Wat we weten en wat niet</h4>
+    <p>Vast staat alleen de aankondiging zelf. Locatie, bedrag en startdatum zijn nog niet bevestigd; aanvullend zoeken leverde geen tweede onafhankelijke bron op.</p>
+    <h4>Bewijsgrens</h4>
+    <div class="grens"><div><strong>Staat vast</strong>De aankondiging, in een persbericht.</div><div><strong>Interpretatie</strong>Dat dit past in een bredere terugkeer van chipproductie.</div><div><strong>Open vragen</strong>Komt er subsidie? Wanneer start de bouw?</div></div>
+    <h4>Bronnen</h4>
+    <ul class="bronnen"><li><span class="weging">Primair</span>Persbericht van het bedrijf, 20 nov</li><li><span class="weging">Secundair</span>Twee nieuwsberichten die het persbericht herhalen</li></ul>
+  </div></details></div>
+
+  <div class="item">
+    <div>
+      <h3>Hoe een verzekeraar klachten 40% sneller afhandelt met een AI-assistent</h3>
+      <div class="chips"><span class="chip">Tekst</span><span class="chip">Dossiers</span><span class="stand klaar">Klaar</span></div>
+      <p class="meta">Praktijkvoorbeeld · uit je dossier Werk en AI · 19 nov · klaar om 12:20 · 6 bronnen</p>
+    </div>
+    <div class="acties"><button class="knop">Ongedaan</button></div>
+  </div>
+  <div class="uitwerking"><details><summary>Uitwerking</summary>
+  <div class="doc">
+    <div class="kopregel"><span>Leestijd 4 min</span></div>
+    <h4>Kern</h4>
+    <p>Een middelgrote verzekeraar laat een AI-assistent klachtbrieven samenvatten en een conceptantwoord klaarzetten; een medewerker controleert en verstuurt. Het is een van de eerste voorbeelden waarbij het resultaat extern is gemeten. Voor leiders laat het zien dat de winst zit in het herontwerp van het werk, niet in de tool.</p>
+    <h4>Context</h4>
+    <p>Klachten liepen op tot een achterstand van zes weken. De afdeling kon niet groeien; het team bleef even groot.</p>
+    <h4>Wat ze deden</h4>
+    <p>Eerst werden twintig standaardsituaties beschreven. Pas daarna kreeg de assistent die situaties als kader. Medewerkers kregen het recht om elk concept te weigeren, en dat gebeurde in het begin bij een op de drie brieven.</p>
+    <h4>Resultaat</h4>
+    <p>De doorlooptijd daalde met 40%, gemeten over vier maanden en vergeleken met dezelfde maanden een jaar eerder. Het aantal herhaalklachten bleef gelijk.</p>
+    <h4>Bewijsgrens</h4>
+    <div class="grens"><div><strong>Staat vast</strong>Doorlooptijd −40%, uit het jaarverslag van de toezichthouder.</div><div><strong>Interpretatie</strong>Dat het herontwerp het verschil maakte, niet het model.</div><div><strong>Open vragen</strong>Wat kost het per brief? Hoe vergaat het na een jaar?</div></div>
+    <h4>Quotes en cijfers</h4>
+    <blockquote>"We hebben eerst het werk opnieuw ontworpen en daarna pas de AI erbij gezet."<footer>Voorbeeld: hoofd klantenservice, interview in een vakblad, okt 2026</footer></blockquote>
+    <ul><li>Doorlooptijd −40% over vier maanden. <span class="bron">Voorbeeldbron: jaarverslag van een toezichthouder, 2026</span></li></ul>
+    <h4>Bronnen</h4>
+    <ul class="bronnen"><li><span class="weging">Primair</span>Jaarverslag van de toezichthouder</li><li><span class="weging">Primair</span>Interview met het hoofd klantenservice</li><li><span class="weging">Secundair</span>Vier artikelen in vakmedia</li></ul>
+  </div></details></div>
 
   <div class="item">
     <div>
       <h3>Gemeenten die vergunningen met AI afhandelen: sneller, maar wie is verantwoordelijk?</h3>
       <div class="chips"><span class="chip">Tekst</span><span class="chip">★ Ster</span><span class="stand klaar">Klaar</span></div>
-      <p class="meta">Uit je sterren · 18 nov · klaar om 11:40 · 7 onderdelen, 12 bronnen</p>
+      <p class="meta">Onderzoek en standpunt · uit je sterren · 18 nov · klaar om 11:40 · 12 bronnen</p>
     </div>
     <div class="acties"><button class="knop">Ongedaan</button></div>
   </div>
-
   <div class="uitwerking"><details open><summary>Uitwerking</summary>
   <div class="doc">
-    <h4>Opbouw</h4>
-    <ol>
-      <li>Wat gemeenten nu al automatiseren, en waarom vergunningen de eerste grote toepassing zijn.</li>
-      <li>De belofte: van weken naar dagen, en wat dat voor burgers en ondernemers betekent.</li>
-      <li>De keerzijde: wie is verantwoordelijk als het systeem fout beslist?</li>
-      <li>Wat leiders in andere sectoren hieruit kunnen leren over AI en verantwoordelijkheid.</li>
-    </ol>
-
-    <h4>Quotes</h4>
-    <blockquote>"We gebruiken het systeem niet om te beslissen, maar om te ordenen. De ambtenaar tekent nog steeds."
-      <footer>Voorbeeld: een gemeentesecretaris in een interview met een vakblad voor het openbaar bestuur, nov 2026</footer></blockquote>
-    <blockquote>"Snelheid is geen doel als niemand meer kan uitleggen waarom een aanvraag is afgewezen."
-      <footer>Voorbeeld: een hoogleraar bestuursrecht in een opiniestuk, okt 2026</footer></blockquote>
-
-    <h4>Stellingen</h4>
-    <ul>
-      <li>De eerste AI-revolutie in de overheid is geen chatbot maar een stille achterkant van formulieren.</li>
-      <li>Wie de beslissing automatiseert zonder de uitleg te automatiseren, verliest het vertrouwen van de burger.</li>
-    </ul>
-
-    <h4>Cijfers</h4>
-    <ul>
-      <li>De doorlooptijd van een standaardvergunning daalde in een proef van 6 weken naar 9 dagen. <span class="bron">Voorbeeldbron: evaluatierapport van een gemeente, 2026</span></li>
-      <li>4 op de 10 gemeenten testen AI in de dienstverlening. <span class="bron">Voorbeeldbron: enquête van een koepelorganisatie, 2026</span></li>
-    </ul>
-
-    <h4>Voorbeelden</h4>
-    <p>Een middelgrote gemeente laat een systeem aanvragen voor dakkapellen sorteren op volledigheid; alleen twijfelgevallen gaan naar een ambtenaar. In een Scandinavische stad krijgt elke afwijzing automatisch een uitleg in gewone taal mee.</p>
-
-    <h4>Tegengeluid</h4>
-    <p>De toeslagenaffaire roept vragen op over geautomatiseerde risicoselectie, menselijke controle en rechtsbescherming. Ook vakbonden waarschuwen dat "ordenen" in de praktijk ongemerkt kan verschuiven naar beslissen.</p>
-
-    <h4>Ideeën voor je lezingen</h4>
-    <ul>
-      <li>Openingsvraag aan de zaal: "Wie van u zou een AI laten beslissen over uw eigen verbouwing?"</li>
-      <li>Brug naar bedrijven: elke organisatie heeft haar eigen "vergunningen", processen waar snelheid en verantwoordelijkheid botsen.</li>
-    </ul>
+    <div class="kopregel"><span>Leestijd 9 min</span><span class="label podium">Podiumgeschikt</span></div>
+    <div class="waarschuwing">Let op: het cijfer over 4 op de 10 gemeenten komt uit een enquête met een lage respons; het is een indicatie, geen meting.</div>
+    <h4>Kern</h4>
+    <p>Gemeenten automatiseren de afhandeling van eenvoudige vergunningen. Dat gebeurt nu, omdat de achterstanden groeien en het personeel krap is. Voor leiders in elke sector speelt dezelfde vraag: hoe houd je verantwoordelijkheid als een systeem de eerste beslissing voorbereidt?</p>
+    <h4>Hoe snel gaat het echt?</h4>
+    <p>In een proef daalde de doorlooptijd van een standaardvergunning van zes weken naar negen dagen. Gemeten is het aantal kalenderdagen tussen aanvraag en besluit, over 1.200 aanvragen. De winst zit vooral in het sorteren op volledigheid: onvolledige aanvragen gaan direct terug.</p>
+    <h4>Wie beslist er?</h4>
+    <p>In alle onderzochte gemeenten tekent een ambtenaar het besluit. Critici zeggen dat "ordenen" ongemerkt kan verschuiven naar beslissen: wie honderd voorgesorteerde aanvragen per dag ziet, volgt het systeem. Dat is de sterkste tegenwerping, en hij is niet weerlegd.</p>
+    <h4>Wat leren andere landen?</h4>
+    <p>In een Scandinavische stad krijgt elke afwijzing automatisch een uitleg in gewone taal mee. Bezwaren daalden daar, maar het is één stad en één jaar.</p>
+    <h4>Bewijsgrens</h4>
+    <div class="grens"><div><strong>Staat vast</strong>Doorlooptijd 6 weken → 9 dagen in één proef.</div><div><strong>Interpretatie</strong>Dat dit opschaalt naar complexe vergunningen.</div><div><strong>Open vragen</strong>Wie is aansprakelijk bij een fout? Hoe vaak wijkt de ambtenaar af?</div></div>
+    <h4>Quotes en cijfers</h4>
+    <blockquote>"We gebruiken het systeem niet om te beslissen, maar om te ordenen. De ambtenaar tekent nog steeds."<footer>Voorbeeld: een gemeentesecretaris, interview in een vakblad, nov 2026</footer></blockquote>
+    <ul><li>6 weken → 9 dagen, 1.200 aanvragen. <span class="bron">Voorbeeldbron: evaluatierapport van een gemeente, 2026</span></li><li>4 op de 10 gemeenten testen AI in de dienstverlening. <span class="bron">Voorbeeldbron: enquête van een koepelorganisatie, 2026 (lage respons)</span></li></ul>
+    <h4>Voor het podium</h4>
+    <ul><li><strong>Spanningsveld:</strong> hoe sneller het systeem, hoe minder de mens nog echt kijkt.</li><li><strong>Analogie:</strong> de automatische piloot. Piloten vliegen veiliger, maar grijpen slechter in als het misgaat.</li><li><strong>Zaalvraag:</strong> "Welk besluit in uw organisatie wordt al door een systeem voorbereid zonder dat iemand het zo noemt?"</li></ul>
+    <h4>Bronnen</h4>
+    <ul class="bronnen"><li><span class="weging">Primair</span>Evaluatierapport van de gemeente</li><li><span class="weging">Primair</span>Interview met een gemeentesecretaris</li><li><span class="weging">Opinie</span>Opiniestuk van een hoogleraar bestuursrecht</li><li><span class="weging">Indicatie</span>Enquête koepelorganisatie (lage respons)</li><li><span class="weging">Secundair</span>Acht nieuwsartikelen</li></ul>
   </div></details></div>
 
-</div>
-
-<div class="groepkop"><h2>Video</h2><span class="aantal">— 1 item</span></div>
-<div class="kaart">
   <div class="item">
     <div>
       <h3>Robots in de logistiek: wat het magazijn van 2030 ons leert over werk</h3>
-      <div class="chips"><span class="chip">Video</span><span class="chip">Dossiers</span><span class="stand mis">Mislukt</span></div>
+      <div class="chips"><span class="chip">Tekst</span><span class="chip">Dossiers</span><span class="stand mis">Mislukt</span></div>
       <p class="meta">Uit je dossier Robots · 17 nov · onderzoek gestopt: te weinig bronnen gevonden (3 van minimaal 6) · <a href="#" style="color:var(--accent)">Opnieuw proberen</a></p>
     </div>
     <div class="acties"><button class="knop">Ongedaan</button></div>
   </div>
   <div class="uitwerking"><details><summary>Uitwerking</summary><p class="leeg">Geen uitwerking: het onderzoek vond te weinig bronnen. Kies Opnieuw proberen of Ongedaan.</p></details></div>
+
 </div>
 
-<p class="voorbeeld" style="margin-top:28px">Wat er anders is dan het afgekeurde scherm: binnenmarge van 20–24 px; per item een vette kop met daaronder chips voor soort, herkomst en stand (met kleur en tekst); één gedempte regel met bron, datum en reden van wachten; Ongedaan rechts, verticaal gecentreerd; een groepskop "Tekst — 3 items"; de uitwerking als leesbaar document met tussenkoppen, maximaal ~70 tekens per regel en ruime regelafstand.</p>
+<p class="voorbeeld" style="margin-top:28px">Opbouw van elke uitwerking: altijd een kern (wat speelt er, waarom nu, wat betekent het voor leiders), onderzoek waarvan de koppen de bevindingen volgen, een bewijsgrens en de bronnen met weging. Quotes en cijfers alleen als ze letterlijk in de bronnen staan; podiummateriaal alleen als het stuk podiumgeschikt is. Bij dun materiaal: eerst aanvullend zoeken, anders kort met het label "dun bewijs". Botst de bouwsteen met de bronvorm, dan staat er bovenaan een waarschuwing.</p>
 </div></body></html>
