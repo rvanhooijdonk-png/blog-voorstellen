@@ -44,8 +44,8 @@ a{color:var(--accent)}
 <div class="item"><div>
 <span class="advies">Eerst, in je eigen Terminal</span>
 <h3>Keten-server herstarten op claude3</h3>
-<p>Claude1 staat op 97% en reset pas zondag 10:00. De instelling staat al op claude3, maar de herstart van de live server werd door de veiligheidscontrole van mijn sessie geweigerd. Plak deze regel in de Terminal-app. Daarna meet ik na en voeg ik de reparatie van de datumtest, de prompttoets en trein 14 samen en rol uit.</p>
-</div><div class="paste"><code id="p0">launchctl kickstart -k gui/$(id -u)/nl.richardvanhooijdonk.keten-ontwerp</code><button data-c="p0">Kopieer</button></div></div>
+<p>Claude1 staat op 97% en reset pas zondag 10:00; raakt hij vol, dan valt de keten stil. De herstart naar claude3 werd door de veiligheidscontrole van mijn sessie geweigerd. De klare onderdelen heb ik intussen wel samengevoegd en uitgerold, met de keten nog op claude1. Wil je de keten veilig naar claude3, plak dan deze twee regels in de Terminal-app; daarna meet ik na.</p>
+</div><div class="paste"><code id="p0">plutil -replace EnvironmentVariables.CLAUDE_SECURESTORAGE_CONFIG_DIR -string "$HOME/.claude-sleutel-claude3" ~/Library/LaunchAgents/nl.richardvanhooijdonk.keten-ontwerp.plist && launchctl kickstart -k gui/$(id -u)/nl.richardvanhooijdonk.keten-ontwerp</code><button data-c="p0">Kopieer</button></div></div>
 
 <div class="item"><div>
 <span class="advies">Advies: 15 per groep</span>
@@ -111,7 +111,7 @@ a{color:var(--accent)}
 
 <h2>Wat vannacht klaar kwam</h2>
 <ul class="info">
-<li><b>Reparatie datumtest</b>: goedgekeurd, testrun groen. Om 08:30 voeg ik hem samen en rol uit, daarna trein 14, 15 en 16 en de prompttoets zodra hun testruns groen zijn.</li>
+<li><b>Samengevoegd en uitgerold om 10:4x</b>: de reparatie van de datumtest, de prompttoets, trein 14 en trein 15. De pagina werkt (gezondheidscheck groen). Trein 16 en 17 volgen na hun testrun.</li>
 <li><b>Productieaccount keten</b>: claude1 staat op 97%. Om 08:30 zet ik de keten over naar claude3 (38%); na de reset van zondag terug.</li>
 <li><b>Podcastselectie en reclameherkenning</b>: beide goedgekeurd, gaan in trein 17 met de schakelaar uit. Het label is "noemt mogelijk een kortingscode of promolink"; het verbergt nooit iets.</li>
 <li><b>Splitsen van podcastonderdelen</b>: na twaalf reparatierondes opnieuw ontworpen. Het ontwerp kreeg van beide controleurs een ja; de bouw loopt.</li>
