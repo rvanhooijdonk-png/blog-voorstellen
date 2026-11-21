@@ -26,20 +26,16 @@ img{display:block;width:100%;height:auto;border-radius:4px}
 </head><body>
 <div class="wrap">
 <h1>Schermen voor akkoord</h1>
-<p class="sub">De kaartweergave van Triage 1 en Inhalen, opnieuw gebouwd op de Rij-functie die al live staat (21-11, 13:5x). Alle schermen tonen proefgegevens, geen echte items. De schakelaar staat uit; met de schakelaar uit verandert er niets.</p>
-
-<h2>1. Kaartweergave Triage en Inhalen</h2>
-<p>Samenhangende berichten op één kaart, met filters en tellingen. Rij (met opmerking) en Weg werken op elke kaart. Herbouwd op de bestaande Rij-functie; de testrun is groen, op 13 bekende fouten na die ook in de huidige versie zitten. De controleur kijkt nu naar de herbouw.</p>
+<p class="sub">Versie van 21-11, 15:3x. Alle schermen tonen proefgegevens, geen echte items. Alles staat achter een schakelaar die uit staat; met de schakelaar uit verandert er niets.</p>
+<h2>1. Kaartweergave Triage en Inhalen, met de nieuwe indeling</h2>
+<p>Filterrijen volgens je keuze "segmentatie ja": <b>Onderwerp</b>, <b>Bouwsteen</b> (wat levert het je verhaal op) en <b>Bronvorm</b> (per bron; Rapport is altijd te kiezen), plus één knop <b>Podiumgeschikt</b>. Op de kaart staat "Podiumgeschikt: reden". Wat het systeem niet zeker weet, staat in het uitklapblok "Te controleren" en nooit als "Onbekend".</p>
+<p><b>Let op:</b> in deze proefdata zijn 8 van de 11 kaarten podiumgeschikt, alleen om de markering te laten zien; in echte data is dat veel minder. De juistheid van de indeling wordt nog getoetst op echte berichten (TRECHTER); het eerste deel is geslaagd. Uitgewerkte kaarten worden groen volgens het Uitwerken-ontwerp dat je goedkeurde; dat komt in een volgende stap.</p>
 <div class="paste"><code id="a1">Sjabloon ja op de kaartweergave Triage/Inhalen (5b)</code><button data-c="a1">Kopieer</button></div>
-<figure><figcaption>Triage 1, licht</figcaption><img src="5b-triage1-licht.png" alt="Triage 1 als kaarten, licht thema"></figure>
-<figure><figcaption>Triage 1 met twee filters actief ("5 van 17 kaarten")</figcaption><img src="5b-triage1-licht-filter.png" alt="Triage 1 met filters"></figure>
-<figure><figcaption>Opmerkingveld voor De Rij geopend</figcaption><img src="5b-triage1-licht-opmerking.png" alt="Opmerkingveld voor De Rij"></figure>
-<figure><figcaption>Triage 1, donker</figcaption><img src="5b-triage1-donker.png" alt="Triage 1 donker thema"></figure>
-<figure><figcaption>Triage 1, donker, met filters</figcaption><img src="5b-triage1-donker-filter.png" alt="Triage 1 donker met filters"></figure>
-<figure><figcaption>Inhalen</figcaption><img src="5b-inhalen-licht.png" alt="Inhalen als kaarten"></figure>
-
-<h2>2. Uitwerken-scherm</h2>
-<p>Afgekeurd door Richard op 21-11 (tekst tegen de rand, geen kop, uitwerking onduidelijk). Er komt een nieuw ontwerp als aparte pagina.</p>
+<figure><figcaption>Triage 1, licht</figcaption><img src="5b2-triage1-licht.png" alt="Triage 1, licht"></figure><figure><figcaption>Triage 1 met filters (Proefthema Werk + Podiumgeschikt)</figcaption><img src="5b2-triage1-licht-filter.png" alt="Triage 1 met filters (Proefthema Werk + Podiumgeschikt)"></figure><figure><figcaption>Opmerkingveld voor De Rij</figcaption><img src="5b2-triage1-licht-opmerking.png" alt="Opmerkingveld voor De Rij"></figure><figure><figcaption>Triage 1, donker</figcaption><img src="5b2-triage1-donker.png" alt="Triage 1, donker"></figure><figure><figcaption>Triage 1, donker, met filters</figcaption><img src="5b2-triage1-donker-filter.png" alt="Triage 1, donker, met filters"></figure><figure><figcaption>Inhalen</figcaption><img src="5b2-inhalen-licht.png" alt="Inhalen"></figure>
+<h2>2. Rij met opmerking, op alle schermen</h2>
+<p>Op elk scherm waar het kan een Rij-knop met opmerkingveld. Waar het nog niet kan, staat één zin uitleg; die schermen volgen in een aparte stap (Inspiratie en Thema's eerst).</p>
+<div class="paste"><code id="a2">Sjabloon ja op Rij met opmerking overal (#992)</code><button data-c="a2">Kopieer</button></div>
+<figure><figcaption>Triage 1: Rij met opmerkingveld</figcaption><img src="rij-triage1-licht.png" alt="Triage 1: Rij met opmerkingveld"></figure><figure><figcaption>Papers</figcaption><img src="rij-papers-licht.png" alt="Papers"></figure><figure><figcaption>Teller bij een lange opmerking</figcaption><img src="rij-opmerking-teller-licht.png" alt="Teller bij een lange opmerking"></figure><figure><figcaption>Als De Rij even bezet is: je tekst blijft staan</figcaption><img src="rij-opmerking-fout-503-licht.png" alt="Als De Rij even bezet is: je tekst blijft staan"></figure><figure><figcaption>Podcasts: Rij voor de hele aflevering</figcaption><img src="rij-podcasts-aflevering-licht.png" alt="Podcasts: Rij voor de hele aflevering"></figure><figure><figcaption>Dossiers per onderwerp als één pakket</figcaption><img src="rij-dossiers-onderwerp-licht.png" alt="Dossiers per onderwerp als één pakket"></figure><figure><figcaption>Kennisbank: nog niet beschikbaar, met uitleg</figcaption><img src="rij-kennisbank-citaat-licht.png" alt="Kennisbank: nog niet beschikbaar, met uitleg"></figure>
 </div>
 <script>
 document.querySelectorAll('.paste button').forEach(function(b){b.addEventListener('click',function(){var el=document.getElementById(b.getAttribute('data-c'));function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent='Gekopieerd';setTimeout(function(){b.textContent='Kopieer'},1500)},sel);}catch(e){sel();}});});
