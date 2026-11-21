@@ -170,7 +170,7 @@ document.addEventListener("click",e=>{const dd=e.target.closest(".dd");document.
  if(/Uitwerking tonen/.test(e.target.textContent)){zeg("Proef: hier klapt de uitwerking open (Samenvatting | Volledige tekst)");return}
  if(/Uitwerken/.test(e.target.textContent)){zeg("Proef: wordt uitgewerkt; daarna groen");return}
  zeg("Proef: "+e.target.textContent.replace("★ ","")+" — item verdwijnt uit de lijst");r.remove()});
-document.addEventListener("change",e=>{if(!e.target.matches(".menu input"))return;const f=e.target.closest(".dd").dataset.f,v=f+": "+e.target.value;act=act.filter(a=>a!==v);if(e.target.checked)act.push(v);toon()});
+document.addEventListener("change",e=>{if(!e.target.matches(".menu input[type=checkbox]"))return;const f=e.target.closest(".dd").dataset.f,v=f+": "+e.target.value;act=act.filter(a=>a!==v);if(e.target.checked)act.push(v);toon()});
 document.getElementById("q").addEventListener("input",()=>filter());
 document.addEventListener("change",e=>{if(e.target.name!=="per")return;const v=e.target.value;document.getElementById("perknop").textContent="Periode: "+v+" ▾";document.getElementById("perknop").classList.toggle("aan",v!=="alle open");
  const d2=document.getElementById("dag2"),vr=document.querySelector(".lijst .dag");const toonV=v!=="gisteren",toonD=!["vandaag","sinds laatste bezoek"].includes(v);
