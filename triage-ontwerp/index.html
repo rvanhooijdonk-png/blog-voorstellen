@@ -50,6 +50,7 @@ main{min-width:0}
 .paneel header h3{margin:0;font-size:15px}.x{font:inherit;font-size:18px;background:none;border:0;color:var(--zacht);cursor:pointer}
 .paneel .in{padding:12px 16px;overflow:auto}.tabs{display:flex;gap:4px;flex-wrap:wrap;margin:10px 0}.tabs button{font:inherit;font-size:12.5px;border:1px solid var(--lijn);background:var(--vlak);color:var(--inkt);border-radius:6px;padding:3px 8px;cursor:pointer}.tabs .aan{background:var(--inkt);color:var(--vlak)}
 .bron{display:flex;justify-content:space-between;padding:7px 4px;border-bottom:1px solid var(--lijn);cursor:pointer}.bron:hover{color:var(--focus)}.bron span{color:var(--zacht);font-variant-numeric:tabular-nums}
+.bundel .t::before{content:"▸ ";color:var(--zacht)}.bundel.open .t::before{content:"▾ "}.bundel .n{font-size:11.5px;background:var(--knop);border-radius:10px;padding:1px 7px;margin-left:6px;font-weight:500;color:var(--zacht)}.kind{display:none;padding-left:28px;background:var(--vlak)}.kind.open{display:block}.kind .rij{background:transparent}
 .melding{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--inkt);color:var(--vlak);padding:7px 14px;border-radius:7px;font-size:13px;display:none;z-index:30}
 .hint{color:var(--zacht);font-size:12px;margin-left:8px}
 .kaarten{display:none}.kaarten.aan{display:block}.kaarten .info{color:var(--zacht);font-size:13px;margin:18px 0 8px}
@@ -83,7 +84,7 @@ main{min-width:0}
  </div>
 </div>
 <div class="lijst" id="lijst">
- <div class="dag"><h2>Vrijdag 21 november</h2><div class="balk"><i></i></div><div class="tel">452 open · 812 behandeld van 1.264</div><span class="hint">↑↓ kiezen · 1–6 acties · ? sneltoetsen</span></div>
+ <div class="dag"><h2>Vrijdag 21 november</h2><div class="balk"><i></i></div><div class="tel">452 open · 812 behandeld van 1.264</div><span class="hint">bundels: klik om te openen · ↑↓ kiezen · 1–6 acties · ? sneltoetsen</span></div>
  <div id="items"></div>
  <button class="inklap" data-x="laag">▸ Lage scores · 19 items</button><div class="extra" id="laag"></div>
  <div class="dag"><h2>Donderdag 20 november</h2><div class="tel">38 open</div></div>
@@ -114,6 +115,13 @@ d.innerHTML=`<div><div class="t">${t}</div><div class="m"><a href="#" class="bn"
 <div class="acts">${gr?`<button>Uitwerking tonen</button>`:""}<button title="Ster (1)">★ Ster</button><button title="Later (2)">Later</button><button title="Dossier (3)">Dossier</button><button title="Rij (4)" class="rj">Rij</button>${gr?"":`<button title="Uitwerken (5)">Uitwerken</button>`}<button title="Weg (6)" class="weg">Weg</button></div>
 <div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>`;return d}
 I.forEach((it,i)=>el.appendChild(rij(it,i)));
+const B=document.createElement("div");B.className="rij bundel";B.tabIndex=0;
+B.innerHTML='<div style="cursor:pointer" class="bk"><div class="t">Banken zetten AI-agents in voor kredietbeslissingen <span class="n">4 berichten</span></div><div class="m">Financial Times, Reuters, @account-4, De Tijd AI · 07:10–09:40<span class="lab">AI-first organisatie</span><span class="lab">Finance</span></div></div><div class="acts"><button title="Ster (1)">★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';
+const K=document.createElement("div");K.className="kind";
+[["Banken zetten AI-agents in voor kredietbeoordeling","Reuters","09:40"],["ECB waarschuwt voor modelrisico bij AI-kredietbeslissingen","De Tijd AI","08:15"],["Draad: wat agents in banken nu al doen","@account-4","07:52"],["Kredietbank automatiseert 60% van mkb-aanvragen","Financial Times","07:10"]].forEach(([tt,b,u])=>{const d=document.createElement("div");d.className="rij";d.innerHTML='<div><div class="t">'+tt+'</div><div class="m"><a href="#" class="bn">'+b+'</a> · '+u+'</div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';K.appendChild(d)});
+el.insertBefore(K,el.children[2]);el.insertBefore(B,K);
+B.querySelector(".bk").addEventListener("click",()=>{B.classList.toggle("open");K.classList.toggle("open")});
+
 document.getElementById("kitems").innerHTML='<div class="rij"><div><div class="t">Banken zetten AI-agents in voor kredietbeslissingen</div><div class="m">3 bronnen · Financial Times, Reuters, @account-4<span class="lab">AI-first organisatie</span><span class="lab">Finance</span></div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button>Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div></div>';
 const L=[["@account-1",158],["@account-2",135],["@account-3",108],["@account-4",95],["@account-5",91],["@account-6",89],["@account-7",84],["@account-8",83],["34 andere accounts",355]];
 document.getElementById("bronnen").innerHTML=L.map(([n,c])=>`<div class="bron"><b style="font-weight:500">${n}</b><span>${c}</span></div>`).join("");
