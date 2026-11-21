@@ -84,6 +84,9 @@ main{min-width:0}
    <label><input type="checkbox" value="Zorg">Zorg</label><label><input type="checkbox" value="Bouw">Bouw</label><label><input type="checkbox" value="Onderwijs">Onderwijs</label><label><input type="checkbox" value="Overheid">Overheid</label><label><input type="checkbox" value="Finance">Finance</label><label><input type="checkbox" value="Logistiek">Logistiek</label><label><input type="checkbox" value="Agrarische sector">Agrarische sector</label><label><input type="checkbox" value="Retail">Retail en detailhandel</label><label><input type="checkbox" value="Slimme steden">Slimme steden</label><label><input type="checkbox" value="Veiligheid en criminaliteit">Veiligheid en criminaliteit</label><label><input type="checkbox" value="Marketing">Marketing</label></div></div>
   <div class="dd" data-f="Type"><button class="f">Type ▾</button><div class="menu">
    <label><input type="checkbox" value="Artikel">Artikel</label><label><input type="checkbox" value="Rapport">Rapport</label><label><input type="checkbox" value="Paper">Paper</label><label><input type="checkbox" value="Video">Video</label><label><input type="checkbox" value="Podcast">Podcast</label><label><input type="checkbox" value="Social media">Social media</label></div></div>
+  <div class="dd" data-p="1"><button class="f" id="perknop">Periode: alle open ▾</button><div class="menu">
+   <label><input type="radio" name="per" value="alle open" checked>Alle open (standaard)</label><label><input type="radio" name="per" value="sinds laatste bezoek">Sinds mijn laatste bezoek</label><label><input type="radio" name="per" value="vandaag">Vandaag</label><label><input type="radio" name="per" value="gisteren">Gisteren</label><label><input type="radio" name="per" value="laatste 7 dagen">Laatste 7 dagen</label><label><input type="radio" name="per" value="laatste 30 dagen">Laatste 30 dagen</label>
+   <div class="g">Zelf kiezen</div><label style="gap:4px">van <input type="date" value="2026-11-18" style="font:inherit;font-size:12px"> tot <input type="date" value="2026-11-21" style="font:inherit;font-size:12px"></label></div></div>
   <button class="f geel" id="opv">★ Opvallend</button>
   <button class="f" id="bronknop">Bronnen</button>
  </div>
@@ -92,7 +95,7 @@ main{min-width:0}
  <div class="dag"><h2>Vrijdag 21 november</h2><div class="balk"><i></i></div><div class="tel">452 open · 812 behandeld van 1.264</div><span class="hint">vink aan voor batch · verhalen: klik om te openen · ↑↓ kiezen · 1–6 acties · ? sneltoetsen</span></div>
  <div id="items"></div>
  <button class="inklap" data-x="laag">▸ Lage scores · 19 items</button><div class="extra" id="laag"></div>
- <div class="dag"><h2>Donderdag 20 november</h2><div class="tel">38 open</div></div><div class="ghost">↳ 1 bericht over "Banken zetten AI-agents in…" staat in het verhaal bij vrijdag</div>
+ <div class="dag" id="dag2"><h2>Donderdag 20 november</h2><div class="tel">38 open</div></div><div class="ghost">↳ 1 bericht over "Banken zetten AI-agents in…" staat in het verhaal bij vrijdag</div>
  <button class="inklap">▸ 38 open items tonen</button>
 </div>
 <div class="lijst kaarten" id="kaarten"><div class="info">38 vondsten staan op een kaart · 414 staan erbuiten (die zie je in Lijst)</div><div id="kitems"></div></div>
@@ -169,6 +172,11 @@ document.addEventListener("click",e=>{const dd=e.target.closest(".dd");document.
  zeg("Proef: "+e.target.textContent.replace("★ ","")+" — item verdwijnt uit de lijst");r.remove()});
 document.addEventListener("change",e=>{if(!e.target.matches(".menu input"))return;const f=e.target.closest(".dd").dataset.f,v=f+": "+e.target.value;act=act.filter(a=>a!==v);if(e.target.checked)act.push(v);toon()});
 document.getElementById("q").addEventListener("input",()=>filter());
+document.addEventListener("change",e=>{if(e.target.name!=="per")return;const v=e.target.value;document.getElementById("perknop").textContent="Periode: "+v+" ▾";document.getElementById("perknop").classList.toggle("aan",v!=="alle open");
+ const d2=document.getElementById("dag2"),vr=document.querySelector(".lijst .dag");const toonV=v!=="gisteren",toonD=!["vandaag","sinds laatste bezoek"].includes(v);
+ [...document.getElementById("lijst").children].forEach(c=>{if(c.id==="batch")return;const naD2=d2.compareDocumentPosition(c)&Node.DOCUMENT_POSITION_FOLLOWING||c===d2;c.style.display=(naD2?toonD:toonV)?"":"none"});
+ act=act.filter(a=>!a.startsWith("Periode: "));if(v!=="alle open")act.push("Periode: "+v);toon();zeg("Proef: periode "+v)});
+
 document.addEventListener("keydown",e=>{if(e.target.tagName==="INPUT")return;if(e.key==="/"){e.preventDefault();document.getElementById("q").focus();return}
  const rs=[...document.querySelectorAll("#items .rij")];let i=rs.findIndex(r=>r.classList.contains("sel"));
  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();rs.forEach(r=>r.classList.remove("sel"));i=Math.max(0,Math.min(rs.length-1,i+(e.key==="ArrowDown"?1:-1)));rs[i]&&rs[i].classList.add("sel");rs[i]&&rs[i].scrollIntoView({block:"nearest"});return}
