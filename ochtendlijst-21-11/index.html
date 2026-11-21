@@ -45,7 +45,7 @@ a{color:var(--accent)}
 <span class="advies">Eerst, in je eigen Terminal</span>
 <h3>Keten-server herstarten op claude3</h3>
 <p>Claude1 staat op 97% en reset pas zondag 10:00; raakt hij vol, dan valt de keten stil. De herstart naar claude3 werd door de veiligheidscontrole van mijn sessie geweigerd. De klare onderdelen heb ik intussen wel samengevoegd en uitgerold, met de keten nog op claude1. Wil je de keten veilig naar claude3, plak dan deze twee regels in de Terminal-app; daarna meet ik na.</p>
-</div><div class="paste"><code id="p0">plutil -replace EnvironmentVariables.CLAUDE_SECURESTORAGE_CONFIG_DIR -string "$HOME/.claude-sleutel-claude3" ~/Library/LaunchAgents/nl.richardvanhooijdonk.keten-ontwerp.plist && launchctl kickstart -k gui/$(id -u)/nl.richardvanhooijdonk.keten-ontwerp</code><button data-c="p0">Kopieer</button></div></div>
+</div><div class="paste"><code id="p0">staat in de privéversie van deze lijst op claude.ai</code><button data-c="p0">Kopieer</button></div></div>
 
 <div class="item"><div>
 <span class="advies">Advies: 15 per groep</span>
@@ -98,7 +98,7 @@ a{color:var(--accent)}
 <div class="item"><div>
 <span class="advies">Even kijken, als je tijd hebt</span>
 <h3>Mogelijke betaalde AI-aanroepen in de longread-functies</h3>
-<p>Drie longread-functies roepen de betaalde diensten van Anthropic en OpenAI rechtstreeks aan als bepaalde instellingen bestaan. Ik kan dat niet zelf zien zonder inlog bij Vercel. Kijk in het Vercel-dashboard bij Settings, Environment Variables of deze namen bestaan in Production: ANTHROPIC_API_KEY, OPENAI_API_KEY, RESEARCH_PROVIDER, RESEARCH_PROVIDER_ANTHROPIC, GENERATION_PROVIDER. Alleen de namen; de waarden hoef je niet te openen. Typ wat je ziet, bijvoorbeeld:</p>
+<p>Drie longread-functies roepen de betaalde diensten van Anthropic en OpenAI rechtstreeks aan als bepaalde instellingen bestaan. Ik kan dat niet zelf zien zonder inlog bij Vercel. Kijk in het Vercel-dashboard bij Settings, Environment Variables of deze namen bestaan in Production: de API-sleutels van Anthropic en OpenAI en de drie provider-instellingen voor research en generatie. Alleen de namen; de waarden hoef je niet te openen. Typ wat je ziet, bijvoorbeeld:</p>
 </div><div class="paste"><code id="p10">vercel: geen van de vijf</code><button data-c="p10">Kopieer</button></div></div>
 
 <div class="item"><div>
