@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Werkplek Artikelen</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1a1a1a;--mute:#666;--line:#e3e3df;--acc:#1f5fbf;--accbg:#eef4ff;--top:#0d7a43;--topbg:#e3f4ea;--warn:#a15c00;--warnbg:#fff4df}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141414;--card:#1e1e1e;--ink:#eee;--mute:#aaa;--line:#333;--acc:#7aa7ff;--accbg:#1b2638;--top:#5fd08f;--topbg:#16301f;--warn:#f0b65a;--warnbg:#33290f}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:1200px;margin:0 auto;padding:16px 16px 40px}
+h1{font-size:22px;margin:0 0 4px}.sub{color:var(--mute);margin:0 0 12px;font-size:14px}a{color:var(--acc)}
+.kolommen{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kol h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin:0 0 6px}
+.kaart{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;cursor:pointer}
+.kaart:hover{border-color:var(--acc)}.kaart .t{font-weight:600;font-size:14.5px}.kaart .s{font-size:12.5px;margin-top:4px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle;background:var(--warn)}
+.leeg{font-size:13px;color:var(--mute)}
+.kop{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 8px}
+.stappen{display:flex;gap:6px;flex-wrap:wrap}.stap{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:4px 13px;font-size:13.5px;cursor:pointer;color:var(--ink)}
+.stap.act{background:var(--acc);border-color:var(--acc);color:#fff}.stap.ok::before{content:"✓ "}.stap:disabled{opacity:.4;cursor:default}
+.blok{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:0 0 10px}
+.blok h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin:0 0 6px}
+iframe{width:100%;height:calc(100vh - 150px);min-height:520px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.vis{display:none}.vis.toon{display:block}
+.uitleg{font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 12px}
+@media (max-width:760px){.kolommen{grid-template-columns:1fr}iframe{height:75vh}}
+</style></head><body><main>
+
+<section class="vis toon" id="v-overzicht">
+<h1>Werkplek Artikelen</h1>
+<p class="sub">Za 21-11-2026 · al je artikelen in de maak · klik een artikel om er direct in te werken</p>
+<div class="uitleg"><b>Wat doe je hier?</b> Klik op een artikel. Je komt meteen in de stap waar het op jou wacht, met de <b>echte inhoud</b> (alle 30 items of de outline). Daar kies je en geef je commentaar zoals je gewend bent, en plak je de regel onderaan bij TOEZICHT. Stappen: <b>1 Briefing</b> (jouw vraag) → <b>2 Onderzoek</b> (kiezen) → <b>3 Opzet</b> (outline) → <b>4 Schrijven</b> (pas na jouw akkoord op de opzet).</div>
+<div class="kolommen">
+ <div class="kol"><h3>1 Briefing</h3><p class="leeg">Geen artikelen in deze stap.</p></div>
+ <div class="kol"><h3>2 Onderzoek — kies items</h3><div id="k-onderzoek"></div></div>
+ <div class="kol"><h3>3 Opzet — beoordeel outline</h3><div id="k-opzet"></div></div>
+ <div class="kol"><h3>4 Schrijven</h3><p class="leeg">Nog niets. Schrijven start pas na jouw akkoord op de opzet.</p></div>
+</div>
+</section>
+
+<section class="vis" id="v-artikel">
+<p style="margin:0 0 8px;font-size:13.5px"><a href="#" id="terug">← Alle artikelen</a></p>
+<div class="kop"><h1 id="a-titel" style="margin:0"></h1>
+<div class="stappen"><button class="stap" data-s="briefing">1 Briefing</button><button class="stap" data-s="onderzoek">2 Onderzoek</button><button class="stap" data-s="opzet">3 Opzet</button><button class="stap" data-s="schrijven">4 Schrijven</button></div></div>
+<div class="vis" id="s-briefing"><div class="blok"><h4>Jouw vraag (briefing)</h4><p id="b-vraag"></p><p class="leeg" id="b-extra"></p></div></div>
+<div class="vis" id="s-frame"><iframe id="frame" title="inhoud van deze stap"></iframe></div>
+<div class="vis" id="s-schrijven"><div class="blok"><h4>Schrijven</h4><p class="leeg">Nog niet gestart. Dit gebeurt pas na jouw <b>Akkoord: schrijven</b> op de opzet.</p></div></div>
+</section>
+
+<script>
+const A=[
+ {k:'trends',t:'AI-trends 2027',stap:'opzet',w:'Wacht op jou: beoordeel outline v1 (titel kiezen, commentaar NL/ENG)',vraag:'"De 10 meest belangrijke AI trends voor 2027" — eerst grondig onderzoek, top 30, dan kies ik er 10 uit. (21-11)',extra:'Jouw keuze: 1+2 samen, 5, 9, 10, 13, 14, 17, 22, 27, 28. Akkoord op invalshoek: één betoog met de regie-stelling.',onderzoek:'../ai-trends-2027/',opzet:'../ai-trends-2027/outline/'},
+ {k:'kunnen',t:'Wat kunnen we in 2027 met AI?',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"Wat kunnen we in 2027 verwachten van AI? Wat kunnen we, wat we nu niet kunnen" — praktisch: wat kunnen agents en AI volgend jaar wat ze nu nog niet kunnen. (21-11)',extra:'Apart van de AI-trends (jouw besluit).',onderzoek:'../ai-kunnen-2027/'},
+ {k:'fysiek',t:'AI verlaat het scherm',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"AI verlaat het scherm. 10 mooie voorbeelden physical AI in de toekomst — als futurist een bizar vooruitkijkje." (21-11)',extra:'',onderzoek:'../ai-fysiek/'},
+ {k:'wakker',t:'Je wordt wakker in 2030',stap:'onderzoek',w:'Wacht op jou: kies scènes uit 30',vraag:'"Je wordt wakker in 2030: hoe ziet een wereld er dan uit met AI?" (21-11)',extra:'',onderzoek:'../ai-wakker-2030/'},
+ {k:'leiders',t:'AI en leiders in 2027',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"Wat is de impact van AI voor leiders in 2027?" (21-11)',extra:'',onderzoek:'../ai-leiders-2027/'},
+ {k:'kinderen',t:'Wat leren we onze kinderen?',stap:'onderzoek',w:'Wacht op jou: kies 3-7 bouwstenen uit 30',vraag:'"Wat leren we onze kinderen nu, zodat ze klaar zijn voor de (AI-)wereld van morgen?" — geen top 10, maar een opgebouwd betoog over skills in relatie tot de nieuwe maatschappij; mag 5 onderwerpen zijn. (21-11)',extra:'',onderzoek:'../ai-kinderen/'},
+ {k:'ideeen',t:'Verbazingwekkende artikelideeën',stap:'onderzoek',w:'Wacht op jou: kies ideeën uit 30',vraag:'"Kom met aanvullende suggesties voor verbazingwekkende artikelen (en dat hoeven geen opsommingen te zijn)." (21-11)',extra:'Elk gekozen idee wordt een eigen artikel met eigen briefing.',onderzoek:'../ai-ideeen/'}];
+const ORDE=['briefing','onderzoek','opzet','schrijven'];let cur=null;
+function kaart(a){return '<div class="kaart" data-k="'+a.k+'"><div class="t">'+a.t+'</div><div class="s"><span class="dot"></span>'+a.w+'</div></div>';}
+document.getElementById('k-onderzoek').innerHTML=A.filter(a=>a.stap==='onderzoek').map(kaart).join('');
+document.getElementById('k-opzet').innerHTML=A.filter(a=>a.stap==='opzet').map(kaart).join('');
+function zie(id){document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('toon',s.id==='v-'+id));window.scrollTo(0,0);}
+function open(k){cur=A.find(a=>a.k===k);document.getElementById('a-titel').textContent=cur.t;document.getElementById('b-vraag').textContent=cur.vraag;document.getElementById('b-extra').textContent=cur.extra;zie('artikel');stap(cur.stap);}
+function stap(s){const i=ORDE.indexOf(cur.stap);document.querySelectorAll('.stap').forEach(b=>{const j=ORDE.indexOf(b.dataset.s);b.classList.toggle('act',b.dataset.s===s);b.classList.toggle('ok',j<i);b.disabled=j>i;});
+document.getElementById('s-briefing').classList.toggle('toon',s==='briefing');document.getElementById('s-schrijven').classList.toggle('toon',s==='schrijven');
+const u=cur[s];const f=document.getElementById('frame');const toon=!!u&&(s==='onderzoek'||s==='opzet');document.getElementById('s-frame').classList.toggle('toon',toon);if(toon&&f.getAttribute('src')!==u)f.setAttribute('src',u);}
+document.querySelectorAll('.kaart').forEach(k=>k.addEventListener('click',()=>open(k.dataset.k)));
+document.querySelectorAll('.stap').forEach(b=>b.addEventListener('click',()=>{if(!b.disabled)stap(b.dataset.s);}));
+document.getElementById('terug').addEventListener('click',e=>{e.preventDefault();zie('overzicht');});
+</script></main></body></html>
