@@ -44,7 +44,7 @@ textarea.f{min-height:52px}.rij2{display:grid;grid-template-columns:1fr 1fr;gap:
  <a class="m" data-g="rij">De Rij</a>
  <a class="m" data-g="item">Item en richting</a>
  <div class="grp">Output</div>
- <a class="m act" data-g="overzicht">Artikelen <span class="badge">4</span></a>
+ <a class="m act" data-g="overzicht">Artikelen <span class="badge">7</span></a>
  <div class="grp">Bewaren</div>
  <a class="m" data-g="dossier">Dossiers</a>
 </nav>
@@ -56,20 +56,23 @@ textarea.f{min-height:52px}.rij2{display:grid;grid-template-columns:1fr 1fr;gap:
 <h1>Artikelen</h1>
 <p class="sub">Paginaconcept · werkplek in de contentpijplijn (OUTPUT) · <b>Briefing → Onderzoek → Opzet → Schrijven</b> · alles slaat direct op, geen plakregels</p>
 <div class="uitleg"><b>Zo hangt het samen:</b> aan de inputkant <b>begrijp</b> je één bron (Uitwerken). Aan de outputkant <b>maak</b> je een eigen stuk. De brug is <b>“Maak hier een artikel van”</b> (vanuit De Rij of een uitwerking) of een eigen onderwerp. Dat opent eerst de <b>briefing</b>: wat wil je, in welke vorm, met welke bronnen. Daarna start het onderzoek. <span class="verb">Concept om te klikken: knoppen werken, maar er draait nog geen echte AI achter.</span></div>
-<p><button class="knop" id="nieuw">+ Nieuw artikel (eigen onderwerp)</button> <span class="melding">· 4 wachten op jou</span></p>
+<p><button class="knop" id="nieuw">+ Nieuw artikel (eigen onderwerp)</button> <span class="melding">· 7 wachten op jou</span></p>
 <div class="kolommen">
  <div class="kol"><h3>Briefing</h3>
   <div class="kaart" data-a="podcast"><div class="t">Wat de podcast van Ethan Mollick ons leert over AI-collega's</div><div class="s"><span class="dot wacht"></span>Wacht op jou: briefing aanvullen</div><div class="s"><span class="lab">vanuit Uitwerken</span></div></div>
  </div>
  <div class="kol"><h3>Onderzoek</h3>
   <div class="kaart" data-a="kunnen"><div class="t">Wat kunnen we in 2027 met AI?</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies items (30)</div><div class="s"><span class="lab">3 onderzoekers</span><span class="lab">lijst</span></div></div>
+  <div class="kaart" data-a="fysiek"><div class="t">AI verlaat het scherm</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies items (30)</div><div class="s"><span class="lab">bizar-score</span></div></div>
+  <div class="kaart" data-a="wakker"><div class="t">Je wordt wakker in 2030</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies scènes (30)</div><div class="s"><span class="lab">scenario</span></div></div>
+  <div class="kaart" data-a="leiders"><div class="t">AI en leiders in 2027</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies items (30)</div></div>
   <div class="kaart" data-a="kinderen"><div class="t">Wat leren we onze kinderen?</div><div class="s"><span class="dot wacht"></span>Wacht op jou: kies 3-7 bouwstenen</div><div class="s"><span class="lab">betoog</span></div></div>
  </div>
  <div class="kol"><h3>Opzet</h3>
   <div class="kaart" data-a="trends"><div class="t">2027: het jaar dat AI ophoudt met praten en gaat werken</div><div class="s"><span class="dot wacht"></span>Wacht op jou: beoordeel opzet v1</div><div class="s"><span class="lab">10 onderdelen</span><span class="lab">titeltoets ✓</span></div></div>
  </div>
  <div class="kol"><h3>Schrijven</h3>
-  <div class="kaart" data-a="schrijf"><div class="t">(voorbeeld) Fysieke AI: 10 keer dat AI een lichaam krijgt</div><div class="s"><span class="dot bezig"></span>Wordt geschreven: NL ✓ · ENG bezig</div><div class="s"><span class="lab">WordPress-concept</span></div></div>
+  <p class="verb" style="font-size:13px">Nog niets. Schrijven start pas na jouw <b>akkoord op de opzet</b>.</p>
  </div>
 </div>
 </section>
@@ -143,7 +146,7 @@ const A={podcast:{t:'Wat de podcast van Ethan Mollick ons leert over AI-collega\
  kunnen:{t:'Wat kunnen we in 2027 met AI?',s:'onderzoek',bron:['Eigen onderwerp (21-11)']},
  kinderen:{t:'Wat leren we onze kinderen?',s:'onderzoek',bron:['Eigen onderwerp (21-11)']},
  trends:{t:'2027: het jaar dat AI ophoudt met praten en gaat werken',s:'opzet',bron:['Eigen onderwerp (21-11)']},
- schrijf:{t:'(voorbeeld) Fysieke AI: 10 keer dat AI een lichaam krijgt',s:'schrijven',bron:['Eigen onderwerp']}};
+ fysiek:{t:'AI verlaat het scherm',s:'onderzoek',bron:['Eigen onderwerp (21-11)']},wakker:{t:'Je wordt wakker in 2030',s:'onderzoek',bron:['Eigen onderwerp (21-11)']},leiders:{t:'AI en leiders in 2027',s:'onderzoek',bron:['Eigen onderwerp (21-11)']}};
 const ORDE=['briefing','onderzoek','opzet','schrijven'];let huidig=null,stap=null;
 function zie(id){document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('toon',s.id==='v-'+id));document.querySelectorAll('nav .m').forEach(m=>m.classList.toggle('act',m.dataset.g===id||(id==='artikel'&&m.dataset.g==='overzicht')));document.getElementById('balk').classList.toggle('toon',id==='artikel');window.scrollTo(0,0);}
 function open(k){huidig=k;const a=A[k];document.querySelectorAll('#s-briefing input.f,#s-briefing textarea.f').forEach(x=>x.value='');document.querySelectorAll('#s-briefing select.f').forEach(x=>x.selectedIndex=0);document.getElementById('a-titel').textContent=a.t;document.getElementById('b-titel').value=a.t;
