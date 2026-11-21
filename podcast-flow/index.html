@@ -58,6 +58,13 @@ table.fct{border-collapse:collapse;width:100%;font-size:14px}table.fct td{border
 .klapknoppen{display:flex;gap:8px;margin:6px 0 12px}.klapknoppen button{font:inherit;font-size:14px;padding:5px 10px;border:1px solid rgba(127,127,127,.4);border-radius:8px;background:none;color:inherit;cursor:pointer}
 .wegnoot{display:block;flex-basis:100%;text-align:right;font-size:12px;opacity:.7;margin-top:4px}
 .toelnoot{font-size:13px;opacity:.75;margin:4px 0 10px}
+.speler-achter{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;z-index:1000;padding:16px}
+.speler-achter[hidden]{display:none}.speler{background:#fff;color:#15201B;border-radius:12px;max-width:560px;width:100%;padding:20px 22px;box-shadow:0 10px 40px rgba(0,0,0,.3);position:relative}
+@media (prefers-color-scheme:dark){.speler{background:#17201C;color:#E6ECE8}}
+.speler h2{font-size:1.05rem;margin:0 32px 4px 0;line-height:1.35}.speler .sm{font-size:14px;opacity:.75;margin:0 0 12px}.speler audio,.speler iframe{width:100%;display:block;border:0;border-radius:8px}
+.speler iframe{aspect-ratio:16/9;height:auto}.speler .sk{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.speler .sk button{font:inherit;font-size:14px;padding:6px 12px;border-radius:8px;border:1px solid rgba(127,127,127,.4);background:none;color:inherit;cursor:pointer}
+.speler .sluit{position:absolute;top:10px;right:12px;font-size:22px;line-height:1;background:none;border:0;color:inherit;cursor:pointer;padding:4px 8px}
+@media (max-width:640px){.speler-achter{padding:0}.speler{max-width:none;height:100%;border-radius:0;display:flex;flex-direction:column;justify-content:center}}
 </style></head><body><main>
 <p class="uitleg"><b>Proef van de flow, versie 3b</b> (21-11, alleen visueel: tijdcode klein achter de samenvatting, knoppen compact onder het hoofdstuk; op aflevering, hoofdstuk en kaart nu alle knoppen: ★ Ster · Later · Dossier · Rij · Uitwerken · Weg, zoals op de kaarten in Triage). Stap 1: de hoofdstukken van één aflevering op een rij; jij kiest. Stap 2: per gekozen hoofdstuk de volledige uitwerking, direct onder dat hoofdstuk. Eén hoofdstuk = één onderwerp = één kaart; geen samenvatting van de hele aflevering. → Rij met opmerking kan op aflevering, hoofdstuk, elk kernpunt en elke kaart. Knoppen slaan in deze proef niets op. Structuur getoetst door Astra en Gemini.</p>
 <div class="flowkop">Stap 1 · Aflevering — kies de hoofdstukken</div>
@@ -313,4 +320,32 @@ document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)r
 document.addEventListener("change",e=>{const s=e.target;if(s.type==="checkbox"){s.closest(".hfd").classList.toggle("gekozen",s.checked);const n=document.querySelectorAll(".hfd input[type=checkbox]:checked").length;document.getElementById("n").textContent=n+" gekozen";return}
  if(s.tagName!=="SELECT"||!s.value)return;const n=s.value==="__nieuw"?"een nieuw dossier":s.options[s.selectedIndex].text;zeg("Proef: naar dossier “"+n+"”");s.value=""});</script><script>function ttab(b,id){var a=b.closest("article");a.querySelectorAll(".ttabs button").forEach(function(x){x.setAttribute("aria-selected",x===b?"true":"false")});a.querySelectorAll(".tpaneel").forEach(function(p){p.hidden=p.id!==id})}</script>
 <script>function aflKlap(h){var s=h.closest(".afl");s.classList.toggle("open");h.querySelector(".pijl").textContent=s.classList.contains("open")?"▾":"▸"}function aflAlles(o){document.querySelectorAll(".afl").forEach(function(s){s.classList.toggle("open",o);var p=s.querySelector(".pijl");if(p)p.textContent=o?"▾":"▸"})}</script>
+<div class="speler-achter" id="speler-achter" hidden><div class="speler" role="dialog" aria-modal="true" aria-label="Fragment afspelen" tabindex="-1" id="speler">
+<button class="sluit" aria-label="Sluiten" id="speler-sluit">×</button><h2 id="speler-titel"></h2><p class="sm" id="speler-meta"></p><div id="speler-media"></div>
+<div class="sk" id="speler-knoppen"><button id="speler-begin">Vanaf begin aflevering</button><button id="speler-verder">Verder luisteren</button></div></div></div>
+<script>(function(){
+var A=document.getElementById("speler-achter"),M=document.getElementById("speler-media"),vorig=null,eind=null,au=null;
+function sec(t){var d=String(t).split(":").map(Number);return d.reduce(function(a,b){return a*60+b},0)}
+function tc(x){x=Math.floor(x);var h=Math.floor(x/3600),m=Math.floor(x%3600/60),s=x%60;return (h?h+":"+String(m).padStart(2,"0"):m)+":"+String(s).padStart(2,"0")}
+function yt(u){var m=/(?:youtu\.be\/|v=|embed\/)([\w-]{11})/.exec(u);return m?m[1]:null}
+function sluit(){if(au){au.pause();au.removeAttribute("src");au.load();au=null}M.innerHTML="";A.hidden=true;if(vorig)vorig.focus()}
+function open(a){var href=a.getAttribute("href"),basis=href.split("#")[0],m=/#t=(\d+)/.exec(href),start=m?+m[1]:0;
+ var r=/▶\s*([\d:]+)\s*[–-]\s*([\d:]+)/.exec(a.textContent);eind=r?sec(r[2]):null;
+ if(eind===null){var p=a.closest(".tpaneel");if(p){var ls=[].slice.call(p.querySelectorAll("a.tc")),i=ls.indexOf(a);if(i>=0&&i+1<ls.length){var n=/#t=(\d+)/.exec(ls[i+1].getAttribute("href"));if(n)eind=+n[1]}}if(eind===null)eind=start+60}
+ var h=a.closest(".hfd"),k=a.closest("article"),af=a.closest(".afl");
+ document.getElementById("speler-titel").textContent=(k&&k.querySelector("h2")?k.querySelector("h2").textContent:h&&h.querySelector(".ht b")?h.querySelector(".ht b").textContent:"Fragment");
+ var meta=af&&af.querySelector(".ep .zacht")?af.querySelector(".ep .zacht").textContent.split(" · ").slice(0,2).join(" · "):"";
+ document.getElementById("speler-meta").textContent=(meta?meta+" · ":"")+"fragment "+tc(start)+"–"+tc(eind);
+ var id=yt(basis);M.innerHTML="";
+ if(id){M.innerHTML='<iframe title="Videofragment" allow="autoplay; encrypted-media" allowfullscreen src="https://www.youtube-nocookie.com/embed/'+id+'?start='+start+'&end='+eind+'&autoplay=1"></iframe>';document.getElementById("speler-knoppen").hidden=true}
+ else{au=document.createElement("audio");au.controls=true;au.preload="auto";au.src=basis+"#t="+start+","+eind;M.appendChild(au);document.getElementById("speler-knoppen").hidden=false;
+  au.addEventListener("timeupdate",function(){if(eind!==null&&au.currentTime>=eind){au.pause()}});
+  au.addEventListener("loadedmetadata",function(){au.currentTime=start;var pr=au.play();if(pr&&pr.catch)pr.catch(function(){})});
+  document.getElementById("speler-begin").onclick=function(){eind=null;au.currentTime=0;au.play()};
+  document.getElementById("speler-verder").onclick=function(){eind=null;au.play()}}
+ vorig=a;A.hidden=false;document.getElementById("speler").focus()}
+document.addEventListener("click",function(e){var a=e.target.closest("a.tc");if(a&&/#t=\d+/.test(a.getAttribute("href")||"")){e.preventDefault();open(a)}},true);
+A.addEventListener("click",function(e){if(e.target===A)sluit()});document.getElementById("speler-sluit").onclick=sluit;
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!A.hidden)sluit()});
+})();</script>
 </body></html>
