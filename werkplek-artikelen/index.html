@@ -146,7 +146,7 @@ const A={podcast:{t:'Wat de podcast van Ethan Mollick ons leert over AI-collega\
  schrijf:{t:'(voorbeeld) Fysieke AI: 10 keer dat AI een lichaam krijgt',s:'schrijven',bron:['Eigen onderwerp']}};
 const ORDE=['briefing','onderzoek','opzet','schrijven'];let huidig=null,stap=null;
 function zie(id){document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('toon',s.id==='v-'+id));document.querySelectorAll('nav .m').forEach(m=>m.classList.toggle('act',m.dataset.g===id||(id==='artikel'&&m.dataset.g==='overzicht')));document.getElementById('balk').classList.toggle('toon',id==='artikel');window.scrollTo(0,0);}
-function open(k){huidig=k;const a=A[k];document.getElementById('a-titel').textContent=a.t;document.getElementById('b-titel').value=a.t;
+function open(k){huidig=k;const a=A[k];document.querySelectorAll('#s-briefing input.f,#s-briefing textarea.f').forEach(x=>x.value='');document.querySelectorAll('#s-briefing select.f').forEach(x=>x.selectedIndex=0);document.getElementById('a-titel').textContent=a.t;document.getElementById('b-titel').value=a.t;
 document.getElementById('b-bronnen').innerHTML=a.bron.map(b=>'<div class="bron">'+b+'</div>').join('');zie('artikel');toonStap(a.s);}
 function toonStap(s){stap=s;const a=A[huidig];const i=ORDE.indexOf(a.s);
 document.querySelectorAll('.stap').forEach(b=>{const j=ORDE.indexOf(b.dataset.s);b.classList.toggle('act',b.dataset.s===s);b.classList.toggle('ok',j<i);b.disabled=j>i;b.style.opacity=j>i?.45:1;});
