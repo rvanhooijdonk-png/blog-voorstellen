@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "20-11-2026 10:52",
+ "gebouwd": "21-11-2026 07:15",
  "overzicht": {
   "keten": [
    {
@@ -31,7 +31,7 @@
     "plan_klaar": 1,
     "plan_totaal": 5,
     "kern_label": "klikken uit Google, blog, 7 dagen",
-    "kern_waarde": "354",
+    "kern_waarde": "349",
     "kosten_status": "geen extra externe kosten"
    },
    {
@@ -89,17 +89,16 @@
   },
   "delen": {
    "Blog EN": {
-    "klikken_7d": 318,
-    "vertoningen_7d": 47256,
-    "trend_pct": 35,
+    "klikken_7d": 310,
+    "vertoningen_7d": 45854,
+    "trend_pct": 32,
     "reeks_90d": [
-     16.0,
-     18.0,
      20.0,
-     21.25,
-     20.0,
-     20.5,
-     19.71,
+     22.0,
+     23.0,
+     21.0,
+     21.4,
+     20.33,
      19.14,
      18.0,
      17.57,
@@ -182,22 +181,22 @@
      41.43,
      43.29,
      44.0,
-     45.43
+     46.0,
+     44.29
     ],
     "context": false
    },
    "Blog NL": {
-    "klikken_7d": 36,
-    "vertoningen_7d": 3106,
-    "trend_pct": 43,
+    "klikken_7d": 39,
+    "vertoningen_7d": 3058,
+    "trend_pct": 49,
     "reeks_90d": [
      0.0,
-     0.0,
-     0.33,
-     0.75,
-     0.8,
+     0.5,
+     1.0,
+     1.0,
+     1.0,
      0.83,
-     0.71,
      0.71,
      0.71,
      0.71,
@@ -280,22 +279,22 @@
      4.29,
      4.14,
      4.71,
-     5.14
+     5.14,
+     5.57
     ],
     "context": false
    },
    "Hoofdsite": {
-    "klikken_7d": 123,
-    "vertoningen_7d": 4050,
-    "trend_pct": -11,
+    "klikken_7d": 138,
+    "vertoningen_7d": 4108,
+    "trend_pct": -3,
     "reeks_90d": [
-     2.0,
-     3.0,
-     5.0,
-     5.5,
-     5.6,
-     6.0,
-     5.71,
+     4.0,
+     6.5,
+     6.67,
+     6.5,
+     6.8,
+     6.33,
      5.57,
      5.57,
      8.71,
@@ -378,7 +377,8 @@
      15.86,
      14.0,
      13.0,
-     17.57
+     18.0,
+     19.71
     ],
     "context": true
    }
@@ -386,53 +386,53 @@
   "top": [
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
-    "klikken": 49,
-    "vertoningen": 910
+    "klikken": 50,
+    "vertoningen": 847
    },
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 14,
-    "vertoningen": 1095
+    "vertoningen": 1146
    },
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
-    "klikken": 14,
-    "vertoningen": 742
-   },
-   {
-    "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
-    "klikken": 11,
-    "vertoningen": 1220
+    "klikken": 12,
+    "vertoningen": 702
    },
    {
     "pad": "/en/how-to-choose-the-right-guest-speakers-for-your-event/",
     "klikken": 9,
-    "vertoningen": 100
+    "vertoningen": 98
+   },
+   {
+    "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
+    "klikken": 9,
+    "vertoningen": 1165
    },
    {
     "pad": "/en/the-future-of-public-speaking-trends-and-technologies-for-presenters/",
     "klikken": 8,
-    "vertoningen": 252
-   },
-   {
-    "pad": "/en/ai-bloopers-artificial-intelligences-most-memorable-mistakes/",
-    "klikken": 7,
-    "vertoningen": 216
+    "vertoningen": 254
    },
    {
     "pad": "/en/how-to-choose-the-right-guest-speakers-for-your-event/",
     "klikken": 7,
-    "vertoningen": 59
+    "vertoningen": 57
    },
    {
-    "pad": "/en/how-ai-is-transforming-the-entertainment-industry/",
-    "klikken": 5,
-    "vertoningen": 274
+    "pad": "/chip-in-mijn-hand/",
+    "klikken": 6,
+    "vertoningen": 35
    },
    {
-    "pad": "/en/how-to-choose-the-right-guest-speakers-for-your-event/",
+    "pad": "/en/6-innovations-that-will-help-predict-earthquakes-and-improve-rescue-operations/",
+    "klikken": 6,
+    "vertoningen": 517
+   },
+   {
+    "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 5,
-    "vertoningen": 106
+    "vertoningen": 851
    }
   ],
   "kosten_status": "geen extra externe kosten (bestaande abonnementen niet meegeteld)"
@@ -511,7 +511,7 @@
    "naam": "Search Console prestaties",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks, laatste 2 dagen voorlopig",
-   "datum": "2026-11-19",
+   "datum": "2026-11-20",
    "status": "ok"
   },
   {
@@ -539,14 +539,14 @@
    "naam": "GA4 blog (klik naar lezing nog niet gemeten)",
    "eigenaar": "SEO/GEO",
    "ritme": "dagelijks",
-   "datum": "2026-11-19",
+   "datum": "2026-11-20",
    "status": "ok"
   },
   {
    "naam": "SEA-export (sea-publiek.json)",
    "eigenaar": "SEA",
    "ritme": "wekelijks, maandag",
-   "datum": "2026-11-19",
+   "datum": "2026-11-21",
    "status": "geen_campagnes"
   }
  ]
