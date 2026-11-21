@@ -52,6 +52,11 @@ table.fct{border-collapse:collapse;width:100%;font-size:14px}table.fct td{border
 #actiebalk{position:sticky;bottom:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:var(--vlak);border:1px solid var(--accent);border-radius:10px;padding:10px 12px;margin-top:12px;box-shadow:var(--schaduw)}
 #actiebalk[hidden]{display:none}#actiebalk #n{font-weight:600;margin-right:6px}
 .luister{margin:0 0 8px}
+.hfd{padding:6px 10px;margin:4px 0}.rijtje{align-items:center;gap:8px;flex-wrap:nowrap}.rijtje input{margin-top:0}
+.ht{min-width:0}.ht b{font-size:15px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.waar{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hfd .uitw:not([hidden]) ~ *, .hfd:has(.uitw:not([hidden])) .ht b,.hfd:has(.uitw:not([hidden])) .waar{white-space:normal}
+
 </style></head><body><main>
 <p class="uitleg"><b>Proef van de flow, versie 4</b> (21-11, vereenvoudigd): geen tijdcodes vooraan (je vindt ze in het uitgeklapte hoofdstuk); klik op een titel of ▾ om uit/in te klappen, of gebruik Alles uitklappen/inklappen. Vink hoofdstukken aan: onderaan verschijnt één balk met alle keuzes (★ Ster · Later · Dossier · Rij · Uitwerken · Weg) voor wat je gekozen hebt. De aflevering heeft één knop "Acties"; kernpunten hebben hun keuzes achter ⋯. Stap 1: de hoofdstukken van één aflevering op een rij; jij kiest. Stap 2: per gekozen hoofdstuk de volledige uitwerking, direct onder dat hoofdstuk. Eén hoofdstuk = één onderwerp = één kaart; geen samenvatting van de hele aflevering. → Rij met opmerking kan op aflevering, hoofdstuk, elk kernpunt en elke kaart. Knoppen slaan in deze proef niets op. Structuur getoetst door Astra en Gemini.</p>
 <div class="flowkop">Stap 1 · Aflevering — kies de hoofdstukken</div>
