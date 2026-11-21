@@ -153,7 +153,7 @@ function filter(){const sel=f=>[...document.querySelectorAll('.dd[data-f="'+f+'"
  const tel=document.querySelector(".dag .tel"),filt=on.length||se.length||ty.length||opv||br||q;tel.textContent="452 open · 812 behandeld van 1.264"+(filt?" · met filter: "+n+" getoond":"");
  let leeg=document.getElementById("leeg");if(!leeg){leeg=document.createElement("div");leeg.id="leeg";leeg.className="ghost";document.getElementById("items").after(leeg)}leeg.textContent=filt&&!n?"Geen items vandaag met deze filters. Wis een filter om meer te zien.":""}
 
-function toon(){setTimeout(filter,0);tokens.innerHTML=act.map((a,i)=>`<span class="tok">${a}<b data-i="${i}">×</b></span>`).join(" ");document.querySelectorAll(".dd").forEach(d=>{const n=d.querySelectorAll("input:checked").length,b=d.querySelector(".f");b.classList.toggle("aan",n>0);b.textContent=d.dataset.f+(n?" · "+n:"")+" ▾"})}
+function toon(){setTimeout(filter,0);tokens.innerHTML=act.map((a,i)=>`<span class="tok">${a}<b data-i="${i}">×</b></span>`).join(" ");document.querySelectorAll(".dd[data-f]").forEach(d=>{const n=d.querySelectorAll("input:checked").length,b=d.querySelector(".f");b.classList.toggle("aan",n>0);b.textContent=d.dataset.f+(n?" · "+n:"")+" ▾"})}
 document.addEventListener("click",e=>{const dd=e.target.closest(".dd");document.querySelectorAll(".dd.open").forEach(x=>{if(x!==dd)x.classList.remove("open")});
  if(e.target.matches(".dd>.f")){dd.classList.toggle("open");return}
  if(e.target.matches(".tok b")){const v=act[+e.target.dataset.i];act.splice(+e.target.dataset.i,1);document.querySelectorAll(".menu input").forEach(c=>{if(v.endsWith(": "+c.value))c.checked=false});if(v==="Opvallend")document.getElementById("opv").classList.remove("aan");toon();return}
