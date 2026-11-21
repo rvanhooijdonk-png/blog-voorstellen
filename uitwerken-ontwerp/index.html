@@ -54,6 +54,10 @@ h1{font-size:1.6rem;line-height:1.25;margin:0 0 6px}
 .feedback label{display:block;font-weight:600;margin:0 0 6px}.feedback textarea{width:100%;min-height:72px;font:inherit;padding:10px;border:1px solid var(--lijn);border-radius:8px;background:var(--vlak2);color:var(--inkt)}
 .feedback .rij{display:flex;justify-content:flex-end;margin-top:10px}.versie{font-size:14px;background:var(--accent-zacht);border-radius:8px;padding:8px 12px;margin:0 0 14px}
 .versie a{color:var(--accent)}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--lijn);margin:0 0 16px}.tabs button{font:inherit;font-size:15px;padding:8px 14px;border:1px solid transparent;border-bottom:0;border-radius:8px 8px 0 0;background:none;color:var(--zacht);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--vlak);border-color:var(--lijn);color:var(--inkt);font-weight:600;margin-bottom:-1px}
+.paneel[hidden]{display:none}.transcript p{margin:0 0 12px}.tc{font-size:13px;font-variant-numeric:tabular-nums;color:var(--accent);margin-right:8px;text-decoration:none}
+.spreker{font-weight:600}.bronlink{font-size:14px;margin:0 0 12px}.bronlink a{color:var(--accent)}
 @media (max-width:640px){.grens{grid-template-columns:minmax(0,1fr)}}
 </style></head><body><div class="pagina">
 
@@ -65,7 +69,7 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
 <h1>Uitwerken</h1>
 <p class="meta">Items die je naar uitwerken stuurde. De opbouw en lengte van elke uitwerking volgen het materiaal: geen vaste koppen, geen lege onderdelen.</p>
 
-<div class="groepkop"><h2>Tekst</h2><span class="aantal">— 5 items</span></div>
+<div class="groepkop"><h2>Tekst</h2><span class="aantal">— 6 items</span></div>
 <div class="kaart">
 
   <div class="item">
@@ -87,7 +91,15 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
     <div class="acties"><button class="knop">Ongedaan</button></div>
   </div>
   <div class="uitwerking"><details><summary>Uitwerking</summary>
-  <div class="doc">
+  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" onclick="tab(this,'a-sam')">Samenvatting</button><button role="tab" aria-selected="false" onclick="tab(this,'a-vol')">Volledige tekst</button></div>
+  <div class="doc paneel" id="a-vol" hidden>
+    <p class="bronlink">Leesweergave van het persbericht, niet herschreven · <a href="#">origineel openen</a></p>
+    <h4>Chipmaker maakt plannen bekend voor nieuwe fabriek in Europa</h4>
+    <p>Het bedrijf onderzoekt de bouw van een productielocatie voor geavanceerde chips in Europa. Een definitief besluit over locatie en investering volgt naar verwachting volgend jaar.</p>
+    <p>"Europa is een belangrijke markt voor ons, en dichter bij onze klanten produceren past in onze strategie," aldus het bedrijf in de verklaring.</p>
+    <p>Over de omvang van de investering en het aantal banen worden nog geen mededelingen gedaan.</p>
+  </div>
+  <div class="doc paneel" id="a-sam">
     <div class="kopregel"><span>Leestijd 2 min</span><span class="label dun">Dun bewijs</span></div>
     <h4>Kern</h4>
     <p>Een chipmaker meldt plannen voor een fabriek in Europa. Het past in de trend dat landen chipproductie terughalen na de tekorten van de afgelopen jaren. Voor leiders betekent het vooral: leveringszekerheid wordt een politieke keuze, geen inkoopkwestie.</p>
@@ -128,6 +140,35 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
     <ul class="bronnen"><li><span class="weging">Primair</span>Jaarverslag van de toezichthouder</li><li><span class="weging">Primair</span>Interview met het hoofd klantenservice</li><li><span class="weging">Secundair</span>Vier artikelen in vakmedia</li></ul>
     <p class="leeg">Versie 2 wordt uitgewerkt met je opmerking. Versie 1 blijft bewaard.</p>
   </div></details></div>
+
+  <div class="item">
+    <div>
+      <h3>Podcast: waarom AI-agents eerst de saaiste processen overnemen</h3>
+      <div class="chips"><span class="chip">Tekst</span><span class="chip">Podcasts &amp; YouTube</span><span class="stand klaar">Klaar</span></div>
+      <p class="meta">Hoofdstuk 3 van een aflevering (14:20–31:05) · 18 nov · klaar om 12:55 · transcript plus 3 bronnen</p>
+    </div>
+    <div class="acties"><button class="knop">Ongedaan</button></div>
+  </div>
+  <div class="uitwerking"><details open><summary>Uitwerking</summary>
+  <div class="tabs" role="tablist"><button role="tab" aria-selected="false" onclick="tab(this,'p-sam')">Samenvatting</button><button role="tab" aria-selected="true" onclick="tab(this,'p-vol')">Volledige tekst</button></div>
+  <div class="doc paneel" id="p-sam" hidden>
+    <div class="kopregel"><span>Leestijd 3 min</span></div>
+    <h4>Kern</h4>
+    <p>De gast stelt dat AI-agents niet beginnen bij het creatieve werk maar bij administratieve processen met duidelijke regels. Voor leiders: de eerste winst zit in het werk waar niemand trots op is.</p>
+    <h4>Bewijsgrens</h4>
+    <div class="grens"><div><strong>Staat vast</strong>Wat de gast zegt (transcript).</div><div><strong>Interpretatie</strong>Dat dit voor alle sectoren geldt.</div><div><strong>Open vragen</strong>Welke cijfers ondersteunen dit?</div></div>
+    <div class="feedback"><label for="fb-p">Wat moet er anders?</label><textarea id="fb-p" placeholder="Bijvoorbeeld: meer over de risico's."></textarea><div class="rij"><button class="knop primair">Opnieuw uitwerken</button></div></div>
+  </div>
+  <div class="doc paneel transcript" id="p-vol">
+    <p class="bronlink">Transcript van hoofdstuk 3, opgemaakt maar niet herschreven (vulwoorden en herhalingen weggelaten) · <a href="#">aflevering openen</a></p>
+    <h4>Hoofdstuk 3 · Waar agents beginnen</h4>
+    <p><a class="tc" href="#">14:20</a><span class="spreker">Presentator:</span> Je zegt dat de eerste agents niet in de creatieve hoek landen. Waar dan wel?</p>
+    <p><a class="tc" href="#">14:34</a><span class="spreker">Gast:</span> In de processen waar duidelijke regels gelden. Facturen controleren, afspraken verzetten, formulieren nalopen. Daar weet je precies wanneer iets goed is.</p>
+    <p><a class="tc" href="#">15:10</a><span class="spreker">Gast:</span> En dat is ook precies het werk dat mensen het minst leuk vinden. Dus de weerstand is kleiner dan je zou denken.</p>
+    <p><a class="tc" href="#">15:42</a><span class="spreker">Presentator:</span> Maar wat gebeurt er met de mensen die dat werk nu doen?</p>
+    <p><a class="tc" href="#">15:51</a><span class="spreker">Gast:</span> Die worden de controleurs. Ze kijken naar de uitzonderingen, en dat is moeilijker werk dan je zou denken.</p>
+  </div>
+  </details></div>
 
   <div class="item">
     <div>
@@ -174,5 +215,6 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
 
 </div>
 
-<p class="voorbeeld" style="margin-top:28px">Opbouw van elke uitwerking: altijd een kern (wat speelt er, waarom nu, wat betekent het voor leiders), onderzoek waarvan de koppen de bevindingen volgen, een bewijsgrens en de bronnen met weging. Quotes en cijfers alleen als ze letterlijk in de bronnen staan; podiummateriaal alleen als het stuk podiumgeschikt is. Bij dun materiaal: eerst aanvullend zoeken, anders kort met het label "dun bewijs". Botst de bouwsteen met de bronvorm, dan staat er bovenaan een waarschuwing. Onder elke klare uitwerking: "Wat moet er anders?" met Opnieuw uitwerken; je opmerking gaat letterlijk mee, de vorige versie blijft bewaard.</p>
+<p class="voorbeeld" style="margin-top:28px">Opbouw van elke uitwerking: altijd een kern (wat speelt er, waarom nu, wat betekent het voor leiders), onderzoek waarvan de koppen de bevindingen volgen, een bewijsgrens en de bronnen met weging. Quotes en cijfers alleen als ze letterlijk in de bronnen staan; podiummateriaal alleen als het stuk podiumgeschikt is. Bij dun materiaal: eerst aanvullend zoeken, anders kort met het label "dun bewijs". Botst de bouwsteen met de bronvorm, dan staat er bovenaan een waarschuwing. Elke uitwerking heeft twee tabs: Samenvatting (de uitwerking) en Volledige tekst (de bron zelf, opgemaakt maar niet herschreven: een transcript met sprekers en tijdcodes, of de leesweergave van een artikel). Onder de samenvatting: "Wat moet er anders?" met Opnieuw uitwerken; je opmerking gaat letterlijk mee, de vorige versie blijft bewaard.</p>
+<script>function tab(b,id){var w=b.closest('.uitwerking');w.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});w.querySelectorAll('.paneel').forEach(function(p){p.hidden=p.id!==id})}</script>
 </div></body></html>
