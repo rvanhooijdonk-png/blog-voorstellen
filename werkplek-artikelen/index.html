@@ -11,7 +11,7 @@ h1{font-size:22px;margin:0 0 4px}.sub{color:var(--mute);margin:0 0 12px;font-siz
 .kol h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin:0 0 6px}
 .kaart{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;cursor:pointer}
 .kaart:hover{border-color:var(--acc)}.kaart .t{font-weight:600;font-size:14.5px}.kaart .s{font-size:12.5px;margin-top:4px}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle;background:var(--warn)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle;background:var(--warn)}.dot.grijs{background:var(--mute)}
 .leeg{font-size:13px;color:var(--mute)}
 .kop{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 8px}
 .stappen{display:flex;gap:6px;flex-wrap:wrap}.stap{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:4px 13px;font-size:13.5px;cursor:pointer;color:var(--ink)}
@@ -27,7 +27,7 @@ iframe{width:100%;height:calc(100vh - 150px);min-height:520px;border:1px solid v
 <section class="vis toon" id="v-overzicht">
 <h1>Werkplek Artikelen</h1>
 <p class="sub">Za 21-11-2026 · al je artikelen in de maak · klik een artikel om er direct in te werken</p>
-<div class="uitleg"><b>Wat doe je hier?</b> Klik op een artikel. Je komt meteen in de stap waar het op jou wacht, met de <b>echte inhoud</b> (alle 30 items of de outline). Daar kies je en geef je commentaar zoals je gewend bent, en plak je de regel onderaan bij TOEZICHT. Stappen: <b>1 Briefing</b> (jouw vraag) → <b>2 Onderzoek</b> (kiezen) → <b>3 Opzet</b> (outline) → <b>4 Schrijven</b> (pas na jouw akkoord op de opzet).</div>
+<div class="uitleg"><b>Wat doe je hier?</b> Klik op een artikel. Je komt meteen in de stap waar het op jou wacht, met de <b>echte inhoud</b> (alle 30 items of de outline). Daar kies je en geef je commentaar zoals je gewend bent, en plak je de regel onderaan bij TOEZICHT. Stappen: <b>1 Briefing</b> (jouw vraag) → <b>2 Onderzoek</b> (kiezen) → <b>3 Opzet</b> (outline) → <b>4 Schrijven</b> (pas na jouw akkoord op de opzet).<br><span class="dot"></span><b>Wacht op jou</b> · <span class="dot grijs"></span><b>Wordt gemaakt</b>: vraag je een nieuwe versie of nieuw onderzoek, dan blijft het artikel in dezelfde kolom met het label "Wordt gemaakt (v2)" tot de nieuwe versie klaar is. Geen aparte tab.</div>
 <div class="kolommen">
  <div class="kol"><h3>1 Briefing</h3><p class="leeg">Geen artikelen in deze stap.</p></div>
  <div class="kol"><h3>2 Onderzoek — kies items</h3><div id="k-onderzoek"></div></div>
@@ -47,7 +47,7 @@ iframe{width:100%;height:calc(100vh - 150px);min-height:520px;border:1px solid v
 
 <script>
 const A=[
- {k:'trends',t:'AI-trends 2027',stap:'opzet',w:'Wacht op jou: beoordeel outline v1 (titel kiezen, commentaar NL/ENG)',vraag:'"De 10 meest belangrijke AI trends voor 2027" — eerst grondig onderzoek, top 30, dan kies ik er 10 uit. (21-11)',extra:'Jouw keuze: 1+2 samen, 5, 9, 10, 13, 14, 17, 22, 27, 28. Akkoord op invalshoek: één betoog met de regie-stelling.',onderzoek:'../ai-trends-2027/',opzet:'../ai-trends-2027/outline/'},
+ {k:'trends',t:'AI-trends 2027',stap:'opzet',w:'Wacht op jou: beoordeel opzet v2 (titel kiezen, commentaar, algemene feedback)',vraag:'"De 10 meest belangrijke AI trends voor 2027" — eerst grondig onderzoek, top 30, dan kies ik er 10 uit. (21-11)',extra:'Jouw keuze: 1+2 samen, 5, 9, 10, 13, 14, 17, 22, 27, 28. Akkoord op invalshoek: één betoog met de regie-stelling.',onderzoek:'../ai-trends-2027/',opzet:'../ai-trends-2027/outline/'},
  {k:'kunnen',t:'Wat kunnen we in 2027 met AI?',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"Wat kunnen we in 2027 verwachten van AI? Wat kunnen we, wat we nu niet kunnen" — praktisch: wat kunnen agents en AI volgend jaar wat ze nu nog niet kunnen. (21-11)',extra:'Apart van de AI-trends (jouw besluit).',onderzoek:'../ai-kunnen-2027/'},
  {k:'fysiek',t:'AI verlaat het scherm',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"AI verlaat het scherm. 10 mooie voorbeelden physical AI in de toekomst — als futurist een bizar vooruitkijkje." (21-11)',extra:'',onderzoek:'../ai-fysiek/'},
  {k:'wakker',t:'Je wordt wakker in 2030',stap:'onderzoek',w:'Wacht op jou: kies scènes uit 30',vraag:'"Je wordt wakker in 2030: hoe ziet een wereld er dan uit met AI?" (21-11)',extra:'',onderzoek:'../ai-wakker-2030/'},
@@ -55,7 +55,7 @@ const A=[
  {k:'kinderen',t:'Wat leren we onze kinderen?',stap:'onderzoek',w:'Wacht op jou: kies 3-7 bouwstenen uit 30',vraag:'"Wat leren we onze kinderen nu, zodat ze klaar zijn voor de (AI-)wereld van morgen?" — geen top 10, maar een opgebouwd betoog over skills in relatie tot de nieuwe maatschappij; mag 5 onderwerpen zijn. (21-11)',extra:'',onderzoek:'../ai-kinderen/'},
  {k:'ideeen',t:'Verbazingwekkende artikelideeën',stap:'onderzoek',w:'Wacht op jou: kies ideeën uit 30',vraag:'"Kom met aanvullende suggesties voor verbazingwekkende artikelen (en dat hoeven geen opsommingen te zijn)." (21-11)',extra:'Elk gekozen idee wordt een eigen artikel met eigen briefing.',onderzoek:'../ai-ideeen/'}];
 const ORDE=['briefing','onderzoek','opzet','schrijven'];let cur=null;
-function kaart(a){return '<div class="kaart" data-k="'+a.k+'"><div class="t">'+a.t+'</div><div class="s"><span class="dot"></span>'+a.w+'</div></div>';}
+function kaart(a){return '<div class="kaart" data-k="'+a.k+'"><div class="t">'+a.t+'</div><div class="s"><span class="dot'+(a.bezig?' grijs':'')+'"></span>'+a.w+'</div></div>';}
 document.getElementById('k-onderzoek').innerHTML=A.filter(a=>a.stap==='onderzoek').map(kaart).join('');
 document.getElementById('k-opzet').innerHTML=A.filter(a=>a.stap==='opzet').map(kaart).join('');
 function zie(id){document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('toon',s.id==='v-'+id));window.scrollTo(0,0);}
