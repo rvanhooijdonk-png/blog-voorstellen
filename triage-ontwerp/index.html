@@ -1,0 +1,179 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Triage-ontwerp (proef)</title><style>
+:root{--grond:#F3F5F1;--vlak:#FFFFFF;--vlak2:#F8FAF7;--inkt:#15201B;--zacht:#5D6B64;--lijn:#DCE3DC;--accent:#1F5F4A;--accent-zacht:#E2EFE8;
+--geel:#8A6A10;--geel-zacht:#FBF1D6;--laat:#A4482A;--laat-zacht:#F8E7DF;--groen:#2E7D4F;--groen-zacht:#E3F3E8;
+--letter:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root{--grond:#0F1513;--vlak:#17201C;--vlak2:#1C2722;--inkt:#E6ECE8;--zacht:#9AABA2;--lijn:#2A3832;
+--accent:#6CC4A1;--accent-zacht:#1D3A2F;--geel:#E3C46A;--geel-zacht:#352B10;--laat:#E59A7B;--laat-zacht:#3A2219;--groen:#7DD3A0;--groen-zacht:#183526}}
+*{box-sizing:border-box}body{margin:0;background:var(--grond);color:var(--inkt);font:14px/1.5 var(--letter)}
+.proef{background:var(--geel-zacht);color:var(--geel);padding:8px 16px;font-size:13px;border-bottom:1px solid var(--lijn)}
+.app{display:flex;min-height:100vh}
+nav{width:220px;flex:none;background:var(--vlak);border-right:1px solid var(--lijn);padding:16px 12px}
+nav .merk{font-weight:700;margin:0 8px}nav .merk small{display:block;font-weight:400;color:var(--zacht);font-size:12px}
+nav ul{list-style:none;margin:14px 0 0;padding:0}nav li{padding:7px 10px;border-radius:8px;display:flex;justify-content:space-between;color:var(--inkt)}
+nav li.aan{background:var(--accent-zacht);color:var(--accent);font-weight:600}nav li .n{font-size:12px;color:var(--zacht)}
+nav li.sub{padding-left:24px;font-size:13px;color:var(--zacht)}nav .kop{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--zacht);margin:14px 10px 4px}
+nav .nieuw{font:10px var(--mono);color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:0 4px;margin-left:6px}
+main{flex:1;min-width:0;padding:20px 24px 64px;max-width:1100px}
+h1{font-size:22px;margin:0 0 4px}.uitleg{color:var(--zacht);margin:0 0 12px;max-width:760px}
+.wissel{display:inline-flex;border:1px solid var(--lijn);border-radius:8px;overflow:hidden;margin:4px 0 14px}
+.wissel button{border:0;background:var(--vlak);color:var(--inkt);padding:7px 14px;font:inherit;cursor:pointer}.wissel button.aan{background:var(--accent);color:#fff}
+.balk{background:var(--vlak);border:1px solid var(--lijn);border-radius:10px;padding:12px 14px;margin-bottom:12px}
+.rij{display:flex;gap:6px;align-items:flex-start;flex-wrap:wrap;margin:4px 0}.rij>.wat{width:92px;flex:none;color:var(--zacht);font-size:12px;padding-top:5px}
+.groep{display:inline-flex;gap:4px;flex-wrap:wrap;align-items:center;margin-right:10px}.groep b{font-size:12px;color:var(--zacht);font-weight:600;margin-right:2px}
+.chip{border:1px solid var(--lijn);background:var(--vlak);border-radius:999px;padding:2px 10px;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.chip.aan{border-color:var(--accent);background:var(--accent-zacht);color:var(--accent);font-weight:600}.chip i{font-style:normal;color:var(--zacht)}
+.chip.podium{border-color:var(--geel);color:var(--geel)}.chip.podium.aan{background:var(--geel-zacht)}
+.actief{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;padding-top:8px;border-top:1px dashed var(--lijn);font-size:12.5px}
+.actief .x{background:var(--accent);color:#fff;border-radius:999px;padding:2px 10px}.knop{border:1px solid var(--lijn);background:var(--vlak);border-radius:8px;padding:5px 12px;font:inherit;cursor:pointer}
+.knop.bronnen{font-weight:600}
+.paneel{background:var(--vlak);border:1px solid var(--accent);border-radius:10px;padding:12px 14px;margin-bottom:12px}
+.paneel h2{font-size:15px;margin:0 0 8px}.paneel input{width:100%;max-width:340px;padding:6px 10px;border:1px solid var(--lijn);border-radius:8px;background:var(--vlak2);color:var(--inkt);font:inherit}
+.tabs{display:flex;gap:6px;margin:10px 0;flex-wrap:wrap}.kol{columns:2;column-gap:28px;font-size:13px}.kol div{break-inside:avoid;display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--lijn)}
+.kol a,.bron a{color:var(--accent);text-decoration:none}.kol a:hover,.bron a:hover{text-decoration:underline}
+.verdiep{background:var(--accent-zacht);border-radius:8px;padding:8px 12px;margin:0 0 12px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.dag{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 6px;flex-wrap:wrap;gap:6px}.dag h2{font-size:16px;margin:0}.dag span{color:var(--zacht);font-size:13px}
+.lijst{background:var(--vlak);border:1px solid var(--lijn);border-radius:10px;overflow:hidden}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:10px 14px;border-top:1px solid var(--lijn)}.item:first-child{border-top:0}
+.item .t{font-weight:600}.item .m{font-size:12.5px;color:var(--zacht);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tag{border:1px solid var(--lijn);border-radius:5px;padding:0 6px;font-size:11.5px}.tag.ty{font:11px var(--mono);text-transform:uppercase}
+.tag.po{border-color:var(--geel);color:var(--geel);background:var(--geel-zacht)}
+.acties{display:flex;gap:4px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.acties span{border:1px solid var(--lijn);border-radius:6px;padding:2px 8px;font-size:12.5px;background:var(--vlak)}
+.acties .weg{color:var(--laat)}
+.item.klaar{background:var(--groen-zacht)}.item.klaar .t::after{content:" · uitgewerkt";color:var(--groen);font-weight:600}
+.laag{padding:10px 14px;border-top:1px solid var(--lijn);color:var(--zacht);font-size:13px;background:var(--vlak2)}
+.kaarten{display:none}.kaartweergave .kaarten{display:block}.kaartweergave .lijstweergave{display:none}
+.kaart{background:var(--vlak);border:1px solid var(--lijn);border-radius:10px;padding:14px 16px;margin:10px 0}.kaart h3{margin:0 0 4px;font-size:17px}
+.teller{background:var(--vlak2);border:1px solid var(--lijn);border-radius:8px;padding:8px 12px;margin:0 0 10px;font-size:13px}
+.noot{color:var(--zacht);font-size:12.5px;margin-top:24px;border-top:1px solid var(--lijn);padding-top:10px}
+@media (max-width:820px){nav{display:none}.kol{columns:1}.rij>.wat{width:100%}main{padding:16px}}
+</style></head><body>
+<div class="proef">Proefontwerp, niet live. Kader: Richard OW-93900 (21-11). Categorie-, sector- en bronnamen zijn echt (keten/regels/THEMAS.json, SECTOR_TOP10.json, live bronnen 15–21 nov.); de items zijn voorbeelden. X-accounts staan als @account-1 … omdat het personen zijn.</div>
+<div class="app" id="app">
+<nav aria-label="Menu">
+  <div class="merk">Contentpijplijn<small>input · kennis · publishing</small></div>
+  <ul>
+    <li class="aan">Triage 1 <span class="n">452</span></li>
+    <li>Inhalen <span class="n">61</span></li>
+    <li>★ Ster <span class="n">12</span></li>
+    <li>Later <span class="n">34</span></li>
+    <li>Stack<span class="nieuw">eigen item</span> <span class="n">9</span></li>
+    <li>Uitwerken <span class="n">5</span></li>
+    <li>Instapaper</li>
+    <li>Inspiratie</li>
+    <li>De Rij <span class="n">3</span></li>
+    <li>Dossiers</li>
+    <li>Lezingen</li>
+    <li>Keynotes</li>
+  </ul>
+  <div class="kop">Overigen ▾</div>
+  <ul><li class="sub">Trading</li><li class="sub">Marketing</li><li class="sub">SEO</li><li class="sub">Ventures</li></ul>
+  <div class="kop">Kennisbank ▸</div><div class="kop">Beheer ▸</div>
+</nav>
+<main id="hoofd">
+  <h1>Triage 1</h1>
+  <p class="uitleg">Standaard de volledige lijst per dag, nieuwste dag boven. De kaarten zijn een aparte weergave: wat er niet op een kaart staat, blijft hier zichtbaar.</p>
+  <div class="wissel" role="tablist"><button class="aan" data-w="lijst">Lijst (alles)</button><button data-w="kaarten">Kaarten · 38 op een kaart · 414 erbuiten</button></div>
+
+  <div class="balk" aria-label="Filters">
+    <div class="rij"><span class="wat">Onderwerp</span>
+      <span class="groep"><b>AI</b><span class="chip">AI-revolutie <i>141</i></span><span class="chip">AI &amp; digitale veiligheid <i>38</i></span><span class="chip">AI-ethiek <i>17</i></span></span>
+      <span class="groep"><b>Organisatie en leiderschap</b><span class="chip">AI-first organisatie &amp; transformatie <i>44</i></span><span class="chip">Organisatie van de toekomst <i>29</i></span><span class="chip">Future Leadership <i>12</i></span></span>
+      <span class="groep"><b>Brede technologie</b><span class="chip">Nieuwe technologie <i>76</i></span></span>
+      <span class="groep"><b>Overige</b><span class="chip">Overige <i>95</i></span></span>
+    </div>
+    <div class="rij"><span class="wat">Sector</span>
+      <span class="chip">Zorg <i>21</i></span><span class="chip">Bouw <i>4</i></span><span class="chip">Onderwijs <i>9</i></span><span class="chip">Overheid <i>18</i></span><span class="chip aan">Finance <i>26</i></span><span class="chip">Logistiek <i>7</i></span><span class="chip">Agrarische sector <i>2</i></span><span class="chip">Retail en detailhandel <i>11</i></span><span class="chip">Slimme steden <i>3</i></span><span class="chip">Veiligheid en criminaliteit <i>14</i></span><span class="chip">Marketing <i>8</i></span>
+    </div>
+    <div class="rij"><span class="wat">Type</span>
+      <span class="chip">Artikel <i>318</i></span><span class="chip">Rapport <i>4</i></span><span class="chip">Paper <i>19</i></span><span class="chip">Video <i>14</i></span><span class="chip">Podcast <i>3</i></span><span class="chip">Social media <i>94</i></span>
+    </div>
+    <div class="rij"><span class="wat">Snelfilter</span><span class="chip podium">★ Opvallend / podiumgeschikt <i>23</i></span>
+      <button class="knop bronnen" id="bronknop" aria-expanded="true">Bronnen ▾</button></div>
+    <div class="actief">Actief: <span class="x">Finance ✕</span><button class="knop">Wis filters</button>
+      <span style="color:var(--zacht)">OF binnen een filterrij, EN tussen de rijen.</span></div>
+  </div>
+
+  <div class="paneel" id="bronpaneel">
+    <h2>Bronnen · 15–21 november</h2>
+    <input type="search" placeholder="Zoek een bron, account of nieuwsbrief" aria-label="Zoek een bron">
+    <div class="tabs"><span class="chip aan">X · 42 accounts <i>1.197</i></span><span class="chip">Sites en blogs · 508 <i>7.528</i></span><span class="chip">Nieuwsbrieven · 248 <i>882</i></span><span class="chip">YouTube · 32 <i>110</i></span><span class="chip">Vaste bronnen ★</span></div>
+    <div class="kol">
+      <div><a href="#" data-b="@account-1">@account-1</a><span>158</span></div><div><a href="#" data-b="@account-2">@account-2</a><span>135</span></div>
+      <div><a href="#" data-b="@account-3">@account-3</a><span>108</span></div><div><a href="#" data-b="@account-4">@account-4</a><span>95</span></div>
+      <div><a href="#" data-b="@account-5">@account-5</a><span>91</span></div><div><a href="#" data-b="@account-6">@account-6</a><span>89</span></div>
+      <div><a href="#" data-b="@account-7">@account-7</a><span>84</span></div><div><a href="#" data-b="@account-8">@account-8</a><span>83</span></div>
+      <div><span>34 andere accounts</span><span>355</span></div>
+    </div>
+    <p style="color:var(--zacht);font-size:12.5px;margin:8px 0 0">8 accounts leveren 73% van X deze week. Klik op een naam: alle onbehandelde berichten van die bron.</p>
+  </div>
+
+  <div id="weergave">
+  <div class="lijstweergave">
+    <div class="dag"><h2>Vrijdag 21 november</h2><span>1.264 binnen · 812 behandeld · 452 open · met filter Finance: 26</span></div>
+    <div class="lijst">
+      <div class="item klaar"><div><div class="t">Bank zet AI-agent in voor kredietbeoordeling van mkb-klanten</div>
+        <div class="m"><span class="bron"><a href="#">Financial Times · technologie</a></span><span class="tag ty">artikel</span><span class="tag">AI-first organisatie &amp; transformatie</span><span class="tag">Finance</span></div></div>
+        <div class="acties"><span>In dossier</span><span>Uitwerking bekijken</span></div></div>
+      <div class="item"><div><div class="t">Agentplatform haalt in één kwartaal tienduizend zakelijke klanten</div>
+        <div class="m"><span class="bron"><a href="#">X · @account-1</a></span><span class="tag ty">social media</span><span class="tag">AI-revolutie</span><span class="tag">Finance</span></div></div>
+        <div class="acties"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+      <div class="item"><div><div class="t">Toezichthouder vraagt banken om uitlegbare AI bij fraudedetectie</div>
+        <div class="m"><span class="bron"><a href="#">Reuters (Google News)</a></span><span class="tag ty">artikel</span><span class="tag">AI-revolutie</span><span class="tag">Finance</span><span class="tag po">★ podiumgeschikt: raakt elke bestuurder die AI bij klanten inzet</span></div></div>
+        <div class="acties"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+      <div class="item"><div><div class="t">The state of AI in financial services 2026</div>
+        <div class="m"><span class="bron"><a href="#">McKinsey · Leading Off</a> (nieuwsbrief)</span><span class="tag ty">rapport</span><span class="tag">AI-revolutie</span><span class="tag">Finance</span></div></div>
+        <div class="acties"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+      <div class="item"><div><div class="t">Eerlijkheid van AI-kredietmodellen gemeten bij twaalf Europese banken</div>
+        <div class="m"><span class="bron"><a href="#">arXiv · cs.CY (computers en samenleving)</a></span><span class="tag ty">paper</span><span class="tag">AI-ethiek</span><span class="tag">Finance</span></div></div>
+        <div class="acties"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+      <div class="item"><div><div class="t">Waarom investeerders nu op AI-agents voor de backoffice wedden</div>
+        <div class="m"><span class="bron"><a href="#">YouTube · a16z</a></span><span class="tag ty">video</span><span class="tag">AI-first organisatie &amp; transformatie</span><span class="tag">Finance</span></div></div>
+        <div class="acties"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+      <div class="item"><div><div class="t">Verzekeraar laat schadeclaims volledig door AI afhandelen</div>
+        <div class="m"><span class="bron"><a href="#">Business Insider</a></span><span class="tag ty">artikel</span><span class="tag">AI-revolutie</span><span class="tag">Finance</span></div></div>
+        <div class="acties"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+      <div class="laag">▸ Lage score · 19 items (ingeklapt, niet verborgen)</div>
+    </div>
+
+    <div class="dag"><h2>Donderdag 20 november</h2><span>1.311 binnen · 1.290 behandeld · 21 open · met filter Finance: 3</span></div>
+    <div class="lijst"><div class="laag">▸ 3 open items tonen</div></div>
+
+    <h2 style="font-size:15px;margin:28px 0 8px">Voorbeeld: klik op een bronnaam (hier @account-1)</h2>
+    <div class="verdiep" id="verdiep"><span><b>Alle onbehandelde berichten van @account-1</b> · 158 deze week · 41 open, alle dagen samen</span><button class="knop">✕ terug naar de dag</button></div>
+    <div class="lijst">
+      <div class="item"><div><div class="t">Agentplatform haalt in één kwartaal tienduizend zakelijke klanten</div>
+        <div class="m"><span class="bron"><a href="#">X · @account-1</a></span><span class="tag ty">social media</span><span class="tag">AI-revolutie</span><span class="tag">Finance</span><span>vr 21 nov</span></div></div>
+        <div class="acties"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+      <div class="item"><div><div class="t">Drie open modellen die lokaal op een laptop draaien, vergeleken</div>
+        <div class="m"><span class="bron"><a href="#">X · @account-1</a></span><span class="tag ty">social media</span><span class="tag">AI-revolutie</span><span>vr 21 nov</span></div></div>
+        <div class="acties"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+      <div class="item"><div><div class="t">Hoe een webshop zijn klantenservice in zes weken door agents liet overnemen</div>
+        <div class="m"><span class="bron"><a href="#">X · @account-1</a></span><span class="tag ty">social media</span><span class="tag">AI-first organisatie &amp; transformatie</span><span class="tag">Retail en detailhandel</span><span>do 20 nov</span></div></div>
+        <div class="acties"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+      <div class="laag">▸ 38 andere open berichten van @account-1</div>
+    </div>
+  </div>
+
+  <div class="kaarten">
+    <div class="teller">38 items staan op een kaart · 414 erbuiten. Die 414 staan in de lijst; niets is weg. De kaarten bundelen per verhaal één stelling met de bronnen eronder.</div>
+    <div class="kaart"><h3>Banken mogen AI bij klanten alleen inzetten als ze het besluit kunnen uitleggen</h3>
+      <div class="m" style="font-size:12.5px;color:var(--zacht);display:flex;gap:8px;flex-wrap:wrap"><span class="tag">AI-revolutie</span><span class="tag">Finance</span><span class="tag po">★ podiumgeschikt</span><span>3 bronnen: Reuters (artikel), McKinsey (rapport), @account-1 (social media)</span></div>
+      <div class="acties" style="justify-content:flex-start;margin-top:8px"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+    <div class="kaart"><h3>De backoffice is het eerste wat AI-agents echt overnemen</h3>
+      <div class="m" style="font-size:12.5px;color:var(--zacht);display:flex;gap:8px;flex-wrap:wrap"><span class="tag">AI-first organisatie &amp; transformatie</span><span class="tag">Finance</span><span>2 bronnen: YouTube · a16z (video), Business Insider (artikel)</span></div>
+      <div class="acties" style="justify-content:flex-start;margin-top:8px"><span>★ Ster</span><span>Later</span><span>Dossier</span><span>Rij</span><span>Uitwerken</span><span class="weg">Weg</span></div></div>
+  </div>
+  </div>
+
+  <p class="noot">Wat hier vastligt (OW-93900): één hoofdthema per item plus Sector als aparte rij; Type per bron (Rapport alleen bij een echte publicatie, Paper apart); podiumgeschikt overal; niets automatisch weg; behandeld gaat uit de lijst, uitgewerkt kleurt groen; Inhalen, Ster en Later krijgen dezelfde filters. Dossiers houden hun eigen indeling met subdossiers. Stack is een eigen menu-item; Trading, Marketing, SEO en Ventures staan onder Overigen.</p>
+</main></div>
+<script>
+document.querySelectorAll('.wissel button').forEach(function(b){b.addEventListener('click',function(){
+  document.querySelectorAll('.wissel button').forEach(function(x){x.classList.toggle('aan',x===b)});
+  document.getElementById('weergave').classList.toggle('kaartweergave',b.dataset.w==='kaarten');});});
+document.getElementById('bronknop').addEventListener('click',function(){var p=document.getElementById('bronpaneel'),open=p.style.display!=='none';
+  p.style.display=open?'none':'';this.setAttribute('aria-expanded',String(!open));this.textContent=open?'Bronnen ▸':'Bronnen ▾';});
+document.querySelectorAll('[data-b]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();
+  document.querySelector('#verdiep b').textContent='Alle onbehandelde berichten van '+a.dataset.b;document.getElementById('verdiep').style.display='';document.getElementById('verdiep').scrollIntoView();});});
+document.querySelector('#verdiep .knop').addEventListener('click',function(){document.getElementById('verdiep').style.display='none';});
+</script></body></html>
