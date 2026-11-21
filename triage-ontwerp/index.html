@@ -102,8 +102,8 @@ main{min-width:0}
 </main></div>
 <aside class="paneel" id="paneel"><header><h3>Bronnen · 15–21 nov</h3><button class="x" id="sluit" aria-label="Sluiten">×</button></header>
 <div class="in"><div class="zoek"><input placeholder="Zoek een bron, account of nieuwsbrief"></div>
-<div class="tabs"><button class="aan">X · 42</button><button>Sites en blogs · 508</button><button>Nieuwsbrieven · 248</button><button>YouTube · 32</button><button>★ Vaste bronnen</button></div>
-<div id="bronnen"></div><p class="hint" style="margin:10px 0 0">Klik op een bron: alle onbehandelde berichten van die bron.</p></div></aside>
+<div class="tabs" id="btabs"><button class="aan" data-k="X">X · 42</button><button data-k="Sites">Sites en blogs · 508</button><button data-k="Nieuwsbrieven">Nieuwsbrieven · 248</button><button data-k="YouTube">YouTube · 32</button><button data-k="Vast">★ Vaste bronnen</button></div>
+<label class="bron allekanaal"><span><input type="checkbox" id="alleK"> <b id="alleKt" style="font-weight:600">Alle X-accounts</b></span><span id="alleKn">1.197</span></label><div id="bronnen"></div><div style="display:flex;gap:8px;align-items:center;margin-top:12px"><button class="f" id="btoepas" style="background:var(--inkt);color:var(--vlak)">Toon berichten van gekozen bronnen</button><button class="selalles" id="bwis">wissen</button></div><p class="hint" style="margin:8px 0 0">Vink meerdere bronnen aan, of alles van één soort. Klik op een naam om alleen die bron te zien.</p></div></aside>
 <div class="melding" id="mel"></div>
 <script>
 const I=[
@@ -142,13 +142,27 @@ sa.addEventListener("click",()=>{document.querySelectorAll("#items > .rij").forE
 
 
 document.getElementById("kitems").innerHTML='<div class="rij"><div><div class="t">Banken zetten AI-agents in voor kredietbeslissingen</div><div class="m">3 bronnen · Financial Times, Reuters, @account-4<span class="lab">AI-first organisatie</span><span class="lab">Finance</span></div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button>Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div></div>';
-const L=[["@account-1",158],["@account-2",135],["@account-3",108],["@account-4",95],["@account-5",91],["@account-6",89],["@account-7",84],["@account-8",83],["34 andere accounts",355]];
-document.getElementById("bronnen").innerHTML=L.map(([n,c])=>`<div class="bron"><b style="font-weight:500">${n}</b><span>${c}</span></div>`).join("");
+const BR={X:[["@account-1",158],["@account-2",135],["@account-3",108],["@account-4",95],["@account-5",91],["@account-6",89],["@account-7",84],["@account-8",83]],
+Sites:[["Business Insider",220],["NOS",125],["Handelsblatt KI",123],["The Register",117],["Bloomberg tech",116],["Financial Times",111],["Reuters",103],["arXiv cs.CY",128],["De Tijd AI",83]],
+Nieuwsbrieven:[["McKinsey Leading Off",24],["Axios AI",19],["Semafor Tech",18],["MIT Technology Review",17],["TLDR AI",15]],
+YouTube:[["YouTube · a16z",13],["YouTube · McKinsey",12],["YouTube · Bright",11],["YouTube · Simon Sinek",7]],
+Vast:[["Financial Times",111],["McKinsey Leading Off",24],["YouTube · a16z",13]]};
+const KT={X:["Alle X-accounts","1.197"],Sites:["Alle sites en blogs","7.528"],Nieuwsbrieven:["Alle nieuwsbrieven","882"],YouTube:["Alle YouTube-kanalen","110"],Vast:["Alle vaste bronnen","148"]};
+let bk="X";const gekozen=new Set(),alleK=new Set();
+function kanaal(b){return b.startsWith("@")?"X":b.startsWith("YouTube")?"YouTube":["McKinsey Leading Off","Axios AI","Semafor Tech","MIT Technology Review","TLDR AI"].includes(b)?"Nieuwsbrieven":"Sites"}
+function bl(){document.getElementById("bronnen").innerHTML=BR[bk].map(([n,c])=>`<label class="bron"><span><input type="checkbox" class="bkb" value="${n}" ${gekozen.has(n)||alleK.has(bk)?"checked":""}> <b style="font-weight:500" class="bnm">${n}</b></span><span>${c}</span></label>`).join("");document.getElementById("alleKt").textContent=KT[bk][0];document.getElementById("alleKn").textContent=KT[bk][1];document.getElementById("alleK").checked=alleK.has(bk)}
+bl();
+document.getElementById("btabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;bk=b.dataset.k;[...document.querySelectorAll("#btabs button")].forEach(x=>x.classList.toggle("aan",x===b));bl()});
+document.getElementById("paneel").addEventListener("change",e=>{if(e.target.id==="alleK"){e.target.checked?alleK.add(bk):alleK.delete(bk);bl()}else if(e.target.classList.contains("bkb")){e.target.checked?gekozen.add(e.target.value):gekozen.delete(e.target.value)}});
+function bronLabel(){act=act.filter(a=>!a.startsWith("Bron: ")&&!a.startsWith("Bronnen: "));const n=[...alleK].map(k=>KT[k][0]).concat([...gekozen]);if(n.length===1)act.push("Bron: "+n[0]);else if(n.length)act.push("Bronnen: "+n.length);toon()}
+document.getElementById("btoepas").addEventListener("click",()=>{bronLabel();document.getElementById("paneel").classList.remove("open");zeg("Proef: lijst toont berichten van gekozen bronnen")});
+document.getElementById("bwis").addEventListener("click",()=>{gekozen.clear();alleK.clear();bl();bronLabel()});
+
 const tokens=document.getElementById("tokens");let act=[];
 function filter(){const sel=f=>[...document.querySelectorAll('.dd[data-f="'+f+'"] input:checked')].map(c=>c.value);
- const on=sel("Onderwerp"),se=sel("Sector"),ty=sel("Type"),opv=document.getElementById("opv").classList.contains("aan"),br=(act.find(a=>a.startsWith("Bron: "))||"").slice(6),q=document.getElementById("q").value.toLowerCase();
+ const on=sel("Onderwerp"),se=sel("Sector"),ty=sel("Type"),opv=document.getElementById("opv").classList.contains("aan"),br=(gekozen.size||alleK.size),q=document.getElementById("q").value.toLowerCase();
  let n=0;document.querySelectorAll("#items > .rij").forEach(r=>{const tg=(r.dataset.tags||"").split("|"),tp=(r.dataset.type||"").split("|");
-  const ok=(!on.length||on.some(x=>tg.includes(x)))&&(!se.length||se.some(x=>tg.includes(x)))&&(!ty.length||ty.some(x=>tp.includes(x)))&&(!opv||r.dataset.pod==="1")&&(!br||(r.dataset.bron||"").split("|").includes(br))&&(!q||r.innerText.toLowerCase().includes(q));
+  const ok=(!on.length||on.some(x=>tg.includes(x)))&&(!se.length||se.some(x=>tg.includes(x)))&&(!ty.length||ty.some(x=>tp.includes(x)))&&(!opv||r.dataset.pod==="1")&&(!br||(r.dataset.bron||"").split("|").some(b=>gekozen.has(b)||alleK.has(kanaal(b))||(alleK.has("Vast")&&BR.Vast.some(v=>v[0]===b))))&&(!q||r.innerText.toLowerCase().includes(q));
   r.style.display=ok?"":"none";if(r.classList.contains("bundel")){const k=r.nextElementSibling;if(k&&k.classList.contains("kind"))k.style.display=ok?"":"none"}if(ok)n++});
  const tel=document.querySelector(".dag .tel"),filt=on.length||se.length||ty.length||opv||br||q;tel.textContent="452 open · 812 behandeld van 1.264"+(filt?" · met filter: "+n+" getoond":"");
  let leeg=document.getElementById("leeg");if(!leeg){leeg=document.createElement("div");leeg.id="leeg";leeg.className="ghost";document.getElementById("items").after(leeg)}leeg.textContent=filt&&!n?"Geen items vandaag met deze filters. Wis een filter om meer te zien.":""}
@@ -156,9 +170,9 @@ function filter(){const sel=f=>[...document.querySelectorAll('.dd[data-f="'+f+'"
 function toon(){setTimeout(filter,0);tokens.innerHTML=act.map((a,i)=>`<span class="tok">${a}<b data-i="${i}">×</b></span>`).join(" ");document.querySelectorAll(".dd[data-f]").forEach(d=>{const n=d.querySelectorAll("input:checked").length,b=d.querySelector(".f");b.classList.toggle("aan",n>0);b.textContent=d.dataset.f+(n?" · "+n:"")+" ▾"})}
 document.addEventListener("click",e=>{const dd=e.target.closest(".dd");document.querySelectorAll(".dd.open").forEach(x=>{if(x!==dd)x.classList.remove("open")});
  if(e.target.matches(".dd>.f")){dd.classList.toggle("open");return}
- if(e.target.matches(".tok b")){const v=act[+e.target.dataset.i];act.splice(+e.target.dataset.i,1);document.querySelectorAll(".menu input").forEach(c=>{if(v.endsWith(": "+c.value))c.checked=false});if(v==="Opvallend")document.getElementById("opv").classList.remove("aan");toon();return}
+ if(e.target.matches(".tok b")){const v=act[+e.target.dataset.i];act.splice(+e.target.dataset.i,1);document.querySelectorAll(".menu input").forEach(c=>{if(v.endsWith(": "+c.value))c.checked=false});if(v==="Opvallend")document.getElementById("opv").classList.remove("aan");if(v.startsWith("Bron")){gekozen.clear();alleK.clear();bl()}toon();return}
  if(e.target.id==="opv"){e.target.classList.toggle("aan");act=act.filter(a=>a!=="Opvallend");if(e.target.classList.contains("aan"))act.push("Opvallend");toon();return}
- if(e.target.id==="bronknop"||e.target.classList.contains("bn")){e.preventDefault();document.getElementById("paneel").classList.add("open");if(e.target.classList.contains("bn"))zeg("Proef: alle onbehandelde berichten van "+e.target.textContent);return}
+ if(e.target.id==="bronknop"||e.target.classList.contains("bn")){e.preventDefault();document.getElementById("paneel").classList.add("open");if(e.target.classList.contains("bn")){gekozen.clear();alleK.clear();gekozen.add(e.target.textContent);bk=kanaal(e.target.textContent);bl();bronLabel();document.getElementById("paneel").classList.remove("open")}return}
  if(e.target.id==="sluit"){document.getElementById("paneel").classList.remove("open");return}
  if(e.target.closest(".bron")){const n=e.target.closest(".bron").querySelector("b").textContent;zeg("Proef: lijst gefilterd op "+n);document.getElementById("paneel").classList.remove("open");act=act.filter(a=>!a.startsWith("Bron: "));act.push("Bron: "+n);toon();return}
  if(e.target.dataset.w){document.querySelectorAll(".seg button").forEach(b=>b.classList.toggle("aan",b===e.target));const k=e.target.dataset.w==="kaarten";document.getElementById("kaarten").classList.toggle("aan",k);document.getElementById("lijst").style.display=k?"none":"";return}
