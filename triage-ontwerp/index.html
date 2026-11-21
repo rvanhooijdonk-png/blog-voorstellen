@@ -50,6 +50,13 @@ main{min-width:0}
 .paneel header h3{margin:0;font-size:15px}.x{font:inherit;font-size:18px;background:none;border:0;color:var(--zacht);cursor:pointer}
 .paneel .in{padding:12px 16px;overflow:auto}.tabs{display:flex;gap:4px;flex-wrap:wrap;margin:10px 0}.tabs button{font:inherit;font-size:12.5px;border:1px solid var(--lijn);background:var(--vlak);color:var(--inkt);border-radius:6px;padding:3px 8px;cursor:pointer}.tabs .aan{background:var(--inkt);color:var(--vlak)}
 .bron{display:flex;justify-content:space-between;padding:7px 4px;border-bottom:1px solid var(--lijn);cursor:pointer}.bron:hover{color:var(--focus)}.bron span{color:var(--zacht);font-variant-numeric:tabular-nums}
+.bundel .t::before{content:"▸ ";color:var(--zacht)}.bundel.open .t::before{content:"▾ "}.bundel .n{font-size:11.5px;background:var(--knop);border-radius:10px;padding:1px 7px;margin-left:6px;font-weight:500;color:var(--zacht)}.kind{display:none;padding-left:28px;background:var(--vlak)}.kind.open{display:block}.kind .rij{background:transparent}
+.ghost{color:var(--zacht);font-size:12.5px;padding:6px 12px;font-style:italic}
+.rij{grid-template-columns:auto 1fr auto}.rij>.kb{width:16px;height:16px;margin:0}.rij .opm{grid-column:2/-1}
+#batch{position:sticky;bottom:0;display:none;align-items:center;gap:6px;flex-wrap:wrap;background:var(--inkt);color:var(--vlak);border-radius:10px;padding:8px 12px;margin-top:10px;z-index:6}
+#batch.aan{display:flex}#batch b{margin-right:6px}#batch button{font:inherit;font-size:12.5px;border:0;border-radius:6px;padding:4px 9px;cursor:pointer;background:rgba(255,255,255,.14);color:inherit}#batch .wis{margin-left:auto;background:transparent;text-decoration:underline}
+.selalles{font:inherit;font-size:12.5px;background:none;border:0;color:var(--focus);cursor:pointer;padding:0}
+@media (max-width:820px){.rij{grid-template-columns:auto 1fr}.rij .acts{grid-column:2}}
 .melding{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--inkt);color:var(--vlak);padding:7px 14px;border-radius:7px;font-size:13px;display:none;z-index:30}
 .hint{color:var(--zacht);font-size:12px;margin-left:8px}
 .kaarten{display:none}.kaarten.aan{display:block}.kaarten .info{color:var(--zacht);font-size:13px;margin:18px 0 8px}
@@ -59,9 +66,8 @@ main{min-width:0}
 <div class="app">
 <nav>
 <div class="merk">Contentpijplijn</div>
-<a class="actief" href="#">Triage 1<span>452</span></a><a href="#">Inhalen<span>61</span></a><a href="#">★ Ster<span>12</span></a><a href="#">Later<span>34</span></a><a href="#">Stack<span>9</span></a>
-<a href="#">Inspiratie</a><a href="#">De Rij<span>3</span></a><a href="#">Dossiers</a><a href="#">Lezingen</a><a href="#">Keynotes</a>
-<div class="kop" data-k="ov">Overigen ▾</div><div class="sub" id="ov"><a href="#">Trading</a><a href="#">Marketing</a><a href="#">SEO</a><a href="#">Ventures</a></div>
+<a class="actief" href="#">Triage 1<span>452</span></a><a href="#">Inhalen<span>61</span></a><a href="#">★ Ster<span>12</span></a><a href="#">Later<span>34</span></a><a href="#">Inspiratie</a><a href="#">De Rij<span>3</span></a><a href="#">Dossiers</a><a href="#">Lezingen</a><a href="#">Keynotes</a>
+<div class="kop" data-k="ov">Overigen ▾</div><div class="sub" id="ov"><a href="#">Stack<span>9</span></a><a href="#">Trading</a><a href="#">Marketing</a><a href="#">SEO</a><a href="#">Ventures</a></div>
 <div class="kop">Kennisbank ▸</div><div class="kop">Beheer ▸</div>
 </nav>
 <main>
@@ -78,15 +84,18 @@ main{min-width:0}
    <label><input type="checkbox" value="Zorg">Zorg</label><label><input type="checkbox" value="Bouw">Bouw</label><label><input type="checkbox" value="Onderwijs">Onderwijs</label><label><input type="checkbox" value="Overheid">Overheid</label><label><input type="checkbox" value="Finance">Finance</label><label><input type="checkbox" value="Logistiek">Logistiek</label><label><input type="checkbox" value="Agrarische sector">Agrarische sector</label><label><input type="checkbox" value="Retail">Retail en detailhandel</label><label><input type="checkbox" value="Slimme steden">Slimme steden</label><label><input type="checkbox" value="Veiligheid en criminaliteit">Veiligheid en criminaliteit</label><label><input type="checkbox" value="Marketing">Marketing</label></div></div>
   <div class="dd" data-f="Type"><button class="f">Type ▾</button><div class="menu">
    <label><input type="checkbox" value="Artikel">Artikel</label><label><input type="checkbox" value="Rapport">Rapport</label><label><input type="checkbox" value="Paper">Paper</label><label><input type="checkbox" value="Video">Video</label><label><input type="checkbox" value="Podcast">Podcast</label><label><input type="checkbox" value="Social media">Social media</label></div></div>
+  <div class="dd" data-p="1"><button class="f" id="perknop">Periode: alle open ▾</button><div class="menu">
+   <label><input type="radio" name="per" value="alle open" checked>Alle open (standaard)</label><label><input type="radio" name="per" value="sinds laatste bezoek">Sinds mijn laatste bezoek</label><label><input type="radio" name="per" value="vandaag">Vandaag</label><label><input type="radio" name="per" value="gisteren">Gisteren</label><label><input type="radio" name="per" value="laatste 7 dagen">Laatste 7 dagen</label><label><input type="radio" name="per" value="laatste 30 dagen">Laatste 30 dagen</label>
+   <div class="g">Zelf kiezen</div><label style="gap:4px">van <input type="date" value="2026-11-18" style="font:inherit;font-size:12px"> tot <input type="date" value="2026-11-21" style="font:inherit;font-size:12px"></label></div></div>
   <button class="f geel" id="opv">★ Opvallend</button>
   <button class="f" id="bronknop">Bronnen</button>
  </div>
 </div>
 <div class="lijst" id="lijst">
- <div class="dag"><h2>Vrijdag 21 november</h2><div class="balk"><i></i></div><div class="tel">452 open · 812 behandeld van 1.264</div><span class="hint">↑↓ kiezen · 1–6 acties · ? sneltoetsen</span></div>
+ <div class="dag"><h2>Vrijdag 21 november</h2><div class="balk"><i></i></div><div class="tel">452 open · 812 behandeld van 1.264</div><span class="hint">vink aan voor batch · verhalen: klik om te openen · ↑↓ kiezen · 1–6 acties · ? sneltoetsen</span></div>
  <div id="items"></div>
  <button class="inklap" data-x="laag">▸ Lage scores · 19 items</button><div class="extra" id="laag"></div>
- <div class="dag"><h2>Donderdag 20 november</h2><div class="tel">38 open</div></div>
+ <div class="dag" id="dag2"><h2>Donderdag 20 november</h2><div class="tel">38 open</div></div><div class="ghost">↳ 1 bericht over "Banken zetten AI-agents in…" staat in het verhaal bij vrijdag</div>
  <button class="inklap">▸ 38 open items tonen</button>
 </div>
 <div class="lijst kaarten" id="kaarten"><div class="info">38 vondsten staan op een kaart · 414 staan erbuiten (die zie je in Lijst)</div><div id="kitems"></div></div>
@@ -109,16 +118,42 @@ const I=[
 ["Retailketen laat AI de schappen indelen, omzet per meter stijgt","Business Insider","07:30","Artikel",["AI-revolutie","Retail"],0,0]];
 const el=document.getElementById("items"),mel=document.getElementById("mel");
 function zeg(t){mel.textContent=t;mel.style.display="block";clearTimeout(zeg.t);zeg.t=setTimeout(()=>mel.style.display="none",2200)}
-function rij(it,i){const[t,b,u,ty,tags,gr,pod]=it;const d=document.createElement("div");d.className="rij"+(gr?" groen":"");d.tabIndex=0;d.dataset.i=i;
+function rij(it,i){const[t,b,u,ty,tags,gr,pod]=it;const d=document.createElement("div");d.className="rij"+(gr?" groen":"");d.tabIndex=0;d.dataset.i=i;d.dataset.type=ty;d.dataset.tags=tags.join("|");d.dataset.pod=pod;d.dataset.bron=b;
 d.innerHTML=`<div><div class="t">${t}</div><div class="m"><a href="#" class="bn">${b}</a> · ${u} · ${ty}${tags.map(x=>`<span class="lab">${x}</span>`).join("")}${pod?` <span class="pod">★ podiumgeschikt: concreet cijfer, raakt bestuurders</span>`:""}${gr?` · <span class="st">uitgewerkt</span>`:""}</div></div>
 <div class="acts">${gr?`<button>Uitwerking tonen</button>`:""}<button title="Ster (1)">★ Ster</button><button title="Later (2)">Later</button><button title="Dossier (3)">Dossier</button><button title="Rij (4)" class="rj">Rij</button>${gr?"":`<button title="Uitwerken (5)">Uitwerken</button>`}<button title="Weg (6)" class="weg">Weg</button></div>
 <div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>`;return d}
 I.forEach((it,i)=>el.appendChild(rij(it,i)));
+const B=document.createElement("div");B.className="rij bundel";B.tabIndex=0;B.dataset.type="Artikel|Social media";B.dataset.tags="AI-first organisatie|Finance";B.dataset.pod="0";B.dataset.bron="Financial Times|Reuters|@account-4|De Tijd AI";
+B.innerHTML='<div style="cursor:pointer" class="bk"><div class="t">Banken zetten AI-agents in voor kredietbeslissingen <span class="n">verhaal · 4 berichten · 2 nieuw</span></div><div class="m">loopt sinds wo 19 nov · Financial Times, Reuters, @account-4, De Tijd AI<span class="lab">AI-first organisatie</span><span class="lab">Finance</span></div></div><div class="acts"><button title="Ster (1)">★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';
+const K=document.createElement("div");K.className="kind";
+[["● Banken zetten AI-agents in voor kredietbeoordeling","Reuters","vr 09:40 · nieuw"],["● ECB waarschuwt voor modelrisico bij AI-kredietbeslissingen","De Tijd AI","vr 08:15 · nieuw"],["Draad: wat agents in banken nu al doen","@account-4","do 20 nov 17:52"],["Kredietbank automatiseert 60% van mkb-aanvragen","Financial Times","wo 19 nov 11:10"]].forEach(([tt,b,u])=>{const d=document.createElement("div");d.className="rij";d.innerHTML='<div><div class="t">'+tt+'</div><div class="m"><a href="#" class="bn">'+b+'</a> · '+u+'</div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';K.appendChild(d)});
+el.insertBefore(K,el.children[2]);el.insertBefore(B,K);
+B.querySelector(".bk").addEventListener("click",()=>{B.classList.toggle("open");K.classList.toggle("open")});
+function kb(r){if(r.querySelector(":scope>.kb"))return;const c=document.createElement("input");c.type="checkbox";c.className="kb";c.setAttribute("aria-label","Selecteer");r.prepend(c)}
+document.querySelectorAll("#items .rij").forEach(kb);
+const bar=document.createElement("div");bar.id="batch";bar.innerHTML='<b id="bn">0 geselecteerd</b><button>★ Ster</button><button>Later</button><button>Dossier</button><button>Rij</button><button>Uitwerken</button><button>Weg</button><button class="wis">selectie wissen</button>';
+document.getElementById("lijst").appendChild(bar);
+function telsel(){const n=[...document.querySelectorAll("#items .kb:checked")].filter(c=>c.closest(".rij").offsetParent!==null).length;document.getElementById("bn").textContent=n+" geselecteerd";bar.classList.toggle("aan",n>0)}
+document.addEventListener("change",e=>{if(e.target.classList.contains("kb")){if(e.target.closest(".bundel")){const k=e.target.closest(".bundel").nextElementSibling;k&&k.querySelectorAll(".kb").forEach(c=>c.checked=e.target.checked)}telsel()}});
+bar.addEventListener("click",e=>{if(e.target.tagName!=="BUTTON")return;if(e.target.classList.contains("wis")){document.querySelectorAll("#items .kb").forEach(c=>c.checked=false);telsel();return}
+ const rs=[...document.querySelectorAll("#items .kb:checked")].map(c=>c.closest(".rij")).filter(r=>r.offsetParent!==null);zeg("Proef: "+e.target.textContent.replace("★ ","")+" voor "+rs.length+" items — ze verdwijnen uit de lijst");rs.forEach(r=>{if(r.classList.contains("bundel")){const k=r.nextElementSibling;k&&k.classList.contains("kind")&&k.remove()}r.remove()});telsel()});
+const dk=document.querySelector(".dag");const sa=document.createElement("button");sa.className="selalles";sa.textContent="alles op deze dag selecteren";dk.appendChild(sa);
+sa.addEventListener("click",()=>{document.querySelectorAll("#items > .rij").forEach(r=>{if(r.style.display!=="none")r.querySelector(".kb").checked=true});document.querySelectorAll("#items .kind .kb").forEach(c=>c.checked=true);telsel()});
+
+
 document.getElementById("kitems").innerHTML='<div class="rij"><div><div class="t">Banken zetten AI-agents in voor kredietbeslissingen</div><div class="m">3 bronnen · Financial Times, Reuters, @account-4<span class="lab">AI-first organisatie</span><span class="lab">Finance</span></div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button>Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div></div>';
 const L=[["@account-1",158],["@account-2",135],["@account-3",108],["@account-4",95],["@account-5",91],["@account-6",89],["@account-7",84],["@account-8",83],["34 andere accounts",355]];
 document.getElementById("bronnen").innerHTML=L.map(([n,c])=>`<div class="bron"><b style="font-weight:500">${n}</b><span>${c}</span></div>`).join("");
 const tokens=document.getElementById("tokens");let act=[];
-function toon(){tokens.innerHTML=act.map((a,i)=>`<span class="tok">${a}<b data-i="${i}">×</b></span>`).join(" ");document.querySelectorAll(".dd").forEach(d=>{const n=d.querySelectorAll("input:checked").length,b=d.querySelector(".f");b.classList.toggle("aan",n>0);b.textContent=d.dataset.f+(n?" · "+n:"")+" ▾"})}
+function filter(){const sel=f=>[...document.querySelectorAll('.dd[data-f="'+f+'"] input:checked')].map(c=>c.value);
+ const on=sel("Onderwerp"),se=sel("Sector"),ty=sel("Type"),opv=document.getElementById("opv").classList.contains("aan"),br=(act.find(a=>a.startsWith("Bron: "))||"").slice(6),q=document.getElementById("q").value.toLowerCase();
+ let n=0;document.querySelectorAll("#items > .rij").forEach(r=>{const tg=(r.dataset.tags||"").split("|"),tp=(r.dataset.type||"").split("|");
+  const ok=(!on.length||on.some(x=>tg.includes(x)))&&(!se.length||se.some(x=>tg.includes(x)))&&(!ty.length||ty.some(x=>tp.includes(x)))&&(!opv||r.dataset.pod==="1")&&(!br||(r.dataset.bron||"").split("|").includes(br))&&(!q||r.innerText.toLowerCase().includes(q));
+  r.style.display=ok?"":"none";if(r.classList.contains("bundel")){const k=r.nextElementSibling;if(k&&k.classList.contains("kind"))k.style.display=ok?"":"none"}if(ok)n++});
+ const tel=document.querySelector(".dag .tel"),filt=on.length||se.length||ty.length||opv||br||q;tel.textContent="452 open · 812 behandeld van 1.264"+(filt?" · met filter: "+n+" getoond":"");
+ let leeg=document.getElementById("leeg");if(!leeg){leeg=document.createElement("div");leeg.id="leeg";leeg.className="ghost";document.getElementById("items").after(leeg)}leeg.textContent=filt&&!n?"Geen items vandaag met deze filters. Wis een filter om meer te zien.":""}
+
+function toon(){setTimeout(filter,0);tokens.innerHTML=act.map((a,i)=>`<span class="tok">${a}<b data-i="${i}">×</b></span>`).join(" ");document.querySelectorAll(".dd[data-f]").forEach(d=>{const n=d.querySelectorAll("input:checked").length,b=d.querySelector(".f");b.classList.toggle("aan",n>0);b.textContent=d.dataset.f+(n?" · "+n:"")+" ▾"})}
 document.addEventListener("click",e=>{const dd=e.target.closest(".dd");document.querySelectorAll(".dd.open").forEach(x=>{if(x!==dd)x.classList.remove("open")});
  if(e.target.matches(".dd>.f")){dd.classList.toggle("open");return}
  if(e.target.matches(".tok b")){const v=act[+e.target.dataset.i];act.splice(+e.target.dataset.i,1);document.querySelectorAll(".menu input").forEach(c=>{if(v.endsWith(": "+c.value))c.checked=false});if(v==="Opvallend")document.getElementById("opv").classList.remove("aan");toon();return}
@@ -135,7 +170,13 @@ document.addEventListener("click",e=>{const dd=e.target.closest(".dd");document.
  if(/Uitwerking tonen/.test(e.target.textContent)){zeg("Proef: hier klapt de uitwerking open (Samenvatting | Volledige tekst)");return}
  if(/Uitwerken/.test(e.target.textContent)){zeg("Proef: wordt uitgewerkt; daarna groen");return}
  zeg("Proef: "+e.target.textContent.replace("★ ","")+" — item verdwijnt uit de lijst");r.remove()});
-document.addEventListener("change",e=>{if(!e.target.matches(".menu input"))return;const f=e.target.closest(".dd").dataset.f,v=f+": "+e.target.value;act=act.filter(a=>a!==v);if(e.target.checked)act.push(v);toon()});
+document.addEventListener("change",e=>{if(!e.target.matches(".menu input[type=checkbox]"))return;const f=e.target.closest(".dd").dataset.f,v=f+": "+e.target.value;act=act.filter(a=>a!==v);if(e.target.checked)act.push(v);toon()});
+document.getElementById("q").addEventListener("input",()=>filter());
+document.addEventListener("change",e=>{if(e.target.name!=="per")return;const v=e.target.value;document.getElementById("perknop").textContent="Periode: "+v+" ▾";document.getElementById("perknop").classList.toggle("aan",v!=="alle open");
+ const d2=document.getElementById("dag2"),vr=document.querySelector(".lijst .dag");const toonV=v!=="gisteren",toonD=!["vandaag","sinds laatste bezoek"].includes(v);
+ [...document.getElementById("lijst").children].forEach(c=>{if(c.id==="batch")return;const naD2=d2.compareDocumentPosition(c)&Node.DOCUMENT_POSITION_FOLLOWING||c===d2;c.style.display=(naD2?toonD:toonV)?"":"none"});
+ act=act.filter(a=>!a.startsWith("Periode: "));if(v!=="alle open")act.push("Periode: "+v);toon();zeg("Proef: periode "+v)});
+
 document.addEventListener("keydown",e=>{if(e.target.tagName==="INPUT")return;if(e.key==="/"){e.preventDefault();document.getElementById("q").focus();return}
  const rs=[...document.querySelectorAll("#items .rij")];let i=rs.findIndex(r=>r.classList.contains("sel"));
  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();rs.forEach(r=>r.classList.remove("sel"));i=Math.max(0,Math.min(rs.length-1,i+(e.key==="ArrowDown"?1:-1)));rs[i]&&rs[i].classList.add("sel");rs[i]&&rs[i].scrollIntoView({block:"nearest"});return}
