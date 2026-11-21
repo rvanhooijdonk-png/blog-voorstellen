@@ -51,6 +51,7 @@ main{min-width:0}
 .paneel .in{padding:12px 16px;overflow:auto}.tabs{display:flex;gap:4px;flex-wrap:wrap;margin:10px 0}.tabs button{font:inherit;font-size:12.5px;border:1px solid var(--lijn);background:var(--vlak);color:var(--inkt);border-radius:6px;padding:3px 8px;cursor:pointer}.tabs .aan{background:var(--inkt);color:var(--vlak)}
 .bron{display:flex;justify-content:space-between;padding:7px 4px;border-bottom:1px solid var(--lijn);cursor:pointer}.bron:hover{color:var(--focus)}.bron span{color:var(--zacht);font-variant-numeric:tabular-nums}
 .bundel .t::before{content:"▸ ";color:var(--zacht)}.bundel.open .t::before{content:"▾ "}.bundel .n{font-size:11.5px;background:var(--knop);border-radius:10px;padding:1px 7px;margin-left:6px;font-weight:500;color:var(--zacht)}.kind{display:none;padding-left:28px;background:var(--vlak)}.kind.open{display:block}.kind .rij{background:transparent}
+.ghost{color:var(--zacht);font-size:12.5px;padding:6px 12px;font-style:italic}
 .melding{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--inkt);color:var(--vlak);padding:7px 14px;border-radius:7px;font-size:13px;display:none;z-index:30}
 .hint{color:var(--zacht);font-size:12px;margin-left:8px}
 .kaarten{display:none}.kaarten.aan{display:block}.kaarten .info{color:var(--zacht);font-size:13px;margin:18px 0 8px}
@@ -60,9 +61,8 @@ main{min-width:0}
 <div class="app">
 <nav>
 <div class="merk">Contentpijplijn</div>
-<a class="actief" href="#">Triage 1<span>452</span></a><a href="#">Inhalen<span>61</span></a><a href="#">★ Ster<span>12</span></a><a href="#">Later<span>34</span></a><a href="#">Stack<span>9</span></a>
-<a href="#">Inspiratie</a><a href="#">De Rij<span>3</span></a><a href="#">Dossiers</a><a href="#">Lezingen</a><a href="#">Keynotes</a>
-<div class="kop" data-k="ov">Overigen ▾</div><div class="sub" id="ov"><a href="#">Trading</a><a href="#">Marketing</a><a href="#">SEO</a><a href="#">Ventures</a></div>
+<a class="actief" href="#">Triage 1<span>452</span></a><a href="#">Inhalen<span>61</span></a><a href="#">★ Ster<span>12</span></a><a href="#">Later<span>34</span></a><a href="#">Inspiratie</a><a href="#">De Rij<span>3</span></a><a href="#">Dossiers</a><a href="#">Lezingen</a><a href="#">Keynotes</a>
+<div class="kop" data-k="ov">Overigen ▾</div><div class="sub" id="ov"><a href="#">Stack<span>9</span></a><a href="#">Trading</a><a href="#">Marketing</a><a href="#">SEO</a><a href="#">Ventures</a></div>
 <div class="kop">Kennisbank ▸</div><div class="kop">Beheer ▸</div>
 </nav>
 <main>
@@ -84,10 +84,10 @@ main{min-width:0}
  </div>
 </div>
 <div class="lijst" id="lijst">
- <div class="dag"><h2>Vrijdag 21 november</h2><div class="balk"><i></i></div><div class="tel">452 open · 812 behandeld van 1.264</div><span class="hint">bundels: klik om te openen · ↑↓ kiezen · 1–6 acties · ? sneltoetsen</span></div>
+ <div class="dag"><h2>Vrijdag 21 november</h2><div class="balk"><i></i></div><div class="tel">452 open · 812 behandeld van 1.264</div><span class="hint">verhalen: klik om te openen · ↑↓ kiezen · 1–6 acties · ? sneltoetsen</span></div>
  <div id="items"></div>
  <button class="inklap" data-x="laag">▸ Lage scores · 19 items</button><div class="extra" id="laag"></div>
- <div class="dag"><h2>Donderdag 20 november</h2><div class="tel">38 open</div></div>
+ <div class="dag"><h2>Donderdag 20 november</h2><div class="tel">38 open</div></div><div class="ghost">↳ 1 bericht over "Banken zetten AI-agents in…" staat in het verhaal bij vrijdag</div>
  <button class="inklap">▸ 38 open items tonen</button>
 </div>
 <div class="lijst kaarten" id="kaarten"><div class="info">38 vondsten staan op een kaart · 414 staan erbuiten (die zie je in Lijst)</div><div id="kitems"></div></div>
@@ -116,9 +116,9 @@ d.innerHTML=`<div><div class="t">${t}</div><div class="m"><a href="#" class="bn"
 <div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>`;return d}
 I.forEach((it,i)=>el.appendChild(rij(it,i)));
 const B=document.createElement("div");B.className="rij bundel";B.tabIndex=0;
-B.innerHTML='<div style="cursor:pointer" class="bk"><div class="t">Banken zetten AI-agents in voor kredietbeslissingen <span class="n">4 berichten</span></div><div class="m">Financial Times, Reuters, @account-4, De Tijd AI · 07:10–09:40<span class="lab">AI-first organisatie</span><span class="lab">Finance</span></div></div><div class="acts"><button title="Ster (1)">★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';
+B.innerHTML='<div style="cursor:pointer" class="bk"><div class="t">Banken zetten AI-agents in voor kredietbeslissingen <span class="n">verhaal · 4 berichten · 2 nieuw</span></div><div class="m">loopt sinds wo 19 nov · Financial Times, Reuters, @account-4, De Tijd AI<span class="lab">AI-first organisatie</span><span class="lab">Finance</span></div></div><div class="acts"><button title="Ster (1)">★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';
 const K=document.createElement("div");K.className="kind";
-[["Banken zetten AI-agents in voor kredietbeoordeling","Reuters","09:40"],["ECB waarschuwt voor modelrisico bij AI-kredietbeslissingen","De Tijd AI","08:15"],["Draad: wat agents in banken nu al doen","@account-4","07:52"],["Kredietbank automatiseert 60% van mkb-aanvragen","Financial Times","07:10"]].forEach(([tt,b,u])=>{const d=document.createElement("div");d.className="rij";d.innerHTML='<div><div class="t">'+tt+'</div><div class="m"><a href="#" class="bn">'+b+'</a> · '+u+'</div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';K.appendChild(d)});
+[["● Banken zetten AI-agents in voor kredietbeoordeling","Reuters","vr 09:40 · nieuw"],["● ECB waarschuwt voor modelrisico bij AI-kredietbeslissingen","De Tijd AI","vr 08:15 · nieuw"],["Draad: wat agents in banken nu al doen","@account-4","do 20 nov 17:52"],["Kredietbank automatiseert 60% van mkb-aanvragen","Financial Times","wo 19 nov 11:10"]].forEach(([tt,b,u])=>{const d=document.createElement("div");d.className="rij";d.innerHTML='<div><div class="t">'+tt+'</div><div class="m"><a href="#" class="bn">'+b+'</a> · '+u+'</div></div><div class="acts"><button>★ Ster</button><button>Later</button><button>Dossier</button><button class="rj">Rij</button><button>Uitwerken</button><button class="weg">Weg</button></div><div class="opm"><input placeholder="Opmerking voor De Rij (optioneel)"><button class="f stuur">Naar De Rij</button></div>';K.appendChild(d)});
 el.insertBefore(K,el.children[2]);el.insertBefore(B,K);
 B.querySelector(".bk").addEventListener("click",()=>{B.classList.toggle("open");K.classList.toggle("open")});
 
