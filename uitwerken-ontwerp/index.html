@@ -50,6 +50,10 @@ h1{font-size:1.6rem;line-height:1.25;margin:0 0 6px}
 .grens div{background:var(--vlak);border:1px solid var(--lijn);border-radius:8px;padding:10px 12px;font-size:15px}
 .grens strong{display:block;font-size:13px;color:var(--zacht);margin-bottom:4px}
 .bronnen li{font-size:15px}.weging{font-size:12px;font-weight:600;padding:2px 6px;border-radius:5px;background:var(--chip);margin-right:6px}
+.feedback{margin:24px 0 0;padding:16px;border:1px solid var(--lijn);border-radius:10px;background:var(--vlak);max-width:70ch}
+.feedback label{display:block;font-weight:600;margin:0 0 6px}.feedback textarea{width:100%;min-height:72px;font:inherit;padding:10px;border:1px solid var(--lijn);border-radius:8px;background:var(--vlak2);color:var(--inkt)}
+.feedback .rij{display:flex;justify-content:flex-end;margin-top:10px}.versie{font-size:14px;background:var(--accent-zacht);border-radius:8px;padding:8px 12px;margin:0 0 14px}
+.versie a{color:var(--accent)}
 @media (max-width:640px){.grens{grid-template-columns:minmax(0,1fr)}}
 </style></head><body><div class="pagina">
 
@@ -93,19 +97,20 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
     <div class="grens"><div><strong>Staat vast</strong>De aankondiging, in een persbericht.</div><div><strong>Interpretatie</strong>Dat dit past in een bredere terugkeer van chipproductie.</div><div><strong>Open vragen</strong>Komt er subsidie? Wanneer start de bouw?</div></div>
     <h4>Bronnen</h4>
     <ul class="bronnen"><li><span class="weging">Primair</span>Persbericht van het bedrijf, 20 nov</li><li><span class="weging">Secundair</span>Twee nieuwsberichten die het persbericht herhalen</li></ul>
+    <div class="feedback"><label for="fb-a">Wat moet er anders?</label><textarea id="fb-a" placeholder="Bijvoorbeeld: minder achtergrond, meer over de gevolgen voor werkgevers."></textarea><div class="rij"><button class="knop primair">Opnieuw uitwerken</button></div></div>
   </div></details></div>
 
   <div class="item">
     <div>
       <h3>Hoe een verzekeraar klachten 40% sneller afhandelt met een AI-assistent</h3>
-      <div class="chips"><span class="chip">Tekst</span><span class="chip">Dossiers</span><span class="stand klaar">Klaar</span></div>
-      <p class="meta">Praktijkvoorbeeld · uit je dossier Werk en AI · 19 nov · klaar om 12:20 · 6 bronnen</p>
+      <div class="chips"><span class="chip">Tekst</span><span class="chip">Dossiers</span><span class="stand bezig">Bezig (versie 2)</span></div>
+      <p class="meta">Praktijkvoorbeeld · uit je dossier Werk en AI · versie 2 loopt sinds 14:12 met jouw opmerking: "Wat kost het per brief?" · versie 1 staat hieronder</p>
     </div>
     <div class="acties"><button class="knop">Ongedaan</button></div>
   </div>
   <div class="uitwerking"><details><summary>Uitwerking</summary>
   <div class="doc">
-    <div class="kopregel"><span>Leestijd 4 min</span></div>
+    <div class="kopregel"><span>Versie 1 · leestijd 4 min</span></div>
     <h4>Kern</h4>
     <p>Een middelgrote verzekeraar laat een AI-assistent klachtbrieven samenvatten en een conceptantwoord klaarzetten; een medewerker controleert en verstuurt. Het is een van de eerste voorbeelden waarbij het resultaat extern is gemeten. Voor leiders laat het zien dat de winst zit in het herontwerp van het werk, niet in de tool.</p>
     <h4>Context</h4>
@@ -121,18 +126,20 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
     <ul><li>Doorlooptijd −40% over vier maanden. <span class="bron">Voorbeeldbron: jaarverslag van een toezichthouder, 2026</span></li></ul>
     <h4>Bronnen</h4>
     <ul class="bronnen"><li><span class="weging">Primair</span>Jaarverslag van de toezichthouder</li><li><span class="weging">Primair</span>Interview met het hoofd klantenservice</li><li><span class="weging">Secundair</span>Vier artikelen in vakmedia</li></ul>
+    <p class="leeg">Versie 2 wordt uitgewerkt met je opmerking. Versie 1 blijft bewaard.</p>
   </div></details></div>
 
   <div class="item">
     <div>
       <h3>Gemeenten die vergunningen met AI afhandelen: sneller, maar wie is verantwoordelijk?</h3>
       <div class="chips"><span class="chip">Tekst</span><span class="chip">★ Ster</span><span class="stand klaar">Klaar</span></div>
-      <p class="meta">Onderzoek en standpunt · uit je sterren · 18 nov · klaar om 11:40 · 12 bronnen</p>
+      <p class="meta">Onderzoek en standpunt · uit je sterren · versie 2 klaar om 13:50 · 12 bronnen</p>
     </div>
     <div class="acties"><button class="knop">Ongedaan</button></div>
   </div>
   <div class="uitwerking"><details open><summary>Uitwerking</summary>
   <div class="doc">
+    <div class="versie">Versie 2 · jouw opmerking: "Minder over Scandinavië, meer over wie aansprakelijk is." · <a href="#">versie 1 bekijken</a></div>
     <div class="kopregel"><span>Leestijd 9 min</span><span class="label podium">Podiumgeschikt</span></div>
     <div class="waarschuwing">Let op: het cijfer over 4 op de 10 gemeenten komt uit een enquête met een lage respons; het is een indicatie, geen meting.</div>
     <h4>Kern</h4>
@@ -152,6 +159,7 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
     <ul><li><strong>Spanningsveld:</strong> hoe sneller het systeem, hoe minder de mens nog echt kijkt.</li><li><strong>Analogie:</strong> de automatische piloot. Piloten vliegen veiliger, maar grijpen slechter in als het misgaat.</li><li><strong>Zaalvraag:</strong> "Welk besluit in uw organisatie wordt al door een systeem voorbereid zonder dat iemand het zo noemt?"</li></ul>
     <h4>Bronnen</h4>
     <ul class="bronnen"><li><span class="weging">Primair</span>Evaluatierapport van de gemeente</li><li><span class="weging">Primair</span>Interview met een gemeentesecretaris</li><li><span class="weging">Opinie</span>Opiniestuk van een hoogleraar bestuursrecht</li><li><span class="weging">Indicatie</span>Enquête koepelorganisatie (lage respons)</li><li><span class="weging">Secundair</span>Acht nieuwsartikelen</li></ul>
+    <div class="feedback"><label for="fb-c">Wat moet er anders?</label><textarea id="fb-c" placeholder="Bijvoorbeeld: minder achtergrond, meer over de gevolgen voor werkgevers."></textarea><div class="rij"><button class="knop primair">Opnieuw uitwerken</button></div></div>
   </div></details></div>
 
   <div class="item">
@@ -166,5 +174,5 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
 
 </div>
 
-<p class="voorbeeld" style="margin-top:28px">Opbouw van elke uitwerking: altijd een kern (wat speelt er, waarom nu, wat betekent het voor leiders), onderzoek waarvan de koppen de bevindingen volgen, een bewijsgrens en de bronnen met weging. Quotes en cijfers alleen als ze letterlijk in de bronnen staan; podiummateriaal alleen als het stuk podiumgeschikt is. Bij dun materiaal: eerst aanvullend zoeken, anders kort met het label "dun bewijs". Botst de bouwsteen met de bronvorm, dan staat er bovenaan een waarschuwing.</p>
+<p class="voorbeeld" style="margin-top:28px">Opbouw van elke uitwerking: altijd een kern (wat speelt er, waarom nu, wat betekent het voor leiders), onderzoek waarvan de koppen de bevindingen volgen, een bewijsgrens en de bronnen met weging. Quotes en cijfers alleen als ze letterlijk in de bronnen staan; podiummateriaal alleen als het stuk podiumgeschikt is. Bij dun materiaal: eerst aanvullend zoeken, anders kort met het label "dun bewijs". Botst de bouwsteen met de bronvorm, dan staat er bovenaan een waarschuwing. Onder elke klare uitwerking: "Wat moet er anders?" met Opnieuw uitwerken; je opmerking gaat letterlijk mee, de vorige versie blijft bewaard.</p>
 </div></body></html>
