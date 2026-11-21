@@ -16,7 +16,7 @@ h1{font-size:1.6rem;line-height:1.25;margin:0 0 6px}
 .groepkop h2{font-size:1.25rem;margin:0}.groepkop .aantal{color:var(--zacht);font-size:15px}
 .kaart{background:var(--vlak);border:1px solid var(--lijn);border-radius:12px;overflow:hidden}
 .item{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:20px 24px}
-.item + .item, .uitwerking + .item{border-top:1px solid var(--lijn)}
+.item + .item, .uitwerking + .item, .tri + .tri{border-top:1px solid var(--lijn)}
 .item h3{font-size:1.125rem;line-height:1.35;margin:0 0 8px;font-weight:700;max-width:70ch}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;min-width:0}
 .chip{font-size:13px;line-height:1;padding:5px 9px;border-radius:999px;background:var(--chip);color:var(--inkt);white-space:nowrap}
@@ -58,6 +58,11 @@ h1{font-size:1.6rem;line-height:1.25;margin:0 0 6px}
 .tabs button[aria-selected="true"]{background:var(--vlak);border-color:var(--lijn);color:var(--inkt);font-weight:600;margin-bottom:-1px}
 .paneel[hidden]{display:none}.transcript p{margin:0 0 12px}.tc{font-size:13px;font-variant-numeric:tabular-nums;color:var(--accent);margin-right:8px;text-decoration:none}
 .spreker{font-weight:600}.bronlink{font-size:14px;margin:0 0 12px}.bronlink a{color:var(--accent)}
+.groen{background:var(--accent-zacht) !important;border-left:4px solid var(--accent)}
+.knoppen5{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}.knoppen5 .knop{padding:6px 10px;font-size:13px}
+.tag-opnieuw{font-size:13px;line-height:1;padding:5px 9px;border-radius:999px;font-weight:700;border:1px dashed var(--bezig);color:var(--bezig);background:var(--bezig-z);white-space:nowrap}
+.sorteer{display:flex;gap:6px;align-items:center;margin:0 0 10px;font-size:14px;color:var(--zacht)}.sorteer button{font:inherit;font-size:13px;padding:5px 10px;border:1px solid var(--lijn);border-radius:999px;background:var(--vlak);color:var(--inkt);cursor:pointer}
+.sorteer button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--vlak)}
 @media (max-width:640px){.grens{grid-template-columns:minmax(0,1fr)}}
 </style></head><body><div class="pagina">
 
@@ -66,7 +71,20 @@ Titels, citaten, cijfers en bronnen zijn <strong>verzonnen voorbeeldinhoud</stro
 een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek met podiummateriaal. Elk onderdeel verschijnt alleen als er materiaal voor is.</p>
 <div class="thema"><button onclick="document.documentElement.dataset.theme='light'">Licht</button><button onclick="document.documentElement.dataset.theme='dark'">Donker</button><button onclick="delete document.documentElement.dataset.theme">Volg systeem</button></div>
 
-<h1>Uitwerken</h1>
+<h1>Zo werkt Uitwerken in Triage</h1>
+<p class="meta">Nieuw (OW-93665/66/67): een uitgewerkt item blijft staan waar het vandaan komt, hier in Triage 1, en de uitwerking klapt daar open. Het is helemaal groen en heeft alle knoppen behalve Uitwerken. Stuur je het naar Ster, Later, Dossier of Rij, dan verdwijnt het uit Uitwerken; het losse Uitwerken-scherm blijft alleen als overzicht met een teller.</p>
+<div class="groepkop"><h2>Triage 1 · vandaag</h2><span class="aantal">— 4 items</span></div>
+<div class="sorteer" role="group" aria-label="Volgorde"><span>Volgorde:</span><button aria-pressed="false" onclick="sorteer(this,'uit')">Uitgewerkt eerst</button><button aria-pressed="false" onclick="sorteer(this,'niet')">Niet uitgewerkt eerst</button><button aria-pressed="true" onclick="sorteer(this,'standaard')">Standaard</button></div>
+<div class="kaart" id="triage-lijst">
+  <div class="tri" data-uit="0" data-volg="1"><div class="item"><div><h3>Robotarmen in de bouw: eerste aannemer zet ze in voor metselwerk</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span></div><p class="meta">Nieuwsbericht · 21 nov · nog niet uitgewerkt</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Uitwerken</button><button class="knop">Weg</button></div></div></div>
+  <div class="tri" data-uit="0" data-volg="2"><div class="item"><div><h3>Ziekenhuizen zetten AI in voor triage op de spoedeisende hulp</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="stand bezig">Wordt uitgewerkt</span></div><p class="meta">Onderzoek · 20 nov · uitwerking loopt sinds 14:05</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div></div>
+  <div class="tri" data-uit="1" data-volg="3"><div class="item groen"><div><h3>Hoe een verzekeraar klachten 40% sneller afhandelt met een AI-assistent</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="stand klaar">Uitgewerkt</span></div><p class="meta">Praktijkvoorbeeld · 19 nov · leestijd 4 min · 6 bronnen</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div>
+    <div class="uitwerking groen"><details><summary>Uitwerking</summary><p class="leeg">Hier klapt de uitwerking open, met de tabs Samenvatting en Volledige tekst en het veld "Wat moet er anders?", zoals hieronder.</p></details></div></div>
+  <div class="tri" data-uit="1" data-volg="4"><div class="item groen"><div><h3>Gemeenten die vergunningen met AI afhandelen: sneller, maar wie is verantwoordelijk?</h3><div class="chips"><span class="chip">Tekst</span><span class="chip">Triage 1</span><span class="tag-opnieuw">Wordt opnieuw uitgewerkt</span></div><p class="meta">Versie 2 loopt met jouw opmerking: "Minder over Scandinavië, meer over wie aansprakelijk is." · versie 1 blijft leesbaar</p></div><div class="acties knoppen5"><button class="knop">★ Ster</button><button class="knop">Later</button><button class="knop">Dossier</button><button class="knop">Rij</button><button class="knop">Weg</button></div></div></div>
+</div>
+<p class="voorbeeld" style="margin:10px 0 32px">Groen = uitgewerkt. Een item dat opnieuw wordt uitgewerkt, krijgt de tag "Wordt opnieuw uitgewerkt" en is daarna weer groen met "versie 2".</p>
+<h1 style="margin-top:8px">Overzicht Uitwerken (alleen teller en overzicht)</h1>
+<h2 style="font-size:1.1rem;margin:0 0 6px;color:var(--zacht)">Eerdere opzet van het losse scherm, ter vergelijking</h2>
 <p class="meta">Items die je naar uitwerken stuurde. De opbouw en lengte van elke uitwerking volgen het materiaal: geen vaste koppen, geen lege onderdelen.</p>
 
 <div class="groepkop"><h2>Tekst</h2><span class="aantal">— 6 items</span></div>
@@ -231,4 +249,6 @@ een kort nieuwsfeit met dun bewijs, een praktijkvoorbeeld, en een rijk onderzoek
 
 <p class="voorbeeld" style="margin-top:28px">Opbouw van elke uitwerking: altijd een kern (wat speelt er, waarom nu, wat betekent het voor leiders), onderzoek waarvan de koppen de bevindingen volgen, een bewijsgrens en de bronnen met weging. Quotes en cijfers alleen als ze letterlijk in de bronnen staan; podiummateriaal alleen als het stuk podiumgeschikt is. Bij dun materiaal: eerst aanvullend zoeken, anders kort met het label "dun bewijs". Botst de bouwsteen met de bronvorm, dan staat er bovenaan een waarschuwing. Elke uitwerking heeft twee tabs: Samenvatting (de uitwerking) en Volledige tekst (de bron zelf, opgemaakt maar niet herschreven: een transcript met sprekers en tijdcodes, of de leesweergave van een artikel). Onder de samenvatting: "Wat moet er anders?" met Opnieuw uitwerken; je opmerking gaat letterlijk mee, de vorige versie blijft bewaard.</p>
 <script>function tab(b,id){var w=b.closest('.uitwerking');w.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});w.querySelectorAll('.paneel').forEach(function(p){p.hidden=p.id!==id})}</script>
+<script>function sorteer(b,w){var l=document.getElementById('triage-lijst');b.parentNode.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+var it=[].slice.call(l.querySelectorAll('.tri'));it.sort(function(a,c){if(w==='uit')return (c.dataset.uit-a.dataset.uit)||(a.dataset.volg-c.dataset.volg);if(w==='niet')return (a.dataset.uit-c.dataset.uit)||(a.dataset.volg-c.dataset.volg);return a.dataset.volg-c.dataset.volg});it.forEach(function(x){l.appendChild(x)})}</script>
 </div></body></html>
