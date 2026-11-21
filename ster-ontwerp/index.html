@@ -1,0 +1,97 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Ster als wachtrij (ontwerp)</title>
+<style>
+:root{--grond:#F3F5F1;--vlak:#FFFFFF;--vlak2:#F8FAF7;--inkt:#15201B;--zacht:#5D6B64;--lijn:#DCE3DC;--accent:#1F5F4A;--accent-zacht:#E2EFE8;
+--geel:#8A6A10;--geel-zacht:#FBF1D6;--laat:#A4482A;--laat-zacht:#F8E7DF;--letter:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--schaduw:0 1px 2px rgba(21,32,27,.06),0 6px 24px rgba(21,32,27,.06)}
+@media (prefers-color-scheme:dark){:root{--grond:#0F1513;--vlak:#17201C;--vlak2:#1C2722;--inkt:#E6ECE8;--zacht:#9AABA2;--lijn:#2A3832;
+--accent:#6CC4A1;--accent-zacht:#1D3A2F;--geel:#E3C46A;--geel-zacht:#352B10;--laat:#E59A7B;--laat-zacht:#3A2219}}
+*{box-sizing:border-box}body{margin:0;background:var(--grond);color:var(--inkt);font:15px/1.55 var(--letter)}
+main{max-width:900px;margin:0 auto;padding:24px 16px 64px}
+header.vel h1{font-size:22px;margin:0 0 4px}header.vel p{color:var(--zacht);margin:0 0 6px}
+.kaart{background:var(--vlak);border:1px solid var(--lijn);border-radius:10px;box-shadow:var(--schaduw);padding:18px 20px;margin:18px 0}
+.label{font:12px var(--mono);color:var(--zacht);text-transform:uppercase;letter-spacing:.04em}
+h2{font-size:19px;margin:4px 0 8px}h3{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin:14px 0 6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.tab{border:1px solid var(--lijn);border-radius:999px;padding:4px 12px;background:var(--vlak);font-size:14px}
+.tab.aan{border-color:var(--accent);background:var(--accent-zacht);font-weight:600}
+.herstel{background:var(--laat-zacht);border:1px solid var(--laat);border-radius:8px;padding:10px 14px;font-size:14px}
+.groep{border-top:1px solid var(--lijn);margin-top:14px;padding-top:10px}.groepkop{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline}
+.groepkop strong{font-size:16px}.tel{font:13px var(--mono);color:var(--zacht)}
+.dossier{margin:8px 0 4px 10px;padding-left:10px;border-left:3px solid var(--accent-zacht)}.dossier .dk{font-size:13px;color:var(--zacht);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.item{background:var(--vlak2);border:1px solid var(--lijn);border-radius:8px;padding:10px 12px;margin:8px 0}
+.item .t{font-weight:600}.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.chip{font-size:12px;border-radius:4px;padding:1px 7px;border:1px solid var(--lijn);background:var(--vlak)}
+.chip.onb{color:var(--zacht);font-style:italic}.chip.rijp{border-color:var(--accent);color:var(--accent)}.chip.aanv{border-color:var(--geel);color:var(--geel)}
+.chip.oud{border-color:var(--laat);color:var(--laat)}.chip.dos{background:var(--accent-zacht)}.chip.geendos{background:var(--laat-zacht)}
+.knoppen{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.k{font:inherit;font-size:13px;border:1px solid var(--lijn);background:var(--vlak);color:var(--inkt);border-radius:6px;padding:3px 9px}
+.k.hoofd{border-color:var(--accent);color:var(--accent);font-weight:600}
+.zacht{color:var(--zacht);font-size:13px}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid var(--lijn);padding:5px 6px;text-align:left;vertical-align:top}
+th{color:var(--zacht);font-weight:600}details{margin-top:12px}summary{cursor:pointer;font-weight:600;color:var(--accent)}
+.kort{background:var(--accent-zacht);border-radius:8px;padding:10px 14px}.kort ol{margin:0;padding-left:20px}
+@media (max-width:600px){.kaart{padding:14px 12px}.dossier{margin-left:0}}
+</style></head><body><main>
+<header class="vel"><h1>★ Ster als wachtrij richting De Rij</h1>
+<p>Ontwerpvoorstel, niet gebouwd (21-11-2026). Richard: “een soort van verzamelde wachtrij, om het later naar RIJ te sturen. Sommigen wel, sommigen niet.”
+De voorbeelditems hieronder zijn verzonnen; de aantallen zijn de echte meting van vandaag.</p></header>
+
+<div class="kaart"><div class="label">Zo ziet het bord eruit</div>
+<div class="tabs"><span class="tab aan">Te kiezen · 68</span><span class="tab">Later · 9</span><span class="tab">Naar Rij gestuurd · 1</span><span class="tab">Alles als één lijst</span></div>
+<div class="herstel"><strong>Dossierregel:</strong> alles wat naar Ster, Later, Uitwerken of Rij gaat, gaat ook naar het dossier. Een item zonder
+dossierkoppeling krijgt hier een melding en een knop <button class="k">Dossier koppelen →</button> (gemeten 21-11: de items van alle 55 rij-sterren staan al in het dossier).</div>
+
+<div class="groep"><div class="groepkop"><strong>Leiderschap &amp; werk</strong><span class="tel">9 open · 3 bespreekbaar · 2 lang open</span></div>
+ <div class="dossier"><div class="dk"><span>Dossier: Teams en AI-agents (voorbeeld)</span><button class="k hoofd">Dossier naar Rij (2 items) →</button></div>
+  <div class="item"><div class="t">Fictieve bank laat agents 30% van de back-office doen</div>
+   <div class="chips"><span class="chip">Onderwerp: Leiderschap &amp; werk</span><span class="chip">Bouwsteen: case</span><span class="chip">Bronvorm: artikel + onderzoek</span><span class="chip">Podiumgeschikt: ja</span>
+   <span class="chip rijp">Bespreekbaar · 2 onafhankelijke bronlijnen</span><span class="chip dos">Dossier gekoppeld</span><span class="chip">13 dagen</span></div>
+   <div class="knoppen"><button class="k hoofd">Naar Rij</button><button class="k">Uitwerken</button><button class="k">Later…</button><button class="k">Ster uit</button><button class="k">Dossier</button></div></div>
+  <div class="item"><div class="t">Verzonnen onderzoek: managers vertrouwen agents minder dan medewerkers</div>
+   <div class="chips"><span class="chip">Onderwerp: Leiderschap &amp; werk</span><span class="chip onb">Bouwsteen: nog te beoordelen</span><span class="chip">Bronvorm: onderzoek</span><span class="chip onb">Podiumgeschikt: nog te beoordelen</span>
+   <span class="chip rijp">Uitwerking klaar</span><span class="chip dos">Dossier gekoppeld</span><span class="chip oud">29 dagen · lang open</span></div>
+   <div class="knoppen"><button class="k hoofd">Naar Rij</button><button class="k">Uitwerken</button><button class="k">Later…</button><button class="k">Ster uit</button><button class="k">Dossier</button></div></div></div>
+ <div class="item"><div class="t">Voorbeeld: vakbond vraagt inspraak bij AI-roosters</div>
+  <div class="chips"><span class="chip">Onderwerp: Leiderschap &amp; werk</span><span class="chip onb">Bouwsteen: nog te beoordelen</span><span class="chip onb">Bronvorm: nog te beoordelen</span><span class="chip onb">Podiumgeschikt: nog te beoordelen</span>
+  <span class="chip aanv">Aanvullen · 1 bron, geen dossier</span><span class="chip geendos">Dossier ontbreekt</span><span class="chip oud">15 dagen · opnieuw bekijken</span></div>
+  <div class="knoppen"><button class="k" disabled title="Eerst een dossier koppelen">Naar Rij</button><button class="k">Dossier koppelen</button><button class="k">Uitwerken</button><button class="k">Later…</button><button class="k">Ster uit</button></div></div>
+</div>
+<div class="groep"><div class="groepkop"><strong>AI · beleid, veiligheid &amp; ethiek</strong><span class="tel">8 open · 1 bespreekbaar</span></div><p class="zacht">… (ingeklapt)</p></div>
+<div class="groep"><div class="groepkop"><strong>Nog in te delen</strong><span class="tel">items zonder onderwerp</span></div><p class="zacht">… (ingeklapt)</p></div>
+<p class="zacht">Binnen een onderwerp: eerst dossiers met iets bespreekbaars, dan losse items; binnen elk: oudste ster eerst. Filters op de vier kenmerken bovenaan (niet getekend).</p>
+</div>
+
+<div class="kaart"><div class="label">Regels van het voorstel</div>
+<h3>Rijpheid (uitleg, geen score; Richard beslist)</h3>
+<table><tr><th>Signaal</th><th>Wanneer</th></tr>
+<tr><td>Aanvullen</td><td>dossier ontbreekt, of kern/invalshoek of onderbouwing nog niet beoordeeld</td></tr>
+<tr><td>Bespreekbaar</td><td>dossier gekoppeld en minstens 2 onafhankelijke bronlijnen of 1 beoordeelde primaire bron (vijf artikelen over één persbericht = één lijn)</td></tr>
+<tr><td>Uitwerking klaar</td><td>bovendien een uitwerking die als klaar is gemarkeerd</td></tr></table>
+<h3>Tijd (nooit stil weg)</h3>
+<ul><li>Na 2 weken: <em>opnieuw bekijken</em>. Na 4 weken: <em>lang open</em> en in een wekelijkse oudste-eerst-lijst.</li>
+<li>Later: Richard kiest een datum (standaard 2 weken); daarna terug in Te kiezen, met geschiedenis. Later telt als open.</li>
+<li>Geen timer verplaatst, ontstert of verwijdert iets; alleen Richards besluiten verlagen het aantal open items.</li></ul>
+<h3>Acties</h3>
+<ul><li>Per item: Naar Rij (vraagt een gekoppeld dossier), Uitwerken, Later met datum, Ster uit (met Ongedaan), Dossier.</li>
+<li>Per dossiergroep: <strong>Dossier naar Rij</strong>, met de betrokken items zichtbaar; geen knop “heel onderwerp naar Rij”.</li>
+<li>Kenmerken die er nog niet zijn tonen “nog te beoordelen”, nooit leeg.</li></ul>
+</div>
+
+<div class="kaart"><div class="label">Meting, twee ontwerpers en advies</div>
+<details open><summary>Meting 21-11 (studio2, alleen gelezen)</summary>
+<ul><li>55 rij-sterren + 13 podcast-sterren; 9 Later. Leeftijd van de rij-sterren 8 tot 14 dagen (mediaan 13).</li>
+<li>Onderwerp verdeeld: Leiderschap &amp; werk 9, AI-beleid 8, agents &amp; producten 7, onderzoek 6, Overig 6, modellen &amp; labs 5, …</li>
+<li>Bronnen per rij: ≥ 5: 24 · 4: 10 · 3: 9 · 2: 7 · 1: 5.</li>
+<li>Naar De Rij: 1 van 55. In het dossier: alle 55 (218 van 218 items; gecorrigeerd, een eerste meting vergeleek rij-id's met item-id's). Bouwsteen, Bronvorm en Podiumgeschikt bestaan nog niet als veld.</li></ul></details>
+<details open><summary>Eens, oneens (Astra en een tweede onafhankelijke Codex-ontwerper)</summary>
+<table><tr><th>Punt</th><th>Astra</th><th>Tweede ontwerper</th></tr>
+<tr><td>Hoofdindeling</td><td colspan="2">Eens: per onderwerp, met “Nog in te delen”.</td></tr>
+<tr><td>Dossier als subgroep</td><td>Nee, zolang koppelingen ontbreken (op de foute meting)</td><td>Ja, binnen het onderwerp</td></tr>
+<tr><td>Rijpheid</td><td>3 relevante bronnen als richtlijn</td><td>2 onafhankelijke bronlijnen of 1 primaire bron</td></tr>
+<tr><td>Tijd</td><td colspan="2">Eens: 2 weken signaal, 4 weken herbeoordelingslijst, niets automatisch.</td></tr>
+<tr><td>Groepsacties</td><td>Alleen selecteren en aanvullen</td><td>Ook koppelen en Later per selectie</td></tr>
+<tr><td>Hele groep naar Rij</td><td colspan="2">Eens: nee.</td></tr></table>
+<p class="zacht">Gemini kon niet meedoen: de Gemini-CLI wordt voor dit account niet meer ondersteund. De tweede stem is daarom een ander Codex-account.</p></details>
+<div class="kort"><strong>Advies</strong><ol>
+<li>De dossierregel is voor de rij-sterren al gedekt (alle items in het dossier); toon de dossierstatus per item en controleer podcast-sterren en Later apart.</li>
+<li>Indeling per onderwerp, daarbinnen per dossier (de koppelingen zijn er); rijpheid als uitleg met de drempel van de tweede ontwerper (bronlijnen, niet artikelen).</li>
+<li>“Naar Rij” per item en per dossier, nooit per onderwerp; tijd maakt achterstand zichtbaar (2 en 4 weken), nooit stil weg.</li></ol></div>
+</div>
+</main></body></html>
