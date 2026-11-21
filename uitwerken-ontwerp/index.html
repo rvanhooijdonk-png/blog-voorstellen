@@ -64,6 +64,10 @@ h1{font-size:1.6rem;line-height:1.25;margin:0 0 6px}
 .sorteer{display:flex;gap:6px;align-items:center;margin:0 0 10px;font-size:14px;color:var(--zacht)}.sorteer button{font:inherit;font-size:13px;padding:5px 10px;border:1px solid var(--lijn);border-radius:999px;background:var(--vlak);color:var(--inkt);cursor:pointer}
 .sorteer button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--vlak)}
 @media (max-width:640px){.grens{grid-template-columns:minmax(0,1fr)}}
+.item-wrap{border-top:0;margin:0 0 14px;border:1px solid var(--lijn);border-radius:10px;overflow:hidden;background:var(--vlak)}
+.item-wrap:has(.groen){border-color:var(--accent);border-left:6px solid var(--accent)}
+.item.groen,.uitwerking.groen{border-left:0}
+.item-wrap .uitwerking{border-top:1px dashed var(--lijn)}
 </style></head><body><div class="pagina">
 
 <p class="toelichting">Ontwerp voor Richard (21-11-2026), na je keuze "uitwerking adaptief ja" (OW-93524). Statische voorbeeldpagina, nog geen code in de keten.
