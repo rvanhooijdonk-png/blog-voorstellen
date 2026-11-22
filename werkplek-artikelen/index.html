@@ -26,12 +26,12 @@ iframe{width:100%;height:calc(100vh - 150px);min-height:520px;border:1px solid v
 
 <section class="vis toon" id="v-overzicht">
 <h1>Werkplek Artikelen</h1>
-<p class="sub">Za 21-11-2026 · al je artikelen in de maak · klik een artikel om er direct in te werken</p>
+<p class="sub">Zo 22-11-2026 · al je artikelen in de maak · klik een artikel om er direct in te werken</p>
 <div class="uitleg"><b>Wat doe je hier?</b> Klik op een artikel. Je komt meteen in de stap waar het op jou wacht, met de <b>echte inhoud</b> (alle 30 items of de outline). Daar kies je en geef je commentaar zoals je gewend bent, en plak je de regel onderaan bij TOEZICHT. Stappen: <b>1 Briefing</b> (jouw vraag) → <b>2 Onderzoek</b> (kiezen) → <b>3 Opzet</b> (outline) → <b>4 Schrijven</b> (pas na jouw akkoord op de opzet).<br><span class="dot"></span><b>Wacht op jou</b> · <span class="dot grijs"></span><b>Wordt gemaakt</b>: vraag je een nieuwe versie of nieuw onderzoek, dan blijft het artikel in dezelfde kolom met het label "Wordt gemaakt (v2)" tot de nieuwe versie klaar is. Geen aparte tab.</div>
 <div class="kolommen">
  <div class="kol"><h3>1 Briefing</h3><p class="leeg">Geen artikelen in deze stap.</p></div>
- <div class="kol"><h3>2 Onderzoek — kies items</h3><div id="k-onderzoek"></div></div>
- <div class="kol"><h3>3 Opzet — beoordeel outline</h3><div id="k-opzet"></div></div>
+ <div class="kol"><h3>2 Onderzoek: kies items</h3><div id="k-onderzoek"></div></div>
+ <div class="kol"><h3>3 Opzet: beoordeel outline</h3><div id="k-opzet"></div></div>
  <div class="kol"><h3>4 Schrijven</h3><p class="leeg">Nog niets. Schrijven start pas na jouw akkoord op de opzet.</p></div>
 </div>
 </section>
@@ -47,13 +47,20 @@ iframe{width:100%;height:calc(100vh - 150px);min-height:520px;border:1px solid v
 
 <script>
 const A=[
- {k:'trends',t:'AI-trends 2027',stap:'opzet',w:'Wacht op jou: beoordeel opzet v2 (titel kiezen, commentaar, algemene feedback)',vraag:'"De 10 meest belangrijke AI trends voor 2027" — eerst grondig onderzoek, top 30, dan kies ik er 10 uit. (21-11)',extra:'Jouw keuze: 1+2 samen, 5, 9, 10, 13, 14, 17, 22, 27, 28. Akkoord op invalshoek: één betoog met de regie-stelling.',onderzoek:'../ai-trends-2027/',opzet:'../ai-trends-2027/outline/'},
- {k:'kunnen',t:'Wat kunnen we in 2027 met AI?',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"Wat kunnen we in 2027 verwachten van AI? Wat kunnen we, wat we nu niet kunnen" — praktisch: wat kunnen agents en AI volgend jaar wat ze nu nog niet kunnen. (21-11)',extra:'Apart van de AI-trends (jouw besluit).',onderzoek:'../ai-kunnen-2027/'},
- {k:'fysiek',t:'AI verlaat het scherm',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"AI verlaat het scherm. 10 mooie voorbeelden physical AI in de toekomst — als futurist een bizar vooruitkijkje." (21-11)',extra:'',onderzoek:'../ai-fysiek/'},
+ {k:'trends',t:'AI-trends 2027',stap:'opzet',w:'Wacht op jou: beoordeel opzet v2 (titel kiezen, commentaar, algemene feedback)',vraag:'"De 10 meest belangrijke AI trends voor 2027": eerst grondig onderzoek, top 30, dan kies ik er 10 uit. (21-11)',extra:'Jouw keuze: 1+2 samen, 5, 9, 10, 13, 14, 17, 22, 27, 28. Akkoord op invalshoek: één betoog met de regie-stelling.',onderzoek:'../ai-trends-2027/',opzet:'../ai-trends-2027/outline/'},
+ {k:'kunnen',t:'Wat kunnen we in 2027 met AI?',stap:'onderzoek',w:'Wacht op jou: kies invalshoek (v2, zonder overlap met AI-trends)',vraag:'"Wat kunnen we in 2027 verwachten van AI? Wat kunnen we, wat we nu niet kunnen": praktisch: wat kunnen agents en AI volgend jaar wat ze nu nog niet kunnen. (21-11)',extra:'Apart van de AI-trends (jouw besluit).',onderzoek:'../ai-kunnen-2027-v2/'},
+ {k:'fysiek',t:'AI verlaat het scherm',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"AI verlaat het scherm. 10 mooie voorbeelden physical AI in de toekomst: als futurist een bizar vooruitkijkje." (21-11)',extra:'',onderzoek:'../ai-fysiek/'},
  {k:'wakker',t:'Je wordt wakker in 2030',stap:'onderzoek',w:'Wacht op jou: kies scènes uit 30',vraag:'"Je wordt wakker in 2030: hoe ziet een wereld er dan uit met AI?" (21-11)',extra:'',onderzoek:'../ai-wakker-2030/'},
  {k:'leiders',t:'AI en leiders in 2027',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"Wat is de impact van AI voor leiders in 2027?" (21-11)',extra:'',onderzoek:'../ai-leiders-2027/'},
- {k:'kinderen',t:'Wat leren we onze kinderen?',stap:'onderzoek',w:'Wacht op jou: kies 3-7 bouwstenen uit 30',vraag:'"Wat leren we onze kinderen nu, zodat ze klaar zijn voor de (AI-)wereld van morgen?" — geen top 10, maar een opgebouwd betoog over skills in relatie tot de nieuwe maatschappij; mag 5 onderwerpen zijn. (21-11)',extra:'',onderzoek:'../ai-kinderen/'},
- {k:'ideeen',t:'Verbazingwekkende artikelideeën',stap:'onderzoek',w:'Wacht op jou: kies ideeën uit 30',vraag:'"Kom met aanvullende suggesties voor verbazingwekkende artikelen (en dat hoeven geen opsommingen te zijn)." (21-11)',extra:'Elk gekozen idee wordt een eigen artikel met eigen briefing.',onderzoek:'../ai-ideeen/'}];
+ {k:'kinderen',t:'Wat leren we onze kinderen?',stap:'onderzoek',w:'Wacht op jou: kies 3-7 bouwstenen uit 30',vraag:'"Wat leren we onze kinderen nu, zodat ze klaar zijn voor de (AI-)wereld van morgen?": geen top 10, maar een opgebouwd betoog over skills in relatie tot de nieuwe maatschappij; mag 5 onderwerpen zijn. (21-11)',extra:'',onderzoek:'../ai-kinderen/'},
+ {k:'ideeen',t:'Verbazingwekkende artikelideeën',stap:'onderzoek',w:'Wacht op jou: kies ideeën uit 30',vraag:'"Kom met aanvullende suggesties voor verbazingwekkende artikelen (en dat hoeven geen opsommingen te zijn)." (21-11)',extra:'Elk gekozen idee wordt een eigen artikel met eigen briefing.',onderzoek:'../ai-ideeen/'},
+ {k:'wil',t:'AI en de menselijke wil',stap:'onderzoek',w:'Wacht op jou: kies invalshoek (+ Kiezen, Akkoord)',vraag:'ethiek: filosofen uitverkocht, technologie die zichzelf ontwikkelt (22-11)',extra:'Onderzoek met Opus, Codex en Gemini plus websearch; concurrentietoets en 8 invalshoeken.',onderzoek:'../ai-menselijke-wil/'},
+ {k:'stroom',t:'Stroom voor AI',stap:'onderzoek',w:'Wacht op jou: kies invalshoek (+ Kiezen, Akkoord)',vraag:'kerncentrales, smart grids, netcongestie (22-11)',extra:'Onderzoek met Opus, Codex en Gemini plus websearch; concurrentietoets en 8 invalshoeken.',onderzoek:'../ai-stroom/'},
+ {k:'oostwest',t:'Oost tegenover West: de robotstad',stap:'onderzoek',w:'Wacht op jou: kies invalshoek (+ Kiezen, Akkoord)',vraag:'Shenzhen-reportage; China maakt het werkend (robotica, zelfrijdend, drones) (22-11)',extra:'Onderzoek met Opus, Codex en Gemini plus websearch; concurrentietoets en 8 invalshoeken.',onderzoek:'../oost-west-technologie/'},
+ {k:'agents',t:'Agents 2030-2035',stap:'onderzoek',w:'Wacht op jou: kies invalshoek (+ Kiezen, Akkoord)',vraag:'futurist: verder dan volgend jaar; jij altijd in het midden (22-11)',extra:'Onderzoek met Opus, Codex en Gemini plus websearch; concurrentietoets en 8 invalshoeken.',onderzoek:'../agents-toekomst/'},
+ {k:'vrede',t:'Vrede door technologie',stap:'onderzoek',w:'Wacht op jou: kies invalshoek (+ Kiezen, Akkoord)',vraag:'oorlogen stoppen of voorkomen met technologie (22-11)',extra:'Onderzoek met Opus, Codex en Gemini plus websearch; concurrentietoets en 8 invalshoeken.',onderzoek:'../oorlog-stoppen-technologie/'},
+ {k:'macht',t:'De macht van AI-modellen',stap:'onderzoek',w:'Wacht op jou: kies invalshoek (+ Kiezen, Akkoord)',vraag:'brede macht; NL-voorbeelden (Kamerleden) naast internationale (22-11)',extra:'Onderzoek met Opus, Codex en Gemini plus websearch; concurrentietoets en 8 invalshoeken.',onderzoek:'../macht-ai-modellen/'},
+ {k:'politie',t:'De AI-politie',stap:'onderzoek',w:'Wacht op jou: kies invalshoek (+ Kiezen, Akkoord)',vraag:'vijf lagen: wetgeving, audits, monitoring, policing, veroordelingen (22-11)',extra:'Onderzoek met Opus, Codex en Gemini plus websearch; concurrentietoets en 8 invalshoeken.',onderzoek:'../ai-politie/'}];
 const ORDE=['briefing','onderzoek','opzet','schrijven'];let cur=null;
 function kaart(a){return '<div class="kaart" data-k="'+a.k+'"><div class="t">'+a.t+'</div><div class="s"><span class="dot'+(a.bezig?' grijs':'')+'"></span>'+a.w+'</div></div>';}
 document.getElementById('k-onderzoek').innerHTML=A.filter(a=>a.stap==='onderzoek').map(kaart).join('');
