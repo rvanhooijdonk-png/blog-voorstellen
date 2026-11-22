@@ -32,7 +32,7 @@ iframe{width:100%;height:calc(100vh - 150px);min-height:520px;border:1px solid v
  <div class="kol"><h3>1 Briefing</h3><p class="leeg">Geen artikelen in deze stap.</p></div>
  <div class="kol"><h3>2 Onderzoek: kies items</h3><div id="k-onderzoek"></div></div>
  <div class="kol"><h3>3 Opzet: beoordeel outline</h3><div id="k-opzet"></div></div>
- <div class="kol"><h3>4 Schrijven</h3><p class="leeg">Nog niets. Schrijven start pas na jouw akkoord op de opzet.</p></div>
+ <div class="kol"><h3>4 Schrijven</h3><div id="k-schrijven"></div></div>
 </div>
 </section>
 
@@ -47,7 +47,7 @@ iframe{width:100%;height:calc(100vh - 150px);min-height:520px;border:1px solid v
 
 <script>
 const A=[
- {k:'trends',t:'AI-trends 2027',stap:'opzet',w:'Wacht op jou: beoordeel opzet v2 (titel kiezen, commentaar, algemene feedback)',vraag:'"De 10 meest belangrijke AI trends voor 2027": eerst grondig onderzoek, top 30, dan kies ik er 10 uit. (21-11)',extra:'Jouw keuze: 1+2 samen, 5, 9, 10, 13, 14, 17, 22, 27, 28. Akkoord op invalshoek: één betoog met de regie-stelling.',onderzoek:'../ai-trends-2027/',opzet:'../ai-trends-2027/outline/'},
+ {k:'trends',t:'AI-trends 2027',stap:'schrijven',w:'Wacht op jou: lees NL-tekst en geef akkoord',vraag:'"De 10 meest belangrijke AI trends voor 2027": eerst grondig onderzoek, top 30, dan kies ik er 10 uit. (21-11)',extra:'Jouw keuze: 1+2 samen, 5, 9, 10, 13, 14, 17, 22, 27, 28. Akkoord op invalshoek: één betoog met de regie-stelling.',onderzoek:'../ai-trends-2027/',opzet:'../ai-trends-2027/outline/',schrijven:'../ai-trends-2027/artikel/'},
  {k:'kunnen',t:'Wat kunnen we in 2027 met AI?',stap:'onderzoek',w:'Wacht op jou: kies invalshoek (v2, zonder overlap met AI-trends)',vraag:'"Wat kunnen we in 2027 verwachten van AI? Wat kunnen we, wat we nu niet kunnen": praktisch: wat kunnen agents en AI volgend jaar wat ze nu nog niet kunnen. (21-11)',extra:'Apart van de AI-trends (jouw besluit).',onderzoek:'../ai-kunnen-2027-v2/'},
  {k:'fysiek',t:'AI verlaat het scherm',stap:'onderzoek',w:'Wacht op jou: kies items uit 30',vraag:'"AI verlaat het scherm. 10 mooie voorbeelden physical AI in de toekomst: als futurist een bizar vooruitkijkje." (21-11)',extra:'',onderzoek:'../ai-fysiek/'},
  {k:'wakker',t:'Je wordt wakker in 2030',stap:'onderzoek',w:'Wacht op jou: kies scènes uit 30',vraag:'"Je wordt wakker in 2030: hoe ziet een wereld er dan uit met AI?" (21-11)',extra:'',onderzoek:'../ai-wakker-2030/'},
@@ -64,12 +64,13 @@ const A=[
 const ORDE=['briefing','onderzoek','opzet','schrijven'];let cur=null;
 function kaart(a){return '<div class="kaart" data-k="'+a.k+'"><div class="t">'+a.t+'</div><div class="s"><span class="dot'+(a.bezig?' grijs':'')+'"></span>'+a.w+'</div></div>';}
 document.getElementById('k-onderzoek').innerHTML=A.filter(a=>a.stap==='onderzoek').map(kaart).join('');
-document.getElementById('k-opzet').innerHTML=A.filter(a=>a.stap==='opzet').map(kaart).join('');
+document.getElementById('k-opzet').innerHTML=A.filter(a=>a.stap==='opzet').map(kaart).join('')||'<p class="leeg">Geen artikelen in deze stap.</p>';
+document.getElementById('k-schrijven').innerHTML=A.filter(a=>a.stap==='schrijven').map(kaart).join('')||'<p class="leeg">Nog niets. Schrijven start pas na jouw akkoord op de opzet.</p>';
 function zie(id){document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('toon',s.id==='v-'+id));window.scrollTo(0,0);}
 function open(k){cur=A.find(a=>a.k===k);document.getElementById('a-titel').textContent=cur.t;document.getElementById('b-vraag').textContent=cur.vraag;document.getElementById('b-extra').textContent=cur.extra;zie('artikel');stap(cur.stap);}
 function stap(s){const i=ORDE.indexOf(cur.stap);document.querySelectorAll('.stap').forEach(b=>{const j=ORDE.indexOf(b.dataset.s);b.classList.toggle('act',b.dataset.s===s);b.classList.toggle('ok',j<i);b.disabled=j>i;});
-document.getElementById('s-briefing').classList.toggle('toon',s==='briefing');document.getElementById('s-schrijven').classList.toggle('toon',s==='schrijven');
-const u=cur[s];const f=document.getElementById('frame');const toon=!!u&&(s==='onderzoek'||s==='opzet');document.getElementById('s-frame').classList.toggle('toon',toon);if(toon&&f.getAttribute('src')!==u)f.setAttribute('src',u);}
+document.getElementById('s-briefing').classList.toggle('toon',s==='briefing');const u=cur[s];document.getElementById('s-schrijven').classList.toggle('toon',s==='schrijven'&&!u);
+const f=document.getElementById('frame');const toon=!!u&&(s==='onderzoek'||s==='opzet'||s==='schrijven');document.getElementById('s-frame').classList.toggle('toon',toon);if(toon&&f.getAttribute('src')!==u)f.setAttribute('src',u);}
 document.querySelectorAll('.kaart').forEach(k=>k.addEventListener('click',()=>open(k.dataset.k)));
 document.querySelectorAll('.stap').forEach(b=>b.addEventListener('click',()=>{if(!b.disabled)stap(b.dataset.s);}));
 document.getElementById('terug').addEventListener('click',e=>{e.preventDefault();zie('overzicht');});
