@@ -88,7 +88,7 @@ a{color:var(--acc)}
 </main>
 <div class="balk"><div><span id="teller">0 gekozen</span><button type="button" id="akk" disabled>Akkoord: maak de outline</button><span id="status"></span><span id="plak">Kies trends met + Kiezen</span><button type="button" id="wis">Wis keuze</button></div></div>
 <script>
-const rows=[...document.querySelectorAll('.tr')];let akkoord=false;
+const rows=[...document.querySelectorAll('.tr[data-n]')];let akkoord=false;
 function regel(){return rows.filter(t=>t.classList.contains('gek')).map(t=>{const o=t.querySelector('.opm').value.trim().replace(/\s+/g,' ');return t.dataset.n+(o?' ('+o+')':'');});}
 function alg(){const a=document.getElementById('alg');return a?a.value.trim().replace(/\s+/g,' '):'';}
 function upd(){const k=regel(),g=alg();akkoord=false;
