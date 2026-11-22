@@ -1,6 +1,6 @@
 {
  "schema": "groeibord-publiek/1",
- "gebouwd": "22-11-2026 07:15",
+ "gebouwd": "22-11-2026 07:52",
  "overzicht": {
   "keten": [
    {
@@ -90,7 +90,7 @@
   "delen": {
    "Blog EN": {
     "klikken_7d": 289,
-    "vertoningen_7d": 45543,
+    "vertoningen_7d": 45749,
     "trend_pct": 21,
     "reeks_90d": [
      24.0,
@@ -188,7 +188,7 @@
    },
    "Blog NL": {
     "klikken_7d": 37,
-    "vertoningen_7d": 3057,
+    "vertoningen_7d": 3065,
     "trend_pct": 37,
     "reeks_90d": [
      1.0,
@@ -286,7 +286,7 @@
    },
    "Hoofdsite": {
     "klikken_7d": 142,
-    "vertoningen_7d": 4071,
+    "vertoningen_7d": 4084,
     "trend_pct": -1,
     "reeks_90d": [
      9.0,
@@ -387,17 +387,17 @@
    {
     "pad": "/en/the-male-sex-robots-are-coming-would-you-make-room-in-your-bed-for-a-bot-with-a-bionic-penis/",
     "klikken": 43,
-    "vertoningen": 843
+    "vertoningen": 844
    },
    {
     "pad": "/en/human-microchipping-the-benefits-and-downsides/",
     "klikken": 14,
-    "vertoningen": 1216
+    "vertoningen": 1224
    },
    {
     "pad": "/en/a-robot-in-every-home-the-coming-domestic-robotics-revolution/",
     "klikken": 10,
-    "vertoningen": 932
+    "vertoningen": 933
    },
    {
     "pad": "/en/the-future-of-public-speaking-trends-and-technologies-for-presenters/",
@@ -407,7 +407,7 @@
    {
     "pad": "/en/top-10-exoskeletons-that-bring-the-world-closer-to-superhuman-powers/",
     "klikken": 9,
-    "vertoningen": 694
+    "vertoningen": 696
    },
    {
     "pad": "/en/6-innovations-that-will-help-predict-earthquakes-and-improve-rescue-operations/",
@@ -417,7 +417,7 @@
    {
     "pad": "/en/top-10-phenomenal-smart-cities-of-the-future/",
     "klikken": 8,
-    "vertoningen": 1120
+    "vertoningen": 1124
    },
    {
     "pad": "/chip-in-mijn-hand/",
@@ -427,7 +427,7 @@
    {
     "pad": "/en/how-ai-is-transforming-the-entertainment-industry/",
     "klikken": 5,
-    "vertoningen": 249
+    "vertoningen": 250
    },
    {
     "pad": "/en/how-to-choose-the-right-guest-speakers-for-your-event/",
