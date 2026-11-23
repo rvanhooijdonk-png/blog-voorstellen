@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Mock: voorstelrij per onderdeel</title>
+<style>
+  :root { --tekst:#1d1d1f; --zacht:#6e6e73; --lijn:#d2d2d7; --vlak:#f5f5f7; --accent:#0a5bd3; --gekozen:#0f7b3f; }
+  body { margin:0; font:16px/1.5 -apple-system, system-ui, sans-serif; color:var(--tekst); background:#fff; }
+  main { max-width:960px; margin:0 auto; padding:16px; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .uitleg { color:var(--zacht); margin:0 0 20px; font-size:14px; }
+  section.onderdeel { border-top:1px solid var(--lijn); padding:14px 0; }
+  .kop { display:flex; align-items:baseline; gap:8px; margin-bottom:8px; }
+  .kop h2 { font-size:16px; margin:0; }
+  .soort { font-size:12px; color:var(--zacht); }
+  .rij { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 2px 10px; }
+  .rij:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .kaart { flex:0 0 220px; scroll-snap-align:start; border:1px solid var(--lijn); border-radius:10px; padding:10px; background:#fff; text-align:left; font:inherit; cursor:pointer; }
+  .kaart:focus-visible { outline:2px solid var(--accent); }
+  .kaart[aria-pressed="true"] { border-color:var(--gekozen); box-shadow:0 0 0 2px var(--gekozen) inset; }
+  .nr { display:inline-block; min-width:22px; height:22px; border-radius:11px; background:var(--vlak); text-align:center; font-size:12px; line-height:22px; margin-right:6px; }
+  .thema { font-size:12px; color:var(--accent); }
+  .wat { font-weight:600; margin:6px 0 4px; font-size:14px; }
+  .bron { font-size:12px; color:var(--zacht); }
+  .beeld { height:96px; border-radius:6px; background:linear-gradient(135deg,#dfe7f5,#f3f6fb); margin-bottom:6px; }
+  @media (max-width:600px){ .kaart{ flex-basis:78vw; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Voorstelrij per onderdeel (mock, synthetisch)</h1>
+  <p class="uitleg">Per onderdeel van het artikel staan de voorstellen in één horizontale rij. Je scrollt met de muis, met een veeg op mobiel, of met de pijltjestoetsen als de rij focus heeft. Elk kaartje is genummerd; klik om te kiezen. Dezelfde rij werkt voor beelden en statistieken, en later voor citaten, video en bronnen. Alle inhoud is fictief.</p>
+
+  <section class="onderdeel">
+    <div class="kop"><h2>Inleiding</h2><span class="soort">Statistiek of grafiek · 3 voorstellen · 3 thema's</span></div>
+    <div class="rij" tabindex="0" aria-label="Statistiekvoorstellen bij de inleiding">
+      <button class="kaart" aria-pressed="true"><span class="nr">1</span><span class="thema">markt</span><div class="wat">Omvang van de markt voor AI-assistenten op kantoor</div><div class="bron">bronsoort: marktonderzoek</div></button>
+      <button class="kaart" aria-pressed="false"><span class="nr">2</span><span class="thema">adoptie</span><div class="wat">Aandeel teams dat dagelijks een assistent gebruikt</div><div class="bron">bronsoort: enquête</div></button>
+      <button class="kaart" aria-pressed="false"><span class="nr">3</span><span class="thema">regionaal/NL</span><div class="wat">Gebruik in Nederland tegenover de EU</div><div class="bron">bronsoort: statistiekbureau</div></button>
+    </div>
+  </section>
+
+  <section class="onderdeel">
+    <div class="kop"><h2>Wat verandert er in het werk</h2><span class="soort">Statistiek of grafiek · 3 voorstellen · 3 thema's</span></div>
+    <div class="rij" tabindex="0" aria-label="Statistiekvoorstellen bij onderdeel 2">
+      <button class="kaart" aria-pressed="false"><span class="nr">4</span><span class="thema">productiviteit</span><div class="wat">Tijdwinst per taaktype</div><div class="bron">bronsoort: veldexperiment</div></button>
+      <button class="kaart" aria-pressed="false"><span class="nr">5</span><span class="thema">werkgelegenheid</span><div class="wat">Verschuiving in functies, niet in aantallen</div><div class="bron">bronsoort: arbeidsmarktdata</div></button>
+      <button class="kaart" aria-pressed="false"><span class="nr">6</span><span class="thema">trend</span><div class="wat">Ontwikkeling over vijf jaar</div><div class="bron">bronsoort: tijdreeks</div></button>
+    </div>
+  </section>
+
+  <section class="onderdeel">
+    <div class="kop"><h2>Topbeeld</h2><span class="soort">Afbeelding · 2 zoekvoorstellen + 1 beeldconcept</span></div>
+    <div class="rij" tabindex="0" aria-label="Beeldvoorstellen voor het topbeeld">
+      <button class="kaart" aria-pressed="false"><div class="beeld"></div><span class="nr">7</span><span class="thema">gratis foto</span><div class="bron">fictieve fotobank · vrije licentie</div></button>
+      <button class="kaart" aria-pressed="false"><div class="beeld"></div><span class="nr">8</span><span class="thema">gratis foto</span><div class="bron">fictieve fotobank · vrije licentie</div></button>
+      <button class="kaart" aria-pressed="false"><div class="beeld"></div><span class="nr">9</span><span class="thema">beeldconcept</span><div class="wat">Genereren alleen na jouw ja</div><div class="bron">betaald, per keer</div></button>
+    </div>
+  </section>
+</main>
+<script>
+  document.querySelectorAll('.rij').forEach(function (rij) {
+    rij.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { rij.scrollBy({left: 232, behavior: 'smooth'}); e.preventDefault(); }
+      if (e.key === 'ArrowLeft') { rij.scrollBy({left: -232, behavior: 'smooth'}); e.preventDefault(); }
+    });
+    rij.querySelectorAll('.kaart').forEach(function (k) {
+      k.addEventListener('click', function () {
+        rij.querySelectorAll('.kaart').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        k.setAttribute('aria-pressed', 'true');
+      });
+    });
+  });
+</script>
+</body>
+</html>
