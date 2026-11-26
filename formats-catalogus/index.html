@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="nl">
+<head><meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vaste designformats — keuzehulp</title>
+  <style>
+    :root{--paper:#fbfaf7;--ink:#1d2420;--muted:#66706a;--green:#63796b;--green-dark:#40584a;--line:#d8ddd7;--panel:#fff;--soft:#eef1ec}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif}
+    a{color:inherit} .wrap{width:min(1440px,calc(100% - 40px));margin:auto}
+    .hero{padding:56px 0 30px;border-top:7px solid var(--green-dark)} .eyebrow,.number{color:var(--green);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400} h1{max-width:780px;margin:8px 0 14px;font-size:clamp(38px,5vw,68px);line-height:1.02;letter-spacing:-.025em}
+    .intro{max-width:690px;margin:0;color:var(--muted);font-size:17px} .summary{display:flex;gap:24px;margin-top:26px;color:var(--green-dark);font-size:13px;font-weight:700}
+    nav{position:sticky;top:0;z-index:5;padding:12px 0;background:rgba(251,250,247,.96);border-block:1px solid var(--line);backdrop-filter:blur(8px)} nav .wrap{display:flex;gap:8px;overflow:auto} nav a{flex:0 0 auto;padding:6px 10px;text-decoration:none;border-radius:20px;color:var(--green-dark);font-size:13px} nav a:hover,nav a:focus{background:var(--soft)}
+    main{padding:10px 0 70px} .medium{padding:46px 0 42px;border-bottom:1px solid var(--line);scroll-margin-top:60px} .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px}
+    .section-head>div{display:flex;align-items:baseline;gap:14px} h2{margin:0;font-size:33px;line-height:1.1} .section-head>p{margin:0;color:var(--muted);font-size:13px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px} .card{min-width:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:5px}
+    .visual{display:block;height:210px;overflow:hidden;background:#eeece6;border-bottom:1px solid var(--line)} .visual img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .2s ease} .visual:hover img{transform:scale(1.015)}
+    .visual.empty{display:grid;place-items:center;background:repeating-linear-gradient(135deg,#f3f2ee,#f3f2ee 12px,#edede8 12px,#edede8 24px);color:var(--muted);font-size:13px} .visual.empty span{padding:7px 10px;background:var(--paper);border:1px solid var(--line);border-radius:18px}
+    .card-body{padding:14px 15px 15px} .card-title{display:flex;align-items:flex-start;justify-content:space-between;gap:10px} h3{margin:0;font:700 16px/1.25 Arial,Helvetica,sans-serif} .badge{flex:0 0 auto;padding:3px 7px;border-radius:12px;background:var(--green-dark);color:white;font-size:10px;font-weight:700;letter-spacing:.03em}
+    .fixed{margin:8px 0 0;color:#4e5752;font-size:13px;line-height:1.45} .note{margin:8px 0 0;padding-top:8px;border-top:1px solid #eceeea;color:var(--muted);font-size:11px;line-height:1.4}
+    .missing{margin:14px 0 0;padding:11px 13px;background:var(--soft);border-left:3px solid var(--green);color:#526057;font-size:13px} .missing strong{color:var(--green-dark)}
+    footer{padding:26px 0 44px;color:var(--muted);font-size:12px} footer p{margin:0}
+    @media(max-width:620px){.wrap{width:min(100% - 24px,1440px)}.hero{padding-top:38px}.summary{display:block}.summary span{display:block;margin-top:4px}.section-head{align-items:baseline}.visual{height:240px}}
+    @media print{nav{display:none}.medium{break-inside:avoid}.visual{height:160px}}
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="wrap">
+    <p class="eyebrow">Keuzehulp · bestaande uitwerkingen</p>
+    <h1>Eén vast designformat per medium</h1>
+    <p class="intro">Een compacte vergelijking van wat er al is. De groene badge volgt de sterkste kandidaat uit de inventaris; de beelden zijn ongewijzigde bestaande PNG’s.</p>
+    <div class="summary"><span>8 media</span><span>24 designkeuzes</span><span>23 getoonde PNG-voorbeelden</span></div>
+  </div></header>
+  <nav aria-label="Media"><div class="wrap"><a href="#nieuwsbrief">Nieuwsbrief</a><a href="#social">LinkedIn / social</a><a href="#infographic">Infographic</a><a href="#keynote">Keynote-dia’s</a><a href="#video">Video</a><a href="#ebook">E-book</a><a href="#statistiekkaart">Statistiekkaart</a><a href="#longread">Long-read</a></div></nav>
+  <main class="wrap"><section class="medium" id="nieuwsbrief">
+      <header class="section-head">
+        <div><span class="number">01</span><h2>Nieuwsbrief</h2></div>
+        <p>1 design</p>
+      </header>
+      <div class="cards"><article class="card">
+        <div class="visual empty"><span>Geen bestaande PNG</span></div>
+        <div class="card-body">
+          <div class="card-title"><h3>Beehiiv standaard</h3><span class="badge">sterkste kandidaat</span></div>
+          <p class="fixed">Arial / Helvetica · zwart #222222 en tekstgrijs #6f6f6f · mailbreedte 600 px</p>
+          <p class="note">Alleen als HTML-preview aanwezig; er is geen bestaande lokale PNG.</p>
+        </div>
+      </article></div>
+      <p class="missing"><strong>Ontbreekt.</strong> Echte korte en lange templates, centrale designtokens, een lokale referentie-PNG en mailclient-regressieproeven.</p>
+    </section><section class="medium" id="social">
+      <header class="section-head">
+        <div><span class="number">02</span><h2>LinkedIn / social</h2></div>
+        <p>4 designs</p>
+      </header>
+      <div class="cards"><article class="card">
+        <a class="visual" href="img/social-linkedin--kaart-1.png" title="Klik: volledige uiting groot bekijken"><img src="img/social-linkedin--kaart-1.png" alt="Bestaand voorbeeld van Podium oranje" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Podium oranje</h3><span class="badge">sterkste kandidaat</span></div>
+          <p class="fixed">Arial / DejaVu · oranje accent · 1080 × 1350 en 1080 × 1920</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/social-linkedin--document-1-cover.png" title="Klik: volledige uiting groot bekijken"><img src="img/social-linkedin--document-1-cover.png" alt="Bestaand voorbeeld van Podium licht" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Podium licht</h3></div>
+          <p class="fixed">Arial / DejaVu · lichte ondergrond · 1080 × 1350 en 1080 × 1920</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/social-linkedin--uit--social-nl--v12--document-1-pagina-1.png" data-pages="img/social-linkedin--uit--social-nl--v12--document-1-pagina-1.png,img/social-linkedin--uit--social-nl--v12--document-1-pagina-2.png,img/social-linkedin--uit--social-nl--v12--document-1-pagina-3.png,img/social-linkedin--uit--social-nl--v12--document-1-pagina-4.png,img/social-linkedin--uit--social-nl--v12--document-1-pagina-5.png,img/social-linkedin--uit--social-nl--v12--document-1-pagina-6.png,img/social-linkedin--uit--social-nl--v12--document-1-pagina-7.png" title="Klik: volledige uiting groot bekijken"><img src="img/social-linkedin--uit--social-nl--v12--document-1-pagina-1.png" alt="Bestaand voorbeeld van Podium donker" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Podium donker</h3></div>
+          <p class="fixed">Arial / DejaVu · donkere variant · 1080 × 1350 en 1080 × 1920</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/social-linkedin--uit--social-nl--v12--ig-carrousel-1-pagina-1.png" data-pages="img/social-linkedin--uit--social-nl--v12--ig-carrousel-1-pagina-1.png,img/social-linkedin--uit--social-nl--v12--ig-carrousel-1-pagina-2.png,img/social-linkedin--uit--social-nl--v12--ig-carrousel-1-pagina-3.png,img/social-linkedin--uit--social-nl--v12--ig-carrousel-1-pagina-4.png,img/social-linkedin--uit--social-nl--v12--ig-carrousel-1-pagina-5.png,img/social-linkedin--uit--social-nl--v12--ig-carrousel-1-pagina-6.png" title="Klik: volledige uiting groot bekijken"><img src="img/social-linkedin--uit--social-nl--v12--ig-carrousel-1-pagina-1.png" alt="Bestaand voorbeeld van Minimal iconen" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Minimal iconen</h3></div>
+          <p class="fixed">Arial / DejaVu · lijniconen en sober palet · 1080 × 1350 en 1080 × 1920</p>
+          
+        </div>
+      </article></div>
+      <p class="missing"><strong>Ontbreekt.</strong> Eén standaard per socialvorm, harmonisatie van #f26a21 met #eb6834, een vaste vierkante export en één volledig catalogusbeeld.</p>
+    </section><section class="medium" id="infographic">
+      <header class="section-head">
+        <div><span class="number">03</span><h2>Infographic</h2></div>
+        <p>5 designs</p>
+      </header>
+      <div class="cards"><article class="card">
+        <a class="visual" href="img/infographic--uit--infographic-nl--v6--infographic-1080x1350.png" title="Klik: volledige uiting groot bekijken"><img src="img/infographic--uit--infographic-nl--v6--infographic-1080x1350.png" alt="Bestaand voorbeeld van Lijn licht" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Lijn licht</h3></div>
+          <p class="fixed">system-ui / Segoe UI / Arial · lichte lijnstijl · vijf formaten, van 1080 × 1080 tot A4</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/infographic--uit--infographic-nl--v9--infographic-1080x1350.png" title="Klik: volledige uiting groot bekijken"><img src="img/infographic--uit--infographic-nl--v9--infographic-1080x1350.png" alt="Bestaand voorbeeld van Lijn donker" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Lijn donker</h3></div>
+          <p class="fixed">system-ui / Segoe UI / Arial · donkere lijnstijl · vijf formaten, van 1080 × 1080 tot A4</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/infographic--uit--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/infographic--uit--catalogus.png" alt="Bestaand voorbeeld van Vlak iconen" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Vlak iconen</h3></div>
+          <p class="fixed">system-ui / Segoe UI / Arial · kleurvlakken en iconen · vijf formaten</p>
+          <p class="note">Geen eigen referentie-PNG; bestaand catalogusoverzicht getoond.</p>
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/infographic--uit--catalogus--grote-stat--podium-oranje--1080x1350.png" title="Klik: volledige uiting groot bekijken"><img src="img/infographic--uit--catalogus--grote-stat--podium-oranje--1080x1350.png" alt="Bestaand voorbeeld van Podium oranje" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Podium oranje</h3><span class="badge">sterkste kandidaat</span></div>
+          <p class="fixed">system-ui / Segoe UI / Arial · oranje accent #eb6834 · 1080 × 1350 getoond; vijf formaten beschikbaar</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/infographic--uit--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/infographic--uit--catalogus.png" alt="Bestaand voorbeeld van Monochroom" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Monochroom</h3></div>
+          <p class="fixed">system-ui / Segoe UI / Arial · monochroom palet · vijf formaten</p>
+          <p class="note">Geen eigen referentie-PNG; bestaand catalogusoverzicht getoond.</p>
+        </div>
+      </article></div>
+      <p class="missing"><strong>Ontbreekt.</strong> Een beperkte vaste kernset, verplichte keuze voor Podium als hoofdthema en formele maximale tekstlengtes per vorm.</p>
+    </section><section class="medium" id="keynote">
+      <header class="section-head">
+        <div><span class="number">04</span><h2>Keynote-dia’s</h2></div>
+        <p>3 designs</p>
+      </header>
+      <div class="cards"><article class="card">
+        <a class="visual" href="img/keynote-dias--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/keynote-dias--catalogus.png" alt="Bestaand voorbeeld van Licht" loading="lazy" style="object-position:8% 58%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Licht</h3></div>
+          <p class="fixed">Avenir Next + Charter, met terugval · licht palet · 1920 × 1080 en 1440 × 1080</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/keynote-dias--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/keynote-dias--catalogus.png" alt="Bestaand voorbeeld van Donker" loading="lazy" style="object-position:55% 58%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Donker</h3></div>
+          <p class="fixed">Avenir Next + Charter, met terugval · donkere ondergrond · 1920 × 1080 en 1440 × 1080</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/keynote-dias--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/keynote-dias--catalogus.png" alt="Bestaand voorbeeld van Podium, gemengd 16:9" loading="lazy" style="object-position:94% 58%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Podium, gemengd 16:9</h3><span class="badge">sterkste kandidaat</span></div>
+          <p class="fixed">Avenir Next + Charter, met terugval · #eb6834, #faf8f3 en zwart · 1920 × 1080</p>
+          
+        </div>
+      </article></div>
+      <p class="missing"><strong>Ontbreekt.</strong> Een vast hoofddeckritme, meegeleverde lettertypen en vaste regels voor beeld, opening en afsluiting.</p>
+    </section><section class="medium" id="video">
+      <header class="section-head">
+        <div><span class="number">05</span><h2>Video</h2></div>
+        <p>4 designs</p>
+      </header>
+      <div class="cards"><article class="card">
+        <a class="visual" href="img/video--frames-r2--trends-explainer-stem-16x9-t027.6.png" title="Klik: volledige uiting groot bekijken"><img src="img/video--frames-r2--trends-explainer-stem-16x9-t027.6.png" alt="Bestaand voorbeeld van Podium explainer 16:9" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Podium explainer 16:9</h3><span class="badge">sterkste kandidaat</span></div>
+          <p class="fixed">Titels + Richard-stem · Podium-kaarten en #eb6834 · 1920 × 1080</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/video--frames-r2--audiogram--donker--1x1-t009.5.png" title="Klik: volledige uiting groot bekijken"><img src="img/video--frames-r2--audiogram--donker--1x1-t009.5.png" alt="Bestaand voorbeeld van Donker" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Donker</h3></div>
+          <p class="fixed">Titels / audio · donkere variant · 1080 × 1080 getoond; 16:9, 9:16 en 1:1 ondersteund</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/video--frames-r2--slidecast--licht--16x9-t005.3.png" title="Klik: volledige uiting groot bekijken"><img src="img/video--frames-r2--slidecast--licht--16x9-t005.3.png" alt="Bestaand voorbeeld van Licht" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Licht</h3></div>
+          <p class="fixed">Titels / audio · lichte variant · 1920 × 1080 getoond; 16:9, 9:16 en 1:1 ondersteund</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/video--frames-r2--quote-clip--minimal-iconen--1x1-t004.8.png" title="Klik: volledige uiting groot bekijken"><img src="img/video--frames-r2--quote-clip--minimal-iconen--1x1-t004.8.png" alt="Bestaand voorbeeld van Minimal iconen" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Minimal iconen</h3></div>
+          <p class="fixed">Titels + lijniconen · sober palet · 1080 × 1080 getoond; 16:9, 9:16 en 1:1 ondersteund</p>
+          
+        </div>
+      </article></div>
+      <p class="missing"><strong>Ontbreekt.</strong> Eén standaard per kanaal, vaste rechtenvrije muziek, keynotebeeld en een ingebedde Remotion-compositie in deze werkboom.</p>
+    </section><section class="medium" id="ebook">
+      <header class="section-head">
+        <div><span class="number">06</span><h2>E-book</h2></div>
+        <p>5 designs</p>
+      </header>
+      <div class="cards"><article class="card">
+        <a class="visual" href="img/ebook--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/ebook--catalogus.png" alt="Bestaand voorbeeld van Rustig redactioneel" loading="lazy" style="object-position:7% 29%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Rustig redactioneel</h3></div>
+          <p class="fixed">Charter + Avenir Next, met terugval · warm wit en roodbruin · A5, 6×9, A4, scherm-PDF en EPUB</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/ebook--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/ebook--catalogus.png" alt="Bestaand voorbeeld van Volledig, Podium, A5, balkomslag" loading="lazy" style="object-position:29% 29%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Volledig, Podium, A5, balkomslag</h3><span class="badge">sterkste kandidaat</span></div>
+          <p class="fixed">Charter + Avenir Next, met terugval · Podium-oranje · A5 als sterkste; vijf formaten</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/ebook--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/ebook--catalogus.png" alt="Bestaand voorbeeld van Donker" loading="lazy" style="object-position:51% 29%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Donker</h3></div>
+          <p class="fixed">Charter + Avenir Next, met terugval · donker omslag · vijf formaten</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/ebook--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/ebook--catalogus.png" alt="Bestaand voorbeeld van Iconen" loading="lazy" style="object-position:73% 29%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Iconen</h3></div>
+          <p class="fixed">Charter + Avenir Next, met terugval · iconen en koel licht vlak · vijf formaten</p>
+          
+        </div>
+      </article><article class="card">
+        <a class="visual" href="img/ebook--catalogus.png" title="Klik: volledige uiting groot bekijken"><img src="img/ebook--catalogus.png" alt="Bestaand voorbeeld van Magazine" loading="lazy" style="object-position:95% 29%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Magazine</h3></div>
+          <p class="fixed">Charter + Avenir Next, met terugval · rustig magazinepalet · vijf formaten</p>
+          
+        </div>
+      </article></div>
+      <p class="missing"><strong>Ontbreekt.</strong> De definitieve combinatie van design, formaat en omslag, meegeleverde lettertypen en een complete inhoudelijke boekproef.</p>
+    </section><section class="medium" id="statistiekkaart">
+      <header class="section-head">
+        <div><span class="number">07</span><h2>Statistiekkaart</h2></div>
+        <p>1 design</p>
+      </header>
+      <div class="cards"><article class="card">
+        <a class="visual" href="img/infographic--uit--catalogus--grote-stat--podium-oranje--1080x1350.png" title="Klik: volledige uiting groot bekijken"><img src="img/infographic--uit--catalogus--grote-stat--podium-oranje--1080x1350.png" alt="Bestaand voorbeeld van Podium" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Podium</h3><span class="badge">sterkste kandidaat</span></div>
+          <p class="fixed">system-ui / Segoe UI / Roboto / Helvetica / Arial · #eb6834, #2a78d6 en #0b0b0b · 1080 × 1350 getoond</p>
+          
+        </div>
+      </article></div>
+      <p class="missing"><strong>Ontbreekt.</strong> Zelfstandige canvassjablonen en referentie-PNG’s per medium; maat en typografische schaal zitten nog in afzonderlijke makers.</p>
+    </section><section class="medium" id="longread">
+      <header class="section-head">
+        <div><span class="number">08</span><h2>Long-read</h2></div>
+        <p>1 design</p>
+      </header>
+      <div class="cards"><article class="card">
+        <a class="visual" href="img/trends-v2b--modules-richard--proef-png--breed-dock.png" title="Klik: volledige uiting groot bekijken"><img src="img/trends-v2b--modules-richard--proef-png--breed-dock.png" alt="Bestaand voorbeeld van Redactioneel werkplekprototype" loading="lazy" style="object-position:50% 20%"></a>
+        <div class="card-body">
+          <div class="card-title"><h3>Redactioneel werkplekprototype</h3><span class="badge">sterkste kandidaat</span></div>
+          <p class="fixed">Georgia / Times New Roman · #fbfaf7, #1d2420 en gedempt groen · tekstkolom maximaal 720 px</p>
+          <p class="note">Bestaande werkplekproef; geen schone publieke long-read-PNG.</p>
+        </div>
+      </article></div>
+      <p class="missing"><strong>Ontbreekt.</strong> Een zelfstandig publiek sjabloon, CMS-regels, definitieve header en footer, mobiele regels, metadata, CTA en een schone referentierender.</p>
+    </section></main>
+  <footer><div class="wrap"><p>Bron: inventaris-codex1.md · lokaal en zonder externe bronnen · gegenereerd met maak_catalogus.py</p></div></footer>
+<div id="lb" hidden onclick="this.hidden=true"><p></p><div class="pg"></div><p>Klik of Esc om te sluiten</p></div>
+<style>#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:99;overflow:auto;cursor:zoom-out;padding:16px;text-align:center}#lb .pg{display:flex;flex-direction:column;align-items:center;gap:12px}#lb[hidden]{display:none}#lb img{max-width:96vw;max-height:92vh;object-fit:contain;background:#fff}#lb p{color:#ddd;font:14px sans-serif;margin:8px 0 0}a.visual{cursor:zoom-in}</style>
+<script>document.addEventListener('click',e=>{const a=e.target.closest('a.visual');if(!a)return;e.preventDefault();const lb=document.getElementById('lb');const pg=(a.dataset.pages||a.getAttribute('href')).split(',');lb.querySelector('.pg').replaceChildren(...pg.map(s=>{const i=new Image();i.src=s;return i}));lb.querySelector('p').textContent=(pg.length>1?pg.length+' pagina\'s, scroll omlaag. ':'')+'Klik of Esc om te sluiten';lb.scrollTop=0;lb.hidden=false});document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lb').hidden=true});</script></body>
+</html>
