@@ -48,7 +48,7 @@ th{background:#ece5d8}
 <main>
 <div class="kicker">Onderzoeksformat social en video · voorbeeld 27-11 · onderwerp AI in 2027</div>
 <h1>Zes ideeën, elk op één kaart</h1>
-<p class="intro">Korter en pakkender dan het artikelonderzoek. Elke kaart begint met wat het publiek als eerste ziet: de haak. Daaronder één zin boodschap, één bewezen cijfer of citaat met bron en datum, waarom het nu speelt, het beeld, het kanaal en wat je mag verwachten. De bronnen en het oordeel van de drie onderzoekers staan ingeklapt. Per kaart kies je met één knop. Opzet na advies van Astra en Gemini.</p>
+<p class="intro">Korter en pakkender dan het artikelonderzoek. Elke kaart begint met wat het publiek als eerste ziet: de haak. Daaronder één zin boodschap, één bewezen cijfer of citaat met bron en datum, waarom het nu speelt, het beeld, het kanaal en wat je mag verwachten. De bronnen en het oordeel van de drie onderzoekers staan ingeklapt. Per kaart kies je met één knop. Opzet na advies van Astra en Gemini.</p><p class="intro"><b>Bij een artikel als startpunt</b> komen deze kaarten eerst uit het artikelonderzoek; alle zes hieronder zijn daaruit afgeleid. Met "Aanvullend onderzoek" laat je per idee nieuw social- of videogericht onderzoek doen (trending, haak, beeld). Is social of video zelf het startpunt, dan worden de kaarten direct met nieuw onderzoek gevuld.</p>
 <p class="status" id="status">0 van 6 gekozen</p>
 <div class="raster" id="raster"></div>
 
@@ -75,7 +75,7 @@ var K=[
 var raster=document.getElementById('raster');
 K.forEach(function(c,i){
  var d=document.createElement('div'); d.className='kaart';
- d.innerHTML='<div class="kop"><span>Idee '+(i+1)+'</span><span class="kanaal">'+c.k+'</span></div>'+
+ d.innerHTML='<div class="kop"><span>Idee '+(i+1)+' · uit artikelonderzoek</span><span class="kanaal">'+c.k+'</span></div>'+
  '<div class="haak">'+c.h+'</div>'+
  '<div class="veld"><b>Boodschap</b>'+c.b+'</div>'+
  '<div class="veld bewijs"><b>Bewijs</b>'+c.bw+'</div>'+
