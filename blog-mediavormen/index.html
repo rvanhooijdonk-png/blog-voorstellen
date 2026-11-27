@@ -50,17 +50,31 @@ h2.titel{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(32px,
 .kaart div{padding:12px}
 .badges{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 .badges span{font-size:12px;font-weight:700;border-radius:999px;padding:3px 8px;background:#f1ece3}
-.badges span.s{background:#ffe2d0;color:#9a3c00}
+.badges span.s{background:#f1ece3;color:#9a3c00}
 .regels{max-width:1000px;margin:0 auto;padding:10px 20px 80px}
 table{width:100%;border-collapse:collapse}
 td,th{border-bottom:1px solid var(--lijn);padding:10px;text-align:left;font-size:16px;vertical-align:top}
 th{background:#f6f2ea}
 @media (max-width:720px){.tegels,.overzicht{grid-template-columns:1fr}.rustpunt{grid-template-columns:1fr}}
+.vormbalk{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.vormbalk::-webkit-scrollbar{display:none}
+.vormbalk a,.vormbalk summary{white-space:nowrap}
+.nb{background:#151515;color:#fff;border-radius:12px;padding:20px;margin:26px 0}
+.nb b{font-family:"Bricolage Grotesque";font-weight:800;font-size:22px;display:block}
+.nb form{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.nb input{flex:1;min-width:200px;padding:11px;border-radius:8px;border:0;font:16px "Schibsted Grotesk"}
+.nb button{background:var(--oranje);border:0;border-radius:8px;padding:11px 16px;font:700 16px "Schibsted Grotesk";color:#111}
+.lezing{display:grid;grid-template-columns:1.2fr 1fr;gap:0;background:#151515;color:#fff;border-radius:12px;overflow:hidden;margin-top:30px}
+.lezing div{padding:24px}
+.lezing b{font-family:"Bricolage Grotesque";font-weight:800;font-size:26px;display:block;line-height:1.1}
+.lezing a.knop{display:inline-block;margin-top:14px;background:var(--oranje);color:#111;font-weight:800;padding:12px 18px;border-radius:999px;text-decoration:none}
+.lezing img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:720px){.rustpunt.vidkaart{grid-template-columns:110px 1fr}.rustpunt.klein{grid-template-columns:90px 1fr}.lezing{grid-template-columns:1fr}.badges span.s{background:#f1ece3;color:#9a3c00}}
 </style>
 </head>
 <body>
 <section class="uitleg"><div><div class="kicker">Voorstel · zo bieden we de mediavormen aan op de blog</div><h1>Het artikel blijft de ingang, de rest kies je erbij</h1>
-<p>Advies van Astra en Gemini, los van elkaar hetzelfde: direct onder de titel een rustige keuzeregel, onderaan het hele pakket, en elke vorm ook los te delen. Hieronder zie je het artikel zoals de lezer het ziet, daarna de overzichtspagina van de blog.</p></div></section>
+<p>Advies van Astra en Gemini, los van elkaar hetzelfde, en daarna door beiden getoetst (GO met punten, verwerkt): direct onder de titel een rustige keuzeregel, onderaan het hele pakket, en elke vorm ook los te delen. Hieronder zie je het artikel zoals de lezer het ziet, daarna de overzichtspagina van de blog.</p></div></section>
 
 <article>
 <span class="label">1 · Bovenaan het artikel</span>
@@ -68,9 +82,9 @@ th{background:#f6f2ea}
 <h2 class="titel">2027: het jaar dat AI ophoudt met praten en gaat werken</h2>
 <p><em>Tien trends, en de vraag wie de regie houdt</em></p>
 <nav class="vormbalk"><span>Kies je vorm</span>
- <a class="actief" href="#">Lees artikel</a>
- <a class="story" href="../story-2027/">Bekijk als story</a>
- <a href="#video">Kijk de video · 1 min</a>
+ <a class="actief" href="#">📖 Lees</a>
+ <a class="story" href="../story-2027/">✦ Story</a>
+ <a href="#video">▶ Video 1 min</a>
  <details><summary>Meer vormen ▾</summary><div>
   <a href="../story-2027/ebook-2027.pdf">E-book (PDF, 30 pagina's)</a>
   <a href="#infographic">Infographic (PDF)</a>
@@ -81,23 +95,22 @@ th{background:#f6f2ea}
 <p class="meta">... de lopende tekst van het artikel ...</p>
 
 <span class="label">2 · Halverwege: video en infographic als rustpunt</span>
-<div class="rustpunt" id="video"><div class="vid"><img src="../mediapakket-2027/m/v2-explainer.jpg" alt=""></div><div><b>De tien trends in één minuut</b>Video, 60 seconden. Speelt pas af als je erop klikt, dus het artikel blijft snel.</div></div>
+<div class="rustpunt vidkaart" id="video"><div class="vid"><img src="../mediapakket-2027/m/v2-explainer.jpg" alt=""></div><div><b>De tien trends in één minuut</b>Video, 60 seconden. Speelt pas af als je erop klikt, dus het artikel blijft snel.</div></div>
+<div class="nb"><b>Elke week de trends die ertoe doen</b>Ontvang de nieuwsbrief van Richard van Hooijdonk: één artikel, de belangrijkste cijfers en wat het betekent voor jouw organisatie.<form onsubmit="return false"><input type="email" placeholder="je e-mailadres"><button>Aanmelden</button></form></div>
 <p class="meta">... verder met de tekst ...</p>
-<div class="rustpunt" id="infographic"><img src="../mediapakket-2027/m/i1-infographic.jpg" alt=""><div><b>Drie manieren waarop AI gaat werken</b>De infographic op één pagina. <a href="#">Download als PDF</a></div></div>
+<div class="rustpunt klein" id="infographic"><img src="../mediapakket-2027/m/i1-infographic.jpg" alt=""><div><b>Drie manieren waarop AI gaat werken</b>De infographic op één pagina. <a href="#">Download als PDF</a></div></div>
 
-<span class="label">3 · Onderaan: het hele pakket</span>
+<span class="label">3 · Onderaan: de andere vormen en de lezing</span>
 <div class="pakket"><h3>Alles over dit onderwerp</h3>
 <div class="tegels">
  <a class="tegel" href="../story-2027/"><img src="../story-2027/media/b01.jpg" alt=""><div><b>Story</b>Het hele verhaal in beeld</div></a>
- <a class="tegel" href="#video"><img src="../mediapakket-2027/m/v2-explainer.jpg" alt=""><div><b>Video</b>De tien trends in 1 minuut</div></a>
  <a class="tegel" href="../story-2027/ebook-2027.pdf"><img src="../story-2027/media/b04.jpg" alt=""><div><b>E-book</b>PDF, 30 pagina's</div></a>
- <a class="tegel" href="#infographic"><img src="../mediapakket-2027/m/i1-infographic.jpg" alt=""><div><b>Infographic</b>PDF, één pagina</div></a>
  <a class="tegel" href="#"><img src="../mediapakket-2027/m/s3-cijfer.jpg" alt=""><div><b>Op LinkedIn</b>Cijferkaart en carrousel</div></a>
- <a class="tegel" href="#"><img src="../mediapakket-2027/m/k-1.jpg" alt=""><div><b>Als keynote</b>Boek deze lezing</div></a>
 </div></div>
+<div class="lezing"><div><span class="kicker">Lezing</span><b>Dit verhaal live op jouw podium</b>Richard vertaalt de trends van 2027 naar jouw sector en organisatie, in een keynote van 45 tot 60 minuten.<br><a class="knop" href="#">Vraag een lezing aan</a></div><img src="../mediapakket-2027/m/k-2.jpg" alt=""></div>
 </article>
 
-<section class="uitleg"><div><span class="label" style="margin-top:0">4 · Op de overzichtspagina van de blog</span><p>Op elke kaart kleine labels met de vormen die er zijn. "Story" krijgt een eigen kleur, zodat het opvalt.</p></div></section>
+<section class="uitleg"><div><span class="label" style="margin-top:0">4 · Op de overzichtspagina van de blog</span><p>Op elke kaart kleine labels met de vormen die er zijn, klein en rustig, zodat ze de kaart niet overheersen.</p></div></section>
 <div class="overzicht" style="margin-top:20px">
  <div class="kaart"><img src="../story-2027/media/b01.jpg" alt=""><div><b>2027: het jaar dat AI ophoudt met praten en gaat werken</b><div class="badges"><span class="s">ook als story</span><span>video</span><span>e-book</span></div></div></div>
  <div class="kaart"><img src="../story-2027/media/b05.jpg" alt=""><div><b>Voorbeeld ander artikel</b><div class="badges"><span>video</span></div></div></div>
@@ -108,7 +121,9 @@ th{background:#f6f2ea}
 <table>
 <tr><th>Onderdeel</th><th>Afspraak</th></tr>
 <tr><td>Adres van de story</td><td>Onder de blog, bijvoorbeeld blog.richardvanhooijdonk.com/story/2027-ai-gaat-werken. De story verwijst voor Google naar het artikel als hoofdversie (canonical). Zo is er geen dubbele inhoud en blijft alle waardering bij het artikel.</td></tr>
-<tr><td>PDF's</td><td>E-book en infographic als download, met dezelfde verwijzing naar het artikel.</td></tr>
+<tr><td>PDF's</td><td>E-book en infographic als download. De verwijzing naar het artikel gaat bij een PDF via de serverkop (HTTP-canonical).</td></tr>
+<tr><td>Nederlands en Engels</td><td>Elke taal een eigen artikel, story en PDF, met onderlinge taalverwijzingen (hreflang).</td></tr>
+<tr><td>Nieuwsbrief en lezing</td><td>Aanmelden voor de nieuwsbrief halverwege het artikel; de lezing als eigen blok onderaan met een aanvraagknop.</td></tr>
 <tr><td>Video</td><td>Op drie plekken: in de keuzeregel bovenaan, als rustpunt halverwege, en los als social post die naar het artikel of de story linkt.</td></tr>
 <tr><td>Social</td><td>Elke vorm heeft zijn eigen post met een directe link naar die vorm: de story voor LinkedIn en Instagram, de PDF voor de nieuwsbrief.</td></tr>
 <tr><td>Meten</td><td>Per artikel: hoeveel lezers welke vorm kiezen, hoe ver ze de story lezen, kijktijd van de video, downloads van de PDF. En welke vorm leidt tot een aanvraag voor een lezing.</td></tr>
