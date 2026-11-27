@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog mediavormen</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Schibsted+Grotesk:wght@400;500;700&family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--oranje:#F26B1D;--inkt:#151515;--zacht:#6b665e;--lijn:#e5ded2}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--inkt);font:18px/1.6 "Schibsted Grotesk",system-ui,sans-serif}
+.uitleg{background:#151515;color:#fff;padding:26px 20px}
+.uitleg div{max-width:1000px;margin:0 auto}
+.uitleg h1{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(28px,4vw,44px);margin:6px 0 8px}
+.kicker{font-family:"Barlow Condensed";font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--oranje);font-size:14px}
+.uitleg p{color:#ddd;max-width:860px;margin:6px 0}
+.label{display:inline-block;background:var(--oranje);color:#111;font:700 12px "Schibsted Grotesk";padding:3px 9px;border-radius:4px;margin:30px 0 8px;letter-spacing:.04em}
+article{max-width:760px;margin:0 auto;padding:10px 20px 40px}
+.meta{color:var(--zacht);font-size:15px}
+h2.titel{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(32px,4.4vw,50px);line-height:1.05;margin:10px 0 12px;letter-spacing:-.015em}
+.vormbalk{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-top:1px solid var(--lijn);border-bottom:1px solid var(--lijn);padding:12px 0;margin:18px 0 22px}
+.vormbalk span{font:600 13px "Barlow Condensed";letter-spacing:.16em;text-transform:uppercase;color:var(--zacht);margin-right:4px}
+.vormbalk a{display:inline-flex;gap:6px;align-items:center;text-decoration:none;color:var(--inkt);border:1px solid var(--lijn);border-radius:999px;padding:7px 13px;font-size:15px;font-weight:600}
+.vormbalk a.actief{background:var(--inkt);color:#fff;border-color:var(--inkt)}
+.vormbalk a.story{border-color:var(--oranje)}
+.vormbalk details{position:relative}
+.vormbalk summary{list-style:none;cursor:pointer;border:1px solid var(--lijn);border-radius:999px;padding:7px 13px;font-size:15px;font-weight:600}
+.vormbalk details div{position:absolute;top:44px;left:0;background:#fff;border:1px solid var(--lijn);border-radius:10px;padding:8px;z-index:5;min-width:230px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.vormbalk details div a{display:block;border:0;border-radius:6px;padding:8px 10px}
+.vormbalk details div a:hover{background:#f6f2ea}
+.rustpunt{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:center;background:#f6f2ea;border-radius:10px;padding:14px;margin:26px 0}
+.rustpunt img{width:100%;border-radius:6px;display:block}
+.rustpunt b{display:block;font-size:17px}
+.rustpunt a{color:var(--oranje);font-weight:700;text-decoration:none}
+.vid{position:relative}
+.vid::after{content:"▶";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:38px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.pakket{border-top:3px solid var(--inkt);margin-top:36px;padding-top:18px}
+.pakket h3{font-family:"Bricolage Grotesque";font-weight:800;font-size:28px;margin:0 0 14px}
+.tegels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tegel{border:1px solid var(--lijn);border-radius:10px;overflow:hidden;text-decoration:none;color:var(--inkt)}
+.tegel img{width:100%;height:120px;object-fit:cover;display:block}
+.tegel div{padding:10px 12px;font-size:15px}
+.tegel b{display:block;font-size:16px}
+.overzicht{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto;padding:0 20px 40px}
+.kaart{border:1px solid var(--lijn);border-radius:10px;overflow:hidden}
+.kaart img{width:100%;height:150px;object-fit:cover;display:block}
+.kaart div{padding:12px}
+.badges{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.badges span{font-size:12px;font-weight:700;border-radius:999px;padding:3px 8px;background:#f1ece3}
+.badges span.s{background:#ffe2d0;color:#9a3c00}
+.regels{max-width:1000px;margin:0 auto;padding:10px 20px 80px}
+table{width:100%;border-collapse:collapse}
+td,th{border-bottom:1px solid var(--lijn);padding:10px;text-align:left;font-size:16px;vertical-align:top}
+th{background:#f6f2ea}
+@media (max-width:720px){.tegels,.overzicht{grid-template-columns:1fr}.rustpunt{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<section class="uitleg"><div><div class="kicker">Voorstel · zo bieden we de mediavormen aan op de blog</div><h1>Het artikel blijft de ingang, de rest kies je erbij</h1>
+<p>Advies van Astra en Gemini, los van elkaar hetzelfde: direct onder de titel een rustige keuzeregel, onderaan het hele pakket, en elke vorm ook los te delen. Hieronder zie je het artikel zoals de lezer het ziet, daarna de overzichtspagina van de blog.</p></div></section>
+
+<article>
+<span class="label">1 · Bovenaan het artikel</span>
+<div class="meta">27 november 2026 · Richard van Hooijdonk · 14 minuten lezen</div>
+<h2 class="titel">2027: het jaar dat AI ophoudt met praten en gaat werken</h2>
+<p><em>Tien trends, en de vraag wie de regie houdt</em></p>
+<nav class="vormbalk"><span>Kies je vorm</span>
+ <a class="actief" href="#">Lees artikel</a>
+ <a class="story" href="../story-2027/">Bekijk als story</a>
+ <a href="#video">Kijk de video · 1 min</a>
+ <details><summary>Meer vormen ▾</summary><div>
+  <a href="../story-2027/ebook-2027.pdf">E-book (PDF, 30 pagina's)</a>
+  <a href="#infographic">Infographic (PDF)</a>
+  <a href="#">Luister · binnenkort</a>
+ </div></details>
+</nav>
+<p>AI schuift in 2027 op van praten naar werken. Agents ronden taken af die uren duren, open modellen maken rekenkracht goedkoop en de gewone fabrieksrobot breekt het ene record na het andere. Voor leiders draait het daarom om één vraag: wat geef je uit handen, en waarvoor blijf je zelf verantwoordelijk?</p>
+<p class="meta">... de lopende tekst van het artikel ...</p>
+
+<span class="label">2 · Halverwege: video en infographic als rustpunt</span>
+<div class="rustpunt" id="video"><div class="vid"><img src="../mediapakket-2027/m/v2-explainer.jpg" alt=""></div><div><b>De tien trends in één minuut</b>Video, 60 seconden. Speelt pas af als je erop klikt, dus het artikel blijft snel.</div></div>
+<p class="meta">... verder met de tekst ...</p>
+<div class="rustpunt" id="infographic"><img src="../mediapakket-2027/m/i1-infographic.jpg" alt=""><div><b>Drie manieren waarop AI gaat werken</b>De infographic op één pagina. <a href="#">Download als PDF</a></div></div>
+
+<span class="label">3 · Onderaan: het hele pakket</span>
+<div class="pakket"><h3>Alles over dit onderwerp</h3>
+<div class="tegels">
+ <a class="tegel" href="../story-2027/"><img src="../story-2027/media/b01.jpg" alt=""><div><b>Story</b>Het hele verhaal in beeld</div></a>
+ <a class="tegel" href="#video"><img src="../mediapakket-2027/m/v2-explainer.jpg" alt=""><div><b>Video</b>De tien trends in 1 minuut</div></a>
+ <a class="tegel" href="../story-2027/ebook-2027.pdf"><img src="../story-2027/media/b04.jpg" alt=""><div><b>E-book</b>PDF, 30 pagina's</div></a>
+ <a class="tegel" href="#infographic"><img src="../mediapakket-2027/m/i1-infographic.jpg" alt=""><div><b>Infographic</b>PDF, één pagina</div></a>
+ <a class="tegel" href="#"><img src="../mediapakket-2027/m/s3-cijfer.jpg" alt=""><div><b>Op LinkedIn</b>Cijferkaart en carrousel</div></a>
+ <a class="tegel" href="#"><img src="../mediapakket-2027/m/k-1.jpg" alt=""><div><b>Als keynote</b>Boek deze lezing</div></a>
+</div></div>
+</article>
+
+<section class="uitleg"><div><span class="label" style="margin-top:0">4 · Op de overzichtspagina van de blog</span><p>Op elke kaart kleine labels met de vormen die er zijn. "Story" krijgt een eigen kleur, zodat het opvalt.</p></div></section>
+<div class="overzicht" style="margin-top:20px">
+ <div class="kaart"><img src="../story-2027/media/b01.jpg" alt=""><div><b>2027: het jaar dat AI ophoudt met praten en gaat werken</b><div class="badges"><span class="s">ook als story</span><span>video</span><span>e-book</span></div></div></div>
+ <div class="kaart"><img src="../story-2027/media/b05.jpg" alt=""><div><b>Voorbeeld ander artikel</b><div class="badges"><span>video</span></div></div></div>
+ <div class="kaart"><img src="../story-2027/media/b09.jpg" alt=""><div><b>Voorbeeld ander artikel</b><div class="badges"><span>infographic</span></div></div></div>
+</div>
+
+<div class="regels"><h3 style="font-family:'Bricolage Grotesque';font-weight:800;font-size:28px">Afspraken achter de schermen</h3>
+<table>
+<tr><th>Onderdeel</th><th>Afspraak</th></tr>
+<tr><td>Adres van de story</td><td>Onder de blog, bijvoorbeeld blog.richardvanhooijdonk.com/story/2027-ai-gaat-werken. De story verwijst voor Google naar het artikel als hoofdversie (canonical). Zo is er geen dubbele inhoud en blijft alle waardering bij het artikel.</td></tr>
+<tr><td>PDF's</td><td>E-book en infographic als download, met dezelfde verwijzing naar het artikel.</td></tr>
+<tr><td>Video</td><td>Op drie plekken: in de keuzeregel bovenaan, als rustpunt halverwege, en los als social post die naar het artikel of de story linkt.</td></tr>
+<tr><td>Social</td><td>Elke vorm heeft zijn eigen post met een directe link naar die vorm: de story voor LinkedIn en Instagram, de PDF voor de nieuwsbrief.</td></tr>
+<tr><td>Meten</td><td>Per artikel: hoeveel lezers welke vorm kiezen, hoe ver ze de story lezen, kijktijd van de video, downloads van de PDF. En welke vorm leidt tot een aanvraag voor een lezing.</td></tr>
+<tr><td>Snelheid</td><td>Video en zware beelden laden pas als je erop klikt; de story staat los van het WordPress-thema.</td></tr>
+</table></div>
+</body>
+</html>
