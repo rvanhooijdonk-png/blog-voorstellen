@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Story 2027</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{--oranje:#F26B1D;--wit:#fff;--zwart:#0d0d0d}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--zwart);color:var(--wit);font:18px/1.6 Inter,system-ui,-apple-system,sans-serif}
+.decor{position:fixed;inset:0;z-index:0}
+.decor video,.decor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
+.decor .aan{opacity:1}
+.decor::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,13,13,.88) 0%,rgba(13,13,13,.55) 45%,rgba(13,13,13,.15) 100%)}
+@media (max-width:760px){.decor::after{background:linear-gradient(0deg,rgba(13,13,13,.92) 0%,rgba(13,13,13,.5) 60%,rgba(13,13,13,.2) 100%)}}
+main{position:relative;z-index:1}
+.stap{min-height:100vh;display:flex;align-items:center;padding:12vh 6vw}
+.kaart{max-width:560px}
+.kicker{color:var(--oranje);font-weight:800;letter-spacing:.18em;font-size:14px;text-transform:uppercase}
+.balk{width:72px;height:6px;background:var(--oranje);margin:18px 0}
+h1{font-size:clamp(40px,7vw,84px);line-height:1;margin:.2em 0;font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(30px,5vw,56px);line-height:1.05;margin:.1em 0 .4em;font-weight:800}
+.cijfer{font-size:clamp(90px,16vw,200px);line-height:.9;font-weight:800;color:var(--oranje)}
+p{font-size:clamp(18px,2vw,22px);color:#e8e8e8;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.verschijn{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.zichtbaar{opacity:1;transform:none}
+.scroll{margin-top:40px;font-size:14px;color:#bbb}
+.slot{justify-content:center;text-align:center}
+.slot .kaart{margin:0 auto}
+.knop{display:inline-block;margin-top:18px;background:var(--oranje);color:#111;font-weight:800;padding:14px 22px;border-radius:999px;text-decoration:none}
+.bron{position:fixed;right:12px;bottom:10px;z-index:2;font-size:11px;color:#aaa}
+.bron a{color:#aaa}
+.voortgang{position:fixed;left:0;top:0;height:4px;background:var(--oranje);z-index:3;width:0}
+@media (prefers-reduced-motion:reduce){.verschijn{opacity:1;transform:none;transition:none}.decor video,.decor img{transition:none}}
+</style>
+</head>
+<body>
+<div class="voortgang" id="voortgang"></div>
+<div class="decor" aria-hidden="true">
+ <video data-scene="1" src="media/s1.mp4" poster="media/s1.jpg" muted loop playsinline preload="auto" class="aan"></video>
+ <video data-scene="2" src="media/s2.mp4" poster="media/s2.jpg" muted loop playsinline preload="none"></video>
+ <video data-scene="3" src="media/s3.mp4" poster="media/s3.jpg" muted loop playsinline preload="none"></video>
+ <video data-scene="4" src="media/s4.mp4" poster="media/s4.jpg" muted loop playsinline preload="none"></video>
+ <video data-scene="5" src="media/s5.mp4" poster="media/s5.jpg" muted loop playsinline preload="none"></video>
+</div>
+<main>
+ <section class="stap" data-scene="1"><div class="kaart verschijn">
+  <div class="kicker">Trends 2027 · story</div><div class="balk"></div>
+  <h1>2027: het jaar dat AI ophoudt met praten en gaat werken</h1>
+  <p>AI schuift in 2027 van praten naar werken. Voor leiders draait het daarom om één vraag: wat geef je uit handen, en waarvoor blijf je zelf verantwoordelijk?</p>
+  <div class="scroll">Scroll om het verhaal te volgen ↓</div>
+ </div></section>
+ <section class="stap" data-scene="2"><div class="kaart verschijn">
+  <div class="cijfer">1</div>
+  <h2>AI-agents werken dagen achter elkaar door</h2>
+  <p>Een agent krijgt geen losse vraag meer, maar een opdracht die dagen duurt. Hij meldt zich pas als er iets te beslissen valt.</p>
+ </div></section>
+ <section class="stap" data-scene="3"><div class="kaart verschijn">
+  <div class="cijfer">2</div>
+  <h2>Jouw agent koopt bij hun agent</h2>
+  <p>Inkoop en verkoop verlopen steeds vaker tussen agents van twee bedrijven. De mens stelt de grenzen, de agents onderhandelen.</p>
+ </div></section>
+ <section class="stap" data-scene="4"><div class="kaart verschijn">
+  <div class="cijfer">3</div>
+  <h2>Echtheid moet je kunnen bewijzen</h2>
+  <p>Nu beeld, stem en document na te maken zijn, wordt aantoonbare echtheid een eis.</p>
+ </div></section>
+ <section class="stap slot" data-scene="5"><div class="kaart verschijn">
+  <div class="kicker">Richard van Hooijdonk</div><div class="balk" style="margin:18px auto"></div>
+  <h2>Lees het hele verhaal</h2>
+  <p>Tien trends, en de vraag wie de regie houdt.</p>
+  <a class="knop" href="#">Naar het artikel</a>
+ </div></section>
+</main>
+<div class="bron">Demo 27-11 · video's: Pexels (Google DeepMind e.a.)</div>
+<script>
+(function(){
+  var vids=[].slice.call(document.querySelectorAll('.decor video'));
+  var stil=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function toon(n){vids.forEach(function(v){var aan=v.dataset.scene===n;v.classList.toggle('aan',aan);if(aan){if(v.preload==='none'){v.preload='auto';v.load();}if(!stil){var p=v.play();if(p&&p.catch)p.catch(function(){});}}else{v.pause();}});}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){toon(e.target.dataset.scene);var k=e.target.querySelector('.verschijn');if(k)k.classList.add('zichtbaar');}});},{threshold:0.5});
+  [].forEach.call(document.querySelectorAll('.stap'),function(s){io.observe(s);});
+  toon('1');document.querySelector('.verschijn').classList.add('zichtbaar');
+  var bar=document.getElementById('voortgang');
+  window.addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(100*h.scrollTop/(h.scrollHeight-h.clientHeight))+'%';},{passive:true});
+})();
+</script>
+</body>
+</html>
