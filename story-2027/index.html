@@ -104,6 +104,20 @@ h2{font-size:clamp(40px,5.6vw,84px);line-height:1;font-weight:800;letter-spacing
  .cijferstap{min-height:55vh}
  .tegels{grid-template-columns:repeat(2,1fr)}
 }
+/* snappen: elke scroll eindigt op een hele scène (Richard 27-11) */
+@media (min-width:821px){
+ html{scroll-snap-type:y mandatory}
+ .opening,.intro,.opener,.citaat,.hoofdstuk,.overzicht,.bronnen{scroll-snap-align:start}
+ .stap{min-height:100vh;scroll-snap-align:start;padding:10vh 0}
+ .cijferstap{min-height:100vh;scroll-snap-align:start}
+ .cijfer-stappen{padding:0}
+ .hoofdstuk,.overzicht{min-height:100vh}
+ .bronnen{scroll-snap-align:start}
+}
+@media (max-width:820px){
+ html{scroll-snap-type:y proximity}
+ .opening,.opener,.citaat,.lees-beeld,.cijferstap{scroll-snap-align:start}
+}
 @media (prefers-reduced-motion:reduce){.verschijn{opacity:1;transform:none;transition:none}.vol img,.lees-beeld img{transform:none!important;transition:none}}
 </style>
 <noscript><style>.verschijn{opacity:1;transform:none}.cijferstap p{opacity:1}</style></noscript>
