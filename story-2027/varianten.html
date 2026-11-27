@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Story varianten</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Schibsted+Grotesk:wght@400;500;700&family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--oranje:#F26B1D;--zwart:#0b0b0c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zwart);color:#fff;font-family:"Schibsted Grotesk",sans-serif}
+.label{position:absolute;top:18px;left:18px;z-index:5;font:600 14px "Barlow Condensed";letter-spacing:.2em;text-transform:uppercase;background:var(--oranje);color:#111;padding:6px 12px;border-radius:3px}
+.v{position:relative;min-height:100vh;overflow:hidden}
+.kop{font-family:"Bricolage Grotesque";font-weight:800;letter-spacing:-.02em;line-height:1.02}
+sup{color:var(--oranje);font-size:.55em;font-weight:700}
+.or{color:var(--oranje)}
+/* A: volle foto, tekst eroverheen */
+.a img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.a::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,.95) 0%,rgba(11,11,12,.82) 42%,rgba(11,11,12,.15) 75%)}
+.a .t{position:relative;z-index:2;max-width:820px;padding:16vh 7vw}
+.a .kop{font-size:clamp(40px,4.4vw,68px);margin:0 0 30px}
+.a p{font-size:clamp(24px,2vw,30px);line-height:1.5;margin:0 0 .9em;color:#f1eee8}
+/* B: magazine-spread, beeld tot de rand */
+.b{display:grid;grid-template-columns:1fr 1fr;background:#14110e}
+.b img{width:100%;height:100%;object-fit:cover;min-height:100vh}
+.b .t{padding:14vh 6vw;display:flex;flex-direction:column;justify-content:center}
+.b .nr{font-family:"Bricolage Grotesque";font-weight:800;font-size:120px;color:var(--oranje);line-height:.8}
+.b .kop{font-size:clamp(38px,3.8vw,60px);margin:20px 0 28px}
+.b p{font-size:clamp(23px,1.8vw,28px);line-height:1.5;color:#ebe6dd;margin:0 0 .9em}
+.b p:first-of-type::first-letter{font-family:"Bricolage Grotesque";font-weight:800;font-size:3.2em;float:left;line-height:.8;margin:6px 12px 0 0;color:var(--oranje)}
+/* C: beeldband boven, grote kernzin, tekst in twee kolommen */
+.c{background:#f4efe6;color:#141414}
+.c .band{height:46vh;position:relative}
+.c .band img{width:100%;height:100%;object-fit:cover}
+.c .t{padding:7vh 7vw 10vh}
+.c .kop{font-size:clamp(38px,4.6vw,72px);max-width:1150px;margin:0 0 4vh}
+.c .kol{columns:2;column-gap:56px}
+.c p{font-size:clamp(22px,1.7vw,27px);line-height:1.5;margin:0 0 .9em;break-inside:avoid}
+.c .groot{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(70px,8vw,130px);color:var(--oranje);line-height:.9}
+/* D: cijfer en beeld als decor, tekst groot in het midden */
+.d img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(3px) brightness(.35) saturate(1.2);transform:scale(1.05)}
+.d .t{position:relative;z-index:2;min-height:100vh;display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:center;padding:12vh 7vw}
+.d .groot{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(90px,11vw,190px);color:var(--oranje);line-height:.85;letter-spacing:-.03em}
+.d .onder{font-size:clamp(24px,2vw,30px);font-weight:700;margin-top:18px;max-width:420px;line-height:1.25}
+.d p{font-size:clamp(24px,2vw,30px);line-height:1.5;margin:0 0 .9em;color:#f3efe9}
+.uitleg{padding:60px 7vw 90px;max-width:1100px;font-size:20px;line-height:1.55;color:#ddd}
+.uitleg h2{font-family:"Bricolage Grotesque";font-weight:800;font-size:40px;margin:0 0 16px}
+.uitleg b{color:var(--oranje)}
+@media (max-width:820px){.b,.d .t{grid-template-columns:1fr}.b img{min-height:50vh;height:50vh}.c .kol{columns:1}}
+</style>
+</head>
+<body>
+<section class="uitleg"><h2>Vier alternatieven voor de leespagina</h2>
+<p>Dezelfde tekst (trend 3, stroom) en hetzelfde beeld, op vier manieren. Kies een letter, of combineer, bijvoorbeeld "A voor gewone pagina's, D bij cijfers".</p>
+<p><b>A Volle foto:</b> het beeld vult het scherm, de tekst staat er groot overheen. <b>B Magazine:</b> warm donker, beeld tot de rand, grote kop en een oranje beginletter. <b>C Krant van morgen:</b> een beeldband bovenaan, één kernzin als kop, de tekst in twee kolommen. <b>D Cijfer centraal:</b> het belangrijkste getal groot links, de tekst rechts, het beeld vaag als sfeer.</p></section>
+
+<section class="v a"><span class="label">A · Volle foto</span><img src="media/b05.jpg" alt=""><div class="t">
+<div class="kop">Zonder stroom staat ook de duurste chip stil.</div>
+<p>Het stroomverbruik van datacenters steeg in 2025 met 17 procent, meldt het Internationaal Energieagentschap, terwijl de totale vraag naar stroom met 3 procent groeide.<sup>10</sup> AI-datacenters groeiden nog sneller, en we lopen nu tegen fysieke grenzen aan: gasturbines, transformatoren en netaansluitingen zijn schaars.<sup>10</sup></p>
+<p>In Nederland staan 15.498 bedrijven in de rij voor een grote aansluiting, en datacenters vragen bijna een derde van die capaciteit.<sup>11</sup></p>
+</div></section>
+
+<section class="v b"><span class="label">B · Magazine</span><div class="t"><div class="nr">03</div>
+<div class="kop">Zonder stroom staat ook de duurste chip stil.</div>
+<p>Het stroomverbruik van datacenters steeg in 2025 met 17 procent, meldt het Internationaal Energieagentschap, terwijl de totale vraag naar stroom met 3 procent groeide.<sup>10</sup> AI-datacenters groeiden nog sneller, en we lopen nu tegen fysieke grenzen aan: gasturbines, transformatoren en netaansluitingen zijn schaars.<sup>10</sup></p>
+<p>In Nederland staan 15.498 bedrijven in de rij voor een grote aansluiting, en datacenters vragen bijna een derde van die capaciteit.<sup>11</sup></p>
+</div><img src="media/b05.jpg" alt=""></section>
+
+<section class="v c"><span class="label">C · Krant van morgen</span><div class="band"><img src="media/b05.jpg" alt=""></div><div class="t">
+<div class="kop">Zonder stroom staat ook de duurste chip stil.</div>
+<div class="kol"><p>Het stroomverbruik van datacenters steeg in 2025 met 17 procent, meldt het Internationaal Energieagentschap, terwijl de totale vraag naar stroom met 3 procent groeide.<sup>10</sup> AI-datacenters groeiden nog sneller, en we lopen nu tegen fysieke grenzen aan: gasturbines, transformatoren en netaansluitingen zijn schaars.<sup>10</sup></p>
+<p><span class="groot">15.498</span><br>bedrijven in Nederland staan in de rij voor een grote aansluiting, en datacenters vragen bijna een derde van die capaciteit.<sup>11</sup> Bij Vijfhuizen is het net volgens een rechter pas tussen 2033 en 2035 sterk genoeg voor een nieuw datacenter.<sup>12</sup></p></div>
+</div></section>
+
+<section class="v d"><span class="label">D · Cijfer centraal</span><img src="media/b05.jpg" alt=""><div class="t">
+<div><div class="groot">+17%</div><div class="onder">stroomverbruik datacenters in 2025, tegen <span class="or">+3%</span> totale vraag</div></div>
+<div><p>Het stroomverbruik van datacenters steeg in 2025 met 17 procent, meldt het Internationaal Energieagentschap, terwijl de totale vraag naar stroom met 3 procent groeide.<sup>10</sup> AI-datacenters groeiden nog sneller, en we lopen nu tegen fysieke grenzen aan: gasturbines, transformatoren en netaansluitingen zijn schaars.<sup>10</sup> Zonder stroom staat ook de duurste chip stil.</p></div>
+</div></section>
+</body>
+</html>
