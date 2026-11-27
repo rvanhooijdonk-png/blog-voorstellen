@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flow ontwerp</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Schibsted+Grotesk:wght@400;500;700&family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--oranje:#F26B1D;--bg:#f6f2ea;--inkt:#151515;--zacht:#6b665e;--lijn:#e0d8ca;--kaart:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--inkt);font:18px/1.55 "Schibsted Grotesk",system-ui,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:40px 20px 100px}
+.kicker{font-family:"Barlow Condensed";font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--oranje);font-size:14px}
+h1{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(36px,5vw,64px);line-height:1;margin:10px 0 14px;letter-spacing:-.02em}
+h2{font-family:"Bricolage Grotesque";font-weight:800;font-size:32px;margin:60px 0 10px;letter-spacing:-.01em}
+.intro{font-size:21px;max-width:860px}
+.antwoord{background:#151515;color:#fff;border-radius:12px;padding:24px 28px;margin:26px 0;font-size:19px}
+.antwoord b{color:var(--oranje)}
+.stappen{display:grid;gap:16px;margin-top:18px}
+.stap{display:grid;grid-template-columns:90px 1fr 1fr;gap:22px;background:var(--kaart);border-radius:12px;padding:22px;border:1px solid var(--lijn)}
+.stap .n{font-family:"Bricolage Grotesque";font-weight:800;font-size:56px;color:var(--oranje);line-height:.9}
+.stap h3{margin:0 0 6px;font-size:22px}
+.stap p{margin:0 0 8px}
+.wie{font-size:15px;color:var(--zacht)}
+.schets{background:#151515;color:#eee;border-radius:8px;padding:14px 16px;font:13.5px/1.5 ui-monospace,Menlo,monospace;white-space:pre;overflow-x:auto}
+.bestaat{display:inline-block;font-size:13px;font-weight:700;padding:3px 9px;border-radius:999px;margin:6px 6px 0 0}
+.b-ja{background:#dff3e4;color:#1d6b35}.b-deels{background:#fff0d6;color:#8a5a00}.b-nee{background:#fde2dc;color:#a33a1c}
+table{width:100%;border-collapse:collapse;margin-top:14px;background:#fff;border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--lijn);vertical-align:top;font-size:16px}
+th{background:#ece5d8;font-size:14px;letter-spacing:.04em}
+.groot{font-family:"Bricolage Grotesque";font-weight:800;font-size:26px;margin:0}
+@media (max-width:820px){.stap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<div class="kicker">Ontwerp · 27 november 2026 · ter beoordeling</div>
+<h1>Van onderzoek tot publicatie: van inspiratie tot meting</h1>
+<p class="intro">Hoe het onderzoeksboard, de artikelpagina, de uitwerking per medium, de afronding en de publicatie op elkaar aansluiten. Op elk moment zie je waar een item staat, wie aan zet is en wat er nog moet.</p>
+
+<div class="antwoord"><b>Wordt dit een opzet op de bestaande pipeline?</b> Ja. Er komt geen nieuw systeem. De inname en selectie blijven in de contentpijplijn (8797). Het onderzoeksformat dat je "heel mooi" vond, wordt stap 1 van elk item. De werkplek (8812) wordt de plek waar het item daarna doorheen loopt, met de tabs die er al zijn. De correctiekaarten (v1 en v2 naast elkaar) zijn het vaste model voor elke correctie. Nieuw is alleen de verbinding: één itempagina met een stappenbalk, zodat het pad doorlopend en logisch wordt.</div>
+
+<h2>Het scherm: één itempagina</h2>
+<div class="schets">┌─ ITEM  2027: het jaar dat AI ophoudt met praten          startpunt: Artikel ▾      aan zet: JIJ (3) ─┐
+│  ⓪ Inspiratie ✓  ① Wat maken ✓  ② Onderzoek ✓  ③ Opzet ✓  ④ Hoofdtekst ✓  ⑤ Afgeleide teksten ●  ⑥ Productie  ⑦ Afronden + inplannen  ⑧ Meting │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  ONDERDEEL          TEKST        PRODUCTIE              CONTROLE      PUBLICATIE                       │
+│  Artikel NL         ✓ akkoord    WordPress concept      ✓ Astra       gepland ma 09:00                 │
+│  Story              ✓ (erft)     12 beelden, 3 varianten ● jij        WordPress                        │
+│  Nieuwsbrief        ● jij        3 ontwerpen            .             beehiiv concept                  │
+│  Social S1 tot S6   ● AI         6 varianten per stuk   .             Metricool                        │
+│  Video V1 tot V3    .            Creatomate             .             Metricool, YouTube               │
+│  E-book, Keynote    .            Paged.js, Canva        .             WordPress, download              │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  klik op een rij = de werkplek-tab van dat onderdeel, met daarin dezelfde vier stappen                 │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────┘</div>
+
+<h2>Van inspiratie tot meting</h2>
+<p style="max-width:860px">Het pad begint op de inspiratiepagina: daar kies je het onderwerp. Dan bepaal je wat we maken en welke media erbij horen, en daarna werken we per medium uit (Richard 27-11). Onderzoek voor een artikel is iets anders dan onderzoek voor social of video, dus het onderzoek volgt op de keuze van de vorm. Tekst eerst en dan productie blijft. De nieuwsbrief is altijd een afgeleide van een artikel.</p>
+<div class="stappen">
+ <div class="stap"><div class="n">0</div><div><h3>Inspiratie</h3><p>De inspiratiepagina is het startpunt. Daar staan de blokken die er al zijn: zelf invullen, nieuwe voorstellen, actualiteit en trending social, thema's, sector, statistieken die ertoe doen, quotes, opvallend, trending rapporten, de andere hoek en de kalender. Naast "Onderzoek dit", "Ster", "Later" en "Weg" krijgt elk item de knop "Maak hiervan". Die opent stap 1 met het onderwerp al ingevuld en een mediavoorstel dat bij het soort item past: een statistiek wordt een cijferkaart, een quote een quotekaart, een grote trend een artikel met story. Je kunt ook meerdere sterren samen tot één onderwerp maken.</p><p class="wie">Jij kiest · AI stelt de media voor · uitkomst: onderwerp met voorstel</p><span class="bestaat b-deels">pagina bestaat (8797, #pub-nieuw), knop "Maak hiervan" nieuw</span></div>
+  <div class="schets">INSPIRATIE · Statistieken die ertoe doen
+15.498 bedrijven wachten op stroom   (Onderzoek dit) (★) (Later) (Weg) [ Maak hiervan → ]
+INSPIRATIE · Nieuwe voorstellen
+AI-agents werken dagen door           (Onderzoek dit) (★) (Later) (Weg) [ Maak hiervan → ]
+                ↓
+Voorstel: cijferkaart S3 + short V1 · of: artikel + story + nieuwsbrief</div></div>
+ <div class="stap"><div class="n">1</div><div><h3>Wat gaan we maken</h3><p>Het onderwerp komt uit de inspiratiepagina, of je vult het zelf in. Standaard staat er artikel met nieuwsbrief klaar, want dat is in ongeveer 9 van de 10 gevallen de route; daarna volgt de rest. Alles blijft open: je kunt ook kiezen voor een artikel, of een losse social-reeks, een video, een keynote. Meteen daarna vink je aan welke media erbij horen en hoeveel varianten, op basis van de kanaalmatrix. De nieuwsbrief verschijnt alleen als er een artikel is. Per gekozen medium geef je een eigen instructie, bijvoorbeeld "carrousel over de drie grootste verschuivingen, zakelijk, geen robots" of "short van 30 seconden voor managers, haak met een cijfer". Die instructie gaat mee naar onderzoek, tekst en productie.</p><p class="wie">Jij kiest · uitkomst: hoofdvorm en mediaplan</p><span class="bestaat b-nee">nieuw (00e1)</span></div>
+  <div class="schets">Onderwerp: AI gaat werken in 2027
+Hoofdvorm: (•) Artikel + nieuwsbrief (standaard)  ( ) Social  ( ) Video  ( ) Keynote
+☑ Story ☑ Nieuwsbrief ☑ S1–S6 ☑ V1 V2 ☐ V3 ☑ E-book
+S4 carrousel  instructie: drie grootste verschuivingen, zakelijk
+V1 short      instructie: 30 s, haak met een cijfer
+( plan akkoord )</div></div>
+ <div class="stap"><div class="n">2</div><div><h3>Onderzoek op maat</h3><p>Het onderzoek past bij de hoofdvorm. Voor een artikel het onderzoeksboard: drie onderzoekers, kort eerst, verdieping ingeklapt, bronnen per punt, akkoord of aanvullend onderzoek. Is het artikel het startpunt, dan halen we de ideeën voor de andere media eerst uit het artikelonderzoek (gemarkeerd als "uit artikelonderzoek"). Is dat niet genoeg, dan start je per medium aanvullend onderzoek in het social- en videoformat. Is social of video zelf het startpunt, dan gebruiken we dat format meteen: wat nu trending is, sterke openingshaken, één scherp cijfer of citaat met bron, beelden en wat op elk kanaal scoort.</p><p class="wie">Jij kiest · AI onderzoekt · uitkomst: gekozen punten met bronnen</p><span class="bestaat b-deels">artikel bestaat als losse pagina, social en video nieuw</span></div>
+  <div class="schets">ARTIKEL  punt 4 Stroom  impact hoog · 3 van 3
+         ( ✓ akkoord ) ( ↻ aanvullend: .... )
+SOCIAL   haak · trending · cijfer · beeld · kanaal</div></div>
+ <div class="stap"><div class="n">3</div><div><h3>Opzet</h3><p>Bij een artikel één outline in het Nederlands met de Engelse afwijkingen, cijfers en citaten met bron en de verhaallijn. Bij video een scènescript met haak en slot. Bij social de kernboodschap per uiting. Commentaar per onderdeel, dan akkoord.</p><p class="wie">Jij keurt · uitkomst: goedgekeurde opzet</p><span class="bestaat b-ja">artikel bestaat (proces 21-11)</span></div>
+  <div class="schets">§3 Stroom   [commentaar NL] [commentaar EN]
+( nieuwe versie )  ( akkoord )   v3</div></div>
+ <div class="stap"><div class="n">4</div><div><h3>Hoofdtekst</h3><p>De hoofdvorm wordt geschreven: de long-read, het videoscript of de social-teksten. Correcties gaan via de kaarten: v1 en v2 naast elkaar, opdrachten direct verwerkt, vragen eerst beantwoord. Eindigt met tekstakkoord.</p><p class="wie">Jij keurt · Astra controleert · uitkomst: tekst met vaste vingerafdruk</p><span class="bestaat b-ja">artikel bestaat (werkplek)</span></div>
+  <div class="schets">kaart 7/12  "15.498 bedrijven..."
+ v1 ─────── │ v2 ───────
+( akkoord ) ( anders ) ( vraag ) ( weg )</div></div>
+ <div class="stap"><div class="n">5</div><div><h3>Afgeleide teksten</h3><p>Uit de goedgekeurde hoofdtekst komen de teksten voor de andere media: nieuwsbrief (alleen na een artikel), posttekst, scèneteksten, dia-teksten. Je keurt per onderdeel of alles in één keer. Zonder tekstakkoord wordt er niets gemaakt.</p><p class="wie">Jij keurt · uitkomst: tekst per onderdeel</p><span class="bestaat b-deels">poort bestaat, overzicht nieuw</span></div>
+  <div class="schets">Nieuwsbrief     blokken ✎    ( akkoord )
+S3 cijferkaart  posttekst ✎  ( akkoord )
+( alles akkoord )</div></div>
+ <div class="stap"><div class="n">6</div><div><h3>Productie met varianten</h3><p>Per onderdeel varianten in de gekozen tool: Canva voor beeld, Creatomate voor video, het e-book automatisch gezet, story en nieuwsbrief in eigen sjablonen. Naast elkaar kiezen, commentaar of "Open in Canva"; commentaar geeft v2.</p><p class="wie">Jij kiest · uitkomst: gekozen versie per onderdeel</p><span class="bestaat b-deels">in bouw (00a tot 00j)</span></div>
+  <div class="schets">[ var A ] [ var B ] [ var C ]  ← kies
+Open in Canva ↗  commentaar: ........</div></div>
+ <div class="stap"><div class="n">7</div><div><h3>Afronden en inplannen</h3><p>Eén scherm: het pakket met nummers, de automatische eindcontrole (tekst letterlijk gelijk, bronnen, alt-teksten, formaten, Astra) en de kalender per kanaal. Alles staat aangevinkt; je haalt weg wat niet mag en drukt één keer op "Akkoord en inplannen". De keten zet concepten klaar in WordPress, beehiiv en Metricool.</p><p class="wie">Jij keurt en plant · uitkomst: geplande uitingen</p><span class="bestaat b-deels">voorbeeld en droge stap bestaan</span></div>
+  <div class="schets">14 van 14 ✓  controles groen
+☑ ma 09:00 Artikel + story  WordPress
+☑ ma 12:00 S1 LinkedIn      Metricool
+☑ di 08:00 Nieuwsbrief      beehiiv
+( akkoord en inplannen )</div></div>
+ <div class="stap"><div class="n">8</div><div><h3>Meting</h3><p>Na 7 en 28 dagen komen de resultaten terug op het item: bereik, klikken, reacties, vertoningen in Google en AI-zoekmachines. Wat werkt, gaat het leerbestand in voor de volgende keuze in stap 1.</p><p class="wie">AI meet · uitkomst: lessen per kanaal</p><span class="bestaat b-nee">nieuw</span></div>
+  <div class="schets">S3 cijferkaart  LinkedIn  4.210 weergaven
+nieuwsbrief     open 52%  klik 9%</div></div>
+</div>
+
+<h2>Wat er al staat en wat nog moet</h2>
+<table>
+<tr><th>Stap</th><th>Nu</th><th>Nodig</th></tr>
+<tr><td>0 Inspiratie</td><td>Inspiratiepagina met blokken en knoppen (8797)</td><td>Knop "Maak hiervan" met mediavoorstel per soort item, sterren samenvoegen tot één onderwerp</td></tr>
+<tr><td>1 Wat maken</td><td>Losse keuze in de contentpijplijn</td><td>Hoofdvorm en mediaplan als eerste scherm van het item (00e1)</td></tr>
+<tr><td>2 Onderzoek</td><td>Artikelonderzoek als losse pagina</td><td>In de werkplek, plus een eigen onderzoeksvorm voor social en video</td></tr>
+<tr><td>3 Opzet, 4 Hoofdtekst</td><td>Werkt voor het artikel</td><td>Scriptopzet voor video en kernboodschap voor social</td></tr>
+<tr><td>5 Afgeleide teksten</td><td>Tekstpoort per onderdeel werkt</td><td>Overzicht met "alles akkoord" (00e2)</td></tr>
+<tr><td>6 Productie</td><td>In bouw</td><td>Varianten, bronlink en commentaar (00a tot 00j)</td></tr>
+<tr><td>7 Afronden en inplannen</td><td>Voorbeeld en droge stap</td><td>Eindcontrole, kalender en concepten, één knop</td></tr>
+<tr><td>8 Meting</td><td>SEO meet per artikel</td><td>Per uiting en kanaal terug op het item</td></tr>
+</table>
+<p class="groot" style="margin-top:40px">Eerst jouw akkoord op dit pad, dan bouwen we het als één geheel.</p>
+</main>
+</body>
+</html>

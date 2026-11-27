@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onderzoek social en video</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Schibsted+Grotesk:wght@400;500;700&family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--oranje:#F26B1D;--bg:#f6f2ea;--inkt:#151515;--zacht:#6b665e;--lijn:#e0d8ca}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--inkt);font:17px/1.5 "Schibsted Grotesk",system-ui,sans-serif}
+main{max-width:1240px;margin:0 auto;padding:36px 18px 100px}
+.kicker{font-family:"Barlow Condensed";font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--oranje);font-size:14px}
+h1{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(34px,4.6vw,58px);line-height:1;margin:10px 0 12px;letter-spacing:-.02em}
+.intro{max-width:900px;font-size:19px}
+.status{margin:18px 0 6px;font-weight:700}
+.raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px;margin-top:16px}
+.kaart{background:#fff;border:1px solid var(--lijn);border-radius:14px;padding:20px;display:flex;flex-direction:column}
+.kop{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--zacht)}
+.kanaal{background:#151515;color:#fff;border-radius:999px;padding:4px 11px;font-weight:700;font-size:12.5px}
+.haak{font-family:"Bricolage Grotesque";font-weight:800;font-size:26px;line-height:1.1;margin:14px 0 10px;letter-spacing:-.01em}
+.haak::before{content:"Haak";display:block;font:600 12px "Barlow Condensed";letter-spacing:.18em;text-transform:uppercase;color:var(--oranje);margin-bottom:4px}
+.veld{margin:8px 0;font-size:16px}
+.veld b{display:block;font:600 12px "Barlow Condensed";letter-spacing:.16em;text-transform:uppercase;color:var(--zacht)}
+.bewijs{background:#fbf3ea;border-left:3px solid var(--oranje);padding:8px 10px;border-radius:0 6px 6px 0}
+.labels{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 4px}
+.lab{font-size:12.5px;padding:3px 9px;border-radius:999px;background:#eee8dd}
+.lab.h{background:#ffe2d0;color:#9a3c00;font-weight:700}
+details{margin-top:8px;font-size:14.5px;color:#333}
+summary{cursor:pointer;color:var(--zacht)}
+details p{margin:6px 0}
+.knoppen{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:14px}
+.knoppen button{font:600 14px "Schibsted Grotesk",sans-serif;border-radius:999px;border:1px solid #cfc6b6;background:#fff;padding:8px 13px;cursor:pointer}
+.knoppen button.maak{background:var(--oranje);border-color:var(--oranje);color:#111}
+.knoppen button.aan{outline:3px solid #151515}
+.aanwijzing{display:none;width:100%;margin-top:8px;font:15px "Schibsted Grotesk";padding:8px;border:1px solid #cfc6b6;border-radius:8px}
+.toon{display:block}
+.vgl{max-width:900px;margin-top:40px;font-size:16px;color:#333}
+table{border-collapse:collapse;margin-top:10px;background:#fff;width:100%;border-radius:10px;overflow:hidden}
+td,th{padding:10px 12px;border-bottom:1px solid var(--lijn);text-align:left;font-size:15.5px;vertical-align:top}
+th{background:#ece5d8}
+</style>
+</head>
+<body>
+<main>
+<div class="kicker">Onderzoeksformat social en video · voorbeeld 27-11 · onderwerp AI in 2027</div>
+<h1>Zes ideeën, elk op één kaart</h1>
+<p class="intro">Korter en pakkender dan het artikelonderzoek. Elke kaart begint met wat het publiek als eerste ziet: de haak. Daaronder één zin boodschap, één bewezen cijfer of citaat met bron en datum, waarom het nu speelt, het beeld, het kanaal en wat je mag verwachten. De bronnen en het oordeel van de drie onderzoekers staan ingeklapt. Per kaart kies je met één knop. Opzet na advies van Astra en Gemini.</p><p class="intro"><b>Bij een artikel als startpunt</b> komen deze kaarten eerst uit het artikelonderzoek; alle zes hieronder zijn daaruit afgeleid. Met "Aanvullend onderzoek" laat je per idee nieuw social- of videogericht onderzoek doen (trending, haak, beeld). Is social of video zelf het startpunt, dan worden de kaarten direct met nieuw onderzoek gevuld.</p>
+<p class="status" id="status">0 van 6 gekozen</p>
+<div class="raster" id="raster"></div>
+
+<div class="vgl"><h2 style="font-family:'Bricolage Grotesque';font-weight:800">Verschil met het artikelonderzoek</h2>
+<table><tr><th></th><th>Artikel</th><th>Social en video</th></tr>
+<tr><td>Eenheid</td><td>Trend of bouwsteen met verdieping</td><td>Eén idee per kaart, klaar om te maken</td></tr>
+<tr><td>Eerste regel</td><td>Naam en één zin</td><td>De haak: eerste regel of eerste twee seconden</td></tr>
+<tr><td>Bewijs</td><td>Meerdere bronnen per punt</td><td>Eén hard cijfer of citaat met bron en datum</td></tr>
+<tr><td>Extra</td><td>Waarom nu, gevolg</td><td>Beeld of openingsscène, kanaal en format, verwachting</td></tr>
+<tr><td>Keuze</td><td>Akkoord of aanvullend onderzoek</td><td>Maken, haak testen, aanvullend onderzoek, parkeren, afwijzen</td></tr>
+<tr><td>Aantal</td><td>Longlist van 10 tot 20</td><td>Zes per ronde</td></tr>
+</table>
+<p>Prestatieverwachting: zolang er nog geen eigen cijfers per kanaal zijn, staat er "nog geen voorspelling". Na publicatie vullen we de echte uitkomst in en wordt de volgende ronde scherper.</p></div>
+</main>
+<script>
+var K=[
+{k:"LinkedIn · documentcarrousel",h:"Over tien jaar werkt elke medewerker van Nvidia met honderd agents.",b:"De werkvloer van morgen bestaat uit één mens en honderd digitale collega's.",bw:"Jensen Huang: \"Die 75.000 medewerkers werken samen met 7,5 miljoen agents.\" Fortune, 19-03-2026.",nu:"Agents gaan in 2027 van proef naar productie; volgens IDC had 95 procent van de ondernemingen al agents in productie (IDC, 27-10-2026).",v:"Dia 1 groot citaat op donker, dia 2 tot 5 wat dit vraagt van leiders, dia 6 de vraag uit het artikel.",imp:"hoog",z:"hoog",o:"Alle drie: sterke, bekende afzender en een helder getal.",br:"Fortune, interview Jensen Huang, 19-03-2026; IDC FutureScape 2027, 27-10-2026."},
+{k:"Reels en Shorts · 30 s",h:"15.498 bedrijven staan in de rij. Voor stroom.",b:"Niet de chips maar het stroomnet bepaalt hoe snel AI in Nederland groeit.",bw:"15.498 bedrijven wachten op een grote netaansluiting; datacenters vragen bijna een derde van die capaciteit. Netbeheer Nederland via NL Times, 16-10-2026.",nu:"Rechter: net bij Vijfhuizen pas tussen 2033 en 2035 sterk genoeg voor een nieuw datacenter (NOS, 29-04-2026).",v:"Opening: hoogspanningsmast bij nacht, het getal telt op naar 15.498 in oranje. Slot: zonder stroom staat ook de duurste chip stil.",imp:"hoog",z:"hoog",o:"Twee van drie: sterk lokaal haakje. Eén: check of 'een derde' het juiste kader is.",br:"NL Times over Netbeheer Nederland, 16-10-2026; NOS, 29-04-2026."},
+{k:"LinkedIn · tekst met cijferkaart",h:"Juniorvacatures: min 24 procent in twee jaar.",b:"AI kost vooral de eerste baan, en daarmee de opleidingsplek van je toekomstige senioren.",bw:"Het aantal vacatures voor juniorfuncties daalde in twee jaar met 24 procent. Indeed Nederland, 11-12-2025.",nu:"Afstudeerseizoen en jaarplannen voor 2027: bedrijven beslissen nu over instroom.",v:"Cijferkaart in Podium-stijl, -24% groot, kleine trendlijn eronder.",imp:"hoog",z:"middel",o:"Twee van drie: raakt managers direct. Eén: cijfer is van december 2025, mogelijk verversen.",br:"Indeed Nederland, 11-12-2025."},
+{k:"LinkedIn en X · korte post",h:"Driekwart van de inkoop beslist straks een agent mee.",b:"Je verkoopt in 2027 niet alleen aan mensen, maar aan hun agents.",bw:"Forrester verwacht dat AI-agents in 2027 driekwart van de zakelijke aankoopbeslissingen beïnvloeden. Forrester, 21-10-2026.",nu:"Net gepubliceerde voorspellingen voor 2027; B2B-marketeers zitten nu in hun jaarplanning.",v:"Twee etalages met data-lijnen ertussen (beeld uit de story), tekst 'Jouw agent koopt bij hun agent'.",imp:"hoog",z:"middel",o:"Alle drie: verrassend perspectief. Let op: het is een voorspelling, geen meting.",br:"Forrester, 2027 B2B Go-To-Market Predictions, 21-10-2026."},
+{k:"Shorts en TikTok · 45 s explainer",h:"Elke drie maanden kan AI twee keer zo lang zelf doorwerken.",b:"De vraag is niet meer wat AI kan, maar wie de resultaten nakijkt.",bw:"De taakhorizon van de nieuwste modellen verdubbelt volgens METR ongeveer elke drie maanden. METR, 29-01-2026.",nu:"Nieuwe modellen werken nu al uren zelfstandig; kantoren richten in 2027 controle-rollen in.",v:"Klok die steeds sneller draait, daarna een mens die een stapel werk nakijkt. Voiceover via ElevenLabs.",imp:"middel",z:"hoog",o:"Twee van drie: sterk visueel concept. Eén: begrip 'taakhorizon' uitleggen in 3 seconden.",br:"METR, Time Horizon 1.1, 29-01-2026; The Decoder, 10-05-2026."},
+{k:"LinkedIn · beeld met duiding",h:"Geen noodrem op je agents? Dan betaal je een kwart meer.",b:"Een noodrem voor AI wordt een harde eis van verzekeraars, niet alleen van ethici.",bw:"Grote bedrijven zonder noodrem voor hun agents betalen volgens IDC in 2028 een kwart meer voor hun aansprakelijkheidsverzekering. IDC, 27-10-2026.",nu:"Jaarcontracten voor verzekeringen en de AI Act-verplichtingen worden nu voorbereid.",v:"Hand op een oranje noodknop in een controlekamer (beeld uit de story).",imp:"middel",z:"middel",o:"Twee van drie: concreet en zakelijk. Eén: het is een prognose voor 2028, zo benoemen.",br:"IDC FutureScape 2027, 27-10-2026."}
+];
+var raster=document.getElementById('raster');
+K.forEach(function(c,i){
+ var d=document.createElement('div'); d.className='kaart';
+ d.innerHTML='<div class="kop"><span>Idee '+(i+1)+' · uit artikelonderzoek</span><span class="kanaal">'+c.k+'</span></div>'+
+ '<div class="haak">'+c.h+'</div>'+
+ '<div class="veld"><b>Boodschap</b>'+c.b+'</div>'+
+ '<div class="veld bewijs"><b>Bewijs</b>'+c.bw+'</div>'+
+ '<div class="veld"><b>Waarom nu</b>'+c.nu+'</div>'+
+ '<div class="veld"><b>Beeld of openingsscène</b>'+c.v+'</div>'+
+ '<div class="veld"><b>Verwachting</b>Nog geen voorspelling: eerst eigen cijfers per kanaal verzamelen.</div>'+
+ '<div class="labels"><span class="lab '+(c.imp=="hoog"?"h":"")+'">impact '+c.imp+'</span><span class="lab">zekerheid '+c.z+'</span></div>'+
+ '<details><summary>Oordeel onderzoekers en bronnen</summary><p>'+c.o+'</p><p>'+c.br+'</p></details>'+
+ '<div class="knoppen"><button class="maak">Maken</button><button>Haak testen</button><button data-aw="1">Aanvullend onderzoek</button><button>Parkeren</button><button>Afwijzen</button><input class="aanwijzing" placeholder="Jouw aanwijzing (verplicht)"></div>';
+ raster.appendChild(d);
+ var knoppen=d.querySelectorAll('button'), inp=d.querySelector('.aanwijzing');
+ knoppen.forEach(function(b){b.onclick=function(){knoppen.forEach(function(x){x.classList.remove('aan')});b.classList.add('aan');d.dataset.keuze=b.textContent;inp.classList.toggle('toon',!!b.dataset.aw||b.textContent=='Haak testen');tel();};});
+});
+function tel(){var n=document.querySelectorAll('.kaart[data-keuze]').length;document.getElementById('status').textContent=n+' van 6 gekozen';}
+</script>
+</body>
+</html>
